@@ -16,28 +16,70 @@
 <div id="page" class="site">
 
 	<header class="site-header">
-
+				<div class="container">
         <div class="top-hedaer-block">
+						<div id="logo">
+							<a href="<?php echo home_url(); ?>" >
+								<img src="<?php  echo get_theme_file_uri( '/assets/images/logo1-2.png' ) ?>" alt="Logo">
+								<div>ИДЖИС</div>
+								<p>Живи без долгов</p>
+							</a>
+						</div>
+						<div class="center-top-heder">
+						<div class="center-top-heder-bre">
 
+								<div class="center-top-heder-walpaper clearfix">
+										<img src="<?php  echo get_theme_file_uri( '/assets/images/cal-2.jpg' ) ?>">
+										<div class="center-top-heder-holder">
 
+										<p>Время работы</p>
+										<div>с 9:00 до 17:00</div>
 
-        </div>
+									</div>
+								</div>
+									<div  class="center-top-heder-walpaper clearfix">
+										<img src="<?php  echo get_theme_file_uri( '/assets/images/tel-icon-2.jpg' ) ?>">
+										<div class="center-top-heder-holder">
+										<p>Звоните нам</p>
+										<div><a href="tel:+79235374667">8 923 537 46 67</a></div>
+										</div>
+									</div>
+
+		 				</div>
+		 				</div>
+						<div class="right-top-header">
+							<a href="#" class="btn btn-link-modal">
+									<div>Оставить заявку</div>
+									<p>Мы перезвоним Вам</p>
+							</a>
+						</div>
+        </div><!-- end container-->
+				</div><!-- end top hedaer-->
+
+				<div class="bottom-header clearfix">
+					<div class="container">
+						<div class="bottom-header-wallpaper">
+							 <ul class="navigation clearfix">
+								 <li><a href="#">Главная</a></li>
+								 <li><a href="#">Услуги<i class="icon-down-dir"></i></a></li>
+								 <li><a href="#">Полезная информация<i class="icon-down-dir"></i></a></li>
+								 <li><a href="#">Калькулятор банкротсва</a></li>
+								 <li><a href="#">Банкротсво бесплатно</a></li>
+							 </ul>
+							 <ul class="social-top clearfix">
+								 <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+								 <li><a href="#"><i class="icon-facebook"></i></a></li>
+								 <li><a href="#"><i class="icon-odnoklassniki"></i></a></li>
+							 </ul>
+						</div>
+					</div><!-- end container-->
+				</div><!-- end bottom header-->
+
 
 
 
 	</header>
 
-	<?php
 
-	/*
-	 * If a regular post or page, and not the front page, show the featured image.
-	 * Using get_queried_object_id() here since the $post global may not be set before a call to the_post().
-	 */
-	if ( ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
-		echo '<div class="single-featured-image-header">';
-		echo get_the_post_thumbnail( get_queried_object_id(), 'twentyseventeen-featured-image' );
-		echo '</div><!-- .single-featured-image-header -->';
-	endif;
-	?>
 
 		<div id="content" class="site-content">

@@ -88,7 +88,6 @@ figure {
 
 hr {
 	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 	height: 0;
 	overflow: visible;
@@ -229,7 +228,6 @@ fieldset {
 
 legend {
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	color: inherit;
 	display: table;
@@ -250,7 +248,6 @@ textarea {
 [type="checkbox"],
 [type="radio"] {
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0;
 }
@@ -832,7 +829,6 @@ textarea {
 	background: #fff;
 	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 	border: 1px solid #bbb;
-	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	display: block;
 	padding: 0.7em;
@@ -861,7 +857,6 @@ textarea:focus {
 
 select {
 	border: 1px solid #bbb;
-	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	height: 3em;
 	max-width: 100%;
@@ -876,13 +871,12 @@ input[type="radio"] + label,
 input[type="checkbox"] + label {
 	font-weight: 400;
 }
-
+/*
 button,
 input[type="button"],
 input[type="submit"] {
 	background-color: #222;
 	border: 0;
-	-webkit-border-radius: 2px;
 	border-radius: 2px;
 	-webkit-box-shadow: none;
 	box-shadow: none;
@@ -897,7 +891,7 @@ input[type="submit"] {
 	text-shadow: none;
 	-webkit-transition: background 0.2s;
 	transition: background 0.2s;
-}
+}*/
 
 input + button,
 input + input[type="button"],
@@ -1057,4 +1051,19 @@ a:hover,
 a:active {
 	color: #000;
 	outline: 0;
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+.row:before,
+.row:after,
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
+}
+.row:after,
+.container:after {
+	clear: both;
 }
