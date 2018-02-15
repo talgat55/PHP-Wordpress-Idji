@@ -83,11 +83,11 @@ get_header(); ?>
     <div class="col-md-6">
       <div class="block-use-our">
         <div id="contentSlider">Общая сумма долга: <span id="valueidslider">1000</span> руб</div>
-        <div id="slider-ui"></div>
+        <div id="slider-ui" ></div>
         <div class="block-calc clearfix">
           <img src="<?php  echo get_theme_file_uri( '/assets/images/mon-2.jpg' ) ?>">
           <p>Вы получите :</p>
-          <div class="result-calc"><span>50 000</span> руб.</div>
+          <div class="result-calc"><span>0</span> руб.</div>
         </div>
       </div>
     </div>
@@ -176,28 +176,87 @@ get_header(); ?>
 <section id="how-we-work" class="margin-bottom">
   <div class="container">
     <div class="title-section center">Как мы осуществляем свою работу?</div>
+    <div class="tabs">
     <ul class="HowWeWorkBlockTab">
       <li>1</li>
       <li>2</li>
       <li>3</li>
       <li>4</li>
     </ul>
-  <div class="col-md-2 margin-top">
+    <div>
+          <div>
+            <div class="col-md-2 margin-top">
 
-      <img src="<?php  echo get_theme_file_uri( '/assets/images/feedback-2.jpg' ) ?>">
-  </div>
-  <div class="col-md-10  block-text-how-we-work margin-top">
-      <h3>Оставьте заявку</h3>
-      <p>Сделать это можно, позвонив по телефону <a href="tel:89235374767" class="linkInText">8-923-537-47-67</a>, либо оставив данные в форме на нашем сайте. Наш специалист обязательно перезвонит, что бы уточнить детали, ответить на все интересующие вопросы о банкротстве граждан, стоимости наших услуг и записать Вас на бесплатную консультацию!</p>
-      <h3>Результат</h3>
-      <p>Вы получите возможность посетить бесплатную консультацию. Обычная цена такой консультации  - 1800 рублей.</p>
-  </div>
+                <img src="<?php  echo get_theme_file_uri( '/assets/images/feedback-2.jpg' ) ?>">
+            </div>
+            <div class="col-md-10  block-text-how-we-work margin-top">
+                <h3>Оставьте заявку</h3>
+                <p>Сделать это можно, позвонив по телефону <a href="tel:89235374767" class="linkInText">8-923-537-47-67</a>, либо оставив данные в форме на нашем сайте. Наш специалист обязательно перезвонит, что бы уточнить детали, ответить на все интересующие вопросы о банкротстве граждан, стоимости наших услуг и записать Вас на бесплатную консультацию!</p>
+                <h3>Результат</h3>
+                <p>Вы получите возможность посетить бесплатную консультацию. Обычная цена такой консультации  - 1800 рублей.</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-md-2 margin-top">
+
+                <img src="<?php  echo get_theme_file_uri( '/assets/images/feedback2-2.jpg' ) ?>">
+            </div>
+            <div class="col-md-10  block-text-how-we-work margin-top">
+                <h3>Посетите бесплатную консультацию</h3>
+                <p>В ходе бесплатной консультации Вам подробно расскажут о банкротстве граждан и подарят
+                    брошюру по банкротству. Более того, наш специалист проведёт Ваш финансовый анализ
+                    и  выробатывает рекомендации относительно дальнейших действий, а  также о том, как правильно выбрать компанию по банкротству.</p>
+                <h3>Результат</h3>
+                <p>Ясное понимание  проблемы  и способа её решения, составление “дорожной карты”
+                  того, что, как и когда нужно делать для того, чтобы избавиться от долгов.</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-md-2 margin-top">
+
+                <img src="<?php  echo get_theme_file_uri( '/assets/images/feedback3-2.jpg' ) ?>">
+            </div>
+            <div class="col-md-10  block-text-how-we-work margin-top">
+                <h3>Заключите с нами договор</h3>
+                <p>После  того,  как Вы убедитесь, что сотрудничество с нами  лучший выбор, и заключите с
+                  нами договор, мы подготовим необходимые документы и инициируем процедуру Вашего
+                  банкротства. Вас представят финансовому управляющему, который наметит стратегию
+                  дальнейшей работы </p>
+                <h3>Результат</h3>
+                <p>Договор с гарантией возврата денег, уверенность в скором решении
+                  проблем с долгами.</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-md-2 margin-top">
+
+                <img src="<?php  echo get_theme_file_uri( '/assets/images/feedback4-2.jpg' ) ?>">
+            </div>
+            <div class="col-md-10  block-text-how-we-work margin-top">
+                <h3>Мы решим Вашу проблему с долгами!</h3>
+                <p>В ходе проведения процедуры мы постоянно будем держать Вас в курсе всех дел. По Вашему желанию, наш юрист будет представлять Ваши интересы в суде. После окончания
+процедуры банкротства  Вы получите результат, которого добиваетесь: реструктиризацию
+долгов или полное их списание!</p>
+                <h3>Результат</h3>
+                <p>Решение проблемы с долгами с минимальными потерями, достижение требуемого
+результата: полного списания долгов или их реструктиризации.</p>
+            </div>
+          </div>
+
+    </div>
+
+
+
+    </div>
 
 
 
   </div>
 </section>
-<section id="SendMessage">
+<section class="SendMessage">
     <div class="container">
       <div class="title-section center-white">Закажите бесплатную консультацию</div>
       <?php echo do_shortcode('[contact-form-7 id="10" title="Untitled"]'); ?>
@@ -210,6 +269,7 @@ get_header(); ?>
 <section id="Offer">
     <div class="container">
         <div class="title-section center">Предлагаем Вам воспользоваться процедурой <span class="red">банкротства,</span> в ходе которой мы</div>
+        <div class="clearfix">
         <div class="col-md-7">
           <div class="title-offer-list clearfix">
             <img src="<?php  echo get_theme_file_uri( '/assets/images/cube-2.jpg' ) ?>">
@@ -238,10 +298,159 @@ get_header(); ?>
           </ul>
         </div>
         </div>
+        <div class="col-md-12 ">
+
+          <div class="block-warning">
+            <img class="img-warn" src="<?php  echo get_theme_file_uri( '/assets/images/warning-2.png' ) ?>">
+            <p><b>Важно:</b> Объявить себя банкротом гражданин <b>ОБЯЗАН</b> тогда, когда его общий долг превышает 500 тысяч рублей, а рассчитаться
+            со всеми  он не может. Невыполнение этого требования может повлечь административную и уголовную ответственность!
+            </br>
+            </br>
+            Кроме того, вы можете объявить о своей несостоятельности при меньшем долге в том случае, когда рассчитаться со всеми кредитами в установленный срок невозможно</p>
+
+            <img  class="check-bg" src="<?php  echo get_theme_file_uri( '/assets/images/check-bg-2.png' ) ?>">
+          </div>
+
+        </div>
+        </div>
 
     </div>
 </section>
+<section id="OurService" >
+  <div class="container relative">
+      <div class="clearfix relative">
+      <div class="col-md-6 service-col">
+        <div class="ourServiceBlock">
+            <img  src="<?php  echo get_theme_file_uri( '/assets/images/service1-2.jpg' ) ?>">
+            <div class="service-text-block">
+                <h3>Банкротство гражданина</h3>
+                <a href="#">Узнать подробнее</a>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-6 service-col service-col-nopadding">
+        <div class="ourServiceBlock">
+            <img  src="<?php  echo get_theme_file_uri( '/assets/images/service2-2.jpg' ) ?>">
+            <div class="service-text-block">
+                <h3>Банкротство ипотечника</h3>
+                <a href="#">Узнать подробнее</a>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-6 service-col">
+        <div class="ourServiceBlock">
+            <img  src="<?php  echo get_theme_file_uri( '/assets/images/service3-2.jpg' ) ?>">
+            <div class="service-text-block">
+                <h3>Банкротство поручителя</h3>
+                <a href="#">Узнать подробнее</a>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-6 service-col service-col-nopadding">
+        <div class="ourServiceBlock">
+            <img  src="<?php  echo get_theme_file_uri( '/assets/images/service4-2.jpg' ) ?>">
+            <div class="service-text-block">
+                <h3>Банкротство ИП</h3>
+                <a href="#">Узнать подробнее</a>
+            </div>
+        </div>
+      </div>
+      <div class="title-our-service">Наши услуги</div>
+      </div>
+      <div class="col-md-12 relative">
+          <img  src="<?php  echo get_theme_file_uri( '/assets/images/service5-2.jpg' ) ?>">
+          <div class="service-text-block">
+              <h3>Банкротство ООО</h3>
+              <a href="#">Узнать подробнее</a>
+          </div>
+      </div>
+
+  </div>
+</section>
+<section class="SendMessage  SendMessage-2">
+    <div class="container relative">
+
+      <?php
+
+      $argsaction = array(
+        'posts_per_page'   => -1,
+        'post_type' => 'action'
+      );
+
+      $the_query = new WP_Query($argsaction);
+
+        while( $the_query->have_posts() ) :
+            $the_query->the_post();
+            $post_id = $the_query->post->ID;
+
+            //$img_url = wp_get_attachment_url( get_post_thumbnail_id($post_id) ,'full'); // Get img URL
+
+      $ShowChecbox = get_post_meta($post_id, 'check_show', true);
+      if($ShowChecbox){
+          echo '
+          <div class="title-section white">'.get_the_title($post_id).'</div>
+
+          <p>'.get_the_content($post_id).'</p>
+
+          ';
+
+      }
+        endwhile;
+      ?>
 
 
+
+    <?php echo do_shortcode('[contact-form-7 id="29" title="Untitled"]'); ?>
+    <img src="<?php  echo get_theme_file_uri( '/assets/images/bg-send-2.png' ) ?>">
+    </div>
+
+
+
+</section>
+
+<section id="SendClients">
+  <div class="container relative">
+      <div class="title-section center">Отзывы о работе <span class="red">нашей компании</span></div>
+      <div class="slider-wallpaper-clients slick-slider">
+        <?php
+
+        $argsslideer2 = array(
+          'posts_per_page'   => -1,
+          'post_type' => 'clients'
+        );
+
+        $the_query_slider2 = new WP_Query($argsslideer2);
+
+          while( $the_query_slider2->have_posts() ) :
+              $the_query_slider2->the_post();
+              $post_id_slider = $the_query_slider2->post->ID;
+            $thumb   = get_post_thumbnail_id($post_id_slider);
+            $img_url = wp_get_attachment_url( $thumb,'full'); // Get img URL
+          //  $image   = aq_resize( $img_url, 1920, 720, true ); // Resize & crop img
+
+          //	$image ? $image:$img_url;
+          $CityClient = get_post_meta($post_id_slider, 'city_meta', true);
+
+          echo '<div  class="slider-walpaper-client" >
+                    <img src="'.esc_url( $img_url ).'">
+                <div class="slider-client-title">'.get_the_title($post_id_slider).'</div>
+                <div class="client-city">'.$CityClient.'</div>
+                <div class="slider-content-client">
+                  '.get_the_content($post_id_slider).'
+                </div>
+              </div>';
+          endwhile;
+        ?>
+
+
+      </div>
+      <div class="slider-nav-clients">
+        <a href="#" class="slider-arrow-left"><span class="icon-left-open"></span></a>
+
+        <a href="#" class="slider-arrow-right"><span class="icon-right-open"></span></a>
+      </div>
+      <div class="block-link-client"><a href="#" class="link-client-more">Читать больше</a></div>
+  </div>
+</section>
 
 <?php get_footer();

@@ -6,7 +6,12 @@
 add_theme_support( 'post-thumbnails' );
 
 /*
-* Enrique SCript
+* Include meta box
+*/
+include_once('inc/meta-box/meta-box.php');
+
+/*
+* Enrique Script
 */
 
 function th_scripts() {
@@ -17,6 +22,7 @@ function th_scripts() {
   wp_enqueue_script( 'jquery', get_theme_file_uri( '/assets/js/jquery-3.2.1.min.js' ), array(), '1' );
 	wp_enqueue_script( 'default', get_theme_file_uri(  '/assets/js/default_js.js'),array(), '2' );
  	wp_enqueue_script( 'slick.min', get_theme_file_uri(  '/assets/js/slick.min.js'),array(), '2' );
+ 	wp_enqueue_script( 'tabs', get_theme_file_uri(  '/assets/js/tabs.js'),array(), '2' );
  	wp_enqueue_script( 'jquery.ui-slider', get_theme_file_uri(  '/assets/js/jquery-ui.min.js'),array(), '2' );
 
 }
@@ -50,90 +56,210 @@ function post_type_slider() {
 	);
 	register_post_type('slider',$args);
 }
+/*
+*  Rgister Post Type CLients
+*/
 
+add_action( 'init', 'post_type_client' );
 
-function my_meta_box() {
-    add_meta_box(
-        'my_meta_menu_box',
-        'Дополнительное поле',
-        'show_my_metabox',
-        'slider',
-        'normal',
-        'high');
+function post_type_client() {
+	$labels = array(
+		'name' => 'Клиенты',
+		'singular_name' => 'Клиенты',
+		'all_items' => 'Клиенты',
+		'menu_name' => 'Клиенты' // ссылка в меню в админке
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'menu_position' => 5,
+		'has_archive' => true,
+		'query_var' => "clients",
+		'supports'  => array(
+						'title',
+						'editor',
+						'thumbnail'
+		)
+	);
+	register_post_type('clients',$args);
 }
-add_action('add_meta_boxes', 'my_meta_box');
+/*
+*  Rgister Post Type Action
+*/
 
-$meta_fields = array(
-    array(
-        'label' => 'Заголовок',
-        'id'    => 'title_meta',
-        'type'  => 'text'
-    ) ,
-    array(
-        'label' => 'Текст',
-        'id'    => 'text_meta',
-        'type'  => 'text'
-    ) ,
-    array(
-        'label' => 'Выделеное слово',
-        'id'    => 'select_meta',
-        'type'  => 'text'
-    )
+add_action( 'init', 'post_type_action' );
 
+function post_type_action() {
+	$labels = array(
+		'name' => 'Акции',
+		'singular_name' => 'Акции',
+		'all_items' => 'Акции',
+		'menu_name' => 'Акции' // ссылка в меню в админке
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'menu_position' => 5,
+		'has_archive' => true,
+		'query_var' => "action",
+		'supports'  => array(
+						'title',
+						'editor',
+						'thumbnail'
 
-
-);
-
-function show_my_metabox() {
-global $meta_fields;
-global $post;
-echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
-
-    echo '<table class="form-table">';
-    foreach ($meta_fields as $field) {
-        $meta = get_post_meta($post->ID, $field['id'], true);
-        echo '<tr><th><label for="'.$field['id'].'">'.$field['label'].'</label></th><td>';
-
-        switch($field['type']) {
-            case 'text':
-    			echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="30" /><br /><span class="description">'.$field['desc'].'</span>';
-			break;
-			case 'textarea':
-			    echo '<textarea name="'.$field['id'].'" id="'.$field['id'].'" cols="60" rows="4">'.$meta.'</textarea><br /><span class="description">'.$field['desc'].'</span>';
-			break;
-            case 'checkbox':
-                echo '<input type="checkbox" name="'.$field['id'].'" id="'.$field['id'].'" ',$meta ? ' checked="checked"' : '','/><label for="'.$field['id'].'">'.$field['desc'].'</label>';
-            break;
-
-                }
-        echo '</td></tr>';
-    }
-    echo '</table>';
+		)
+	);
+	register_post_type('action',$args);
+}
+/*
+* Meta box Slider
+*/
+add_filter( 'rwmb_meta_boxes', 'your_prefix_file_demo' );
+function your_prefix_file_demo( $meta_boxes )
+{
+	$meta_boxes[] = array(
+		'title'  => __( 'Дополнительное поле', 'your-prefix' ),
+		'post_types' =>'slider',
+		'fields' => array(
+			array(
+					'id'      => 'title_meta',
+					'name'    => 'Заголовок',
+					'type'    => 'text',
+			),
+			array(
+					'name' => 'Текст',
+					'id'    => 'text_meta',
+					'type'  => 'text'
+			) ,
+			array(
+					'name' => 'Выделеное слово',
+					'id'    => 'select_meta',
+					'type'  => 'text'
+			)
+		),
+	);
+	return $meta_boxes;
 }
 
-function save_my_meta_fields($post_id) {
-    global $meta_fields;
 
-    if (!wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__)))
-        return $post_id;
 
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
-        return $post_id;
-    if ('page' == $_POST['post_type']) {
-        if (!current_user_can('edit_page', $post_id))
-            return $post_id;
-        } elseif (!current_user_can('edit_post', $post_id)) {
-            return $post_id;
-    }
 
-    foreach ($meta_fields as $field) {
-        $old = get_post_meta($post_id, $field['id'], true);
-        $new = $_POST[$field['id']];
-        if ($new && $new != $old) {
-            update_post_meta($post_id, $field['id'], $new);
-        } elseif ('' == $new && $old) {
-            delete_post_meta($post_id, $field['id'], $old);
-        }
-    } // end foreach
+/*
+* Meta Box for CLients
+*/
+add_filter( 'rwmb_meta_boxes', 'your_prefix_file_demo2' );
+function your_prefix_file_demo2( $meta_boxes )
+{
+	$meta_boxes[] = array(
+		'title'  => __( 'Дополнительное поле', 'your-prefix' ),
+		'post_types' =>'clients',
+		'fields' => array(
+			array(
+					'name' => 'Город',
+					'id'    => 'city_meta',
+					'type'  => 'text'
+			)
+		),
+	);
+	return $meta_boxes;
 }
-add_action('save_post', 'save_my_meta_fields');
+
+
+/*
+*  Meta box for Action
+*/
+add_filter( 'rwmb_meta_boxes', 'your_prefix_file_demo3' );
+function your_prefix_file_demo3( $meta_boxes )
+{
+	$meta_boxes[] = array(
+		'title'  => __( 'Дополнительное поле', 'your-prefix' ),
+		'post_types' =>'action',
+		'fields' => array(
+			array(
+					'name' => 'Показывать на главной странице',
+					'id'    => 'check_show',
+					'type'  => 'checkbox'
+			)
+		),
+	);
+	return $meta_boxes;
+}
+/**
+ * Create Tables if not exist  For Profile
+ */
+add_action( 'after_setup_theme', 'create_tables' );
+function create_tables (){
+	global $wpdb;
+
+	$table_name = $wpdb->prefix . "addition_informaion";
+	if ($wpdb->get_var("show tables like '$table_name'") != $table_name) {
+	$charset_collate = "DEFAULT CHARACTER SET {$wpdb->charset} COLLATE {$wpdb->collate}";
+	$sql = "CREATE TABLE {$table_name} (
+	  id mediumint(9) NOT NULL AUTO_INCREMENT,
+	  id_user integer,
+	  first_name text,
+	  second_name text,
+	  third_name text,
+	  bird_day date,
+	  place_bird text,
+	  last_name text,
+	  place_live text,
+	  passport_serial text,
+	  passport_number text,
+	  passport_issued_by text,
+	  passport_issued_date date,
+	  passport_issued_key text,
+	  extra_inn text,
+	  extra_snils text,
+	  extra_phone text,
+	  extra_email text,
+	  registrtation_index text,
+	  registrtation_city text,
+	  registrtation_locality text,
+	  registrtation_street text,
+	  registrtation_number_hourse text,
+	  registrtation_number_housing text,
+	  registrtation_number_apartments text,
+	  UNIQUE KEY id (id)
+
+	)
+	{$charset_collate};";
+	require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+	dbDelta($sql);
+
+	}
+
+}
+
+
+
+/*
+* Login
+*/
+
+if (isset($_POST['login_submit'])) {
+//    login_check($_POST['login_name'], $_POST['login_password']);
+
+		if( wp_verify_nonce( $_POST['_crsf'], 'ASMART') ){
+
+			global $user;
+			$creds = [];
+			$creds['user_login'] = $_POST['login_name'];
+			$creds['user_password'] =  $_POST['login_password'];
+			$creds['remember'] = true;
+			$user = wp_signon( $creds, false );
+			if ( is_wp_error($user) ) {
+			echo $user->get_error_message();
+			}
+			if ( !is_wp_error($user) ) {
+				wp_redirect(home_url('wp-admin'));
+
+			}
+
+
+		} else{
+
+			echo 'false';
+
+		}
+}
