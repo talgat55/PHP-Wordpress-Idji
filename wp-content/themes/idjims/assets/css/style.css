@@ -279,6 +279,7 @@
 html,
 body{
     font-family: Calibri, sans-serif;
+    overflow-x: hidden;
 }
 
  /*
@@ -817,7 +818,7 @@ input.wpcf7-form-control {
   position: absolute;
       z-index: 9;
       left: 11px;
-      top: 9px;
+      top: 11px;
       font-family: Calibri, sans-serif;
       font-weight: 400;
       font-size: 20px;
@@ -1182,7 +1183,7 @@ form{
 .footer-block-list li{
   list-style: none;
   float: left;
-  padding-right: 105px;
+  padding-right: 100px;
   color: #2a2a2a;
   font-family: Calibri, sans-serif;
   font-weight: 300;
@@ -1347,7 +1348,7 @@ footer{
   display: table-cell;
   vertical-align: middle;
   margin-right: 30px;
-  padding-bottom: 20px;
+  padding-top: 12px;
 }
 #dont-wait .col-md-6{
   padding-right: 1.5%;
@@ -1743,4 +1744,486 @@ font-style: italic;
 }
 #result-calculate{
       margin-bottom: 50px;
+}
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover .hamburger-inner::before, .hamburger:hover .hamburger-inner::after, .hamburger:hover .hamburger-inner {
+  background-color: #cb454c;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+  /*transition: all 0.3s ease;*/
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #008dd0;
+  border-radius: 4px;
+  /*transition: all 0.3s ease;*/
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--slider .hamburger-inner {
+  top: 2px;
+}
+
+.hamburger--slider .hamburger-inner::before {
+  top: 10px;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+}
+
+.hamburger--slider .hamburger-inner::after {
+  top: 20px;
+}
+
+.hamburger--slider.is-active .hamburger-inner {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+          transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger--slider.is-active .hamburger-inner::before {
+  -webkit-transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+          transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+  opacity: 0;
+}
+
+.hamburger--slider.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -20px, 0) rotate(-90deg);
+          transform: translate3d(0, -20px, 0) rotate(-90deg);
+}
+.menu-open {
+  display: block !important;
+}
+#mobile-bar{
+      position: absolute;
+      right: 137px;
+      top: -13px;
+      display: none;
+}
+.bottom-header-wallpaper{
+  display: inline-block;
+}
+@media   (max-width: 1200px){
+  .navigation li {
+    float: none;
+    margin-bottom: 12px;
+  }
+  #mobile-bar{
+        display: inline-block;
+  }
+  .bottom-header-wallpaper{
+    position: relative;
+  }
+  .navigation{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    z-index: 999;
+    padding: 30px;
+  }
+}
+@media (min-width: 992px)  and (max-width: 1200px){
+  .container{
+    width: 900px;
+  }
+  .center-top-heder-walpaper{
+    float: none;
+    margin-bottom: 20px;
+
+  }
+  .center-top-heder-walpaper:first-child{
+    margin-right: 0!important;
+  }
+  .navigation{
+    width: 645px;
+  }
+
+  .slider-block-content-walpaper {
+    width: 55%;
+  }
+  #how-we-work img{
+    width: 100%;
+  }
+  .SendMessage .block-submit{
+        width: 24%;
+  }
+  #OurService img{
+    max-width: 100%;
+  }
+  .wpcf7-submit {
+    line-height: 25px;
+  }
+  #first-section-service {
+    height: auto;
+  }
+  .feature-service {
+    margin: 50px 54px 50px;
+  }
+  #first-section-service img{
+    max-width: 100%;
+  }
+  .dont-wait-block p{
+        display: block;
+  }
+  .dont-wait-block {
+    min-height: 235px;
+  }
+  .five-step-block-bottom{
+    z-index: 99;
+    position: relative;
+  }
+  .plus-minus-block-bottom img {
+    position: absolute;
+    top: -12px;
+    left: -30px;
+  }
+  .plus-minus-block-bottom {
+    padding-left: 38px;
+  }
+  .plus-minus-block-bottom::after{
+    display: none;
+  }
+  .myth-block-alt {
+    min-height: 226px;
+  }
+  .live-idji-block {
+    min-height: 99px;
+  }
+  .live-idji-block img {
+    padding-top: 24px;
+  }
+  .footer-block-list li {
+    padding-right: 17px;
+  }
+}
+@media  (max-width: 991px){
+  .live-idji-block {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .plus-minus-block-bottom-wallpaper p {
+    margin: 0 auto;
+    padding: 26px 0px;
+  }
+  .container {
+    width: 90%;
+  }
+  .navigation {
+    top: 20px;
+  }
+  .title-slider::after{
+    display: none;
+  }
+  #live-idji .col-md-6,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-4,
+  .col-md-10,
+  .col-md-2,
+  .col-md-5,
+  #dont-wait .col-md-6{
+    width: 100%;
+    padding-right: 0;
+  }
+  .background-about{
+    text-align: center;
+    background-position: center!important;
+  }
+  .about-img{
+    top:0;
+  }
+  .benefit-block {
+    min-height: 145px;
+  }
+  #how-we-work .col-md-2{
+    text-align: center;
+  }
+  .SendMessage .field{
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 1%;
+  }
+  .block-submit{
+        display: block;
+        float: none;
+  }
+  .SendMessage-2 .block-submit,
+  .wpcf7-submit{
+    width: 100%;
+        display: block;
+  }
+  .offer-list {
+    margin-bottom: 30px;
+  }
+  .col-md-6.service-col {
+    width: 100%;
+    padding-bottom: .5%;
+    padding-right: 0;
+    text-align: center;
+  }
+  #OurService .col-md-12{
+    overflow: hidden;
+  }
+  #OurService img
+  .col-md-9,
+  .col-md-3 {
+    width: 100%;
+  }
+
+    #first-section-service{
+      height: auto;
+    }
+    #first-section-service .col-md-3{
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+      .feature-service::after,
+      .feature-service::before{
+        display: none;
+      }
+      .feature-service{
+        margin: 50px 0;
+      }
+      .block-use-our {
+          min-height: 115px;
+          margin-bottom: 30px;
+      }
+        .five-step-block-bottom{
+          z-index: 99;
+          position: relative;
+        }
+        .plus-minus-block-bottom::after{
+          display: none;
+        }
+        .plus-minus-block-bottom {
+          width: 87%;
+        }
+        .footer-block-list li{
+          float: none;
+        }
+        footer .bottom-header-wallpaper{
+          display: table;
+          margin: 0 auto;
+        }
+        footer .social-top {
+          display: table-cell;
+          float: none;
+        }
+        .footer-block-list {
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+}
+@media (min-width: 768px)  and (max-width: 991px){
+  .center-top-heder-walpaper{
+    float: none;
+    margin-bottom: 20px;
+
+  }
+  .center-top-heder-walpaper:first-child{
+    margin-right: 0!important;
+  }
+  .navigation{
+    width: 645px;
+  }
+
+
+  .col-md-plus-block p {
+    margin: 0 0 40px;
+  }
+
+  #Myth .col-md-4{
+    width: 49.2%;
+    padding-bottom: 1.5%;
+  }
+  #Myth .col-md-4:nth-of-type(2n+2){
+    padding-right: 0;
+  }
+
+  .right-top-header, .center-top-heder {
+    display: initial;
+  }
+  .slider-block-content-walpaper {
+    display: table;
+    width: 86%;
+     float: none;
+     margin: 0 auto;
+   }
+
+
+}
+@media  (max-width: 767px){
+  .modal-form{
+    width: 100%;
+  }
+  .title-section {
+    z-index: 9;
+    position: relative;
+  }
+  .plus-minus-block-bottom img {
+    position: absolute;
+    top: 2px;
+    left: -47px;
+  }
+  #Myth .col-md-4{
+    width: 100%;
+    padding-bottom: 1.5%;
+  }
+  .feature-service img{
+    float: none;
+    padding-bottom: 20px;
+  }
+  .navigation{
+        width: 300px;
+  }
+  .right-top-header, .center-top-heder {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .center-top-heder-walpaper:first-child{
+    margin: 0;
+  }
+  .center-top-heder-walpaper{
+    margin: 0 0  20px;
+  }
+  .center-top-heder img{
+    display: none;
+  }
+  #logo  {
+     display: block;
+     margin: 0 auto;
+   }
+   .top-hedaer-block{
+     text-align: center;
+   }
+   .center-top-heder .center-top-heder-holder {
+    text-align: left;
+  }
+  .title-section.service,
+  .title-section {
+    font-size: 28px;
+    line-height: 42px;
+  }
+  .Plus-block p, .Plus-minus-block p {
+    width: 100%;
+  }
+  footer .bottom-header-wallpaper {
+    display: block;
+    margin: 0 auto;
+  }
+  .footer-block-list {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .dont-wait-block p {
+    display: block;
+    margin-top: 20px;
+  }
+  .slider-block-content-walpaper {
+    width: 85%;
+    margin: 0 auto;
+    display: table;
+    float: none;
+  }
+  .title-slider {
+    font-size: 27px;
+    line-height: 41px;
+        text-align: right;
+  }
+  .text-slider {
+    font-size: 17px;
+    font-family: "Minsk";
+    text-align: right;
+    margin: 20px 0 0 0;
+  }
+  .slider-arrow-right {
+    right: 8px;
+  }
+  .slider-arrow-left {
+    left: 8px;
+  }
+  .HowWeWorkBlockTab {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+  }
+  .HowWeWorkBlockTab li:last-child{
+    margin-right: 208px;
+  }
+  .label--checkbox {
+    width: 100%;
+  }
+  .SendMessage-2 p {
+    width: 100%;
+  }
+  .title-our-service {
+    font-size: 19px;
+    padding: 9px 19px;
+  }
 }

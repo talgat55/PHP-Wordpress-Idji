@@ -96,8 +96,8 @@ jQuery( ".form-calculate" ).submit(function(e) {
 	var checkproperty = jQuery( ".checkboxprop" ).val();
 
 
-	var check_before_result = (valuesumm - valueproperty ) / (valueincome - 9500);
-console.log('Долг:  '+ valuesumm,'Доход: '+valueincome,'Количекство кредитов: '+ valuecredits,'Ипотека: '+checkmortgage,'Имущество: '+valueproperty,check_before_result);
+	var check_before_result = (parseInt(valuesumm) - parseInt(valueproperty) ) / (parseInt(valueincome) - 9500);
+//console.log('Долг:  '+ valuesumm,'Доход: '+valueincome,'Количекство кредитов: '+ valuecredits,'Ипотека: '+checkmortgage,'Имущество: '+valueproperty,check_before_result);
 	if(check_before_result >= 36){
 
 		jQuery('#result-calculate').html('Процедура реструктуризации невозможна.');
@@ -105,7 +105,7 @@ console.log('Долг:  '+ valuesumm,'Доход: '+valueincome,'Количек�
 	}else{
 		var $addCreditPrice, addText, $addproperty;
 			if(valuecredits > 5){
-				 $addCreditPrice = Number(valuecredits * 2000);
+				 $addCreditPrice = Number(parseInt(valuecredits) * 2000);
 			}else{
 				$addCreditPrice = 0;
 			}
@@ -123,7 +123,7 @@ console.log('Долг:  '+ valuesumm,'Доход: '+valueincome,'Количек�
 				addText = '';
 			}
 
-		 
+
 
 			var $resultprice = Number(100000 + $addCreditPrice + $addproperty);
 
@@ -133,6 +133,16 @@ console.log('Долг:  '+ valuesumm,'Доход: '+valueincome,'Количек�
 	}
 
 
+});
+/*
+* Mobile Menu
+*/
+
+jQuery('#mobile-bar').click(function(){
+		jQuery('.navigation').toggleClass("menu-open");
+		jQuery('#mobile-bar a').toggleClass(" is-active");
+
+		return false;
 });
 
 

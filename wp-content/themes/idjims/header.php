@@ -57,7 +57,7 @@
 				</div><!-- end container-->
 
 				<div class="bottom-header clearfix">
-					<div class="container">
+					<div class="container clearfix relative">
 						<div class="bottom-header-wallpaper">
 							 <ul class="navigation clearfix">
 								 <li><a href="#">Главная</a></li>
@@ -66,6 +66,19 @@
 								 <li><a href="#">Калькулятор банкротсва</a></li>
 								 <li><a href="#">Банкротсво бесплатно</a></li>
 							 </ul>
+
+
+							 </div>
+							 <div id="mobile-bar">
+
+							 		<a class="hamburger hamburger--slider">
+							 	  	<span class="hamburger-box">
+							 	    	<span class="hamburger-inner"></span>
+							 	  	</span>
+							 		</a>
+
+
+							 </div>
 							 <ul class="social-top clearfix">
 								 <li><a href="#"><i class="icon-vkontakte"></i></a></li>
 								 <li><a href="#"><i class="icon-facebook"></i></a></li>
