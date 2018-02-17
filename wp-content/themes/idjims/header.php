@@ -60,10 +60,38 @@
 					<div class="container clearfix relative">
 						<div class="bottom-header-wallpaper">
 							 <ul class="navigation clearfix">
-								 <li><a href="#">Главная</a></li>
-								 <li><a href="#">Услуги<i class="icon-down-dir"></i></a></li>
-								 <li><a href="#">Полезная информация<i class="icon-down-dir"></i></a></li>
-								 <li><a href="#">Калькулятор банкротсва</a></li>
+								 <li><a href="<?php echo home_url(); ?>">Главная</a></li>
+								 <li>
+									 <a href="#">
+										 Услуги
+										 <i class="icon-down-dir"></i>
+										 	<ul class="sub-menu">
+												<li><a href="#">Финансовая защита</a></li>
+												<li><a href="#">Банкротство гражданина</a></li>
+												<li><a href="http://idgis.trekweb.ru/bankrotstvo-ipotechikov/">Банкротство ипотечника</a></li>
+												<li><a href="#">Банкротство поручителя</a></li>
+												<li><a href="#">Банкротство ИП</a></li>
+												<li><a href="#">Банкротство ООО</a></li>
+												<li><a href="#">Юрист по банкротству</a></li>
+											</ul>
+								 </a>
+							 </li>
+								 <li>
+									 	<a href="#">
+											Полезная информация
+											<i class="icon-down-dir"></i>
+											<ul class="sub-menu">
+												<li><a href="#">Наша практика</a></li>
+												<li><a href="#">Отзывы</a></li>
+												<li><a href="#">Блог</a></li>
+												<li><a href="#">Вопрос-ответ</a></li>
+											</ul>
+										</a>
+									</li>
+
+
+
+								 <li><a href="http://idgis.trekweb.ru/calculate/">Калькулятор банкротсва</a></li>
 								 <li><a href="#">Банкротсво бесплатно</a></li>
 							 </ul>
 
@@ -98,7 +126,7 @@
 				<div class="close-modal-block_wallpaper"></div>
 		</div>
 		<div class="title-section center white">Оставьте заявку</div>
-		<?php echo do_shortcode('[contact-form-7 id="33" title="Untitled"]'); ?>
+		<?php echo do_shortcode('[contact-form-7 id="17" title="Untitled"]'); ?>
 
 
 		<img src="<?php  echo get_theme_file_uri( '/assets/images/bg-modal-2.png' ) ?>">

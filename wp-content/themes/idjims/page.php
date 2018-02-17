@@ -19,22 +19,18 @@ get_header(); ?>
 
 <div class="wrap">
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<div class="container">
+			<h1 class="title-section"><?php the_title(); ?></h1>
 
 			<?php
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/page/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+ 			the_content();
 
 			endwhile; // End of the loop.
 			?>
 
-		</main><!-- #main -->
+		</div><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- .wrap -->
 

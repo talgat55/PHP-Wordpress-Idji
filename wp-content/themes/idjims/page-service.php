@@ -111,12 +111,12 @@
      <div class="border-use-our"></div>
      <div class="col-md-6">
        <div class="block-use-our">
-         <div class="block-use-our-walp-2 clearfix">
+         <a href="http://idgis.trekweb.ru/calculate/" class="block-use-our-walp-2 clearfix">
              <h3>Калькулятор <span>банкротства</span></h3>
              <p>Узнайте, подходит ли банкротство в Вашем
                случае, а также узнайте стоимость наших услуг!</p>
              <img class="align-right" style="height: 127px;" src="<?php  echo get_theme_file_uri( '/assets/images/calc-2.png' ) ?>">
-         </div>
+         </a>
        </div>
 
      </div>
@@ -141,11 +141,130 @@
    <div class="title-section center"><span class="red">5 шагов</span> к банкротству</div>
    <img class="check-bg-service" src="<?php  echo get_theme_file_uri( '/assets/images/bg-check-2.png' ) ?>">
 
-   <div class="container">
+   <div class="container ">
+     <div class="clearfix ">
+       <div class="col-md-4">
+         <div class="col-five-step-block One_step">
+            <img src="<?php  echo get_theme_file_uri( '/assets/images/1-2.png' ) ?>">
+              <div class="block-five-step-arrow" >
+                <a class="arrow-start-five-steps" href="#" ></a>
+                  <img  src="<?php  echo get_theme_file_uri( '/assets/images/1_ar-2.png' ) ?>">
+                <a class="arrow-end-five-steps" href="#" ></a>
 
+              </div>
+              <div class="tooltip-five-step" >
+                <p>
+                  На этом этапе начинается сбор информации о должнике и подготовка документов, происходят запросы в различные ведомства (банки, микрофинансовые организации, налоговую инспекцию, пенсионный фонд, Росреестр, ГИБДД и пр.).
+                </p>
+            </div>
+         </div>
+       </div>
+       <div class="col-md-4">
+          <div class="col-five-step-block Two_step" >
+          <img  class="Two_step-img_first" src="<?php  echo get_theme_file_uri( '/assets/images/2-2.png' ) ?>">
+            <div class="block-five-step-arrow"  >
+              <a class="arrow-start-five-steps" href="#"  ></a>
+                <img  src="<?php  echo get_theme_file_uri( '/assets/images/2_ar-2.png' ) ?>">
+              <a class="arrow-end-five-steps" href="#" ></a>
+            </div>
+            <div class="tooltip-five-step" >
+              <p>
+                Составление заявления и подача его в арбитражный суд. Решение суда о начале процедуры банкротства.  (Признание должника банкротом, не освобождает его от долгов. Это происходит на этапе 4.2. по решению суда)
+              </p>
+            </div>
+          </div>
+       </div>
+
+       <div class="col-md-4">
+          <div class="col-five-step-block Tree_Step">
+           <img src="<?php  echo get_theme_file_uri( '/assets/images/3-2.png' ) ?>">
+           <div  class="block-five-step-arrow" >
+             <a class="arrow-start-five-steps" href="#" ></a>
+           </div>
+            <div class="tooltip-five-step"  >
+              <p>
+                Суд назначает нашего арбитражного управляющего на должность вашего финансового управляющего, в обязанность которого входит проведение финансового анализа и дача заключения о наличии или отсутствии признаков преступления (преднамеренного либо фиктивного банкротства), и который, в зависимости от решения суда, решает Вашу финансовую задачу.
+              </p>
+            </div>
+          </div>
+       </div>
+
+       <div class="col-md-6">
+          <div class="col-five-step-block Tree_one_step" >
+           <img src="<?php  echo get_theme_file_uri( '/assets/images/3_1-2.png' ) ?>">
+             <div class="block-five-step-arrow" >
+               <a class="arrow-end-five-steps" href="#" ></a>
+                 <img  src="<?php  echo get_theme_file_uri( '/assets/images/3_1_ar-2.png' ) ?>">
+
+             </div>
+             <div class="tooltip-five-step">
+               <p>
+                На этом этапе приостанавливается дальнейший рост долгов, составляется план реструктуризации, утверждаемый судом.
+              </p>
+             </div>
+          </div>
+       </div>
+       <div class="col-md-6">
+          <div class="col-five-step-block Tree_two_step" >
+           <img src="<?php  echo get_theme_file_uri( '/assets/images/3_2-2.png' ) ?>">
+             <div class="block-five-step-arrow" >
+
+                <a class="arrow-end-five-steps" href="#" ></a>
+                 <img  src="<?php  echo get_theme_file_uri( '/assets/images/3_2_ar-2.png' ) ?>">
+
+             </div>
+             <div class="tooltip-five-step"  >
+               <p>
+                Выплата долга без заоблачных банковских процентов. Рассрочка просроченной задолженности происходит в течении 3 лет, в ходе которых Вы решаете проблему с долгами и продолжаете гасить ипотеку по новым, "льготным" условиям.
+                </p>
+             </div>
+          </div>
+       </div>
+
+
+       <div class="col-md-6">
+         <div class="col-five-step-block Four_one_step" >
+            <img src="<?php  echo get_theme_file_uri( '/assets/images/4_1-2.png' ) ?>">
+              <div class="block-five-step-arrow"  >
+                  <a class="arrow-end-five-steps" href="#" ></a>
+                  <img  src="<?php  echo get_theme_file_uri( '/assets/images/4_1_ar-2.png' ) ?>">
+
+                  <a class="arrow-start-five-steps" href="#" ></a>
+              </div>
+              <div class="tooltip-five-step" >
+                <p>
+                 Процесс реализации имущества. Фактическая
+                  реализация имущества. * Единственное жилье
+                  (не ипотека) и предметы домашнего обихода
+                    НЕ подлежат реализации.</p>
+              </div>
+         </div>
+       </div>
+
+       <div class="col-md-6">
+          <div class="col-five-step-block Four_two_step" >
+          <img class="img-Four_two_step" src="<?php  echo get_theme_file_uri( '/assets/images/4_2-2.png' ) ?>">
+            <div class="block-five-step-arrow"  >
+
+
+                <a class="arrow-start-five-steps" href="#" ></a>
+                <img  src="<?php  echo get_theme_file_uri( '/assets/images/4_2_ar-2.png' ) ?>">
+                  <a class="arrow-end-five-steps" href="#" ></a>
+            </div>
+            <div class="tooltip-five-step" >
+              <p>
+               Решение суда о списании долгов. Избавление должника от обязательств перед кредиторами.</p>
+            </div>
+          </div>
+       </div>
+
+     </div>
+
+     <!--
      <a href="#">
        <img src="<?php  echo get_theme_file_uri( '/assets/images/schema-2.png' ) ?>">
-      </a>
+     </a>-->
+
       <div class="five-step-block-bottom">
           <p>
               Минимальный срок процедуры банкротства ипотечного заемщика — <b>10 месяцев</b>, в среднем же он составляет <b>12 месяцев</b> в случае утверждения процедуры реализации имущества, и <b>3 года</b> - в случае утверждения плана реструктуризации.

@@ -7,7 +7,7 @@ get_header(); ?>
 
 <div class="wrap calculate-page-walp">
 	<div class="container">
-    <div class="title-section">Калькулятор банкротсва</div>
+    <h1 class="title-section">Калькулятор банкротсва</h1>
     <form class="form-calculate clearfix" action="" method="post">
       <div class="clearfix">
         <div class="col-md-6">

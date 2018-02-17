@@ -11,6 +11,28 @@ InitCarouselClients();
 InitUISliderPage();
 
   jQuery(".tabs").lightTabs();
+	jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
+
+
+if(jQuery(window).width() > 1200){
+
+
+		jQuery( ".block-five-step-arrow a"  ).hover(function() {
+
+				var $this = jQuery(this);
+				var tooltipblock = $this.parent().parent().find('.tooltip-five-step');
+				tooltipblock.show();
+
+
+				tooltipblock.mouseleave(function() {
+
+						tooltipblock.hide();
+
+				});
+
+		} );
+}
+
 
 
 /*
@@ -28,6 +50,18 @@ jQuery( "form input"  ).click(function(){
 				}
 
 			});
+});
+jQuery( "form input"  ).hover(function() {
+	jQuery(this).parent().parent().find('label').hide();
+	var $this = jQuery(this);
+	$this.mouseleave(function() {
+		var $thisvalue = $this.val();
+
+		if(!$thisvalue.length){
+			$this.parent().parent().find('label').show();
+		}
+
+	});
 });
 
 jQuery( "form label"  ).click(function(){
@@ -145,6 +179,17 @@ jQuery('#mobile-bar').click(function(){
 		return false;
 });
 
+/**
+* Accordion menu for mobile
+*/
+if(jQuery(window).width() < 1200){
+
+
+	jQuery('.navigation').find('li a').click(function(){
+			 jQuery(this).next().stop().slideToggle();
+			 jQuery(this).toggleClass("accordion-open");
+		 }).next().stop().hide();
+}
 
 // end redy function
 });

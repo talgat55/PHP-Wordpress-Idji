@@ -100,12 +100,14 @@ get_header(); ?>
     <div class="border-use-our"></div>
     <div class="col-md-6">
       <div class="block-use-our">
-        <div class="block-use-our-walp-2 clearfix">
+        <a href="http://idgis.trekweb.ru/calculate/" class="block-use-our-walp-2 clearfix">
+
             <h3>Калькулятор <span>банкротства</span></h3>
             <p>Узнайте, подходит ли банкротство в Вашем
               случае, а также узнайте стоимость наших услуг!</p>
             <img class="align-right" style="height: 127px;" src="<?php  echo get_theme_file_uri( '/assets/images/calc-2.png' ) ?>">
-        </div>
+
+        </a>
       </div>
 
     </div>
@@ -259,7 +261,7 @@ get_header(); ?>
 <section class="SendMessage">
     <div class="container">
       <div class="title-section center-white">Закажите бесплатную консультацию</div>
-      <?php echo do_shortcode('[contact-form-7 id="10" title="Untitled"]'); ?>
+      <?php echo do_shortcode('[contact-form-7 id="15" title="Untitled"]'); ?>
 
     </div>
     <img src="<?php  echo get_theme_file_uri( '/assets/images/smart2-2.png' ) ?>">
@@ -333,7 +335,7 @@ get_header(); ?>
             <img  src="<?php  echo get_theme_file_uri( '/assets/images/service2-2.jpg' ) ?>">
             <div class="service-text-block">
                 <h3>Банкротство ипотечника</h3>
-                <a href="#">Узнать подробнее</a>
+                <a href="http://idgis.trekweb.ru/bankrotstvo-ipotechikov/">Узнать подробнее</a>
             </div>
         </div>
       </div>
@@ -400,7 +402,7 @@ get_header(); ?>
 
 
 
-    <?php echo do_shortcode('[contact-form-7 id="29" title="Untitled"]'); ?>
+    <?php echo do_shortcode('[contact-form-7 id="16" title="Untitled"]'); ?>
     <img src="<?php  echo get_theme_file_uri( '/assets/images/bg-send-2.png' ) ?>">
     </div>
 
