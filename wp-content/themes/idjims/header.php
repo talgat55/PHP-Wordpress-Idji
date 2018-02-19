@@ -67,10 +67,10 @@
 										 <i class="icon-down-dir"></i>
 										 	<ul class="sub-menu">
 												<li><a href="#">Финансовая защита</a></li>
-												<li><a href="#">Банкротство гражданина</a></li>
+												<li><a href="http://idgis.trekweb.ru/banlrotstvo-fl/">Банкротство гражданина</a></li>
 												<li><a href="http://idgis.trekweb.ru/bankrotstvo-ipotechikov/">Банкротство ипотечника</a></li>
-												<li><a href="#">Банкротство поручителя</a></li>
-												<li><a href="#">Банкротство ИП</a></li>
+												<li><a href="http://idgis.trekweb.ru/bankrotstvo-poruchitelya/">Банкротство поручителя</a></li>
+												<li><a href="http://idgis.trekweb.ru/bankrotstvo-ip/">Банкротство ИП</a></li>
 												<li><a href="#">Банкротство ООО</a></li>
 												<li><a href="#">Юрист по банкротству</a></li>
 											</ul>

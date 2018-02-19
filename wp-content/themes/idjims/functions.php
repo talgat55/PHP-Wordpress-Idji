@@ -10,6 +10,14 @@ add_theme_support( 'post-thumbnails' );
 */
 include_once('inc/meta-box/meta-box.php');
 
+
+/*
+*  Pdf Library
+*/
+if(!is_home()){
+	include_once('inc/pdf/mpdf.php');
+}
+
 /*
 * Enrique Script
 */

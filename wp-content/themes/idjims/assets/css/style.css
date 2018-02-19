@@ -1278,9 +1278,21 @@ footer{
 }
 .home-img{
   position: absolute;
-  bottom: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: 0;
 
+}
+.z-up{
+  z-index: 9;
+  position: relative;
+}
+.last-class-first-page p{
+  text-align: center;
+  margin-bottom: 50px!important; 
+  color: #ffe1c2!important;
+  font-size: 22px!important;
 }
 #first-section-service .col-md-3{
     padding-right: 8%;
@@ -1292,6 +1304,7 @@ footer{
 #first-section-service h3{
   color: #ffe1c2;
   font-size: 21px;
+  line-height: 30px;
   font-weight: 400;
   font-family: "Minsk"!important;
 }
@@ -1307,9 +1320,9 @@ footer{
   background-color: #fff;
   padding: 30px;
   position: relative;
-  margin: 0 78px;
-  margin-top: 50px;
-      z-index: 5;
+  margin: 50px 78px;
+  min-height: 67px;
+  z-index: 5;
 }
 .feature-service::after{
   content: "";
@@ -1612,10 +1625,11 @@ font-style: italic;
 #Myth .col-md-4{
   width: 32.333%;
   padding-right: 1.5%;
+  padding-bottom: 1.5%;
 }
 .myth-block-alt{
   padding: 40px;
-  min-height: 188px;
+  min-height: 208px;
   border: 1.5px solid #eee;
   border-radius: 4px;
 }
@@ -2117,6 +2131,63 @@ right: 18px;
    left: 303px;
     width: 354px;
 }
+.top-text-ip{
+  font-style: italic;
+  color: #ffe1c2!important;
+}
+.feature-service-one{
+    border:2px solid #ffe1c3;
+    display: table;
+    padding: 30px;
+    margin: 50px 0;
+
+
+}
+.feature-service-one img{
+  display: table-cell;
+  vertical-align: top;
+    padding-right: 30px;
+}
+.feature-service-one div{
+  display: table-cell;
+
+}
+.feature-service-one h3,
+.feature-service-one p{
+  color: #ffe1c2!important;
+
+}
+/*
+* Create Doc
+*/
+.warning-block{
+  padding: 11px 0;
+  margin: 12px 0;
+  line-height: 35px!important;
+  color: #ec575e;
+}
+.spisok li{
+  margin-top: 30px;
+}
+.spisok   a{
+  color: #008dd0;
+  text-decoration: underline;
+}
+.important-block{
+  padding: 10px;
+  border: 1px solid #ef7177;
+}
+.warning-block::before{
+  content: '';
+  background: url(../images/warning-2.png);
+  background-repeat: no-repeat!important;
+  display: inline-block;
+  width: 42px;
+  padding-right: 11px;
+  float: left;
+  height: 42px;
+}
+
 @media   (min-width: 1201px){
   .navigation li:hover .sub-menu{
     display: block;
