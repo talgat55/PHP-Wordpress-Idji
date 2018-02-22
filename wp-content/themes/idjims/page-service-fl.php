@@ -397,7 +397,7 @@
 
             <div class="col-md-12">
 
-                <div class="plus-minus-block-bottom"><img src="<?php  echo get_theme_file_uri( '/assets/images/emojii-2.png' ) ?>"> При этом виде банкротства реализуют залог (квартиру или дом)</div>
+                <div class="plus-minus-block-bottom"><img src="<?php  echo get_theme_file_uri( '/assets/images/emojii-2.png' ) ?>"> При этом виде банкротства реализуют залог  </div>
 
             </div>
 

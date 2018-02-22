@@ -191,9 +191,96 @@ if(jQuery(window).width() < 1200){
 		 }).next().stop().hide();
 }
 
+
+
+
+/*
+* Accordion
+**/
+
+if(jQuery('.accordion').length){
+	jQuery('.accordion').find('a').click(function(e){
+		 e.preventDefault();
+			 jQuery(this).next().stop().slideToggle();
+		 }).next().stop().hide();
+
+}
+
+
+/*
+* Add row form 1 row form
+*/
+
+if(jQuery('.add-first-form, .add-second-form').length){
+
+	jQuery('.add-first-form').click(function(e){
+		 e.preventDefault();
+
+
+
+			 jQuery('.form-group-one-walp.one-section').append( '<div class="form-group-one">'+
+				'<div class="form-group">'+
+						 '<input name="form_1_entity[]" type="text" class="form-control " placeholder="Содержание обязательства (1)" >'+
+				 '</div>'+
+				 '<div class="form-group">'+
+						 '<input name="form_1_creditor[]" type="text" class="form-control " placeholder="Кредитор (2)" >'+
+				 '</div>'+
+				 '<div class="form-group">'+
+						 '<input name="form_1_place_life[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" >'+
+				 '</div>'+
+				 '<div class="form-group">'+
+						 '<input name="form_1_main_emite[]" type="text" class="form-control " placeholder="Основание возникновения (3)" >'+
+				 '</div>'+
+				 '<div class="form-group">'+
+						 '<input name="form_1_total_all[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (4)" >'+
+				 '</div>'+
+				 '<div class="form-group">'+
+						 '<input name="form_1_total_all_indebtedness[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (5)" >'+
+				' </div>'+
+				 '<div class="form-group">'+
+						 '<input name="form_1_penaltie_fines[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >'+
+				 '</div>'+
+			 '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>'+
+			 '</div>');
+
+
+		 });
+
+	jQuery('.add-second-form').click(function(e){
+		 e.preventDefault();
+
+
+
+			 jQuery('.form-group-one-walp.two-section').append( '<div class="form-group-one">'+
+			 '<div class="form-group">'+
+			 		'<input name="form_1_row2_name_tax[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа" >'+
+			'</div>'+
+			 '<div class="form-group">'+
+			 		'<input name="form_1_row2_arrears[]" type="number" class="form-control " placeholder="Недоимка" >'+
+			 '</div>'+
+			 '<div class="form-group">'+
+			 		'<input name="form_1_row2_penaltie_fines[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >'+
+			 '</div>'+
+			 '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>'+
+			 '</div>');
+
+
+		 });
+
+
+
+}
+
 // end redy function
 });
 
+/*
+* Deleete row
+*/
+function deleterowforms(elmnt){
+
+		 jQuery(elmnt).parent().remove();
+}
 //---------
 // Slider
 //--------

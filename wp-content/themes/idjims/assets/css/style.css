@@ -1290,7 +1290,7 @@ footer{
 }
 .last-class-first-page p{
   text-align: center;
-  margin-bottom: 50px!important; 
+  margin-bottom: 50px!important;
   color: #ffe1c2!important;
   font-size: 22px!important;
 }
@@ -1590,6 +1590,7 @@ font-style: italic;
       height: 29px;
       position: absolute;
       right: -102px;
+      display: none;
       top: -.4px;
 }
 .plus-minus-block-bottom img{

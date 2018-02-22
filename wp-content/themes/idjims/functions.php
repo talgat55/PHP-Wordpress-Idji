@@ -15,7 +15,18 @@ include_once('inc/meta-box/meta-box.php');
 *  Pdf Library
 */
 if(!is_home()){
-	include_once('inc/pdf/mpdf.php');
+
+	include_once('inc/pdf/autoload.inc.php');
+
+	require_once 'inc/pdf/lib/html5lib/Parser.php';
+	require_once 'inc/pdf/lib/php-font-lib/src/FontLib/Autoloader.php';
+	require_once 'inc/pdf/lib/php-svg-lib/src/autoload.php';
+	require_once 'inc/pdf/src/Autoloader.php';
+	Dompdf\Autoloader::register();
+
+
+
+
 }
 
 /*
