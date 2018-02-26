@@ -13,6 +13,13 @@
   font-weight: normal;
   font-style: normal;
 }
+a:focus {
+    outline: none!important;
+}
+.error-404{
+  padding: 50px 0;
+}
+
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
@@ -217,6 +224,8 @@
 .icon-odnoklassniki:before { content: '\f263'; } /* '' */
 .icon-left-open:before { content: '\e75d'; } /* '' */
 .icon-right-open:before { content: '\e75e'; } /* '' */
+.icon-angle-left:before { content: '\f104'; } /* '' */
+.icon-angle-right:before { content: '\f105'; } /* '' */
 .clearfix:after,
 .clearfix:before{
 	display: table;
@@ -271,10 +280,26 @@
 .col-md-3,
 .col-md-6,
 .col-md-8,
+.col-md-5-doc,
+.col-md-7-doc,
 .col-md-4,
+.col-lg-6,
 .col-md-5,
 .col-md-7{
   float: left;
+}
+.col-lg-6{
+  width: 49%;
+  padding-right: 2%;
+}
+.col-md-5-doc{
+  width: 45%;
+}
+.col-md-7-doc{
+  width: 55%;
+}
+.no-padding{
+  padding: 0!important;
 }
 html,
 body{
@@ -546,7 +571,7 @@ body{
       bottom: -38px;
 }
 .text-slider span{
-  background-color: red;
+  background-color: #cb454c;
   padding: 0 3px;
 }
 .title-section{
@@ -695,7 +720,7 @@ z-index: 10;
   background-color: #eee;
   height: 8px;
 }
-#slider-ui{
+.slider-ui{
   position: relative;
   margin-top: 45px;
 }
@@ -817,6 +842,242 @@ z-index: 10;
 .margin-top{
   margin-top: 60px;
 }
+/*
+* breadscrumb
+**/
+.breadscrumb{
+
+  background-color: #cb454c;
+
+}
+.breadscrumb.blue{
+  background-color: #008dd0;
+
+}
+/*
+* Reviews
+*/
+.row-reviews{
+  margin: 50px 0;
+}
+.reviews-block-walp{
+  display: table;
+}
+.reviews-second-block,
+.reviews-first-block{
+  display: table-cell;
+}
+.reviews-first-block-walp,
+.reviews-first-block{
+  width: 173px;
+}
+
+.reviews-block-walp{
+  overflow: hidden;
+}
+.reviews-first-block{
+      padding-right: 30px;
+      position: relative;
+}
+.reviews-first-block-walp{
+    position: relative;
+    top: -19px;
+    left: -30px;
+}/*
+.slider-walpaper-review img {
+
+}*/
+.review-link-overlay{
+    position: absolute;
+    padding: 60px;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.slider-walpaper-review-border:hover .review-link-overlay{
+  opacity: 1;
+}
+  .slider-walpaper-review{
+    overflow: hidden;
+  }
+.slider-walpaper-review-border{
+      border-radius: 50%;
+      background: #fff;
+      width: 173px;
+      height: 173px;
+      position: relative;
+      overflow: hidden;
+}
+.reviews-block-walp .slider-nav{
+  position: relative;
+  top: -6px;
+  right: -48px;
+}
+.reviews-block-walp .slider-arrow-right,
+.reviews-block-walp .slider-arrow-left{
+  color: #d9d9d9;
+  font-size: 51px;
+}
+.reviews-block-walp .slider-arrow-right:hover,
+.reviews-block-walp .slider-arrow-left:hover{
+  color: #cb454c;
+}
+.reviews-block-walp .slider-arrow-left {
+    left: 15px;
+  }
+.meta-review div{
+  line-height: 20px;
+  float: left;
+  color: #d9d9d9;
+}
+.meta-review img{
+  float: left;
+  padding-right: 10px;
+}
+.reviews-block-walp{
+      border: 1px solid #d9d9d9;
+      margin-bottom: 50px;
+      border-radius: 0;
+}
+.meta-review{
+  display: table;
+  margin: 30px auto;
+  width: 144px;
+}
+.review-title{
+  font-size: 22px;
+  font-family: "Minsk";
+  margin: 30px 0 20px;
+}
+.review-city{
+  padding: 0 0 11px 0;
+  font-weight: 400;
+    font-style: italic;
+  border-bottom:1px solid #d9d9d9;
+}
+.block-user-page-second h3,
+.block-user-page-first p,
+.block-user-page-first h1,
+.user-page-link-breadscrumb,
+.review-block-bottom,
+.review-block-bottom a,
+.review-city,
+.review-content{
+
+  font-family: Calibri, sans-serif;
+  font-size: 18px;
+}
+.user-page-link-breadscrumb{
+  color: #fff;
+  font-size: 25px;
+  display: table;
+  margin: 0 auto;
+  text-decoration: underline;
+  padding: 35px 0;
+}
+.page-custom-margin{
+  padding: 30px 0;
+
+}
+.user-page-link-breadscrumb:hover{
+  color: #cb454c;
+}
+.user-page-link-breadscrumb.current{
+  text-decoration: none;
+}
+.reviews-block-walp,
+.review-content{
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.review-content{
+  padding: 15px 50px 15px 0;
+  height: 164px;
+
+  overflow: hidden;
+
+}
+.review-block-bottom{
+  padding: 12px 0 26px 0;
+}
+.review-link-readmore{
+    float: left;
+    padding-right: 50px;
+    color: #cb454c;
+    text-decoration: underline;
+}
+.pdf-review-block a{
+
+  color: #008fdb;
+}
+.pdf-review-block p{
+  margin: 0;
+}
+.pdf-review-block img{
+  float: left;
+    padding-right: 10px;
+}
+.show-content-review{
+  height: 100%;
+}
+/*
+* User  PAge
+*/
+.block-user-page-first{
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+}
+.block-user-page-first p,
+.block-user-page-first h1{
+  font-size: 22px;
+  font-weight: 400!important;
+}
+
+.block-user-page-first p{
+  background:#cb454c;
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 5px 15px;
+}
+.block-user-page-second h3{
+  font-weight: bold;
+  font-size: 23px;
+    color: #cb454c;
+
+}
+.list-docs-user-page li{
+  list-style: none;
+  margin-bottom: 20px;
+}
+.list-docs-user-page p{
+    margin: 0;
+    line-height: 33px;
+    text-decoration: underline;
+}
+.list-docs-user-page img{
+  float: left;
+  padding-right: 20px;
+}
+.custom-user-page-block{
+      margin: 40px 0;
+  padding: 37px;
+  border: 1px solid #d9d9d9;
+
+}
+.block-title-user-page{
+    background: #008fdb;
+    color: #fff;
+    display: table;
+      margin: 0 auto 40px auto;
+    padding: 5px 15px;
+}
+.custom-user-page-block li,
+.custom-user-page-block ul{
+  margin: 0;
+}
+
 
 /*
 * Send Message
@@ -838,19 +1099,22 @@ input.wpcf7-form-control {
   width: 24%;
   padding-right: 1%;
 }
+
+.calculate-page-walp form label,
 .SendMessage form label{
   position: absolute;
       z-index: 9;
-      left: 11px;
-      top: 11px;
+      left: 35px;
       font-family: Calibri, sans-serif;
       font-weight: 400;
       font-size: 20px;
       color: #636363;
       cursor: text;
+      margin: 0;
+      line-height: 48px;
 }
 .SendMessage form label span{
-  color: red;
+  color: #cb454c;
 }
 form input {
   padding: 12px 17px;
@@ -1818,10 +2082,8 @@ font-style: italic;
   border: 2px solid #dadada;
 }
 .calculator-page{
-  border: 1px solid #eee;
+  position: relative;
   padding: 20px;
-  margin-bottom: 20px;
-  min-height: 155px;
 }
 .check-property{
   opacity: 0;
@@ -1835,26 +2097,165 @@ font-style: italic;
   display: block;
 }
 .calculate-form-submit{
-      border: 2px solid #008dd0!important;
-      display: block;
-      padding: 17px 16px;
+        border: 2px solid #cb454c!important;
+        background-color:   #cb454c!important;
+      display: table;
+      padding: 10px 20px;
+      width: 50%;
+      margin: 0 auto;
       cursor: pointer;
       text-align: center;
       border-radius: 13px;
       background-color: transparent;
-      color: #008dd0;
+      color: #fff;
       margin-bottom: 12px;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
 }
 .calculate-form-submit:hover{
     background-color: #008dd0!important;
-    border-color: #008dd0;
+    border-color: #008dd0!important;
     color: #fff;
 }
+.custom-filed-text{
+  position: relative;
+  z-index: 9;
+  left: 14px;
+  font-family: Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #636363;
+  cursor: text;
+  margin: 0;
+  line-height: 48px;
+  float: left;
+  padding-right: 21px;
+}
+.calculate-page-walp input:focus{
+    border: 1px solid #d9d9d9;
+}
+.pagec-calc-field-total-debt-fwalp input:focus{
+    border: none 0;
+}
+.calculate-page-walp input{
+  background: #f7fcff;
+  border-radius: 0;
+
+}
+.check-box-ipoteka{
+  position: relative;
+  float: left;
+  top: 10px;
+}
+.class-ipoteka-text{
+  float: left;
+  padding-right: 13px;
+  margin: 0;
+  line-height: 44px;
+}
+.pagec-calc-field-total-debt input{
+
+  background: inherit;
+  width: 311px;
+  border: none 0;
+}
+.slider-result-input-property{
+  width: 212px!important;
+}
+.pagec-calc-field-total-debt-fwalp{
+  background: #f7fcff;
+  border: 1px solid #d9d9d9;
+
+}
+.table-page-calc{
+  display: table;
+}
+.table-page-calc span,
+.pagec-calc-field-total-debt-fwalp.property{
+  display: table-cell;
+}
+
+.question-page-calc{
+    padding: 5px;
+    text-align: center;
+    background: #cb454c;
+    position: relative;
+    width: 20px;
+    line-height: 20px;
+    font-size: 23px;
+    display: inline-block!important;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    margin-left: 10px;
+}
+.align-center{
+  text-align: center;
+}
+.tooltip.calc-page{
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 18;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.show-tooltip{
+  opacity: 1!important;
+  visibility: visible!important;
+}
+
 #result-calculate{
       margin-bottom: 50px;
 }
+/*
+*  Price Tables
+*/
+.table-prices{
+  margin:0;
+  padding: 0;
+}
+.table-prices li{
+  list-style: none;
+  float: left;
+  width: 33.33%;
+  position: relative;
+
+}
+.price-content{
+  background-color: #f9f9f9;
+  padding: 20px;
+  position: relative;
+  z-index: 9;
+}
+.table-price{
+  margin: 0;
+}
+.table-price li{
+  width: 100%;
+  float: none;
+}
+.table-prices .price-part.first{
+  border: 2px solid #ff9d08;
+
+}
+.first .price-overlay{
+    width: 50%;
+    height: 102%;
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: -1%;
+    right: -2px;
+}
+
+
 .hamburger {
   padding: 15px 15px;
   display: inline-block;
@@ -1968,6 +2369,9 @@ font-style: italic;
       top: -13px;
       display: none;
 }
+
+
+
 /*
  Five Steps Blocks
 **/
@@ -2187,6 +2591,18 @@ right: 18px;
   padding-right: 11px;
   float: left;
   height: 42px;
+}
+
+.form-group-one-walp{
+  position: relative;
+  margin-bottom: 90px;
+}
+
+.add-first-form{
+
+  position: absolute;
+  bottom: -40px;
+
 }
 
 @media   (min-width: 1201px){
@@ -2643,5 +3059,53 @@ right: 18px;
   .title-our-service {
     font-size: 19px;
     padding: 9px 19px;
+  }
+  .reviews-second-block, .reviews-first-block{
+    display: table;
+
+  }
+  .reviews-block-walp{
+    border: none 0;
+  }
+  .review-block-bottom{
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .review-link-readmore{
+    float: none;
+    padding:  0;
+  }
+  .reviews-first-block{
+        margin: 0 auto;
+        padding: 0;
+
+  }
+  .pdf-review-block{
+    margin-top: 20px;
+  }
+  .pdf-review-block img{
+    float: none;
+    padding: 0;
+  }
+  .reviews-first-block-walp{
+    top:0;
+    left:0;
+    margin-top: 20px;
+
+  }
+  .reviews-block-walp .slider-nav{
+        margin: 23px;
+        top:0;
+        left:0;
+  }
+  .meta-review {
+    width: 118px;
+  }
+  .col-lg-6,
+  .col-md-7-doc,
+  .col-md-5-doc{
+    width: 100%;
+    padding-right: 0;
   }
 }

@@ -7,7 +7,7 @@ get_header(); ?>
 <?php
 
  $ValueForHash = wp_create_nonce('ASMART');
- 
+
  ?>
 
 <div class="wrap">
@@ -25,6 +25,7 @@ get_header(); ?>
              <label class="login-field-icon fui-lock" for="login-pass"></label>
          </div>
          <input class="btn btn-primary btn-lg btn-block" type="submit"  name="login_submit" value="Войти" />
+         </div>
  		 </form>
 	</div><!-- #primary -->
 </div><!-- .wrap -->

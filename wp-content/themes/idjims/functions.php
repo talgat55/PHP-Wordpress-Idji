@@ -11,6 +11,7 @@ add_theme_support( 'post-thumbnails' );
 include_once('inc/meta-box/meta-box.php');
 
 
+
 /*
 *  Pdf Library
 */
@@ -24,8 +25,10 @@ if(!is_home()){
 	require_once 'inc/pdf/src/Autoloader.php';
 	Dompdf\Autoloader::register();
 
-
-
+/*
+* Resize Images
+*/
+include_once('inc/aq_resizer.php');
 
 }
 
@@ -37,13 +40,16 @@ function th_scripts() {
 	// Theme stylesheet.
 	wp_enqueue_style( 'th-style', get_theme_file_uri(  'style.css'),array(), '' );
 	wp_enqueue_style( 'style', get_theme_file_uri(  '/assets/css/style.css'),array(), '' );
+	wp_enqueue_style( 'lightbox.min', get_theme_file_uri(  '/assets/css/lightbox.min.css'),array(), '' );
 
   wp_enqueue_script( 'jquery', get_theme_file_uri( '/assets/js/jquery-3.2.1.min.js' ), array(), '1' );
 	wp_enqueue_script( 'default', get_theme_file_uri(  '/assets/js/default_js.js'),array(), '2' );
+	wp_enqueue_script( 'lightbox.min', get_theme_file_uri(  '/assets/js/lightbox.min.js'),array(), '2' );
  	wp_enqueue_script( 'slick.min', get_theme_file_uri(  '/assets/js/slick.min.js'),array(), '2' );
  	wp_enqueue_script( 'tabs', get_theme_file_uri(  '/assets/js/tabs.js'),array(), '2' );
  	wp_enqueue_script( 'jquery.inputmask', get_theme_file_uri(  '/assets/js/jquery.inputmask.js'),array(), '2' );
  	wp_enqueue_script( 'jquery.ui-slider', get_theme_file_uri(  '/assets/js/jquery-ui.min.js'),array(), '2' );
+
 
 }
 add_action( 'wp_enqueue_scripts', 'th_scripts' );
@@ -103,6 +109,8 @@ function post_type_client() {
 	);
 	register_post_type('clients',$args);
 }
+
+
 /*
 *  Rgister Post Type Action
 */
@@ -131,6 +139,7 @@ function post_type_action() {
 	);
 	register_post_type('action',$args);
 }
+
 /*
 * Meta box Slider
 */
@@ -178,6 +187,22 @@ function your_prefix_file_demo2( $meta_boxes )
 					'name' => 'Город',
 					'id'    => 'city_meta',
 					'type'  => 'text'
+			),
+			array(
+		    'id'               => 'images_meta',
+		    'name'             => 'Изображения',
+		    'type'             => 'image_advanced',
+		    'force_delete'     => false,
+		    'max_file_uploads' => 10,
+		    'max_status'       => 'false',
+		    'image_size'       => 'full',
+			),
+			array(
+					'name' 						 => 'Файл PDF',
+					'id'    					 => 'file_meta',
+					'type'             => 'file',
+					'force_delete'     => false,
+					'max_file_uploads' => 1,
 			)
 		),
 	);

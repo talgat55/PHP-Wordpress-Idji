@@ -13,21 +13,21 @@
 get_header(); ?>
 
 <div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div id="primary" class="content-area ">
+		<div class="container"  >
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyseventeen' ); ?></h1>
+					<h1 class="page-title">К сожалению! Эта страница не найдена.</h1>
 				</header><!-- .page-header -->
 				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyseventeen' ); ?></p>
+					<p>Похоже, в этом месте ничего не найдено</p>
 
-					<?php get_search_form(); ?>
+
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
-		</main><!-- #main -->
+		</div><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- .wrap -->
 

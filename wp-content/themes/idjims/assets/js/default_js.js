@@ -8,8 +8,11 @@ jQuery(document).ready(function(){
 InitSlider();
 InitUISlider();
 InitCarouselClients();
+InitOpenContentReview();
 InitUISliderPage();
-
+InitShowTooltip();
+InitUISliderPageProperty();
+InitSliderReview();
   jQuery(".tabs").lightTabs();
 	jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
 
@@ -161,6 +164,8 @@ jQuery( ".form-calculate" ).submit(function(e) {
 
 			var $resultprice = Number(100000 + $addCreditPrice + $addproperty);
 
+		jQuery('html, body').animate({ scrollTop: jQuery('#result-calculate').offset().top-100 }, 500);
+
 		jQuery('#result-calculate').html('Cуд может утвердить план реструктуризации, нужна консультация специалиста, подробнее можно прочесть в соответствующем разделе сайта </br> <div>Цена наших услуг:'+ $resultprice+' руб.</div></br><p>'+ addText+'</p>');
 
 
@@ -275,6 +280,53 @@ if(jQuery('.add-first-form, .add-second-form').length){
 });
 
 /*
+* Show tooltip in Calc Page
+*/
+
+
+function InitShowTooltip(){
+	jQuery('.question-page-calc').click(function(e){
+			e.preventDefault();
+				jQuery('.tooltip.calc-page').toggleClass('show-tooltip');
+	})
+
+}
+/*
+* Open Content for Client Reviews
+**/
+
+
+
+function InitOpenContentReview(){
+	jQuery('.review-link-readmore').click(function(e){
+
+		e.preventDefault();
+
+		if(jQuery(this).text() == 'Читать полностью'){
+
+			jQuery(this).text('Вернуть обратно');
+
+		}else{
+			jQuery(this).text('Читать полностью');
+		}
+
+
+
+		var $thisClass = jQuery(this).parent().parent().find('.review-content');
+		if($thisClass.hasClass('show-content-review')){
+			$thisClass.css('height', '164');
+		}else{
+			$thisClass.css('height', jQuery('.review-content div').height());
+		}
+
+		$thisClass.toggleClass('show-content-review');
+
+
+	})
+
+}
+
+/*
 * Deleete row
 */
 function deleterowforms(elmnt){
@@ -294,12 +346,45 @@ jQuery('.slider-wallpaper').slick({
 	dots: true,
   autoplay: true,
   speed:1000,
-  prevArrow: jQuery('.slider-nav .slider-arrow-left'),
-  nextArrow: jQuery('.slider-nav .slider-arrow-right')
+
 
 });
 
 }
+
+//---------
+// Slider Review
+//--------
+
+function InitSliderReview(){
+
+var arraycarousels = jQuery('.reviews-first-block-walp');
+arraycarousels.each(function(){
+		jQuery(this).slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			infinite: false,
+		//	autoplay: true,
+			speed:1000,
+			arrows: false
+		});
+		jQuery('.reviews-first-block .slider-arrow-left').click(function(e){
+			e.preventDefault();
+		 jQuery(this).parent().parent().find('.reviews-first-block-walp').slick('slickPrev');
+		})
+
+		jQuery('.reviews-first-block .slider-arrow-right').click(function(e){
+			e.preventDefault();
+		 jQuery(this).parent().parent().find('.reviews-first-block-walp').slick('slickNext');
+		})
+
+});
+
+
+}
+
+
 
 
 //---------
@@ -386,22 +471,43 @@ jQuery( "#slider-ui" ).slider({
 }
 
 /*
-* Calculate In Page Calculate
+* Calculate In Page Calculate Total debts
 */
 function InitUISliderPage(){
-
-jQuery( ".slider-ui" ).slider({
+	var $this = jQuery( ".slider-ui" );
+$this.slider({
  value : 0,//Значение, которое будет выставлено слайдеру при загрузке
  min : 1000,//Минимально возможное значение на ползунке
  max : 1500000,//Максимально возможное значение на ползунке
  step : 1000,//Шаг, с которым будет двигаться ползунок
  create: function( event, ui ) {
-	 val = jQuery( ".slider-ui" ).slider("value");//При создании слайдера, получаем его значение в перемен. val
+	 val = jQuery( $this ).slider("value");//При создании слайдера, получаем его значение в перемен. val
 	console.log(val);
-	 jQuery( ".slider-result-input" ).val( val );//Заполняем этим значением элемент с id contentSlider
+	  $this.parent().find( ".slider-result-input" ).val( val );//Заполняем этим значением элемент с id contentSlider
  },
 		 slide: function( event, ui ) {
- 		 			jQuery( ".slider-result-input" ).val( ui.value );//При изменении значения ползунка заполняем элемент с id contentSlider
+ 		 			$this.parent().find( ".slider-result-input" ).val( ui.value );//При изменении значения ползунка заполняем элемент с id contentSlider
+
+		 }
+ });
+}
+/*
+* Calculate In Page Calculate Total property
+*/
+function InitUISliderPageProperty(){
+	var $this = jQuery( ".slider-ui-property" );
+$this.slider({
+ value : 0,//Значение, которое будет выставлено слайдеру при загрузке
+ min : 1000,//Минимально возможное значение на ползунке
+ max : 1500000,//Максимально возможное значение на ползунке
+ step : 1000,//Шаг, с которым будет двигаться ползунок
+ create: function( event, ui ) {
+	 val = jQuery( $this ).slider("value");//При создании слайдера, получаем его значение в перемен. val
+	console.log(val);
+	  $this.parent().find( ".slider-result-input-property" ).val( val );//Заполняем этим значением элемент с id contentSlider
+ },
+		 slide: function( event, ui ) {
+ 		 			$this.parent().find( ".slider-result-input-property" ).val( ui.value );//При изменении значения ползунка заполняем элемент с id contentSlider
 
 		 }
  });

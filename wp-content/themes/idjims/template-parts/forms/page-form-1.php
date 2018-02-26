@@ -10,7 +10,7 @@
     <form method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">
         <div class=" ">
 
-            <div class="form-group-one-walp one-section">
+            <div class="form-group-one-walp one-section" data-section="1">
 							<p>
 								Сведения о кредиторах гражданина (по денежным обязательствам и (или) обязанности по уплате обязательных платежей, за исключением возникших в результате осуществления гражданином предпринимательской деятельности)
 							</br>
@@ -35,54 +35,37 @@
 
 							</p>
 						<h3>Денежные обязательства:</h3>
+
             <div class="form-group-one">
-
 	            <div class="form-group">
-
 	                <input name="form_1_entity[]" type="text" class="form-control " placeholder="Содержание обязательства (1)" >
-
 						  </div>
 	            <div class="form-group">
-
 	                <input name="form_1_creditor[]" type="text" class="form-control " placeholder="Кредитор (2)" >
-
 							</div>
-
 	            <div class="form-group">
-
 	                <input name="form_1_place_life[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" >
-
 	            </div>
-
 	            <div class="form-group">
-
 	                <input name="form_1_main_emite[]" type="text" class="form-control " placeholder="Основание возникновения (3)" >
-
 	            </div>
 	            <div class="form-group">
-
 	                <input name="form_1_total_all[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (4)" >
-
 	            </div>
 	            <div class="form-group">
-
 	                <input name="form_1_total_all_indebtedness[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (5)" >
-
 	            </div>
-
 	            <div class="form-group">
-
 	                <input name="form_1_penaltie_fines[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >
-
 	            </div>
 
-
             </div>
 
+            <a href="#" class="add-first-form">Добавить обязательство</a>
             </div>
-						<a href="#" class="add-first-form">Добавить обязательство</a>
 
-            <div class="form-group-one-walp  two-section">
+
+            <div class="form-group-one-walp  two-section" data-section="1">
 
 						<h3>Обязательные платежи:</h3>
             <div class="form-group-one">
@@ -99,13 +82,14 @@
 
             </div>
 
+            <a href="#" class="add-second-form">Добавить платеж</a>
             </div>
-						<a href="#" class="add-second-form">Добавить платеж</a>
+
 						<!--// end first  -->
 
 
 
-						<div class="form-group-one-walp  tree-section">
+						<div class="form-group-one-walp  one-section" data-section="2">
 
 						<h3>
 								Сведения о должниках гражданина (по денежным обязательствам и (или) обязанности по уплате обязательных платежей, за исключением возникших в результате осуществления гражданином предпринимательской деятельности)
@@ -126,21 +110,34 @@
 
 						</div>
 
-					  <div class="form-group-one">
-
+						<h3>Денежные обязательства:</h3>
+            <div class="form-group-one">
 	            <div class="form-group">
-	                <input name="form_1_row2_name_tax[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа" >
+	                <input name="form_1_entity_2[]" type="text" class="form-control " placeholder="Содержание обязательства (6)" >
 						  </div>
 	            <div class="form-group">
-	                <input name="form_1_row2_arrears[]" type="number" class="form-control " placeholder="Недоимка" >
+	                <input name="form_1_creditor_2[]" type="text" class="form-control " placeholder="Кредитор (7)" >
 							</div>
 	            <div class="form-group">
-	                <input name="form_1_row2_penaltie_fines[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >
+	                <input name="form_1_place_life_2[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" >
+	            </div>
+	            <div class="form-group">
+	                <input name="form_1_main_emite_2[]" type="text" class="form-control " placeholder="Основание возникновения (8)" >
+	            </div>
+	            <div class="form-group">
+	                <input name="form_1_total_all_2[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (9)" >
+	            </div>
+	            <div class="form-group">
+	                <input name="form_1_total_all_indebtedness_2[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (10)" >
+	            </div>
+	            <div class="form-group">
+	                <input name="form_1_penaltie_fines_2[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >
 	            </div>
 
             </div>
-
+            <a href="#" class="add-first-form">Добавить обязательство</a>
             </div>
+
 
 
 
