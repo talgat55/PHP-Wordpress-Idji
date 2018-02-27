@@ -82,7 +82,7 @@
 											<i class="icon-down-dir"></i>
 											<ul class="sub-menu">
 												<li><a href="#">Наша практика</a></li>
-												<li><a href="#">Отзывы</a></li>
+												<li><a href="http://idgis.trekweb.ru/reviews/">Отзывы</a></li>
 												<li><a href="#">Блог</a></li>
 												<li><a href="#">Вопрос-ответ</a></li>
 											</ul>

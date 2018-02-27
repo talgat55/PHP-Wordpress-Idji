@@ -217,7 +217,9 @@ a:focus {
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-
+.text-justify{
+  text-align: justify;
+}
 .icon-down-dir:before { content: '\e800'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
 .icon-vkontakte:before { content: '\f189'; } /* '' */
@@ -676,6 +678,10 @@ z-index: 10;
   right: 0;
   top: 0;
 }
+.block-use-our-walp-2{
+  height:148px;
+  margin-bottom: 40px;
+}
 .block-use-our-walp-2 p{
       font-family: Calibri, sans-serif;
       font-weight: 200;
@@ -685,7 +691,7 @@ z-index: 10;
       margin-bottom: 0;
       position: relative;
       z-index: 6;
-      width: 406px;
+      width: 350px;
       font-style: italic;
 }
 .block-use-our-walp-2 h3 span{
@@ -720,6 +726,7 @@ z-index: 10;
   background-color: #eee;
   height: 8px;
 }
+#slider-ui,
 .slider-ui{
   position: relative;
   margin-top: 45px;
@@ -781,7 +788,7 @@ z-index: 10;
   padding: 25px;
   border-radius: 15px;
   margin-bottom: 40px;
-      min-height: 310px;
+    /*  min-height: 310px;*/
 }
 .center-white{
   text-align: center;
@@ -799,31 +806,46 @@ z-index: 10;
 */
 .HowWeWorkBlockTab{
   width: 799px;
-  height: 5px;
-  background-color: #eee;
+  /*height: 5px;
+  background-color: #eee;*/
   /* display: table; */
   margin: 0 auto;
 }
-.HowWeWorkBlockTab li {
-      float: left;
-      top: -18px;
+.HowWeWorkBlockTab li a{
+
+      top: -9px;
       position: relative;
-      list-style: none;
+
       padding: 8px 16px;
       background-color: #fff;
       border:1px solid #eee;
       color: #000;
-      margin-right: 208px;
+
       border-radius: 23px;
       cursor: pointer;
 }
-.HowWeWorkBlockTab .active{
+.HowWeWorkBlockTab li a::after{
+      content: "";
+      border-top: 6px solid #eee;
+      width: 165px;
+      display: block;
+      position: absolute;
+      left: 42px;
+      top: 17px;
+}
+.HowWeWorkBlockTab li{
+        float: left;
+            text-align: center;
+        width: 25%;
+        list-style: none;
+}
+.HowWeWorkBlockTab .active a{
       background-color: #008fdb;
       color: #fff;
 }
 
-.HowWeWorkBlockTab li:last-child{
-  margin-right: 0;
+.HowWeWorkBlockTab li:last-child a::after{
+  width: 0;
 }
 .block-text-how-we-work h3{
   font-size: 23px;
@@ -952,8 +974,10 @@ z-index: 10;
 }
 .review-city{
   padding: 0 0 11px 0;
+  width: 30%;
+  display: inline-block;
   font-weight: 400;
-    font-style: italic;
+  font-style: italic;
   border-bottom:1px solid #d9d9d9;
 }
 .block-user-page-second h3,
@@ -1088,8 +1112,8 @@ z-index: 10;
 }
 .SendMessage img {
     position: absolute;
-      right: 0;
-      bottom: 0;
+    right: -95px;
+    bottom: 0;
 }
 input.wpcf7-form-control {
 }
@@ -1180,7 +1204,7 @@ form{
   z-index: 1;
   background: #008fdb;
 }
-.checkboxFour input[type=checkbox]:checked::after {
+.checkboxFour input[type=checkbox]:checked .checkboxFour::after {
   left: 5px;
 
 }
@@ -1188,7 +1212,7 @@ form{
   position: relative;
   margin: 40px auto;
     display: table;
-    width: 510px;
+  /*  width: 50%;*/
 }
 /*
 .checkboxFour input::after{
@@ -1198,10 +1222,12 @@ form{
       height: 20px;
       display: block;
 }*/
+/*.SendMessage-2 .checkboxFour input::after{*/
 .SendMessage-2 .checkboxFour input::after{
   background: #cb454c;
 }
-.checkboxFour input::before{
+/*.checkboxFour input::before{*/
+.checkboxFour::before{
   content: "";
   height: 20px;
   width: 20px;
@@ -1212,7 +1238,7 @@ form{
   cursor: pointer;
 
 }
-.checkboxFour input::after{
+.checkboxFour::after{
   content: "";
   height: 14px;
   width: 14px;
@@ -2121,7 +2147,6 @@ font-style: italic;
   position: relative;
   z-index: 9;
   left: 14px;
-  font-family: Calibri, sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: #636363;
@@ -2130,6 +2155,57 @@ font-style: italic;
   line-height: 48px;
   float: left;
   padding-right: 21px;
+}
+.top-price-content{
+  display: table;
+  margin-bottom: 20px;
+  position: relative;
+}
+.top-price-content img,
+.top-price-content h3{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.top-price-content img{
+  padding-right: 10px;
+}
+.top-price-content h3{
+    padding: 0;
+}
+.top-price-content span{
+  font-weight: bold;
+  background: #cb454c;
+  color: #fff;
+      padding: 5px 10px 5px 0;
+  top: -50px;
+  position: relative;
+}
+.top-price-content span::before{
+  content: "";
+      /* width: 0; */
+      display: block;
+      position: absolute;
+      /* height: 0; */
+      top: 0px;
+      left: -15px;
+      border-top: 18px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 15px solid #cb454c;
+}
+.total-price,
+.price-content h3,
+.custom-filed-text{
+    font-family: Calibri, sans-serif;
+}
+.price-content h3{
+  font-size: 30px;
+  font-weight: bold;
+}
+.total-price{
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
 }
 .calculate-page-walp input:focus{
     border: 1px solid #d9d9d9;
@@ -2169,6 +2245,7 @@ font-style: italic;
 }
 .table-page-calc{
   display: table;
+  position: relative;
 }
 .table-page-calc span,
 .pagec-calc-field-total-debt-fwalp.property{
@@ -2176,19 +2253,20 @@ font-style: italic;
 }
 
 .question-page-calc{
-    padding: 5px;
-    text-align: center;
-    background: #cb454c;
-    position: relative;
-    width: 20px;
-    line-height: 20px;
-    font-size: 23px;
-    display: inline-block!important;
-    color: #fff;
-    border-radius: 50%;
-    cursor: pointer;
-    height: 20px;
-    margin-left: 10px;
+  padding: 5px;
+  text-align: center;
+  background: #cb454c;
+  position: absolute;
+  width: 20px;
+  line-height: 22px;
+  font-size: 23px;
+  display: table-cell;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  margin: 10px 0 10px 10px;
+  top: 0;
 }
 .align-center{
   text-align: center;
@@ -2212,7 +2290,17 @@ font-style: italic;
 }
 
 #result-calculate{
-      margin-bottom: 50px;
+  margin-bottom: 50px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  height: 0;
+}
+.overflow-hidden{
+  overflow: hidden;
+}
+.choose-plan-title{
+    font-size: 30px;
+    text-align: center;
 }
 /*
 *  Price Tables
@@ -2222,11 +2310,32 @@ font-style: italic;
   padding: 0;
 }
 .table-prices li{
+  cursor: pointer;
   list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   float: left;
-  width: 33.33%;
+  width: 32.33%;
   position: relative;
+  margin-right: 1%;
 
+
+}
+.price-overlay,
+.table-prices .price-part.third,
+.table-prices .price-part.second,
+.table-prices .price-part.first{
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.active-price-choose{
+  border-color: #cb454c!important;
+}
+.active-price-choose .price-overlay{
+    opacity: 0!important;
+}
+.no-margin-right{
+  margin-right: 0!important;
 }
 .price-content{
   background-color: #f9f9f9;
@@ -2240,9 +2349,25 @@ font-style: italic;
 .table-price li{
   width: 100%;
   float: none;
+  display: table;
+  margin-bottom: 20px;
 }
+.table-price li p,
+.table-price li img{
+  display: table-cell;
+}
+.table-price li img{
+
+  margin-right: 15px!important;
+}
+.table-prices .price-part.third,
+.table-prices .price-part.second,
 .table-prices .price-part.first{
   border: 2px solid #ff9d08;
+
+}
+.table-price li p{
+  width: inherit;
 
 }
 .first .price-overlay{
@@ -2253,8 +2378,36 @@ font-style: italic;
     position: absolute;
     top: -1%;
     right: -2px;
+    opacity: 1;
+}
+.second .price-overlay {
+      width: 50%;
+      height: 45%;
+      background: #fff;
+      display: block;
+      position: absolute;
+      bottom: -1%;
+      right: -2px;
+      opacity: 1;
 }
 
+.tables-ten-mounth-payments li{
+  width: 100%;
+}
+
+.tables-ten-mounth-payments li p{
+  display: inline-block;
+}
+
+.tables-ten-mounth-payments{
+  margin: 0;
+}
+.price-payment-result{
+  height: 0;
+  margin-top: 20px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
 
 .hamburger {
   padding: 15px 15px;
@@ -2562,6 +2715,26 @@ right: 18px;
   color: #ffe1c2!important;
 
 }
+.accrotdions-blocks h3{
+    text-align: center;
+    font-size: 13px!important;
+    font-weight: normal!important;
+    position: relative;
+    z-index: 4;
+    display: table;
+    cursor: pointer;
+    padding: 0px 13px;
+    margin: 0 auto 20px auto;
+    background: #cb454c;
+}
+.accrotdions-blocks::before{
+  content: "";
+  display: block;
+  position: relative;
+  top: 16px;
+  border-top: 2px solid #ffe1c2;
+}
+
 /*
 * Create Doc
 */
@@ -2618,7 +2791,15 @@ right: 18px;
     float: none;
     margin-bottom: 12px;
   }
-
+  .block-use-our-walp-2 {
+    height: auto;
+  }
+  .block-use-our-walp-2 img{
+    display: none;
+  }
+  .block-use-our-walp-2 p{
+    width: 100%;
+  }
   .sub-menu{
     position: relative;
     top: 0;
@@ -2711,10 +2892,10 @@ right: 18px;
   }
   .feature-service {
     margin: 50px 54px 50px;
-  }
+  }/*
   #first-section-service img{
     max-width: 100%;
-  }
+  }*/
   .dont-wait-block p{
         display: block;
   }
@@ -2750,9 +2931,26 @@ right: 18px;
   }
 }
 @media  (max-width: 991px){
+  .first-block-img{
+    height: 200px;
+  }
+  .feature-service-one img{
+    display: inline;
+  }
+  .feature-service-one div{
+    display: block;
+    width: 100%;
+  }
   #five-step .block-five-step-arrow a,
   #five-step .block-five-step-arrow img{
     display: none;
+  }
+  .dont-wait-block{
+    padding: 35px 30px!important;
+  }
+  .col-md-9,
+  .block-submit{
+    width: 100%;
   }
   #five-step .col-five-step-block{
     text-align: left;
@@ -2935,6 +3133,9 @@ right: 18px;
 
 }
 @media  (max-width: 490px){
+  .review-content{
+    padding: 15px 0 0 0;
+  }
   .tooltip-five-step{
     width: 100%!important;
     -webkit-box-sizing: border-box;
@@ -2948,11 +3149,58 @@ right: 18px;
   .tooltip-five-step::before{
     display: none;
   }
+  .live-idji-block-bottom img,
+  .live-idji-block-bottom p,
+  .live-idji-block img,
+  .live-idji-block p{
+    display: block;
+  }
+  .live-idji-block-bottom img,
+  .live-idji-block img{
+    margin-bottom: 10px;
+  }
 
 }
 @media  (max-width: 767px){
   .modal-form{
     width: 100%;
+  }
+  .Plus-block h3,
+  .Plus-minus-block h3{
+    font-size: 16px;
+  }
+  .plus-minus-block-bottom img{
+    display: none;
+  }
+  #Offer h3 {
+    font-size: 17px;
+  }
+  .block-calc p{
+        display: block;
+        text-align: center;
+        margin-bottom: 22px;
+        line-height: 45px;
+        width: auto;
+  }
+  .block-calc div, .block-calc img{
+    display: block!important;
+    margin: 0 auto;
+
+  }
+  .form-policy a,
+  .form-policy {
+    font-size: 11px;
+  }
+  .img-warn{
+    position: relative;
+    margin-right: 0;
+    float: none;
+    margin-bottom: 19px;
+    top: 10px;
+    display: block;
+  }
+  .service-text-block h3 {
+    font-size: 20px;
   }
   .title-section {
     z-index: 9;
@@ -2999,8 +3247,8 @@ right: 18px;
   }
   .title-section.service,
   .title-section {
-    font-size: 28px;
-    line-height: 42px;
+    font-size: 21px!important;
+    line-height: 35px!important;
   }
   .Plus-block p, .Plus-minus-block p {
     width: 100%;
@@ -3047,8 +3295,11 @@ right: 18px;
     display: block;
     margin: 0 auto;
   }
-  .HowWeWorkBlockTab li:last-child{
-    margin-right: 208px;
+  .HowWeWorkBlockTab li a::after{
+    display: none;
+  }
+  #how-we-work img {
+    height: 100px;
   }
   .label--checkbox {
     width: 100%;
@@ -3057,8 +3308,9 @@ right: 18px;
     width: 100%;
   }
   .title-our-service {
-    font-size: 19px;
+    font-size: 13px;
     padding: 9px 19px;
+    line-height: 25px;
   }
   .reviews-second-block, .reviews-first-block{
     display: table;
@@ -3108,4 +3360,9 @@ right: 18px;
     width: 100%;
     padding-right: 0;
   }
+}
+@media  (max-width: 400px){
+  .right-top-header {
+     float: left;
+ }
 }

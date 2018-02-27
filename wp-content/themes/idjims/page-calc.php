@@ -47,7 +47,7 @@ get_header(); ?>
           <div class="calculator-page">
 						<div class="field"><label>Единиц имущества</span></label>
 
-	            <input type="number" min="1" name="valuecollateral" class="calculate-valueincome"  value="1000"  required>
+	            <input type="number" min="1" name="valuecollateral" class="calculate-valueincome"  value=""  required>
 
           	</div>
           </div>
@@ -75,6 +75,7 @@ get_header(); ?>
 							• И иное имущество, на которое согласно статье 446 ГПК РФ может быть обращено взыскание.
 							</span>
 							</div>
+
 					</div>
 
 
@@ -101,23 +102,32 @@ get_header(); ?>
   </form>
 
 
-  <div id="result-calculate">
-
-		<ul class="table-prices">
+  <div id="result-calculate" class="clearfix overflow-hidden">
+				<h3 class="choose-plan-title">Выберите план</h3>
+		<ul class="table-prices clearfix">
 				<li class="price-part first">
 					<div class="price-overlay"></div>
 					<div class="price-content">
+							<div class="top-price-content">
 						  <img  src="<?php  echo get_theme_file_uri( '/assets/images/cup-half.png' ) ?>">
-							<h3>Пакет Эконом</h3>
+							<h3>Пакет</br> Эконом</h3>
+								<span>ОПТИМАЛЬНЫЙ</span>
+							</div>
 							<ul class="table-price">
-								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>">Заключим договор и оформим нотариальную доверенность </li>
-								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>">Предоставим независимого финансового управляющего</li>
-								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>">Соберем все необходимые документы, составим и направим запросы в ведомства</li>
-								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>">Проконтролируем процесс подачи заявления в арбитражный суд</li>
-								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>">Возьмем на себя все рутинные дела по банкротству</li>
-								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>">Оплатим судебные издержки</li>
- 
+								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Заключим договор и оформим нотариальную доверенность</p></li>
+								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Предоставим независимого финансового управляющего</p></li>
+								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Соберем все необходимые документы, составим и направим запросы в ведомства</p></li>
+								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Проконтролируем процесс подачи заявления в арбитражный суд</p></li>
+								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Возьмем на себя все рутинные дела по банкротству</p></li>
+
 							</ul>
+
+
+
+								<div class="total-price">Итог: <span>0</span>  руб.
+
+							</div>
+							<div class="price-payment-result clearfix"> </div>
 					</div>
 
 
@@ -126,14 +136,54 @@ get_header(); ?>
 				<li class="price-part second">
 							<div class="price-overlay"></div>
 							<div class="price-content">
+								<div class="top-price-content">
 							  <img  src="<?php  echo get_theme_file_uri( '/assets/images/cup-third.png' ) ?>">
-								<h3>Пакет Стандарт</h3>
+								<h3>Пакет</br> Стандарт</h3>
+								</div>
+								<ul class="table-price">
+									<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Заключим договор и оформим нотариальную доверенность</p></li>
+									<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Предоставим независимого финансового управляющего</p></li>
+									<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Соберем все необходимые документы, составим и направим запросы в ведомства</p></li>
+									<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Проконтролируем процесс подачи заявления в арбитражный суд</p></li>
+									<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Возьмем на себя все рутинные дела по банкротству</p></li>
+									<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check-red.png' ) ?>"><p>Оплатим судебные издержки</p></li>
+
+								</ul>
+
+									<div class="total-price">Итог: <span>0</span>  руб.
+
+								</div>
+								<div class="price-payment-result clearfix">
+
+								</div>
 							</div>
 				</li>
 
-				<li class="price-part third">
+				<li class="price-part third no-margin-right">
+					<div class="price-overlay"></div>
+					<div class="price-content">
+							<div class="top-price-content clearfix">
 						  <img  src="<?php  echo get_theme_file_uri( '/assets/images/cup-full.png' ) ?>">
-							<h3>Пакет VIP</h3>
+							<h3>Пакет</br> VIP</h3>
+							</div>
+							<ul class="table-price">
+								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Заключим договор и оформим нотариальную доверенность</p></li>
+								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Предоставим независимого финансового управляющего</p></li>
+								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Соберем все необходимые документы, составим и направим запросы в ведомства</p></li>
+								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Проконтролируем процесс подачи заявления в арбитражный суд</p></li>
+								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Возьмем на себя все рутинные дела по банкротству</p></li>
+								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check.png' ) ?>"><p>Оплатим судебные издержки</p></li>
+								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check-red.png' ) ?>"><p>Гарантия возврата денег</p></li>
+								<li><img  src="<?php  echo get_theme_file_uri( '/assets/images/price-check-red.png' ) ?>"><p>Общаемся с коллекторами за Вас</p></li>
+
+							</ul>
+
+							<div class="total-price">Итог: <span>0</span> руб.
+
+
+							</div>
+							<div class="price-payment-result clearfix"> </div>
+					</div>
 				</li>
 
 		</ul>

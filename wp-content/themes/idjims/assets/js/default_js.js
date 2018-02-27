@@ -12,9 +12,10 @@ InitOpenContentReview();
 InitUISliderPage();
 InitShowTooltip();
 InitUISliderPageProperty();
+InitActionPriceTables();
 InitSliderReview();
   jQuery(".tabs").lightTabs();
-	jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
+
 
 
 if(jQuery(window).width() > 1200){
@@ -53,7 +54,26 @@ jQuery( "form input"  ).click(function(){
 				}
 
 			});
+
+			jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
 });
+jQuery( "form input"  ).focus(function() {
+	jQuery(this).parent().parent().find('label').hide();
+	var $this = jQuery(this);
+	$this.mouseleave(function() {
+		var $thisvalue = $this.val();
+
+		if(!$thisvalue.length){
+			$this.parent().parent().find('label').show();
+		}
+
+	});
+
+
+	jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
+
+});
+/*
 jQuery( "form input"  ).hover(function() {
 	jQuery(this).parent().parent().find('label').hide();
 	var $this = jQuery(this);
@@ -66,6 +86,7 @@ jQuery( "form input"  ).hover(function() {
 
 	});
 });
+*/
 
 jQuery( "form label"  ).click(function(){
 			var $this = jQuery(this);
@@ -81,6 +102,14 @@ jQuery( "form label"  ).click(function(){
 				}
 
 			});
+
+
+			jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
+});
+
+jQuery( "form input"  ).focusout(function() {
+
+		jQuery('.telephone').inputmask();
 });
 /*
 * Modal Form
@@ -124,7 +153,7 @@ jQuery('.form-calculate input[type=checkbox]').change(function() {
 jQuery( ".form-calculate" ).submit(function(e) {
 
 	e.preventDefault();
-	jQuery('#result-calculate').html('');
+	//jQuery('#result-calculate').html('');
 	var valuesumm =  jQuery( ".slider-result-input" ).val();
 	var valueincome =  jQuery( ".calculate-valueincome" ).val();
 	var valuecredits = jQuery( ".calculate-valuecredits" ).val();
@@ -154,8 +183,11 @@ jQuery( ".form-calculate" ).submit(function(e) {
 				if(checkproperty == 1){
 
 							$addproperty = Number(parseInt(valueproperty) + 10000);
+
 				}else{
+
 						$addproperty = 0;
+
 				}
 				addText = '';
 			}
@@ -166,7 +198,15 @@ jQuery( ".form-calculate" ).submit(function(e) {
 
 		jQuery('html, body').animate({ scrollTop: jQuery('#result-calculate').offset().top-100 }, 500);
 
-		jQuery('#result-calculate').html('Cуд может утвердить план реструктуризации, нужна консультация специалиста, подробнее можно прочесть в соответствующем разделе сайта </br> <div>Цена наших услуг:'+ $resultprice+' руб.</div></br><p>'+ addText+'</p>');
+		//jQuery('#result-calculate').html('Cуд может утвердить план реструктуризации, нужна консультация специалиста, подробнее можно прочесть в соответствующем разделе сайта </br> <div>Цена наших услуг:'+ $resultprice+' руб.</div></br><p>'+ addText+'</p>');
+		jQuery('.price-part .total-price span').html('');
+		jQuery('.price-part.second .total-price span').html($resultprice);
+		jQuery('.price-part.first .total-price span').html($resultprice - parseInt(40000));
+		jQuery('.price-part.third .total-price span').html($resultprice + parseInt(50000));
+
+		jQuery('#result-calculate').css('height', jQuery('.table-prices').height());
+		jQuery('#result-calculate').removeClass('overflow-hidden');
+
 
 
 	}
@@ -195,6 +235,17 @@ if(jQuery(window).width() < 1200){
 			 jQuery(this).toggleClass("accordion-open");
 		 }).next().stop().hide();
 }
+
+/**
+* Accordion menu  block in first bllocks
+*/
+
+
+
+	jQuery('.accrotdions-blocks').find('h3').click(function(){
+			 jQuery(this).next().stop().slideToggle();
+			 jQuery(this).toggleClass("accordion-open");
+		 }).next().stop().hide();
 
 
 
@@ -275,9 +326,131 @@ if(jQuery('.add-first-form, .add-second-form').length){
 
 
 }
+/*
+* Response Height in bloks
+*/
+
+jQuery('.benefit-cols .benefit-block').equalHeightResponsive();
+jQuery('.live-idji-walp .live-idji-block').equalHeightResponsive();
+jQuery('.dont-wait-block-auto-height .dont-wait-block').equalHeightResponsive();
+
 
 // end redy function
 });
+
+/*
+* Action for Price Tables
+*/
+function InitActionPriceTables(){
+
+
+jQuery('.table-prices .price-part').click(function(e){
+	e.preventDefault();
+		var $this = jQuery(this);
+		$this.parent().find('.price-part').removeClass('active-price-choose');
+		$this.parent().find('.price-payment-result').css('height', '0');
+		$this.parent().find('.price-payment-result').html('');
+
+
+		$this.addClass('active-price-choose');
+
+		var $method = 'percent';   // may be  'percent' and  'plain'
+		var $currentPrice = $this.find('.total-price span').html();
+		var $firstTwoPayment;
+		var $firstMountPayment;
+		var $secondMountPayment;
+		var $mountPayment;
+		var $fiveMountPayment;
+		var lastPayment;
+
+		if($method == 'percent'){
+
+			 $firstMountPayment = parseInt($currentPrice)/5 ;
+			 $secondMountPayment = parseInt($currentPrice) /4;
+			 $firstTwoPayment = $firstMountPayment + $secondMountPayment;
+
+			 $mountPayment = parseInt($currentPrice)/10;
+
+
+		}else{
+
+			$firstTwoPayment = parseInt(20000+25000);
+			$firstMountPayment =  parseInt(20000);
+			$secondMountPayment =  parseInt(25000);
+			$mountPayment = parseInt(10000);
+
+
+
+		}
+
+
+	  var  $priceWithOutFirstTwoMouth =  parseInt($currentPrice) - $firstTwoPayment;
+
+		var Subtotal = $priceWithOutFirstTwoMouth - $fiveMountPayment;
+		var Subtotal = Math.floor($priceWithOutFirstTwoMouth/$mountPayment);
+
+
+		$fiveMountPayment = parseInt($mountPayment * Subtotal);
+
+ 		var $lastMountPayment = parseInt($priceWithOutFirstTwoMouth - $fiveMountPayment);
+ 		var $lastMountPayment = parseInt($priceWithOutFirstTwoMouth - $fiveMountPayment);
+
+		if($lastMountPayment > 0 ){
+
+				lastPayment =  true;
+
+		}else{
+
+				lastPayment =  false;
+		}
+		//lastPayment = false;
+		if(lastPayment){
+			var template = '<li><p>3 месяц: <span>'+$mountPayment+'</span> руб.</p></li>';
+			var template2 = '';
+			var temporarytemplate = '';
+			var redytemplate;
+			var maxvalue = Subtotal + parseInt(3);
+			var lastmounth = maxvalue +1;
+
+			for(var i = 4; i <= maxvalue; i++) {
+
+				temporarytemplate =  '<li><p>'+i+' месяц: <span>'+$mountPayment+'</span> руб.</p></li>';
+				template2 = template2.concat(temporarytemplate);
+
+			}
+			redytemplate = template.concat(template2);
+
+			redytemplate = redytemplate.concat('<li><p>'+lastmounth+' месяц: <span>'+$lastMountPayment+'</span> руб.</p></li>');
+			//console.log(redytemplate);
+
+
+			$this.find('.price-payment-result').html('<h3> Оплата</h3>'+
+						'<ul class="tables-ten-mounth-payments clearfix">'+
+						'<li>'+
+							'<p>1 месяц Аванс: <span>'+$firstMountPayment+'</span> руб.</p>'+
+						'</li>'+
+						'<li>'+
+						'<p>2 месяц Депозит суда: <span>'+$secondMountPayment+'</span> руб.</p>'+
+						'</li>'+redytemplate+'</ul>');
+
+
+		var heighBlock = jQuery('.tables-ten-mounth-payments').height();
+		$this.find('.price-payment-result').css( 'height', heighBlock +36);
+
+			//	$this.find('.price-payment-result').html();
+		}else{
+			$this.find('.price-payment-result').html('Оплата суммы происходит в рассрочку по 10 000 то в месяц, подробности у специалиста');
+
+		}
+
+
+});
+
+
+}
+
+
+
 
 /*
 * Show tooltip in Calc Page
@@ -346,7 +519,8 @@ jQuery('.slider-wallpaper').slick({
 	dots: true,
   autoplay: true,
   speed:1000,
-
+	prevArrow: jQuery('.slider-nav .slider-arrow-left'),
+  nextArrow: jQuery('.slider-nav .slider-arrow-right')
 
 });
 
@@ -450,8 +624,8 @@ function InitUISlider(){
 
 jQuery( "#slider-ui" ).slider({
  value : 0,//Значение, которое будет выставлено слайдеру при загрузке
- min : 1000,//Минимально возможное значение на ползунке
- max : 1500000,//Максимально возможное значение на ползунке
+ min : 500000,//Минимально возможное значение на ползунке
+ max : 15000000,//Максимально возможное значение на ползунке
  step : 1000,//Шаг, с которым будет двигаться ползунок
  create: function( event, ui ) {
 	 val = jQuery( "#slider-ui" ).slider("value");//При создании слайдера, получаем его значение в перемен. val
@@ -461,7 +635,7 @@ jQuery( "#slider-ui" ).slider({
  		 			jQuery( "#valueidslider" ).html( ui.value );//При изменении значения ползунка заполняем элемент с id contentSlider
 					var $result = ui.value*1.3-100000;
 
-					if($result > 0){
+					if($result > 0 && ui.value >= 500000 ){
 						jQuery( ".result-calc span" ).html( $result );//При изменении значения ползунка заполняем элемент с id contentSlider
 					}else{
 						jQuery( ".result-calc span" ).html( '0' );
@@ -477,8 +651,8 @@ function InitUISliderPage(){
 	var $this = jQuery( ".slider-ui" );
 $this.slider({
  value : 0,//Значение, которое будет выставлено слайдеру при загрузке
- min : 1000,//Минимально возможное значение на ползунке
- max : 1500000,//Максимально возможное значение на ползунке
+ min : 500000,//Минимально возможное значение на ползунке
+ max : 15000000,//Максимально возможное значение на ползунке
  step : 1000,//Шаг, с которым будет двигаться ползунок
  create: function( event, ui ) {
 	 val = jQuery( $this ).slider("value");//При создании слайдера, получаем его значение в перемен. val

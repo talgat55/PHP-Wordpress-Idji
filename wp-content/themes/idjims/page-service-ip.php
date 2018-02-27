@@ -9,7 +9,7 @@
      <div class="clearfix">
      <div class="col-md-3">
 
-       <img  src="<?php  echo get_theme_file_uri( '/assets/images/human-2.png' ) ?>">
+       <img  class="first-block-img"   src="<?php  echo get_theme_file_uri( '/assets/images/human-2.png' ) ?>">
 
      </div>
      <div class="col-md-9 z-up">
@@ -21,7 +21,9 @@
         </p>
         <h3>Какой бы из вариантов Вам не подошел, компания ИДЖИС сможет предложить оптимальное решение!</h3>
 
-
+        <div class="accrotdions-blocks">
+          <h3>Читатаь подробнее</h3>
+          <div>
         <p class="with-quote">
           Реструктуризация долга - процедура банкротства, в ходе которой приостанавливается начисление штрафов и неустоек, уменьшается процент по займам, а судом утверждается план реструктуризации, в течении которого под наблюдением финансового управляющего должник может выйти из просрочки и рассчитаться с долгами, сохранив залоговое имущество.
         </p>
@@ -29,6 +31,9 @@
         <p class="with-quote">
           Реализация имущества - процедура банкротства, при которой залоговое имущество подлежит продаже с торгов, а вырученные средства идут на погашение оставшихся долгов по ипотеке. В этом случае оставшиеся долги, в том числе не ипотечные, просто списываются.
         </p>
+      </div>
+
+    </div>
      </div>
      </div>
      <div class="feature-service clearfix">
@@ -49,13 +54,13 @@
       Если в ближайшее время Вы не найдете способ вернуться к платежам, то стоит воспользоваться процедурой банкротства. Иначе могут начаться необратимые последствия:
     </p>
        <div class="clearfix">
-       <div class="col-md-6">
+       <div class="col-md-6  dont-wait-block-auto-height">
          <div class="dont-wait-block">
             <img  src="<?php  echo get_theme_file_uri( '/assets/images/dontwait1-2.png' ) ?>">
              <p>С каждым днем долг будет расти подобно снежному кому: из-за начисленных процентов, пеней и неустоек его размер будет увеличиваться</p>
          </div>
        </div>
-       <div class="col-md-6 no-padding-right">
+       <div class="col-md-6  dont-wait-block-auto-height no-padding-right">
          <div class="dont-wait-block">
             <img   src="<?php  echo get_theme_file_uri( '/assets/images/dontwait2-2.png' ) ?>">
              <p>
@@ -63,7 +68,7 @@
              </p>
          </div>
        </div>
-       <div class="col-md-6">
+       <div class="col-md-6  dont-wait-block-auto-height">
          <div class="dont-wait-block">
             <img  src="<?php  echo get_theme_file_uri( '/assets/images/dontwait3-2.png' ) ?>">
              <p>
@@ -71,7 +76,7 @@
              </p>
          </div>
        </div>
-       <div class="col-md-6 no-padding-right">
+       <div class="col-md-6  dont-wait-block-auto-height no-padding-right">
          <div class="dont-wait-block">
             <img  src="<?php  echo get_theme_file_uri( '/assets/images/dontwait4-2.png' ) ?>">
              <p>
@@ -463,7 +468,7 @@
       Мы сопроводим Ваше банкротство от сбора первичных документов, до решения суда и освобождения Вас от долгов. Наша главная цель — Ваша свобода от долгов!
     </p>
        <div class="clearfix">
-       <div class="col-md-6">
+       <div class="col-md-6 live-idji-walp">
          <div class="live-idji-block">
             <img  src="<?php  echo get_theme_file_uri( '/assets/images/live1.png' ) ?>">
              <p>
@@ -472,7 +477,7 @@
 
          </div>
        </div>
-       <div class="col-md-6 no-padding-right">
+       <div class="col-md-6 live-idji-walp no-padding-right">
          <div class="live-idji-block">
             <img   src="<?php  echo get_theme_file_uri( '/assets/images/live2.png' ) ?>">
              <p>
@@ -480,7 +485,7 @@
                </p>
          </div>
        </div>
-       <div class="col-md-6">
+       <div class="col-md-6 live-idji-walp">
          <div class="live-idji-block">
             <img  src="<?php  echo get_theme_file_uri( '/assets/images/live3.png' ) ?>">
              <p>
@@ -488,7 +493,7 @@
             </p>
          </div>
        </div>
-       <div class="col-md-6 no-padding-right">
+       <div class="col-md-6  live-idji-walp no-padding-right">
          <div class="live-idji-block">
             <img  src="<?php  echo get_theme_file_uri( '/assets/images/live5.png' ) ?>">
              <p>
@@ -520,25 +525,33 @@
 
          $the_query_slider2 = new WP_Query($argsslideer2);
 
-           while( $the_query_slider2->have_posts() ) :
-               $the_query_slider2->the_post();
-               $post_id_slider = $the_query_slider2->post->ID;
-             $thumb   = get_post_thumbnail_id($post_id_slider);
-             $img_url = wp_get_attachment_url( $thumb,'full'); // Get img URL
-           //  $image   = aq_resize( $img_url, 1920, 720, true ); // Resize & crop img
+         while( $the_query_slider2->have_posts() ) :
+             $the_query_slider2->the_post();
+             $post_id_slider = $the_query_slider2->post->ID;
+           $thumb   = get_post_thumbnail_id($post_id_slider);
+           $img_url = wp_get_attachment_url( $thumb,'full'); // Get img URL
+           $ImagesClient = rwmb_meta( 'images_meta', array( 'size' => 'full' ),$post_id_slider);
+         //  $image   = aq_resize( $img_url, 1920, 720, true ); // Resize & crop img
 
-           //	$image ? $image:$img_url;
-           $CityClient = get_post_meta($post_id_slider, 'city_meta', true);
+         //	$image ? $image:$img_url;
+         $CityClient = get_post_meta($post_id_slider, 'city_meta', true);
 
-           echo '<div  class="slider-walpaper-client" >
-                     <img src="'.esc_url( $img_url ).'">
-                 <div class="slider-client-title">'.get_the_title($post_id_slider).'</div>
-                 <div class="client-city">'.$CityClient.'</div>
-                 <div class="slider-content-client">
-                   '.get_the_content($post_id_slider).'
-                 </div>
-               </div>';
-           endwhile;
+         echo '<div  class="slider-walpaper-client" >';
+
+         foreach ($ImagesClient as $key => $value) {
+             $value   = aq_resize( $value['full_url'], 173, 173, true );
+               echo '<img src="'.$value.'">';
+           break;
+         }
+               echo '
+               <div class="slider-client-title">'.get_the_title($post_id_slider).'</div>
+               <div class="client-city">'.$CityClient.'</div>
+               <div class="slider-content-client">
+
+                 '.my_string_limit_words(get_the_content($post_id_slider),20).'
+               </div>
+             </div>';
+         endwhile;
          ?>
 
 

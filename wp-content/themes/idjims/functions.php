@@ -48,6 +48,7 @@ function th_scripts() {
  	wp_enqueue_script( 'slick.min', get_theme_file_uri(  '/assets/js/slick.min.js'),array(), '2' );
  	wp_enqueue_script( 'tabs', get_theme_file_uri(  '/assets/js/tabs.js'),array(), '2' );
  	wp_enqueue_script( 'jquery.inputmask', get_theme_file_uri(  '/assets/js/jquery.inputmask.js'),array(), '2' );
+ 	wp_enqueue_script( 'jquery.equalheightresponsive.min', get_theme_file_uri(  '/assets/js/jquery.equalheightresponsive.min.js'),array(), '2' );
  	wp_enqueue_script( 'jquery.ui-slider', get_theme_file_uri(  '/assets/js/jquery-ui.min.js'),array(), '2' );
 
 
@@ -307,4 +308,16 @@ if (isset($_POST['login_submit'])) {
 			echo 'false';
 
 		}
+}
+
+
+/*
+* Custom excerpt
+*/
+function my_string_limit_words($string, $word_limit){
+		$words = explode(' ', $string, ($word_limit + 1));
+		if( count($words) > $word_limit )
+			array_pop($words);
+	//	return implode(' ', $words).'... ';
+		return implode(' ', $words).'';
 }

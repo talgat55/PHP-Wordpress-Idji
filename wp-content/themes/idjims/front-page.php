@@ -58,7 +58,7 @@ get_header(); ?>
 </section>
 <section id="about">
 	<div class="container clearfix">
-      <div class="col-md-7">
+      <div class="col-md-7 text-justify" >
           <h1 class="title-section">Немного о нас</h1>
           <p>Мы знаем, как решить проблему с долгами КАЧЕСТВЕННО и НЕДОРОГО! </p>
           <p>Компания <b>ИДЖИС</b> специализируется на банкротствах физических лиц с момента принятия Законодателем соответствующих поправок в Федеральный закон
@@ -82,12 +82,12 @@ get_header(); ?>
     <div class="title-section">Что вы получите от обращения к нам?</div>
     <div class="col-md-6">
       <div class="block-use-our">
-        <div id="contentSlider">Общая сумма долга: <span id="valueidslider">1000</span> руб</div>
-        <div id="slider-ui" ></div>
+        <div id="contentSlider">Общая сумма долга: <span id="valueidslider">500000</span> руб</div>
+        <div  id="slider-ui"  ></div>
         <div class="block-calc clearfix">
           <img src="<?php  echo get_theme_file_uri( '/assets/images/mon-2.jpg' ) ?>">
           <p>Вы получите :</p>
-          <div class="result-calc"><span>0</span> руб.</div>
+          <div class="result-calc"><span>550000</span> руб.</div>
         </div>
       </div>
     </div>
@@ -130,47 +130,49 @@ get_header(); ?>
 <section id="benefit" class="padding-bottom">
   <div class="container">
     <div class="title-section center-white">Почему выгодно с нами работать?</div>
-    <div class="col-md-3">
+    <div>
+    <div class="col-md-3 benefit-cols">
         <div class="benefit-block">
           <img src="<?php  echo get_theme_file_uri( '/assets/images/shape6-2.jpg' ) ?>">
           <h3>Низкая стоимость процедуры</h3>
           <p>Работая с нашим управляющим напрямую, вы избегаете финансовых издержек, навязываемых посредниками.</p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 benefit-cols">
         <div class="benefit-block">
           <img src="<?php  echo get_theme_file_uri( '/assets/images/shape5-2.jpg' ) ?>">
           <h3>Профессионализм</h3>
           <p>Арбитражный управляющий - эксперт по банкротству, работа с которым— гарантия успешного завершения процедуры банкротства!</p>
         </div>
     </div>
-    <div class="col-md-3 no-padding-right">
+    <div class="col-md-3  benefit-cols no-padding-right">
         <div class="benefit-block">
           <img src="<?php  echo get_theme_file_uri( '/assets/images/shape4-2.jpg' ) ?>">
           <h3>Рассрочка платежа</h3>
           <p>Мы заботимся о своих клиентах и знаем, с какими финансовыми трудностями им пришлось столкнуться. Поэтому мы готовы дать Вам рассрочку по оплате за оказываемые услуги</p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 benefit-cols">
         <div class="benefit-block">
           <img src="<?php  echo get_theme_file_uri( '/assets/images/shape3-2.jpg' ) ?>">
           <h3>Гарантия возврата денег </h3>
           <p>Если суд не признает Вас банкротом— вернем деньги. Это прописано в договоре!</p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 benefit-cols">
         <div class="benefit-block">
           <img src="<?php  echo get_theme_file_uri( '/assets/images/shape2-2.jpg' ) ?>">
           <h3>Представительство в суде</h3>
           <p>Вам не придется лично присутствовать на судебных заседаниях— этим за Вас займется наш профессиональный юрист. Мы работаем-Вы отдыхаете!</p>
         </div>
     </div>
-    <div class="col-md-3 no-padding-right">
+    <div class="col-md-3 benefit-cols no-padding-right">
         <div class="benefit-block">
           <img src="<?php  echo get_theme_file_uri( '/assets/images/shape1-2.jpg' ) ?>">
           <h3>Юридическая поддержка</h3>
           <p>Заявление о банкротстве, ходатайства, возражения, отзывы и дополнения, справки и доверенности, запросы и переписка с кредиторами— за Вас все это сделает наш профессиональный юрист!</p>
         </div>
+    </div>
     </div>
 
   </div>
@@ -180,10 +182,10 @@ get_header(); ?>
     <div class="title-section center">Как мы осуществляем свою работу?</div>
     <div class="tabs">
     <ul class="HowWeWorkBlockTab">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
+      <li><a hrerf="#">1</a></li>
+      <li><a hrerf="#">2</a></li>
+      <li><a hrerf="#">3</a></li>
+      <li><a hrerf="#">4</a></li>
     </ul>
     <div>
           <div>
@@ -428,17 +430,25 @@ get_header(); ?>
               $post_id_slider = $the_query_slider2->post->ID;
             $thumb   = get_post_thumbnail_id($post_id_slider);
             $img_url = wp_get_attachment_url( $thumb,'full'); // Get img URL
+            $ImagesClient = rwmb_meta( 'images_meta', array( 'size' => 'full' ),$post_id_slider);
           //  $image   = aq_resize( $img_url, 1920, 720, true ); // Resize & crop img
 
           //	$image ? $image:$img_url;
           $CityClient = get_post_meta($post_id_slider, 'city_meta', true);
 
-          echo '<div  class="slider-walpaper-client" >
-                    <img src="'.esc_url( $img_url ).'">
+          echo '<div  class="slider-walpaper-client" >';
+
+          foreach ($ImagesClient as $key => $value) {
+              $value   = aq_resize( $value['full_url'], 173, 173, true );
+                echo '<img src="'.$value.'">';
+            break;
+          }
+                echo '
                 <div class="slider-client-title">'.get_the_title($post_id_slider).'</div>
                 <div class="client-city">'.$CityClient.'</div>
                 <div class="slider-content-client">
-                  '.get_the_content($post_id_slider).'
+
+                  '.my_string_limit_words(get_the_content($post_id_slider),20).'
                 </div>
               </div>';
           endwhile;
@@ -451,7 +461,7 @@ get_header(); ?>
 
         <a href="#" class="slider-arrow-right"><span class="icon-right-open"></span></a>
       </div>
-      <div class="block-link-client"><a href="#" class="link-client-more">Читать больше</a></div>
+      <div class="block-link-client"><a href="http://idgis.trekweb.ru/reviews/" class="link-client-more">Читать больше</a></div>
   </div>
 </section>
 

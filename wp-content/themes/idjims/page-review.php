@@ -55,15 +55,15 @@ get_header(); ?>
                       echo '
                           <div  class="slider-walpaper-review">
                               <div  class="slider-walpaper-review-border">
-                          '; 
-                          if($light_key == 0){
+                          ';
+                      //    if($light_key == 0){
                             echo '
                               <a    href="';
 
                               echo $fullurl;
 
                               echo '" data-lightbox="example-set-'.$uniq.'" class="review-link-overlay"><img src="'.get_theme_file_uri( '/assets/images/zoom-2.png' ).'"/></a>';
-                            }
+                          //  }
                       echo '
                                 <img src="'.$value.'"/>
                               </div>
@@ -81,7 +81,7 @@ get_header(); ?>
                   }
 
                 echo "</div>";
-                if($ImagesClient){
+              /*  if($ImagesClient){
                     $light_key_2 = 0;
                     foreach ($ImagesClient as $key => $value) {
                         $fullurl = $value['full_url'];
@@ -94,7 +94,7 @@ get_header(); ?>
 
                       $light_key_2++;
                     }
-                }
+                }*/
 
 
                  if(count($key_arr) > 1){

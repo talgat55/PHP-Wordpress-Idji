@@ -9,10 +9,10 @@
      <div class="clearfix">
      <div class="col-md-3  z-up">
 
-       <img  src="<?php  echo get_theme_file_uri( '/assets/images/human2-2.png' ) ?>">
+       <img class="first-block-img"   src="<?php  echo get_theme_file_uri( '/assets/images/human2-2.png' ) ?>">
 
      </div>
-     <div class="col-md-9">
+     <div class="col-md-9  z-up">
         <h3>Вам надоело платить по кредитам, которые не брали? Стали поручителем у недобросовестного человека? Оказались в тяжелой финансовой ситуации?</h3>
         <h3 style="color:white; padding-top: 10px;">Банкротство поручителя — Ваша возможность решить долговые проблемы законным путем!</h3>
         <p>
@@ -30,6 +30,9 @@
       </br>
         <p class="top-text-ip">В соответствии с ФЗ «О несостоятельности (банкротстве)» №127-ФЗ:</p>
       </br>
+      <div class="accrotdions-blocks">
+        <h3>Читатаь подробнее</h3>
+        <div>
         <p class="with-quote">
           «Гражданин вправе подать в арбитражный суд заявление о признании его банкротом в случае предвидения банкротства при наличии обстоятельств, очевидно свидетельствующих о том, что он не в состоянии исполнить денежные обязательства и (или) обязанность по уплате обязательных платежей в установленный срок…»
         </p>
@@ -41,6 +44,9 @@
         <p class="with-quote">
           В соответствии со ст. 195 УК РФ за действия, связанные с несвоевременным объявлением о своем банкротстве, могут лишить свободы на срок до 3 лет со штрафом до 200 тыс. руб.
         </p>
+      </div>
+
+    </div>
      </div>
      </div>
      <div class="feature-service-one z-up clearfix">
@@ -76,13 +82,13 @@
       Если в ближайшее время Вы не найдете способ вернуться к платежам, то стоит воспользоваться процедурой банкротства. Иначе могут начаться необратимые последствия:
     </p>
        <div class="clearfix">
-         <div class="col-md-6">
+         <div class="col-md-6  dont-wait-block-auto-height">
            <div class="dont-wait-block">
               <img  src="<?php  echo get_theme_file_uri( '/assets/images/dontwait1-2.png' ) ?>">
                <p>Войти в прежний график будет все сложнее, ведь долг станет только больше. Кредитные каникулы лишь усугубят ситуацию, лишив последней надежды сохранить бизнес</p>
            </div>
          </div>
-         <div class="col-md-6 no-padding-right">
+         <div class="col-md-6  dont-wait-block-auto-height no-padding-right">
            <div class="dont-wait-block">
               <img   src="<?php  echo get_theme_file_uri( '/assets/images/dontwait2-2.png' ) ?>">
                <p>
@@ -476,7 +482,7 @@
       Мы сопроводим Ваше банкротство от сбора первичных документов, до решения суда и освобождения Вас от долгов. Наша главная цель — Ваша свобода от долгов!
     </p>
        <div class="clearfix">
-       <div class="col-md-6">
+       <div class="col-md-6 live-idji-walp">
          <div class="live-idji-block">
             <img  src="<?php  echo get_theme_file_uri( '/assets/images/live1.png' ) ?>">
              <p>
@@ -485,7 +491,7 @@
 
          </div>
        </div>
-       <div class="col-md-6 no-padding-right">
+       <div class="col-md-6  live-idji-walp no-padding-right">
          <div class="live-idji-block">
             <img   src="<?php  echo get_theme_file_uri( '/assets/images/live2.png' ) ?>">
              <p>
@@ -493,7 +499,7 @@
                </p>
          </div>
        </div>
-       <div class="col-md-6">
+       <div class="col-md-6 live-idji-walp">
          <div class="live-idji-block">
             <img  src="<?php  echo get_theme_file_uri( '/assets/images/live3.png' ) ?>">
              <p>
@@ -501,7 +507,7 @@
             </p>
          </div>
        </div>
-       <div class="col-md-6 no-padding-right">
+       <div class="col-md-6  live-idji-walp no-padding-right">
          <div class="live-idji-block">
             <img  src="<?php  echo get_theme_file_uri( '/assets/images/live5.png' ) ?>">
              <p>
@@ -533,25 +539,33 @@
 
          $the_query_slider2 = new WP_Query($argsslideer2);
 
-           while( $the_query_slider2->have_posts() ) :
-               $the_query_slider2->the_post();
-               $post_id_slider = $the_query_slider2->post->ID;
-             $thumb   = get_post_thumbnail_id($post_id_slider);
-             $img_url = wp_get_attachment_url( $thumb,'full'); // Get img URL
-           //  $image   = aq_resize( $img_url, 1920, 720, true ); // Resize & crop img
+         while( $the_query_slider2->have_posts() ) :
+             $the_query_slider2->the_post();
+             $post_id_slider = $the_query_slider2->post->ID;
+           $thumb   = get_post_thumbnail_id($post_id_slider);
+           $img_url = wp_get_attachment_url( $thumb,'full'); // Get img URL
+           $ImagesClient = rwmb_meta( 'images_meta', array( 'size' => 'full' ),$post_id_slider);
+         //  $image   = aq_resize( $img_url, 1920, 720, true ); // Resize & crop img
 
-           //	$image ? $image:$img_url;
-           $CityClient = get_post_meta($post_id_slider, 'city_meta', true);
+         //	$image ? $image:$img_url;
+         $CityClient = get_post_meta($post_id_slider, 'city_meta', true);
 
-           echo '<div  class="slider-walpaper-client" >
-                     <img src="'.esc_url( $img_url ).'">
-                 <div class="slider-client-title">'.get_the_title($post_id_slider).'</div>
-                 <div class="client-city">'.$CityClient.'</div>
-                 <div class="slider-content-client">
-                   '.get_the_content($post_id_slider).'
-                 </div>
-               </div>';
-           endwhile;
+         echo '<div  class="slider-walpaper-client" >';
+
+         foreach ($ImagesClient as $key => $value) {
+             $value   = aq_resize( $value['full_url'], 173, 173, true );
+               echo '<img src="'.$value.'">';
+           break;
+         }
+               echo '
+               <div class="slider-client-title">'.get_the_title($post_id_slider).'</div>
+               <div class="client-city">'.$CityClient.'</div>
+               <div class="slider-content-client">
+
+                 '.my_string_limit_words(get_the_content($post_id_slider),20).'
+               </div>
+             </div>';
+         endwhile;
          ?>
 
 
