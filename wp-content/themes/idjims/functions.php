@@ -30,6 +30,8 @@ if(!is_home()){
 */
 include_once('inc/aq_resizer.php');
 
+
+
 }
 
 /*
@@ -295,19 +297,28 @@ if (isset($_POST['login_submit'])) {
 			$creds['remember'] = true;
 			$user = wp_signon( $creds, false );
 			if ( is_wp_error($user) ) {
-			echo $user->get_error_message();
+			//echo $user->get_error_message();
+
+
+
+			 $_SESSION['error_login'] =  $user->get_error_message();
+
+
 			}
 			if ( !is_wp_error($user) ) {
-				wp_redirect(home_url('wp-admin'));
 
+
+				wp_redirect( home_url() );
+				exit;
 			}
 
 
 		} else{
 
-			echo 'false';
+			 $_SESSION['error_login'] =  'Не соответсвие входных данных. попробуйте снова';
 
 		}
+
 }
 
 

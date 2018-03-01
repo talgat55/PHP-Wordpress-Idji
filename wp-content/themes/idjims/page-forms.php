@@ -7,7 +7,7 @@ get_header(); ?>
 
 
 <div class="wrap">
-	<div class="container">
+	 
     <?php
       while ( have_posts() ) : the_post();
 
@@ -21,7 +21,7 @@ get_header(); ?>
 
       endwhile;
      ?>
-	</div><!-- #primary -->
+
 </div><!-- .wrap -->
 
 <?php get_footer();

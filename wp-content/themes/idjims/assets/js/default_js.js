@@ -13,6 +13,7 @@ InitUISliderPage();
 InitShowTooltip();
 InitUISliderPageProperty();
 InitActionPriceTables();
+InitChooseOld();
 InitSliderReview();
   jQuery(".tabs").lightTabs();
 
@@ -42,7 +43,7 @@ if(jQuery(window).width() > 1200){
 /*
 * hide label in form
 */
-
+/*
 jQuery( "form input"  ).click(function(){
 			jQuery(this).parent().parent().find('label').hide();
 			var $this = jQuery(this);
@@ -50,13 +51,25 @@ jQuery( "form input"  ).click(function(){
 				var $thisvalue = $this.val();
 
 				if(!$thisvalue.length){
+
 					$this.parent().parent().find('label').show();
+
 				}
+				var allinputs = jQuery( "form input"  ).val();
+				alert(allinputs);
+			//	if(!allinputs.length){
+
+			//		allinputs.parent().parent().find('label').show();
+
+			//	}
+
+
 
 			});
 
 			jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
-});
+});*/
+
 jQuery( "form input"  ).focus(function() {
 	jQuery(this).parent().parent().find('label').hide();
 	var $this = jQuery(this);
@@ -115,7 +128,8 @@ jQuery( "form input"  ).focusout(function() {
 * Modal Form
 */
 
-jQuery( ".overlay-layer, .close-modal-block" ).click(function(){
+	jQuery( ".overlay-layer, .close-modal-block" ).click(function(){
+
 	jQuery('.overlay-layer').removeClass('overlay-display');
 	jQuery('.modal-form').removeClass(' overlay-display ');
 
@@ -130,33 +144,55 @@ jQuery( ".btn-link-modal, .btn-link-to-modal" ).click(function(){
 			return false;
 });
 
+
+
+
 /*
-* Show Block In Page Calculate
-*/
+* Click Events for   Check
+**/
 
-jQuery( ".checkboxprop" ).click(function(){
+jQuery('.checkboxFour').click(function(){
 
-		jQuery(this).parent().parent().find('.check-property').toggleClass('show-block');
-		//alert(jQuery(this).val());
+		jQuery(this).parent().toggleClass('choose-checkbox');
 
-});
-/*
-* Calculate form in Calculate Page
-*/
-jQuery('.form-calculate input[type=checkbox]').change(function() {
-	 	if(jQuery(this).val() == 0){
-				jQuery(this).val(1);
+		if(jQuery(this).find('input').val() == 0){
+
+				jQuery(this).find('input').val(1);
+
 		}else{
-				jQuery(this).val(0);
+
+				jQuery(this).find('input').val(0);
+
 		}
+
+
+
+
+
+		return false;
+
 });
+/*
+* Update for Calc Page checkbox
+**/
+jQuery('.form-calculate .checkboxFour').click(function(){
+
+	jQuery('.form-calculate .checkboxFour').parent().removeClass('choose-checkbox');
+	jQuery(this).parent().addClass('choose-checkbox');
+	return false;
+
+});
+
+
+
+
 jQuery( ".form-calculate" ).submit(function(e) {
 
 	e.preventDefault();
 	//jQuery('#result-calculate').html('');
-	var valuesumm =  jQuery( ".slider-result-input" ).val();
-	var valueincome =  jQuery( ".calculate-valueincome" ).val();
-	var valuecredits = jQuery( ".calculate-valuecredits" ).val();
+	var valuesumm =  		jQuery( ".slider-result-input" ).val();
+	var valueincome =  	jQuery( ".calculate-valueincome" ).val();
+	var valuecredits = 	jQuery( ".calculate-valuecredits" ).val();
 	var checkmortgage = jQuery( ".calculate-checkmortgage" ).val();
 	var valueproperty = jQuery( ".calculate-valueproperty" ).val();
 	var checkproperty = jQuery( ".checkboxprop" ).val();
@@ -169,6 +205,7 @@ jQuery( ".form-calculate" ).submit(function(e) {
 		jQuery('#result-calculate').html('Процедура реструктуризации невозможна.');
 
 	}else{
+
 		var $addCreditPrice, addText, $addproperty;
 			if(valuecredits > 5){
 				 $addCreditPrice = Number(parseInt(valuecredits) * 2000);
@@ -263,59 +300,71 @@ if(jQuery('.accordion').length){
 }
 
 
+
+
+
+
 /*
 * Add row form 1 row form
 */
 
-if(jQuery('.add-first-form, .add-second-form').length){
+if(jQuery('.add-form.first, .add-form.second').length){
 
-	jQuery('.add-first-form').click(function(e){
+	jQuery('.add-form.first').click(function(e){
 		 e.preventDefault();
 
+		 	 var $thisParent = jQuery(this).parent();
 
-
-			 jQuery('.form-group-one-walp.one-section').append( '<div class="form-group-one">'+
-				'<div class="form-group">'+
-						 '<input name="form_1_entity[]" type="text" class="form-control " placeholder="Содержание обязательства (1)" >'+
-				 '</div>'+
+			 jQuery($thisParent).append( '<div class="form-group-one clearfix">'+
+			 '<div class="clearfix">'+
+			 '<div class="col-md-6-form">'+
 				 '<div class="form-group">'+
-						 '<input name="form_1_creditor[]" type="text" class="form-control " placeholder="Кредитор (2)" >'+
-				 '</div>'+
+						 '<input name="form_1_entity'+InitTypeFiledNumber(this)+'[]" type="text" class="form-control " placeholder="Содержание обязательства (1)" required>'+
+				  '</div>'+
 				 '<div class="form-group">'+
-						 '<input name="form_1_place_life[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" >'+
-				 '</div>'+
+						' <input name="form_1_creditor'+InitTypeFiledNumber(this)+'[]" type="text" class="form-control " placeholder="Кредитор (2)" required>'+
+				  '</div>'+
+					'<div class="form-group">'+
+							'<input name="form_1_place_life'+InitTypeFiledNumber(this)+'[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" required>'+
+					'</div>'+
+				 '<div class="form-group no-padding">'+
+						 '<input name="form_1_main_emite'+InitTypeFiledNumber(this)+'[]" type="text" class="form-control " placeholder="Основание возникновения (3)" required>'+
+				  '</div>'+
+			  '</div>'+
+			 '<div class="col-md-6-form no-padding-right">'+
 				 '<div class="form-group">'+
-						 '<input name="form_1_main_emite[]" type="text" class="form-control " placeholder="Основание возникновения (3)" >'+
-				 '</div>'+
+						' <input name="form_1_total_all'+InitTypeFiledNumber(this)+'[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (4)" required>'+
+				  '</div>'+
 				 '<div class="form-group">'+
-						 '<input name="form_1_total_all[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (4)" >'+
-				 '</div>'+
+						 '<input name="form_1_total_all_indebtedness'+InitTypeFiledNumber(this)+'[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (5)" required>'+
+				  '</div>'+
 				 '<div class="form-group">'+
-						 '<input name="form_1_total_all_indebtedness[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (5)" >'+
-				' </div>'+
-				 '<div class="form-group">'+
-						 '<input name="form_1_penaltie_fines[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >'+
+						 '<input name="form_1_penaltie_fines'+InitTypeFiledNumber(this)+'[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" required>'+
 				 '</div>'+
-			 '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>'+
-			 '</div>');
+			 '</div>'+
+			 '</div>'+
+			 			 '<div class="delete-row " onclick="deleterowforms(this)">Удалить Строку</div>'+
+			 '</div> ');
 
 
 		 });
 
-	jQuery('.add-second-form').click(function(e){
+	jQuery('.add-form.second').click(function(e){
 		 e.preventDefault();
 
+		 	var $thisParent = jQuery(this).parent();
 
-
-			 jQuery('.form-group-one-walp.two-section').append( '<div class="form-group-one">'+
+			 jQuery($thisParent).append( '<div class="form-group-one">'+
+			 '<div class="col-md-12-form">'+
 			 '<div class="form-group">'+
-			 		'<input name="form_1_row2_name_tax[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа" >'+
+			 		'<input name="form_1_row2_name_tax'+InitTypeFiledNumber(this)+'[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа" >'+
 			'</div>'+
 			 '<div class="form-group">'+
-			 		'<input name="form_1_row2_arrears[]" type="number" class="form-control " placeholder="Недоимка" >'+
+			 		'<input name="form_1_row2_arrears'+InitTypeFiledNumber(this)+'[]" type="number" class="form-control " placeholder="Недоимка" >'+
 			 '</div>'+
 			 '<div class="form-group">'+
-			 		'<input name="form_1_row2_penaltie_fines[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >'+
+			 		'<input name="form_1_row2_penaltie_fines'+InitTypeFiledNumber(this)+'[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >'+
+			 '</div>'+
 			 '</div>'+
 			 '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>'+
 			 '</div>');
@@ -327,7 +376,7 @@ if(jQuery('.add-first-form, .add-second-form').length){
 
 }
 /*
-* Response Height in bloks
+* Response Height in bloks  Same
 */
 
 jQuery('.benefit-cols .benefit-block').equalHeightResponsive();
@@ -339,23 +388,73 @@ jQuery('.dont-wait-block-auto-height .dont-wait-block').equalHeightResponsive();
 });
 
 /*
+* Choose Old in Calculate Page
+*/
+
+function InitChooseOld(){
+
+	jQuery('.calc-pointer').click(function(e){
+		e.preventDefault();
+
+		jQuery('.calc-pointer').removeClass('choose-old');
+		jQuery(this).addClass('choose-old');
+
+
+	});
+
+}
+
+
+/*
+* Function for froms pages add arrays fields
+*/
+
+function InitTypeFiledNumber(Element){
+
+	var $dataSectionNumber = jQuery(Element).parent().data('section');
+	var $redytype;
+	if($dataSectionNumber == '1'){
+
+		 return $redytype ='';
+
+	}else if ($dataSectionNumber =='2') {
+
+		return $redytype ='_2';
+
+	}else if ($dataSectionNumber =='3') {
+
+			return $redytype ='_3';
+
+	}else if ($dataSectionNumber =='4') {
+
+			return $redytype ='_4';
+	}
+
+
+}
+
+
+
+
+/*
 * Action for Price Tables
 */
 function InitActionPriceTables(){
 
 
-jQuery('.table-prices .price-part').click(function(e){
+//jQuery('.table-prices .price-part').click(function(e){
+jQuery('.view-plan-play-calc-page').click(function(e){
 	e.preventDefault();
 		var $this = jQuery(this);
-		$this.parent().find('.price-part').removeClass('active-price-choose');
-		$this.parent().find('.price-payment-result').css('height', '0');
-		$this.parent().find('.price-payment-result').html('');
+		$this.parent().parent().parent().find('.price-part').removeClass('active-price-choose');
+		$this.parent().parent().parent().find('.price-payment-result').css('height', '0');
+		$this.parent().parent().parent().find('.price-payment-result').html('');
 
 
-		$this.addClass('active-price-choose');
+		$this.parent().parent().addClass('active-price-choose');
 
 		var $method = 'percent';   // may be  'percent' and  'plain'
-		var $currentPrice = $this.find('.total-price span').html();
+		var $currentPrice = $this.parent().parent().find('.total-price span').html();
 		var $firstTwoPayment;
 		var $firstMountPayment;
 		var $secondMountPayment;
@@ -424,7 +523,7 @@ jQuery('.table-prices .price-part').click(function(e){
 			//console.log(redytemplate);
 
 
-			$this.find('.price-payment-result').html('<h3> Оплата</h3>'+
+			$this.parent().parent().find('.price-payment-result').html('<h3> Оплата</h3>'+
 						'<ul class="tables-ten-mounth-payments clearfix">'+
 						'<li>'+
 							'<p>1 месяц Аванс: <span>'+$firstMountPayment+'</span> руб.</p>'+
@@ -435,11 +534,11 @@ jQuery('.table-prices .price-part').click(function(e){
 
 
 		var heighBlock = jQuery('.tables-ten-mounth-payments').height();
-		$this.find('.price-payment-result').css( 'height', heighBlock +36);
+		$this.parent().parent().find('.price-payment-result').css( 'height', heighBlock +36);
 
 			//	$this.find('.price-payment-result').html();
 		}else{
-			$this.find('.price-payment-result').html('Оплата суммы происходит в рассрочку по 10 000 то в месяц, подробности у специалиста');
+			$this.parent().parent().find('.price-payment-result').html('Оплата суммы происходит в рассрочку по 10 000 то в месяц, подробности у специалиста');
 
 		}
 

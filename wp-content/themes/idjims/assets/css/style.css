@@ -239,14 +239,19 @@ a:focus {
 .col-md-7{
   width: 60%;
 }
+.col-md-6-form,
 .col-md-6{
   width: 48%;
 }
+.col-md-6-form,
 .col-md-6{
   padding-right: 4%;
 }
 .no-padding-right{
   padding-right: 0!important;
+}
+.col-md-12-form{
+  width: 100%;
 }
 .col-md-9{
   width: 59%;
@@ -280,7 +285,11 @@ a:focus {
 .col-md-9,
 .col-md-10,
 .col-md-3,
+.col-md-6-form,
 .col-md-6,
+.col-lg-3,
+.col-lg-2-calc,
+.col-lg-6-calc,
 .col-md-8,
 .col-md-5-doc,
 .col-md-7-doc,
@@ -290,12 +299,21 @@ a:focus {
 .col-md-7{
   float: left;
 }
+.col-lg-2-calc{
+  width: 20%;
+}
+.col-lg-6-calc{
+  width: 40%;
+}
 .col-lg-6{
   width: 49%;
   padding-right: 2%;
 }
 .col-md-5-doc{
   width: 45%;
+}
+.col-lg-3{
+  width: 25%;
 }
 .col-md-7-doc{
   width: 55%;
@@ -311,7 +329,20 @@ body{
 .content-area{
   margin-bottom: 50px;
 }
-
+.errors{
+  margin-top: 50px;
+}
+.alert-danger {
+    background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442;
+}
+.alert {
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
  /*
  * Header
  */
@@ -1126,16 +1157,26 @@ input.wpcf7-form-control {
 
 .calculate-page-walp form label,
 .SendMessage form label{
-  position: absolute;
+      position: absolute;
       z-index: 9;
-      left: 35px;
+      left: 14px;
+      white-space: nowrap;
       font-family: Calibri, sans-serif;
       font-weight: 400;
       font-size: 20px;
       color: #636363;
       cursor: text;
       margin: 0;
-      line-height: 48px;
+      line-height: 50px;
+}
+
+.custom-cal-marg{
+
+  margin-top: 30px;
+
+}
+.custom-cal-marg-bottom{
+  margin-bottom: 40px;
 }
 .SendMessage form label span{
   color: #cb454c;
@@ -1234,7 +1275,8 @@ form{
   position: relative;
   background: #fff;
   display: block;
-  top: -6px;
+  top: 2px;
+  z-index: 1;
   cursor: pointer;
 
 }
@@ -1837,6 +1879,8 @@ margin: 30px 0 10px;
     font-weight: 400;
     font-family: "Minsk"!important;
 }
+
+
 .Plus-block p,
 .Plus-minus-block p{
   width: 49%;
@@ -2099,7 +2143,7 @@ font-style: italic;
 * Page Calculate
 **/
 .calculate-page-walp .col-md-6{
-  padding-right: 2%;
+  padding-right: 4%;
 }
 .form-calculate{
       margin: 50px 0;
@@ -2107,9 +2151,13 @@ font-style: italic;
 .calculator-page .checkboxFour{
   border: 2px solid #dadada;
 }
+.calculator-page .field {
+    padding-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
 .calculator-page{
   position: relative;
-  padding: 20px;
 }
 .check-property{
   opacity: 0;
@@ -2193,6 +2241,8 @@ font-style: italic;
       border-bottom: 15px solid transparent;
       border-right: 15px solid #cb454c;
 }
+.custom-old-calc h4,
+.check-box-choose-face h3,
 .total-price,
 .price-content h3,
 .custom-filed-text{
@@ -2207,7 +2257,9 @@ font-style: italic;
   font-size: 22px;
   text-align: center;
 }
-.calculate-page-walp input:focus{
+.calculate-page-walp select,
+.calculate-page-walp input:focus,
+.calculate-page-walp input{
     border: 1px solid #d9d9d9;
 }
 .pagec-calc-field-total-debt-fwalp input:focus{
@@ -2229,10 +2281,13 @@ font-style: italic;
   margin: 0;
   line-height: 44px;
 }
+.pagec-calc-field-total-debt-fwalp.property input{
+    width: 251px!important;
+}
 .pagec-calc-field-total-debt input{
 
   background: inherit;
-  width: 311px;
+  width: 351px;
   border: none 0;
 }
 .slider-result-input-property{
@@ -2242,6 +2297,33 @@ font-style: italic;
   background: #f7fcff;
   border: 1px solid #d9d9d9;
 
+}
+.calculator-page .ui-slider-handle{
+
+  margin-left: 0!important;
+
+}
+.price-payment-result{
+  height: 0;
+
+}
+.view-plan-play-calc-page{
+  border: 2px solid #cb454c!important;
+      display: table;
+      padding: 10px 20px;
+      width: 50%;
+      margin: 20px auto;
+      cursor: pointer;
+      text-align: center;
+      background-color: transparent;
+      color: #cb454c;
+      margin-bottom: 12px;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+}
+.view-plan-play-calc-page:hover{
+    background-color: #cb454c!important;
+    color: #fff;
 }
 .table-page-calc{
   display: table;
@@ -2301,6 +2383,97 @@ font-style: italic;
 .choose-plan-title{
     font-size: 30px;
     text-align: center;
+}
+
+.check-box-choose-face{
+  text-align: center;
+}
+
+.check-box-choose-face .checkboxFour  {
+    left: 50%;
+    margin-left: -12px;
+}
+.overlay-img-calc {
+    height: 61px;
+}
+.check-box-choose-face .checkboxFour  {
+      bottom: 0;
+}
+.check-box-choose-face h3{
+    font-size: 20px;
+    font-weight: normal!important;
+    margin-bottom: 50px;
+}
+.select-box{
+      padding: 0 0.7em;
+      height: 48px;
+      border-radius: 0;
+      width: 100%;
+      background-color: #f7fcff;
+      color: #636363;
+}
+
+.custom-old-calc{
+
+  display: table;
+  background: #f7fcff;
+  border: 1px solid #d9d9d9;
+  padding: 22px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.custom-old-calc div{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 40%;
+  position: relative;
+}
+.choose-checkbox .checkboxFour::after{
+
+  left: 5px;
+
+}
+.checkboxFour input{
+  position: absolute;
+  top: 6px;
+  left: 5px;
+}
+.custom-old-calc h4{
+  font-size: 20px;
+  font-weight:normal!important;
+  padding-top: 20px;
+}
+.custom-old-calc img{
+  vertical-align: middle;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.text-calc{
+    width: 20%!important;
+
+}
+.custom-old-calc h3{
+      font-family: "Minsk";
+}
+.calc-pointer{
+  cursor: pointer;
+}
+.choose-old::before{
+      content: "";
+      display: block;
+      background-image: url(../images/check-old-2.png);
+      width: 37px;
+      height: 28px;
+      position: absolute;
+      z-index: 999999;
+      right: 30px;
+      top: 35px;
+}
+.choose-old img{
+  -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0);
 }
 /*
 *  Price Tables
@@ -2771,12 +2944,98 @@ right: 18px;
   margin-bottom: 90px;
 }
 
-.add-first-form{
+.delete-row{
+  border: 2px solid #cb454c!important;
+  background-color: #cb454c!important;
+  display: table;
+  padding: 10px 20px;
+  /* width: 50%; */
+  margin: 20px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 13px;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 0;
+  margin-bottom: 12px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.delete-row:hover{
+    background-color: #fff!important;
+    color: #cb454c;
+}
 
+.add-form {
+  border: 2px solid #008dd0!important;
+  color: #008dd0!important;
+  display: block;
+  padding: 12px 16px;
+  text-align: center;
+  margin-bottom: 12px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: absolute;
-  bottom: -40px;
+  bottom: -80px;
+}
+.btn-form-page-gen-doc{
+  cursor: pointer;
+  border: 2px solid #008dd0!important;
+  color: #008dd0!important;
+  display: block;
+  padding: 12px 16px;
+  text-align: center;
+  margin-bottom: 12px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-form-page-gen-doc:hover,
+.add-form:hover{
+  background-color:  #008dd0!important;
+  color: #fff!important;
 
 }
+
+
+.row-doc-form{
+  margin: 50px 0;
+}
+.form-group-one{
+  position: relative;
+  margin-bottom: 20px;
+}
+.col-md-12-form .form-group,
+.col-md-6-form .form-group{
+  padding-bottom: 30px;
+}
+.row-doc-form input{
+  background: #f7fcff;
+  border-radius: 0;
+}
+.form-group-one::before{
+      content: "";
+      border-left: 4px solid #008dd0;
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -7px;
+}
+
+/*
+* Login
+*/
+
+.login-form input{
+    background: #f7fcff;
+    border-radius: 0;
+}
+.login-form{
+  margin: 50px 0;
+}
+
+
 
 @media   (min-width: 1201px){
   .navigation li:hover .sub-menu{
@@ -2786,7 +3045,26 @@ right: 18px;
 
 
 @media   (max-width: 1200px){
+  .form-calculate .col-md-6{
+      width: 100%;
+      padding-right: 0;
+  }
+  .pagec-calc-field-total-debt-fwalp.property input {
+    width: 606px!important;
+  }
+  .pagec-calc-field-total-debt input {
+    background: inherit;
+    width: 703px;
+    border: none 0;
+  }
+  .choose-old::before {
+    right: 97px;
+  }
+  .table-prices .price-part{
 
+        width: 49%;
+        margin-bottom: 50px;
+  }
   .navigation li {
     float: none;
     margin-bottom: 12px;
@@ -2933,6 +3211,28 @@ right: 18px;
 @media  (max-width: 991px){
   .first-block-img{
     height: 200px;
+  }
+  .pagec-calc-field-total-debt-fwalp.property input {
+    width: 100%!important;
+  }
+  .pagec-calc-field-total-debt input {
+    background: inherit;
+    width: 100%;
+    border: none 0;
+  }
+  .choose-old::before {
+    right: 10px;
+  }
+  .table-prices .price-part {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .calculator-page.check-box-choose-face.clearfix {
+    margin-bottom: 50px;
+  }
+  .col-lg-2-calc,
+  .col-lg-6-calc {
+    width: 50%;
   }
   .feature-service-one img{
     display: inline;
@@ -3165,6 +3465,18 @@ right: 18px;
   .modal-form{
     width: 100%;
   }
+  .col-lg-2-calc, .col-lg-6-calc {
+    width: 100%;
+  }
+  .custom-old-calc div {
+    display: block;
+    width: 100%!important;
+    position: relative;
+    }
+    .question-page-calc {
+    position: relative;
+    display: inline-block;
+  }
   .Plus-block h3,
   .Plus-minus-block h3{
     font-size: 16px;
@@ -3174,6 +3486,15 @@ right: 18px;
   }
   #Offer h3 {
     font-size: 17px;
+  }
+  .top-price-content span {
+    font-weight: bold;
+    background: #cb454c;
+    color: #fff;
+    padding: 5px 10px 5px 0;
+    top: -81px;
+    position: relative;
+    right: 34px;
   }
   .block-calc p{
         display: block;
