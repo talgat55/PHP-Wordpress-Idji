@@ -1264,8 +1264,14 @@ form{
       display: block;
 }*/
 /*.SendMessage-2 .checkboxFour input::after{*/
-.SendMessage-2 .checkboxFour input::after{
+.SendMessage-2 .checkboxFour::after{
   background: #cb454c;
+}
+.error{
+  color: #cb454c;
+}
+.user-errors-profiles p{
+  margin-bottom: 10px;
 }
 /*.checkboxFour input::before{*/
 .checkboxFour::before{
@@ -2911,6 +2917,19 @@ right: 18px;
 /*
 * Create Doc
 */
+.done-generate-form-walp{
+  padding: 50px 0;
+  display: table;
+  margin: 0 auto;
+}
+.done-generate-form-walp a{
+  display: table-cell!important;
+}
+.done-generate-form-walp a:first-child{
+  position: relative;
+  right: 10px;
+}
+
 .warning-block{
   padding: 11px 0;
   margin: 12px 0;
@@ -3022,6 +3041,8 @@ right: 18px;
       top: 0;
       left: -7px;
 }
+
+
 
 /*
 * Login

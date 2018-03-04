@@ -10,25 +10,39 @@ add_theme_support( 'post-thumbnails' );
 */
 include_once('inc/meta-box/meta-box.php');
 
-
+/*
+* Resize Images
+*/
+include_once('inc/aq_resizer.php');
 
 /*
 *  Pdf Library
 */
 if(!is_home()){
 
-	include_once('inc/pdf/autoload.inc.php');
 
-	require_once 'inc/pdf/lib/html5lib/Parser.php';
-	require_once 'inc/pdf/lib/php-font-lib/src/FontLib/Autoloader.php';
-	require_once 'inc/pdf/lib/php-svg-lib/src/autoload.php';
-	require_once 'inc/pdf/src/Autoloader.php';
-	Dompdf\Autoloader::register();
+
+
+
 
 /*
-* Resize Images
+* Form generate
 */
-include_once('inc/aq_resizer.php');
+
+
+include_once('inc/form-generate.php');
+
+
+// form one
+include_once('inc/forms/form-1.php');
+
+
+/*
+* User Profile
+*/
+
+
+include_once('inc/user-profile.php');
 
 
 
@@ -286,6 +300,7 @@ function create_tables (){
 */
 
 if (isset($_POST['login_submit'])) {
+
 //    login_check($_POST['login_name'], $_POST['login_password']);
 
 		if( wp_verify_nonce( $_POST['_crsf'], 'ASMART') ){
@@ -307,9 +322,9 @@ if (isset($_POST['login_submit'])) {
 			}
 			if ( !is_wp_error($user) ) {
 
-
 				wp_redirect( home_url() );
 				exit;
+
 			}
 
 
@@ -332,3 +347,30 @@ function my_string_limit_words($string, $word_limit){
 	//	return implode(' ', $words).'... ';
 		return implode(' ', $words).'';
 }
+
+
+/*
+* Delete pdf files
+*
+*//*
+function destroy() {
+		$days = 1;
+		$dir = dirname (__DIR__.'/inc/redypdf/');
+
+		$nofiles = 0;
+
+		    if ($handle = opendir($dir)) {
+		    while (( $file = readdir($handle)) !== false ) {
+		        if ( $file == '.' || $file == '..' || is_dir($dir.'/'.$file) ) {
+		            continue;
+		        }
+
+		        if ((time() - filemtime($dir.'/'.$file)) > ($days *86400)) {
+		            $nofiles++;
+		            unlink($dir.'/'.$file);
+		        }
+		    }
+		    closedir($handle);
+		   // echo "Total files deleted: $nofiles \n";
+		}
+}*/

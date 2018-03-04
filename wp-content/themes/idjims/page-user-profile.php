@@ -6,8 +6,22 @@
 get_header(); ?>
 
 <div class="wrap">
+	<div class="breadscrumb blue" >
+		<div class="container">
+			<div class="col-lg-6">
+				<a href="#" class="user-page-link-breadscrumb current">
+						Ваш профиль
+				</a>
+			</div>
+			<div class="col-lg-6 no-padding">
+				<a href="#" class="user-page-link-breadscrumb ">
+					Оформление документов
+				</a>
+			</div>
+
+		</div>
+	</div>
 	<div class="container">
-    <h1 class="title-section">ВАШ ПРОФИЛЬ</h1>
     <p>Заполните ваши личные данные, они будут использоваться для формирования документов</p>
 		<form method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">
 			<div class="clearfix">
@@ -28,7 +42,7 @@ get_header(); ?>
 
 					<div class="form-group">
 						<label>День Рождения</label>
-						 <input name="lastName" type="date" class="form-control" placeholder="День Рождения" />
+						 <input name="birdDay" type="date" class="form-control" placeholder="День Рождения" />
 					</div>
 
 					<div class="form-group">
@@ -237,7 +251,7 @@ get_header(); ?>
 
 
 			</div>
-			<input class="btn btn-primary btn-lg btn-block" type="submit" name="reg_submit" value="Сохранить"/>
+			<input class="btn btn-primary btn-lg btn-block" type="submit" name="user_profile_reg_submit" value="Сохранить"/>
 		</form>
   </div><!-- .container -->
 </div><!-- .wrap -->

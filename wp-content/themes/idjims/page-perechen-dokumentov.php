@@ -2,7 +2,7 @@
 /**
  *  Template Name: Perechen documentov
  */
-use Dompdf\Dompdf;
+
 
 
 get_header(); ?>

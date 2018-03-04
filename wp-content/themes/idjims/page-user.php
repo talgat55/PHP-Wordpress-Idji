@@ -2,7 +2,7 @@
 /**
  *  Template Name: User Page
  */
-
+ob_start();  // fix bag redirect
 get_header(); ?>
 
 <div class="wrap">
@@ -21,6 +21,141 @@ get_header(); ?>
 
 		</div>
 	</div>
+<?php
+
+/*
+* Print emty Fileds User profile
+*/
+function printEmptyFieldsUser($array){
+
+
+	if(in_array("id_user", $array)){   // dont verify user
+
+			wp_redirect( home_url());
+			exit;
+	}
+
+echo '<div class="container page-custom-margin  user-errors-profiles">';
+	if(in_array("first_name", $array)   OR  in_array("second_name", $array)  OR in_array("bird_day", $array)  ){
+
+
+				echo '<p class="error"><img  style="padding-right: 10px;" src="'.get_theme_file_uri( '/assets/images/warning-2.png' ).'"/>Личные данные в профиле заполнены не полностью! Формирование документов невозможно.</p>';
+	}
+
+	if(in_array("passport_serial", $array)  OR in_array("passport_number", $array)  OR in_array("passport_issued_by", $array) OR in_array("passport_issued_date", $array)   OR in_array("passport_issued_key", $array)  OR in_array("extra_inn", $array)  OR in_array("extra_snils", $array)   OR in_array("extra_phone", $array)   OR  in_array("registrtation_index", $array)  OR  in_array("registrtation_city", $array)   OR  in_array("registrtation_locality", $array)   OR  in_array("registrtation_street", $array)  OR  in_array("registrtation_number_hourse", $array)   OR  in_array("registrtation_number_housing", $array)   OR  in_array("registrtation_number_apartments", $array)){
+
+			echo '<p class="error"><img  style="padding-right: 10px;" src="'.get_theme_file_uri( '/assets/images/warning-2.png' ).'"/>Пожалуйста, заполните данные поля:</p>';
+
+	}
+	if(in_array("passport_serial", $array)){
+
+		echo '<p class="error"> Серия паспорта</p>';
+
+	}
+	if(in_array("passport_number", $array)){
+
+		echo '<p class="error"> Номер паспорта</p>';
+
+	}
+
+	if(in_array("passport_issued_by", $array)){
+
+		echo '<p class="error"> Кем выдан паспорт</p>';
+
+	}
+	if(in_array("passport_issued_date", $array)){
+
+		echo '<p class="error"> Дата выдачи паспорта</p>';
+
+	}
+	if(in_array("passport_issued_key", $array)){
+
+		echo '<p class="error"> Код подразделения</p>';
+
+	}
+	if(in_array("extra_inn", $array)){
+
+		echo '<p class="error"> ИНН</p>';
+
+	}
+	if(in_array("extra_snils", $array)){
+
+		echo '<p class="error"> СНИЛС</p>';
+
+	}
+	if(in_array("extra_phone", $array)){
+
+		echo '<p class="error"> Телефон</p>';
+
+	}
+	if(in_array("registrtation_index", $array)){
+
+		echo '<p class="error"> Индекс</p>';
+
+	}
+	if(in_array("registrtation_city", $array)){
+
+		echo '<p class="error"> Город</p>';
+
+	}
+	if(in_array("registrtation_locality", $array)){
+
+		echo '<p class="error">Населеный пункт</p>';
+
+	}
+	if(in_array("registrtation_street", $array)){
+
+		echo '<p class="error">Улица</p>';
+
+	}
+	if(in_array("registrtation_number_hourse", $array)){
+
+		echo '<p class="error">Номер дома</p>';
+
+	}
+	if(in_array("registrtation_number_housing", $array)){
+
+		echo '<p class="error">Номер корпуса</p>';
+
+	}
+	if(in_array("registrtation_number_apartments", $array)){
+
+		echo '<p class="error">Номер квартиры</p>';
+
+	}
+	echo '</div>';
+
+
+}
+		//		$cur_user_id = get_current_user_id();
+					$cur_user_id =1;
+					global $wpdb;
+					$table_name = $wpdb->prefix . "addition_informaion";
+					$results = $wpdb->get_results("SELECT * FROM ".$table_name." WHERE id_user ='".$cur_user_id."'");
+
+
+					$arrays_empty_fileds = [];
+					foreach ($results[0] as $key => $value) {
+							if(empty($value)){
+								array_push($arrays_empty_fileds, $key);
+
+
+							}
+
+					}
+					if($arrays_empty_fileds[0]){
+
+							printEmptyFieldsUser($arrays_empty_fileds);
+							$content = false;
+
+					}else{
+							$content = true;
+					}
+
+
+
+					if($content){  // if all fields  user profile exist  show
+ ?>
 	<div class="container page-custom-margin">
 
 
@@ -166,6 +301,10 @@ get_header(); ?>
 
 
   </div><!-- .container -->
+	<?php
+}
+
+	 ?>
 </div><!-- .wrap -->
 
 <?php get_footer();

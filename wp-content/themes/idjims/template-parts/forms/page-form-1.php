@@ -47,27 +47,27 @@
 
 	            <div class="col-md-6-form">
   	            <div class="form-group">
-  	                <input name="form_1_entity[]" type="text" class="form-control " placeholder="Содержание обязательства (1)" required>
+  	                <input name="form_1_entity[]" type="text" class="form-control " placeholder="Содержание обязательства (1)" >
   						  </div>
   	            <div class="form-group">
-  	                <input name="form_1_creditor[]" type="text" class="form-control " placeholder="Кредитор (2)" required>
+  	                <input name="form_1_creditor[]" type="text" class="form-control " placeholder="Кредитор (2)" >
   							</div>
   	            <div class="form-group">
-  	                <input name="form_1_place_life[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" required>
+  	                <input name="form_1_place_life[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" >
   	            </div>
   	            <div class="form-group no-padding">
-  	                <input name="form_1_main_emite[]" type="text" class="form-control " placeholder="Основание возникновения (3)" required>
+  	                <input name="form_1_main_emite[]" type="text" class="form-control " placeholder="Основание возникновения (3)" >
   	            </div>
               </div>
               <div class="col-md-6-form no-padding-right">
   	            <div class="form-group">
-  	                <input name="form_1_total_all[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (4)" required>
+  	                <input name="form_1_total_all[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (4)" >
   	            </div>
   	            <div class="form-group">
   	                <input name="form_1_total_all_indebtedness[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (5)" required>
   	            </div>
   	            <div class="form-group ">
-  	                <input name="form_1_penaltie_fines[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" required>
+  	                <input name="form_1_penaltie_fines[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >
   	            </div>
               </div>
 
@@ -83,13 +83,13 @@
               <div class="form-group-one">
               <div class="col-md-12-form">
   	            <div class="form-group">
-  	                <input name="form_1_row2_name_tax[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа" required >
+  	                <input name="form_1_row2_name_tax[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа"  >
   						  </div>
   	            <div class="form-group">
-  	                <input name="form_1_row2_arrears[]" type="number" class="form-control " placeholder="Недоимка" required >
+  	                <input name="form_1_row2_arrears[]" type="number" class="form-control " placeholder="Недоимка"  >
   							</div>
   	            <div class="form-group">
-  	                <input name="form_1_row2_penaltie_fines[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" required>
+  	                <input name="form_1_row2_penaltie_fines[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >
   	            </div>
 
               </div>
@@ -110,15 +110,15 @@
 						<div class="accordion">
 							<a class="link-to-ul" href="#">Иноформация о правилах заполнения (кликните для показа/скрытия)</a>
 							<div>
-								(11) - Указывается существо обязательства (например, заем, кредит).
+								(6) - Указывается существо обязательства (например, заем, кредит).
 							</br>
-								(12) - Указывается другая сторона обязательства: кредитор, фамилия, имя и отчество (последнее - при наличии) для физического лица или наименование юридического лица.
+								(7) - Указывается другая сторона обязательства: кредитор, фамилия, имя и отчество (последнее - при наличии) для физического лица или наименование юридического лица.
 							</br>
-								(13) - Указывается основание возникновения обязательства, а также реквизиты (дата, номер) соответствующего договора или акта.
+								(8) - Указывается основание возникновения обязательства, а также реквизиты (дата, номер) соответствующего договора или акта.
 							</br>
-								(14) - Указывается сумма основного обязательства, в том числе подлежащие уплате проценты. Для обязательств, выраженных в иностранной валюте, сумма указывается в рублях по курсу Банка России на дату составления списка кредиторов и должников гражданина.
+								(9) - Указывается сумма основного обязательства, в том числе подлежащие уплате проценты. Для обязательств, выраженных в иностранной валюте, сумма указывается в рублях по курсу Банка России на дату составления списка кредиторов и должников гражданина.
 							</br>
-								(15) - Указывается размер просроченной задолженности по сумме основного обязательства (с процентами) по состоянию на дату составления списка кредиторов и должников гражданина (за исключением неустойки (штрафа, пени), процентов за просрочку платежа, убытков в виде упущенной выгоды и иных финансовых санкций, начисленных на сумму основного обязательства). Для обязательств, выраженных в иностранной валюте, сумма указывается в рублях по курсу Банка России на дату составления списка кредиторов и должников гражданина.
+								(10) - Указывается размер просроченной задолженности по сумме основного обязательства (с процентами) по состоянию на дату составления списка кредиторов и должников гражданина (за исключением неустойки (штрафа, пени), процентов за просрочку платежа, убытков в виде упущенной выгоды и иных финансовых санкций, начисленных на сумму основного обязательства). Для обязательств, выраженных в иностранной валюте, сумма указывается в рублях по курсу Банка России на дату составления списка кредиторов и должников гражданина.
 							</div>
 
 						</div>
@@ -161,13 +161,13 @@
               <div class="form-group-one">
               <div class="col-md-12-form">
   	            <div class="form-group">
-  	                <input name="form_1_row2_name_tax_2[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа" required >
+  	                <input name="form_1_row2_name_tax_2[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа"  >
   						  </div>
   	            <div class="form-group">
-  	                <input name="form_1_row2_arrears_2[]" type="number" class="form-control " placeholder="Недоимка" required >
+  	                <input name="form_1_row2_arrears_2[]" type="number" class="form-control " placeholder="Недоимка"  >
   							</div>
   	            <div class="form-group">
-  	                <input name="form_1_row2_penaltie_fines_2[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" required>
+  	                <input name="form_1_row2_penaltie_fines_2[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >
   	            </div>
 
               </div>
@@ -210,27 +210,27 @@
 
               <div class="col-md-6-form">
                 <div class="form-group">
-                    <input name="form_1_entity_3[]" type="text" class="form-control " placeholder="Содержание обязательства (11)" required>
+                    <input name="form_1_entity_3[]" type="text" class="form-control " placeholder="Содержание обязательства (11)" >
                 </div>
                 <div class="form-group">
-                    <input name="form_1_creditor_3[]" type="text" class="form-control " placeholder="Кредитор (12)" required>
+                    <input name="form_1_creditor_3[]" type="text" class="form-control " placeholder="Кредитор (12)" >
                 </div>
                 <div class="form-group">
-                    <input name="form_1_place_life_3[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" required>
+                    <input name="form_1_place_life_3[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" >
                 </div>
                 <div class="form-group no-padding">
-                    <input name="form_1_main_emite_3[]" type="text" class="form-control " placeholder="Основание возникновения (13)" required>
+                    <input name="form_1_main_emite_3[]" type="text" class="form-control " placeholder="Основание возникновения (13)" >
                 </div>
               </div>
               <div class="col-md-6-form no-padding-right">
                 <div class="form-group">
-                    <input name="form_1_total_all_3[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (14)" required>
+                    <input name="form_1_total_all_3[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (14)" >
                 </div>
                 <div class="form-group">
-                    <input name="form_1_total_all_indebtedness_3[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (15)" required>
+                    <input name="form_1_total_all_indebtedness_3[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (15)" >
                 </div>
                 <div class="form-group ">
-                    <input name="form_1_penaltie_fines_3[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" required>
+                    <input name="form_1_penaltie_fines_3[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >
                 </div>
               </div>
 
@@ -245,13 +245,13 @@
               <div class="form-group-one">
               <div class="col-md-12-form">
   	            <div class="form-group">
-  	                <input name="form_1_row2_name_tax_3[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа" required >
+  	                <input name="form_1_row2_name_tax_3[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа"  >
   						  </div>
   	            <div class="form-group">
-  	                <input name="form_1_row2_arrears_3[]" type="number" class="form-control " placeholder="Недоимка" required >
+  	                <input name="form_1_row2_arrears_3[]" type="number" class="form-control " placeholder="Недоимка"  >
   							</div>
   	            <div class="form-group">
-  	                <input name="form_1_row2_penaltie_fines_3[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" required>
+  	                <input name="form_1_row2_penaltie_fines_3[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >
   	            </div>
 
               </div>
@@ -295,27 +295,27 @@
 
               <div class="col-md-6-form">
                 <div class="form-group">
-                    <input name="form_1_entity_4[]" type="text" class="form-control " placeholder="Содержание обязательства (16)" required>
+                    <input name="form_1_entity_4[]" type="text" class="form-control " placeholder="Содержание обязательства (16)" >
                 </div>
                 <div class="form-group">
-                    <input name="form_1_creditor_4[]" type="text" class="form-control " placeholder="Кредитор (17)" required>
+                    <input name="form_1_creditor_4[]" type="text" class="form-control " placeholder="Кредитор (17)" >
                 </div>
                 <div class="form-group">
-                    <input name="form_1_place_life_4[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" required>
+                    <input name="form_1_place_life_4[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" >
                 </div>
                 <div class="form-group no-padding">
-                    <input name="form_1_main_emite_4[]" type="text" class="form-control " placeholder="Основание возникновения (18)" required>
+                    <input name="form_1_main_emite_4[]" type="text" class="form-control " placeholder="Основание возникновения (18)" >
                 </div>
               </div>
               <div class="col-md-6-form no-padding-right">
                 <div class="form-group">
-                    <input name="form_1_total_all_4[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (19)" required>
+                    <input name="form_1_total_all_4[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (19)" >
                 </div>
                 <div class="form-group">
-                    <input name="form_1_total_all_indebtedness_4[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (20)" required>
+                    <input name="form_1_total_all_indebtedness_4[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (20)" >
                 </div>
                 <div class="form-group ">
-                    <input name="form_1_penaltie_fines_4[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" required>
+                    <input name="form_1_penaltie_fines_4[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >
                 </div>
               </div>
 
@@ -330,13 +330,13 @@
               <div class="form-group-one">
                 <div class="col-md-12-form">
     	            <div class="form-group">
-    	                <input name="form_1_row2_name_tax_4[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа" required >
+    	                <input name="form_1_row2_name_tax_4[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа"  >
     						  </div>
     	            <div class="form-group">
-    	                <input name="form_1_row2_arrears_4[]" type="number" class="form-control " placeholder="Недоимка" required >
+    	                <input name="form_1_row2_arrears_4[]" type="number" class="form-control " placeholder="Недоимка"  >
     							</div>
     	            <div class="form-group">
-    	                <input name="form_1_row2_penaltie_fines_4[]" type="number" class="form-control "  placeholder="Сумма к зачету или возврату (проценты) (21)" required>
+    	                <input name="form_1_row2_penaltie_fines_4[]" type="number" class="form-control "  placeholder="Сумма к зачету или возврату (проценты) (21)" >
     	            </div>
 
                 </div>
@@ -346,7 +346,7 @@
             </div>
             </div>
 
-            <input class="btn btn-primary btn-lg btn-block btn-form-page-gen-doc" type="submit" name="reg_submit" value="Сформировать документ"/>
+            <input class="btn btn-primary btn-lg btn-block btn-form-page-gen-doc" type="submit" name="form_reg_submit" value="Сформировать документ"/>
     </form>
 </div>
 </div>
