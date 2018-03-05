@@ -163,7 +163,7 @@ if (isset($_POST['form_reg_submit'])) {
                             обязательно
                     </td>
                     <td  width="20%" valign="middle">
-                    '.date("m.d.y",strtotime($results[0]->bird_day)).'
+                    '.date("d.m.y",strtotime($results[0]->bird_day)).'
                     </td>
                 </tr>
                 <tr>

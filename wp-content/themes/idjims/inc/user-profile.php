@@ -42,8 +42,8 @@ if (isset($_POST['user_profile_reg_submit'])) {
     $table_name = $wpdb->prefix . "addition_informaion";
 
 
-    $wpdb->query( $wpdb->prepare(
-        "INSERT INTO `".$table_name."` (id, id_user, first_name, second_name, third_name, bird_day, place_bird, last_name, place_live, passport_serial, passport_number, passport_issued_by, passport_issued_date, passport_issued_key , extra_inn , extra_snils, extra_phone, extra_email, registrtation_index, registrtation_city, registrtation_locality, registrtation_street, registrtation_number_hourse, registrtation_number_housing, registrtation_number_apartments) VALUES (
+    $wpdb->query($wpdb->prepare(
+        "INSERT INTO `" . $table_name . "` (id, id_user, first_name, second_name, third_name, bird_day, place_bird, last_name, place_live, passport_serial, passport_number, passport_issued_by, passport_issued_date, passport_issued_key , extra_inn , extra_snils, extra_phone, extra_email, registrtation_index, registrtation_city, registrtation_locality, registrtation_street, registrtation_number_hourse, registrtation_number_housing, registrtation_number_apartments) VALUES (
          %d, %d, %s, %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, %s)",
         array(
             0,

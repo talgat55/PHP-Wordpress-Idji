@@ -3,385 +3,515 @@
 // ---------------------------------------------------------
 
 
-jQuery(document).ready(function(){
-	"use strict";
-InitSlider();
-InitUISlider();
-InitCarouselClients();
-InitOpenContentReview();
-InitUISliderPage();
-InitShowTooltip();
-InitUISliderPageProperty();
-InitActionPriceTables();
-InitChooseOld();
-InitSliderReview();
-  jQuery(".tabs").lightTabs();
+jQuery(document).ready(function () {
+    "use strict";
+    InitSlider();
+    InitUISlider();
+    InitCarouselClients();
+    InitOpenContentReview();
+    InitUISliderPage();
+    InitShowTooltip();
+    InitUISliderPageProperty();
+    InitActionPriceTables();
+    InitChooseOld();
+    InitSliderReview();
+    jQuery(".tabs").lightTabs();
 
 
+    if (jQuery(window).width() > 1200) {
 
-if(jQuery(window).width() > 1200){
 
+        jQuery(".block-five-step-arrow a").hover(function () {
 
-		jQuery( ".block-five-step-arrow a"  ).hover(function() {
+            var $this = jQuery(this);
+            var tooltipblock = $this.parent().parent().find('.tooltip-five-step');
+            tooltipblock.show();
 
-				var $this = jQuery(this);
-				var tooltipblock = $this.parent().parent().find('.tooltip-five-step');
-				tooltipblock.show();
 
+            tooltipblock.mouseleave(function () {
 
-				tooltipblock.mouseleave(function() {
+                tooltipblock.hide();
 
-						tooltipblock.hide();
+            });
 
-				});
+        });
+    }
 
-		} );
-}
 
+    /*
+    * hide label in form
+    */
+    /*
+    jQuery( "form input"  ).click(function(){
+                jQuery(this).parent().parent().find('label').hide();
+                var $this = jQuery(this);
+                $this.mouseleave(function() {
+                    var $thisvalue = $this.val();
 
+                    if(!$thisvalue.length){
 
-/*
-* hide label in form
-*/
-/*
-jQuery( "form input"  ).click(function(){
-			jQuery(this).parent().parent().find('label').hide();
-			var $this = jQuery(this);
-			$this.mouseleave(function() {
-				var $thisvalue = $this.val();
+                        $this.parent().parent().find('label').show();
 
-				if(!$thisvalue.length){
+                    }
+                    var allinputs = jQuery( "form input"  ).val();
+                    alert(allinputs);
+                //	if(!allinputs.length){
 
-					$this.parent().parent().find('label').show();
+                //		allinputs.parent().parent().find('label').show();
 
-				}
-				var allinputs = jQuery( "form input"  ).val();
-				alert(allinputs);
-			//	if(!allinputs.length){
+                //	}
 
-			//		allinputs.parent().parent().find('label').show();
 
-			//	}
 
+                });
 
+                jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
+    });*/
 
-			});
+    jQuery("form input").focus(function () {
+        jQuery(this).parent().parent().find('label').hide();
+        var $this = jQuery(this);
+        $this.mouseleave(function () {
+            var $thisvalue = $this.val();
 
-			jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
-});*/
+            if (!$thisvalue.length) {
+                $this.parent().parent().find('label').show();
+            }
 
-jQuery( "form input"  ).focus(function() {
-	jQuery(this).parent().parent().find('label').hide();
-	var $this = jQuery(this);
-	$this.mouseleave(function() {
-		var $thisvalue = $this.val();
+        });
 
-		if(!$thisvalue.length){
-			$this.parent().parent().find('label').show();
-		}
 
-	});
+        jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
 
+    });
+    /*
+    jQuery( "form input"  ).hover(function() {
+        jQuery(this).parent().parent().find('label').hide();
+        var $this = jQuery(this);
+        $this.mouseleave(function() {
+            var $thisvalue = $this.val();
 
-	jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
+            if(!$thisvalue.length){
+                $this.parent().parent().find('label').show();
+            }
 
-});
-/*
-jQuery( "form input"  ).hover(function() {
-	jQuery(this).parent().parent().find('label').hide();
-	var $this = jQuery(this);
-	$this.mouseleave(function() {
-		var $thisvalue = $this.val();
+        });
+    });
+    */
 
-		if(!$thisvalue.length){
-			$this.parent().parent().find('label').show();
-		}
+    jQuery("form label").click(function () {
+        var $this = jQuery(this);
+        var $thisParent = jQuery(this).parent();
+        $this.hide();
 
-	});
-});
-*/
+        $this.parent().find('input').focus();
+        $thisParent.mouseleave(function () {
+            var $thisvalue = $thisParent.find('input').val();
 
-jQuery( "form label"  ).click(function(){
-			var $this = jQuery(this);
-			var $thisParent = jQuery(this).parent();
-			$this.hide();
+            if (!$thisvalue.length) {
+                $this.show();
+            }
 
-			$this.parent().find('input').focus();
-			$thisParent.mouseleave(function() {
-				var $thisvalue = $thisParent.find('input').val();
+        });
 
-				if(!$thisvalue.length){
-					$this.show();
-				}
 
-			});
+        jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
+    });
 
+    jQuery("form input").focusout(function () {
 
-			jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
-});
+        jQuery('.telephone').inputmask();
+    });
+    /*
+    * Modal Form
+    */
 
-jQuery( "form input"  ).focusout(function() {
+    jQuery(".overlay-layer, .close-modal-block").click(function () {
 
-		jQuery('.telephone').inputmask();
-});
-/*
-* Modal Form
-*/
+        jQuery('.overlay-layer').removeClass('overlay-display');
+        jQuery('.modal-form').removeClass(' overlay-display ');
 
-	jQuery( ".overlay-layer, .close-modal-block" ).click(function(){
+        return false;
+    });
 
-	jQuery('.overlay-layer').removeClass('overlay-display');
-	jQuery('.modal-form').removeClass(' overlay-display ');
+    jQuery(".btn-link-modal, .btn-link-to-modal").click(function () {
 
-			return false;
-});
+        jQuery('.overlay-layer').addClass('overlay-display');
+        jQuery('.modal-form').addClass(' overlay-display ');
 
-jQuery( ".btn-link-modal, .btn-link-to-modal" ).click(function(){
+        return false;
+    });
 
-	jQuery('.overlay-layer').addClass('overlay-display');
-	jQuery('.modal-form').addClass(' overlay-display ');
 
-			return false;
-});
+    /*
+    * Click Events for   Check
+    **/
 
+    jQuery('.checkboxFour').click(function () {
 
+        jQuery(this).parent().toggleClass('choose-checkbox');
 
+        if (jQuery(this).find('input').val() == 0) {
 
-/*
-* Click Events for   Check
-**/
+            jQuery(this).find('input').val(1);
 
-jQuery('.checkboxFour').click(function(){
+        } else {
 
-		jQuery(this).parent().toggleClass('choose-checkbox');
+            jQuery(this).find('input').val(0);
 
-		if(jQuery(this).find('input').val() == 0){
+        }
 
-				jQuery(this).find('input').val(1);
 
-		}else{
+        return false;
 
-				jQuery(this).find('input').val(0);
+    });
+    /*
+    * Update for Calc Page checkbox
+    **/
+    jQuery('.form-calculate .checkboxFour').click(function () {
 
-		}
+        jQuery('.form-calculate .checkboxFour').parent().removeClass('choose-checkbox');
+        jQuery(this).parent().addClass('choose-checkbox');
+        return false;
 
+    });
 
 
+    jQuery(".form-calculate").submit(function (e) {
 
+        e.preventDefault();
+        //jQuery('#result-calculate').html('');
+        var valuesumm = jQuery(".slider-result-input").val();
+        var valueincome = jQuery(".calculate-valueincome").val();
+        var valuecredits = jQuery(".calculate-valuecredits").val();
+        var checkmortgage = jQuery(".calculate-checkmortgage").val();
+        var valueproperty = jQuery(".calculate-valueproperty").val();
+        var checkproperty = jQuery(".checkboxprop").val();
 
-		return false;
 
-});
-/*
-* Update for Calc Page checkbox
-**/
-jQuery('.form-calculate .checkboxFour').click(function(){
-
-	jQuery('.form-calculate .checkboxFour').parent().removeClass('choose-checkbox');
-	jQuery(this).parent().addClass('choose-checkbox');
-	return false;
-
-});
-
-
-
-
-jQuery( ".form-calculate" ).submit(function(e) {
-
-	e.preventDefault();
-	//jQuery('#result-calculate').html('');
-	var valuesumm =  		jQuery( ".slider-result-input" ).val();
-	var valueincome =  	jQuery( ".calculate-valueincome" ).val();
-	var valuecredits = 	jQuery( ".calculate-valuecredits" ).val();
-	var checkmortgage = jQuery( ".calculate-checkmortgage" ).val();
-	var valueproperty = jQuery( ".calculate-valueproperty" ).val();
-	var checkproperty = jQuery( ".checkboxprop" ).val();
-
-
-	var check_before_result = (parseInt(valuesumm) - parseInt(valueproperty) ) / (parseInt(valueincome) - 9500);
+        var check_before_result = (parseInt(valuesumm) - parseInt(valueproperty)) / (parseInt(valueincome) - 9500);
 //console.log('Долг:  '+ valuesumm,'Доход: '+valueincome,'Количекство кредитов: '+ valuecredits,'Ипотека: '+checkmortgage,'Имущество: '+valueproperty,check_before_result);
-	if(check_before_result >= 36){
+        if (check_before_result >= 36) {
 
-		jQuery('#result-calculate').html('Процедура реструктуризации невозможна.');
+            jQuery('#result-calculate').html('Процедура реструктуризации невозможна.');
 
-	}else{
+        } else {
 
-		var $addCreditPrice, addText, $addproperty;
-			if(valuecredits > 5){
-				 $addCreditPrice = Number(parseInt(valuecredits) * 2000);
-			}else{
-				$addCreditPrice = 0;
-			}
+            var $addCreditPrice, addText, $addproperty;
+            if (valuecredits > 5) {
+                $addCreditPrice = Number(parseInt(valuecredits) * 2000);
+            } else {
+                $addCreditPrice = 0;
+            }
 
-			if(checkmortgage == 1){
-				addText = 'Для ипотечных клиентов у нас действуют скидки';
-				$addproperty = 0;
-			}else{
-				if(checkproperty == 1){
+            if (checkmortgage == 1) {
+                addText = 'Для ипотечных клиентов у нас действуют скидки';
+                $addproperty = 0;
+            } else {
+                if (checkproperty == 1) {
 
-							$addproperty = Number(parseInt(valueproperty) + 10000);
+                    $addproperty = Number(parseInt(valueproperty) + 10000);
 
-				}else{
+                } else {
 
-						$addproperty = 0;
+                    $addproperty = 0;
 
-				}
-				addText = '';
-			}
-
-
-
-			var $resultprice = Number(100000 + $addCreditPrice + $addproperty);
-
-		jQuery('html, body').animate({ scrollTop: jQuery('#result-calculate').offset().top-100 }, 500);
-
-		//jQuery('#result-calculate').html('Cуд может утвердить план реструктуризации, нужна консультация специалиста, подробнее можно прочесть в соответствующем разделе сайта </br> <div>Цена наших услуг:'+ $resultprice+' руб.</div></br><p>'+ addText+'</p>');
-		jQuery('.price-part .total-price span').html('');
-		jQuery('.price-part.second .total-price span').html($resultprice);
-		jQuery('.price-part.first .total-price span').html($resultprice - parseInt(40000));
-		jQuery('.price-part.third .total-price span').html($resultprice + parseInt(50000));
-
-		jQuery('#result-calculate').css('height', jQuery('.table-prices').height());
-		jQuery('#result-calculate').removeClass('overflow-hidden');
+                }
+                addText = '';
+            }
 
 
+            var $resultprice = Number(100000 + $addCreditPrice + $addproperty);
 
-	}
+            jQuery('html, body').animate({scrollTop: jQuery('#result-calculate').offset().top - 100}, 500);
 
+            //jQuery('#result-calculate').html('Cуд может утвердить план реструктуризации, нужна консультация специалиста, подробнее можно прочесть в соответствующем разделе сайта </br> <div>Цена наших услуг:'+ $resultprice+' руб.</div></br><p>'+ addText+'</p>');
+            jQuery('.price-part .total-price span').html('');
+            jQuery('.price-part.second .total-price span').html($resultprice);
+            jQuery('.price-part.first .total-price span').html($resultprice - parseInt(40000));
+            jQuery('.price-part.third .total-price span').html($resultprice + parseInt(50000));
 
-});
-/*
-* Mobile Menu
-*/
-
-jQuery('#mobile-bar').click(function(){
-		jQuery('.navigation').toggleClass("menu-open");
-		jQuery('#mobile-bar a').toggleClass(" is-active");
-
-		return false;
-});
-
-/**
-* Accordion menu for mobile
-*/
-if(jQuery(window).width() < 1200){
+            jQuery('#result-calculate').css('height', jQuery('.table-prices').height());
+            jQuery('#result-calculate').removeClass('overflow-hidden');
 
 
-	jQuery('.navigation').find('li a').click(function(){
-			 jQuery(this).next().stop().slideToggle();
-			 jQuery(this).toggleClass("accordion-open");
-		 }).next().stop().hide();
-}
+        }
 
-/**
-* Accordion menu  block in first bllocks
-*/
+
+    });
+    /*
+    * Mobile Menu
+    */
+
+    jQuery('#mobile-bar').click(function () {
+        jQuery('.navigation').toggleClass("menu-open");
+        jQuery('#mobile-bar a').toggleClass(" is-active");
+
+        return false;
+    });
+
+    /**
+     * Accordion menu for mobile
+     */
+    if (jQuery(window).width() < 1200) {
+
+
+        jQuery('.navigation').find('li a').click(function () {
+            jQuery(this).next().stop().slideToggle();
+            jQuery(this).toggleClass("accordion-open");
+        }).next().stop().hide();
+    }
+
+    /**
+     * Accordion menu  block in first bllocks
+     */
 
 
 
-	jQuery('.accrotdions-blocks').find('h3').click(function(){
-			 jQuery(this).next().stop().slideToggle();
-			 jQuery(this).toggleClass("accordion-open");
-		 }).next().stop().hide();
+    jQuery('.accrotdions-blocks').find('h3').click(function () {
+        jQuery(this).next().stop().slideToggle();
+        jQuery(this).toggleClass("accordion-open");
+    }).next().stop().hide();
 
 
+    /*
+    * Accordion
+    **/
+
+    if (jQuery('.accordion').length) {
+        jQuery('.accordion').find('a').click(function (e) {
+            e.preventDefault();
+            jQuery(this).next().stop().slideToggle();
+        }).next().stop().hide();
+
+    }
 
 
-/*
-* Accordion
-**/
+    /*
+    * Add row form 1 row form
+    */
 
-if(jQuery('.accordion').length){
-	jQuery('.accordion').find('a').click(function(e){
-		 e.preventDefault();
-			 jQuery(this).next().stop().slideToggle();
-		 }).next().stop().hide();
+    if (jQuery('.add-form.first, .add-form.second, .add-form.first-form-9, .add-form.form-8, .add-form.add-form-6, .add-form.form-4-1, .add-form.form-4-2, .add-form.form-3-1,.add-form.form-3-2').length) {
+        jQuery('.add-form.first').click(function (e) {
+            e.preventDefault();
 
-}
+            var $thisParent = jQuery(this).parent();
 
-
-
-
-
-
-/*
-* Add row form 1 row form
-*/
-
-if(jQuery('.add-form.first, .add-form.second').length){
-
-	jQuery('.add-form.first').click(function(e){
-		 e.preventDefault();
-
-		 	 var $thisParent = jQuery(this).parent();
-
-			 jQuery($thisParent).append( '<div class="form-group-one clearfix">'+
-			 '<div class="clearfix">'+
-			 '<div class="col-md-6-form">'+
-				 '<div class="form-group">'+
-						 '<input name="form_1_entity'+InitTypeFiledNumber(this)+'[]" type="text" class="form-control " placeholder="Содержание обязательства (1)" required>'+
-				  '</div>'+
-				 '<div class="form-group">'+
-						' <input name="form_1_creditor'+InitTypeFiledNumber(this)+'[]" type="text" class="form-control " placeholder="Кредитор (2)" required>'+
-				  '</div>'+
-					'<div class="form-group">'+
-							'<input name="form_1_place_life'+InitTypeFiledNumber(this)+'[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" required>'+
-					'</div>'+
-				 '<div class="form-group no-padding">'+
-						 '<input name="form_1_main_emite'+InitTypeFiledNumber(this)+'[]" type="text" class="form-control " placeholder="Основание возникновения (3)" required>'+
-				  '</div>'+
-			  '</div>'+
-			 '<div class="col-md-6-form no-padding-right">'+
-				 '<div class="form-group">'+
-						' <input name="form_1_total_all'+InitTypeFiledNumber(this)+'[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (4)" required>'+
-				  '</div>'+
-				 '<div class="form-group">'+
-						 '<input name="form_1_total_all_indebtedness'+InitTypeFiledNumber(this)+'[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (5)" required>'+
-				  '</div>'+
-				 '<div class="form-group">'+
-						 '<input name="form_1_penaltie_fines'+InitTypeFiledNumber(this)+'[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" required>'+
-				 '</div>'+
-			 '</div>'+
-			 '</div>'+
-			 			 '<div class="delete-row " onclick="deleterowforms(this)">Удалить Строку</div>'+
-			 '</div> ');
+            jQuery($thisParent).append('<div class="form-group-one clearfix">' +
+                '<div class="clearfix">' +
+                '<div class="col-md-6-form">' +
+                '<div class="form-group">' +
+                '<input name="form_1_entity' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control " placeholder="Содержание обязательства (1)" required>' +
+                '</div>' +
+                '<div class="form-group">' +
+                ' <input name="form_1_creditor' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control " placeholder="Кредитор (2)" required>' +
+                '</div>' +
+                '<div class="form-group">' +
+                '<input name="form_1_place_life' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" required>' +
+                '</div>' +
+                '<div class="form-group no-padding">' +
+                '<input name="form_1_main_emite' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control " placeholder="Основание возникновения (3)" required>' +
+                '</div>' +
+                '</div>' +
+                '<div class="col-md-6-form no-padding-right">' +
+                '<div class="form-group">' +
+                ' <input name="form_1_total_all' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (4)" required>' +
+                '</div>' +
+                '<div class="form-group">' +
+                '<input name="form_1_total_all_indebtedness' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (5)" required>' +
+                '</div>' +
+                '<div class="form-group">' +
+                '<input name="form_1_penaltie_fines' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" required>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="delete-row " onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '</div> ');
 
 
-		 });
+        });
 
-	jQuery('.add-form.second').click(function(e){
-		 e.preventDefault();
+        jQuery('.add-form.second').click(function (e) {
+            e.preventDefault();
 
-		 	var $thisParent = jQuery(this).parent();
+            var $thisParent = jQuery(this).parent();
 
-			 jQuery($thisParent).append( '<div class="form-group-one">'+
-			 '<div class="col-md-12-form">'+
-			 '<div class="form-group">'+
-			 		'<input name="form_1_row2_name_tax'+InitTypeFiledNumber(this)+'[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа" >'+
-			'</div>'+
-			 '<div class="form-group">'+
-			 		'<input name="form_1_row2_arrears'+InitTypeFiledNumber(this)+'[]" type="number" class="form-control " placeholder="Недоимка" >'+
-			 '</div>'+
-			 '<div class="form-group">'+
-			 		'<input name="form_1_row2_penaltie_fines'+InitTypeFiledNumber(this)+'[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >'+
-			 '</div>'+
-			 '</div>'+
-			 '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>'+
-			 '</div>');
-
-
-		 });
+            jQuery($thisParent).append('<div class="form-group-one">' +
+                '<div class="col-md-12-form">' +
+                '<div class="form-group">' +
+                '<input name="form_1_row2_name_tax' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа" >' +
+                '</div>' +
+                '<div class="form-group">' +
+                '<input name="form_1_row2_arrears' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control " placeholder="Недоимка" >' +
+                '</div>' +
+                '<div class="form-group">' +
+                '<input name="form_1_row2_penaltie_fines' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >' +
+                '</div>' +
+                '</div>' +
+                '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '</div>');
 
 
+        });
+        jQuery('.add-form.first-form-9').click(function (e) {
+            e.preventDefault();
+            var $thisParent = jQuery(this).parent();
+            jQuery($thisParent).append(' <div class="col-md-12-form">' +
+                '<div class="form-group">' +
+                '<input name="form_9_name_credit_bank_mfo[]" type="text" class="form-control " placeholder="Наименование кредитора: банка, МФО, физического лица и т.д.">' +
+                '</div>' +
+                '<div class="form-group">' +
+                '<input name="form_9_balance_owed[]" type="number" class="form-control " placeholder="Остаток долга, руб.">' +
+                '</div>' +
+                '<div class="form-group">' +
+                '<input name="form_9_amount_overdue_debt[]" type="number" class="form-control " placeholder="Размер просроченной задолженности, руб.">' +
+                '</div>' +
+                '<div class="form-group">' +
+                '<input name="form_9_default_period[]" type="text" class="form-control " placeholder="Срок просрочки, мес">' +
+                '</div>' +
+                '<div class="form-group">' +
+                '<input name="form_9_bank_try_collect[]" type="text" class="form-control " placeholder="Каким образом банк пытается взыскать задолженность: сам, коллекторы, суд, приставы">' +
+                '</div>' +
+                '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '</div>');
+        });
 
-}
-/*
-* Response Height in bloks  Same
-*/
+        jQuery('.add-form.form-8').click(function (e) {
+            e.preventDefault();
+            var $thisParent = jQuery(this).parent();
+            jQuery($thisParent).append('<div class="form-group">' +
+                '<input name="form_8_aplication_name[]" type="text" class="form-control " placeholder="Название приложения">' +
+                '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '</div>');
 
-jQuery('.benefit-cols .benefit-block').equalHeightResponsive();
-jQuery('.live-idji-walp .live-idji-block').equalHeightResponsive();
-jQuery('.dont-wait-block-auto-height .dont-wait-block').equalHeightResponsive();
+        });
+
+        jQuery('.add-form.add-form-6').click(function (e) {
+            e.preventDefault();
+            var $thisParent = jQuery(this).parent();
+            jQuery($thisParent).append('<div class="form-group">\n' +
+                '   <input name="form_6_creditor[]" type="text" class="form-control " placeholder="Кредитор">\n' +
+                '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '</div> ');
+        });
+
+        jQuery('.add-form.form-4-1').click(function (e) {
+            e.preventDefault();
+            var $thisParent = jQuery(this).parent();
+            jQuery($thisParent).append('<div class="form-group-one clearfix">\n' +
+                '                                <div class="form-group">\n' +
+                '                                    <input name="form_4_name_creditor" type="text" class="form-control "\n' +
+                '                                           placeholder="Наименование кредитора полностью">\n' +
+                '                                </div>\n' +
+                '                                <div class="form-group">\n' +
+                '                                    <input name="form_4_location" type="text" class="form-control "\n' +
+                '                                           placeholder="Место нахождения">\n' +
+                '                                </div>\n' +
+                '                                <div class="form-group">\n' +
+                '                                    <input name="form_4_inn" type="text" class="form-control "\n' +
+                '                                           placeholder="ИНН">\n' +
+                '                                </div>\n' +
+                '                                <div class="form-group">\n' +
+                '                                    <input name="form_4_ogrn" type="text" class="form-control "\n' +
+                '                                           placeholder="ОГРН">\n' +
+                '                                </div>\n' +
+                '                                <div class="form-group">\n' +
+                '                                    <input name="form_4_phone" type="text" class="form-control "\n' +
+                '                                           placeholder="Телефон">\n' +
+                '                                </div>\n' +
+                '                                <div class="form-group">\n' +
+                '                                    <input name="form_4_fax" type="text" class="form-control "\n' +
+                '                                           placeholder="Факс">\n' +
+                '                                </div>\n' +
+                '                                <div class="form-group">\n' +
+                '                                    <input name="form_4_email" type="text" class="form-control "\n' +
+                '                                           placeholder="E-mail">\n' +
+                '                                </div>\n' +
+                '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '                            </div>');
+
+
+        });
+
+        jQuery('.add-form.form-4-2').click(function (e) {
+            e.preventDefault();
+            var $thisParent = jQuery(this).parent();
+            jQuery($thisParent).append('<div class="form-group">\n' +
+                '<input name="form_4_name_app[]" type="text" class="form-control " placeholder="Название приложение">\n' +
+                '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '</div> ');
+        });
+
+        jQuery('.add-form.form-3-1').click(function (e) {
+            e.preventDefault();
+            var $thisParent = jQuery(this).parent();
+            jQuery($thisParent).append('<div class="form-group-one clearfix">\n' +
+                '                                <div class="form-group">\n' +
+                '                                    <input name="form_3_name_creditor[]" type="text" class="form-control "\n' +
+                '                                           placeholder="Наименование кредитора полностью">\n' +
+                '                                </div>\n' +
+                '                                <div class="form-group">\n' +
+                '                                    <input name="form_3_location[]" type="text" class="form-control "\n' +
+                '                                           placeholder="Место нахождения">\n' +
+                '                                </div>\n' +
+                '                                <div class="form-group">\n' +
+                '                                    <input name="form_3_inn[]" type="number" class="form-control "\n' +
+                '                                           placeholder="ИНН">\n' +
+                '                                </div>\n' +
+                '                                <div class="form-group">\n' +
+                '                                    <input name="form_3_ogrn[]" type="number" class="form-control "\n' +
+                '                                           placeholder="ОГРН">\n' +
+                '                                </div>\n' +
+                '                                <div class="form-group">\n' +
+                '                                    <input name="form_3_phone[]" type="number" class="form-control "\n' +
+                '                                           placeholder="Телефон">\n' +
+                '                                </div>\n' +
+                '                                <div class="form-group">\n' +
+                '                                    <input name="form_3_fax[]" type="number" class="form-control "\n' +
+                '                                           placeholder="Факс">\n' +
+                '                                </div>\n' +
+                '                                <div class="form-group">\n' +
+                '                                    <input name="form_3_email[]" type="text" class="form-control "\n' +
+                '                                           placeholder="E-mail">\n' +
+                '                                </div>\n' +
+                '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '                            </div>');
+        });
+
+        jQuery('.add-form.form-3-2').click(function (e) {
+            e.preventDefault();
+            var $thisParent = jQuery(this).parent();
+            jQuery($thisParent).append(' <div class="form-group">\n' +
+                '                                <p> Подсказка: Введите сюда ваши обязательства. Каждое новое обязательство - в новой\n' +
+                '                                    строчке. Например, - "обязательство по оплате по кредитному договору № 0001 от 01\n' +
+                '                                    февраля 2015 г., заключенному с кредитором (имя кредитора)"</p>\n' +
+                '                                <input name="form_3_obyazatelstvo[]" type="text" class="form-control ">\n' +
+                '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '                            </div>');
+        });
+
+
+// end
+    }
+    /*
+    * Show input if check in form pages
+     */
+
+        jQuery('.сheckbox-with-input').change(function() {
+            if(jQuery(this).is(":checked")) {
+                jQuery(this).parent().addClass('showInput');
+            } else{
+                jQuery(this).parent().removeClass('showInput');
+            }
+        });
+
+    /*
+    * Response Height in bloks  Same
+    */
+
+    jQuery('.benefit-cols .benefit-block').equalHeightResponsive();
+    jQuery('.live-idji-walp .live-idji-block').equalHeightResponsive();
+    jQuery('.dont-wait-block-auto-height .dont-wait-block').equalHeightResponsive();
 
 
 // end redy function
@@ -391,16 +521,16 @@ jQuery('.dont-wait-block-auto-height .dont-wait-block').equalHeightResponsive();
 * Choose Old in Calculate Page
 */
 
-function InitChooseOld(){
+function InitChooseOld() {
 
-	jQuery('.calc-pointer').click(function(e){
-		e.preventDefault();
+    jQuery('.calc-pointer').click(function (e) {
+        e.preventDefault();
 
-		jQuery('.calc-pointer').removeClass('choose-old');
-		jQuery(this).addClass('choose-old');
+        jQuery('.calc-pointer').removeClass('choose-old');
+        jQuery(this).addClass('choose-old');
 
 
-	});
+    });
 
 }
 
@@ -409,146 +539,141 @@ function InitChooseOld(){
 * Function for froms pages add arrays fields
 */
 
-function InitTypeFiledNumber(Element){
+function InitTypeFiledNumber(Element) {
 
-	var $dataSectionNumber = jQuery(Element).parent().data('section');
-	var $redytype;
-	if($dataSectionNumber == '1'){
+    var $dataSectionNumber = jQuery(Element).parent().data('section');
+    var $redytype;
+    if ($dataSectionNumber == '1') {
 
-		 return $redytype ='';
+        return $redytype = '';
 
-	}else if ($dataSectionNumber =='2') {
+    } else if ($dataSectionNumber == '2') {
 
-		return $redytype ='_2';
+        return $redytype = '_2';
 
-	}else if ($dataSectionNumber =='3') {
+    } else if ($dataSectionNumber == '3') {
 
-			return $redytype ='_3';
+        return $redytype = '_3';
 
-	}else if ($dataSectionNumber =='4') {
+    } else if ($dataSectionNumber == '4') {
 
-			return $redytype ='_4';
-	}
+        return $redytype = '_4';
+    }
 
 
 }
-
-
 
 
 /*
 * Action for Price Tables
 */
-function InitActionPriceTables(){
+function InitActionPriceTables() {
 
 
 //jQuery('.table-prices .price-part').click(function(e){
-jQuery('.view-plan-play-calc-page').click(function(e){
-	e.preventDefault();
-		var $this = jQuery(this);
-		$this.parent().parent().parent().find('.price-part').removeClass('active-price-choose');
-		$this.parent().parent().parent().find('.price-payment-result').css('height', '0');
-		$this.parent().parent().parent().find('.price-payment-result').html('');
+    jQuery('.view-plan-play-calc-page').click(function (e) {
+        e.preventDefault();
+        var $this = jQuery(this);
+        $this.parent().parent().parent().find('.price-part').removeClass('active-price-choose');
+        $this.parent().parent().parent().find('.price-payment-result').css('height', '0');
+        $this.parent().parent().parent().find('.price-payment-result').html('');
 
 
-		$this.parent().parent().addClass('active-price-choose');
+        $this.parent().parent().addClass('active-price-choose');
 
-		var $method = 'percent';   // may be  'percent' and  'plain'
-		var $currentPrice = $this.parent().parent().find('.total-price span').html();
-		var $firstTwoPayment;
-		var $firstMountPayment;
-		var $secondMountPayment;
-		var $mountPayment;
-		var $fiveMountPayment;
-		var lastPayment;
+        var $method = 'percent';   // may be  'percent' and  'plain'
+        var $currentPrice = $this.parent().parent().find('.total-price span').html();
+        var $firstTwoPayment;
+        var $firstMountPayment;
+        var $secondMountPayment;
+        var $mountPayment;
+        var $fiveMountPayment;
+        var lastPayment;
 
-		if($method == 'percent'){
+        if ($method == 'percent') {
 
-			 $firstMountPayment = parseInt($currentPrice)/5 ;
-			 $secondMountPayment = parseInt($currentPrice) /4;
-			 $firstTwoPayment = $firstMountPayment + $secondMountPayment;
+            $firstMountPayment = parseInt($currentPrice) / 5;
+            $secondMountPayment = parseInt($currentPrice) / 4;
+            $firstTwoPayment = $firstMountPayment + $secondMountPayment;
 
-			 $mountPayment = parseInt($currentPrice)/10;
-
-
-		}else{
-
-			$firstTwoPayment = parseInt(20000+25000);
-			$firstMountPayment =  parseInt(20000);
-			$secondMountPayment =  parseInt(25000);
-			$mountPayment = parseInt(10000);
+            $mountPayment = parseInt($currentPrice) / 10;
 
 
+        } else {
 
-		}
-
-
-	  var  $priceWithOutFirstTwoMouth =  parseInt($currentPrice) - $firstTwoPayment;
-
-		var Subtotal = $priceWithOutFirstTwoMouth - $fiveMountPayment;
-		var Subtotal = Math.floor($priceWithOutFirstTwoMouth/$mountPayment);
+            $firstTwoPayment = parseInt(20000 + 25000);
+            $firstMountPayment = parseInt(20000);
+            $secondMountPayment = parseInt(25000);
+            $mountPayment = parseInt(10000);
 
 
-		$fiveMountPayment = parseInt($mountPayment * Subtotal);
-
- 		var $lastMountPayment = parseInt($priceWithOutFirstTwoMouth - $fiveMountPayment);
- 		var $lastMountPayment = parseInt($priceWithOutFirstTwoMouth - $fiveMountPayment);
-
-		if($lastMountPayment > 0 ){
-
-				lastPayment =  true;
-
-		}else{
-
-				lastPayment =  false;
-		}
-		//lastPayment = false;
-		if(lastPayment){
-			var template = '<li><p>3 месяц: <span>'+$mountPayment+'</span> руб.</p></li>';
-			var template2 = '';
-			var temporarytemplate = '';
-			var redytemplate;
-			var maxvalue = Subtotal + parseInt(3);
-			var lastmounth = maxvalue +1;
-
-			for(var i = 4; i <= maxvalue; i++) {
-
-				temporarytemplate =  '<li><p>'+i+' месяц: <span>'+$mountPayment+'</span> руб.</p></li>';
-				template2 = template2.concat(temporarytemplate);
-
-			}
-			redytemplate = template.concat(template2);
-
-			redytemplate = redytemplate.concat('<li><p>'+lastmounth+' месяц: <span>'+$lastMountPayment+'</span> руб.</p></li>');
-			//console.log(redytemplate);
+        }
 
 
-			$this.parent().parent().find('.price-payment-result').html('<h3> Оплата</h3>'+
-						'<ul class="tables-ten-mounth-payments clearfix">'+
-						'<li>'+
-							'<p>1 месяц Аванс: <span>'+$firstMountPayment+'</span> руб.</p>'+
-						'</li>'+
-						'<li>'+
-						'<p>2 месяц Депозит суда: <span>'+$secondMountPayment+'</span> руб.</p>'+
-						'</li>'+redytemplate+'</ul>');
+        var $priceWithOutFirstTwoMouth = parseInt($currentPrice) - $firstTwoPayment;
+
+        var Subtotal = $priceWithOutFirstTwoMouth - $fiveMountPayment;
+        var Subtotal = Math.floor($priceWithOutFirstTwoMouth / $mountPayment);
 
 
-		var heighBlock = jQuery('.tables-ten-mounth-payments').height();
-		$this.parent().parent().find('.price-payment-result').css( 'height', heighBlock +36);
+        $fiveMountPayment = parseInt($mountPayment * Subtotal);
 
-			//	$this.find('.price-payment-result').html();
-		}else{
-			$this.parent().parent().find('.price-payment-result').html('Оплата суммы происходит в рассрочку по 10 000 то в месяц, подробности у специалиста');
+        var $lastMountPayment = parseInt($priceWithOutFirstTwoMouth - $fiveMountPayment);
+        var $lastMountPayment = parseInt($priceWithOutFirstTwoMouth - $fiveMountPayment);
 
-		}
+        if ($lastMountPayment > 0) {
+
+            lastPayment = true;
+
+        } else {
+
+            lastPayment = false;
+        }
+        //lastPayment = false;
+        if (lastPayment) {
+            var template = '<li><p>3 месяц: <span>' + $mountPayment + '</span> руб.</p></li>';
+            var template2 = '';
+            var temporarytemplate = '';
+            var redytemplate;
+            var maxvalue = Subtotal + parseInt(3);
+            var lastmounth = maxvalue + 1;
+
+            for (var i = 4; i <= maxvalue; i++) {
+
+                temporarytemplate = '<li><p>' + i + ' месяц: <span>' + $mountPayment + '</span> руб.</p></li>';
+                template2 = template2.concat(temporarytemplate);
+
+            }
+            redytemplate = template.concat(template2);
+
+            redytemplate = redytemplate.concat('<li><p>' + lastmounth + ' месяц: <span>' + $lastMountPayment + '</span> руб.</p></li>');
+            //console.log(redytemplate);
 
 
-});
+            $this.parent().parent().find('.price-payment-result').html('<h3> Оплата</h3>' +
+                '<ul class="tables-ten-mounth-payments clearfix">' +
+                '<li>' +
+                '<p>1 месяц Аванс: <span>' + $firstMountPayment + '</span> руб.</p>' +
+                '</li>' +
+                '<li>' +
+                '<p>2 месяц Депозит суда: <span>' + $secondMountPayment + '</span> руб.</p>' +
+                '</li>' + redytemplate + '</ul>');
+
+
+            var heighBlock = jQuery('.tables-ten-mounth-payments').height();
+            $this.parent().parent().find('.price-payment-result').css('height', heighBlock + 36);
+
+            //	$this.find('.price-payment-result').html();
+        } else {
+            $this.parent().parent().find('.price-payment-result').html('Оплата суммы происходит в рассрочку по 10 000 то в месяц, подробности у специалиста');
+
+        }
+
+
+    });
 
 
 }
-
-
 
 
 /*
@@ -556,72 +681,72 @@ jQuery('.view-plan-play-calc-page').click(function(e){
 */
 
 
-function InitShowTooltip(){
-	jQuery('.question-page-calc').click(function(e){
-			e.preventDefault();
-				jQuery('.tooltip.calc-page').toggleClass('show-tooltip');
-	})
+function InitShowTooltip() {
+    jQuery('.question-page-calc').click(function (e) {
+        e.preventDefault();
+        jQuery('.tooltip.calc-page').toggleClass('show-tooltip');
+    })
 
 }
+
 /*
 * Open Content for Client Reviews
 **/
 
 
+function InitOpenContentReview() {
+    jQuery('.review-link-readmore').click(function (e) {
 
-function InitOpenContentReview(){
-	jQuery('.review-link-readmore').click(function(e){
+        e.preventDefault();
 
-		e.preventDefault();
+        if (jQuery(this).text() == 'Читать полностью') {
 
-		if(jQuery(this).text() == 'Читать полностью'){
+            jQuery(this).text('Вернуть обратно');
 
-			jQuery(this).text('Вернуть обратно');
-
-		}else{
-			jQuery(this).text('Читать полностью');
-		}
-
+        } else {
+            jQuery(this).text('Читать полностью');
+        }
 
 
-		var $thisClass = jQuery(this).parent().parent().find('.review-content');
-		if($thisClass.hasClass('show-content-review')){
-			$thisClass.css('height', '164');
-		}else{
-			$thisClass.css('height', jQuery('.review-content div').height());
-		}
+        var $thisClass = jQuery(this).parent().parent().find('.review-content');
+        if ($thisClass.hasClass('show-content-review')) {
+            $thisClass.css('height', '164');
+        } else {
+            $thisClass.css('height', jQuery('.review-content div').height());
+        }
 
-		$thisClass.toggleClass('show-content-review');
+        $thisClass.toggleClass('show-content-review');
 
 
-	})
+    })
 
 }
 
 /*
 * Deleete row
 */
-function deleterowforms(elmnt){
+function deleterowforms(elmnt) {
 
-		 jQuery(elmnt).parent().remove();
+    jQuery(elmnt).parent().remove();
 }
+
 //---------
 // Slider
 //--------
 
-function InitSlider(){
+function InitSlider() {
 
-jQuery('.slider-wallpaper').slick({
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-	dots: true,
-  autoplay: true,
-  speed:1000,
-	prevArrow: jQuery('.slider-nav .slider-arrow-left'),
-  nextArrow: jQuery('.slider-nav .slider-arrow-right')
+    jQuery('.slider-wallpaper').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        autoplay: true,
+        speed: 1000,
+        prevArrow: jQuery('.slider-nav .slider-arrow-left'),
+        nextArrow: jQuery('.slider-nav .slider-arrow-right')
 
-});
+    });
 
 }
 
@@ -629,159 +754,156 @@ jQuery('.slider-wallpaper').slick({
 // Slider Review
 //--------
 
-function InitSliderReview(){
+function InitSliderReview() {
 
-var arraycarousels = jQuery('.reviews-first-block-walp');
-arraycarousels.each(function(){
-		jQuery(this).slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			dots: false,
-			infinite: false,
-		//	autoplay: true,
-			speed:1000,
-			arrows: false
-		});
-		jQuery('.reviews-first-block .slider-arrow-left').click(function(e){
-			e.preventDefault();
-		 jQuery(this).parent().parent().find('.reviews-first-block-walp').slick('slickPrev');
-		})
+    var arraycarousels = jQuery('.reviews-first-block-walp');
+    arraycarousels.each(function () {
+        jQuery(this).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            infinite: false,
+            //	autoplay: true,
+            speed: 1000,
+            arrows: false
+        });
+        jQuery('.reviews-first-block .slider-arrow-left').click(function (e) {
+            e.preventDefault();
+            jQuery(this).parent().parent().find('.reviews-first-block-walp').slick('slickPrev');
+        })
 
-		jQuery('.reviews-first-block .slider-arrow-right').click(function(e){
-			e.preventDefault();
-		 jQuery(this).parent().parent().find('.reviews-first-block-walp').slick('slickNext');
-		})
+        jQuery('.reviews-first-block .slider-arrow-right').click(function (e) {
+            e.preventDefault();
+            jQuery(this).parent().parent().find('.reviews-first-block-walp').slick('slickNext');
+        })
 
-});
+    });
 
 
 }
-
-
 
 
 //---------
 // Carousel Clients
 //--------
 
-function InitCarouselClients(){
+function InitCarouselClients() {
 
-jQuery('.slider-wallpaper-clients').slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-	dots: false,
-  //autoplay: true,
-  speed:1000,
-	responsive: [
-		{
-				breakpoint: 1024,
-				settings: {
-						slidesToShow: 3,
-						slidesToScroll: 1,
-						infinite: true,
-				}
-	},
-	{
-	breakpoint: 900,
-	settings: {
-		slidesToShow: 2,
-		slidesToScroll: 1
-	}
-	},    {
-	breakpoint: 600,
-	settings: {
-		slidesToShow: 1,
-		slidesToScroll: 1
-	}
-	},
-	{
-	breakpoint: 480,
-	settings: {
-		slidesToShow: 1,
-		slidesToScroll: 1
-	}
-	}
-	// You can unslick at a given breakpoint now by adding:
-	// settings: "unslick"
+    jQuery('.slider-wallpaper-clients').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        //autoplay: true,
+        speed: 1000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }, {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
 // instead of a settings object
-],
-  prevArrow: jQuery('.slider-nav-clients .slider-arrow-left'),
-  nextArrow: jQuery('.slider-nav-clients .slider-arrow-right')
+        ],
+        prevArrow: jQuery('.slider-nav-clients .slider-arrow-left'),
+        nextArrow: jQuery('.slider-nav-clients .slider-arrow-right')
 
-});
+    });
 
 }
-
-
 
 
 /*
 * Calculate
 */
-function InitUISlider(){
+function InitUISlider() {
 
-jQuery( "#slider-ui" ).slider({
- value : 0,//Значение, которое будет выставлено слайдеру при загрузке
- min : 500000,//Минимально возможное значение на ползунке
- max : 15000000,//Максимально возможное значение на ползунке
- step : 1000,//Шаг, с которым будет двигаться ползунок
- create: function( event, ui ) {
-	 val = jQuery( "#slider-ui" ).slider("value");//При создании слайдера, получаем его значение в перемен. val
-	 jQuery( "#valueidslider" ).html( val );//Заполняем этим значением элемент с id contentSlider
- },
-		 slide: function( event, ui ) {
- 		 			jQuery( "#valueidslider" ).html( ui.value );//При изменении значения ползунка заполняем элемент с id contentSlider
-					var $result = ui.value*1.3-100000;
+    jQuery("#slider-ui").slider({
+        value: 0,//Значение, которое будет выставлено слайдеру при загрузке
+        min: 500000,//Минимально возможное значение на ползунке
+        max: 15000000,//Максимально возможное значение на ползунке
+        step: 1000,//Шаг, с которым будет двигаться ползунок
+        create: function (event, ui) {
+            val = jQuery("#slider-ui").slider("value");//При создании слайдера, получаем его значение в перемен. val
+            jQuery("#valueidslider").html(val);//Заполняем этим значением элемент с id contentSlider
+        },
+        slide: function (event, ui) {
+            jQuery("#valueidslider").html(ui.value);//При изменении значения ползунка заполняем элемент с id contentSlider
+            var $result = ui.value * 1.3 - 100000;
 
-					if($result > 0 && ui.value >= 500000 ){
-						jQuery( ".result-calc span" ).html( $result );//При изменении значения ползунка заполняем элемент с id contentSlider
-					}else{
-						jQuery( ".result-calc span" ).html( '0' );
-					}
-		 }
- });
+            if ($result > 0 && ui.value >= 500000) {
+                jQuery(".result-calc span").html($result);//При изменении значения ползунка заполняем элемент с id contentSlider
+            } else {
+                jQuery(".result-calc span").html('0');
+            }
+        }
+    });
 }
 
 /*
 * Calculate In Page Calculate Total debts
 */
-function InitUISliderPage(){
-	var $this = jQuery( ".slider-ui" );
-$this.slider({
- value : 0,//Значение, которое будет выставлено слайдеру при загрузке
- min : 500000,//Минимально возможное значение на ползунке
- max : 15000000,//Максимально возможное значение на ползунке
- step : 1000,//Шаг, с которым будет двигаться ползунок
- create: function( event, ui ) {
-	 val = jQuery( $this ).slider("value");//При создании слайдера, получаем его значение в перемен. val
-	console.log(val);
-	  $this.parent().find( ".slider-result-input" ).val( val );//Заполняем этим значением элемент с id contentSlider
- },
-		 slide: function( event, ui ) {
- 		 			$this.parent().find( ".slider-result-input" ).val( ui.value );//При изменении значения ползунка заполняем элемент с id contentSlider
+function InitUISliderPage() {
+    var $this = jQuery(".slider-ui");
+    $this.slider({
+        value: 0,//Значение, которое будет выставлено слайдеру при загрузке
+        min: 500000,//Минимально возможное значение на ползунке
+        max: 15000000,//Максимально возможное значение на ползунке
+        step: 1000,//Шаг, с которым будет двигаться ползунок
+        create: function (event, ui) {
+            val = jQuery($this).slider("value");//При создании слайдера, получаем его значение в перемен. val
+            console.log(val);
+            $this.parent().find(".slider-result-input").val(val);//Заполняем этим значением элемент с id contentSlider
+        },
+        slide: function (event, ui) {
+            $this.parent().find(".slider-result-input").val(ui.value);//При изменении значения ползунка заполняем элемент с id contentSlider
 
-		 }
- });
+        }
+    });
 }
+
 /*
 * Calculate In Page Calculate Total property
 */
-function InitUISliderPageProperty(){
-	var $this = jQuery( ".slider-ui-property" );
-$this.slider({
- value : 0,//Значение, которое будет выставлено слайдеру при загрузке
- min : 1000,//Минимально возможное значение на ползунке
- max : 1500000,//Максимально возможное значение на ползунке
- step : 1000,//Шаг, с которым будет двигаться ползунок
- create: function( event, ui ) {
-	 val = jQuery( $this ).slider("value");//При создании слайдера, получаем его значение в перемен. val
-	console.log(val);
-	  $this.parent().find( ".slider-result-input-property" ).val( val );//Заполняем этим значением элемент с id contentSlider
- },
-		 slide: function( event, ui ) {
- 		 			$this.parent().find( ".slider-result-input-property" ).val( ui.value );//При изменении значения ползунка заполняем элемент с id contentSlider
+function InitUISliderPageProperty() {
+    var $this = jQuery(".slider-ui-property");
+    $this.slider({
+        value: 0,//Значение, которое будет выставлено слайдеру при загрузке
+        min: 1000,//Минимально возможное значение на ползунке
+        max: 1500000,//Максимально возможное значение на ползунке
+        step: 1000,//Шаг, с которым будет двигаться ползунок
+        create: function (event, ui) {
+            val = jQuery($this).slider("value");//При создании слайдера, получаем его значение в перемен. val
+            console.log(val);
+            $this.parent().find(".slider-result-input-property").val(val);//Заполняем этим значением элемент с id contentSlider
+        },
+        slide: function (event, ui) {
+            $this.parent().find(".slider-result-input-property").val(ui.value);//При изменении значения ползунка заполняем элемент с id contentSlider
 
-		 }
- });
+        }
+    });
 }
