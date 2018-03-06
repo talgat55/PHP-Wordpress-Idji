@@ -30,31 +30,50 @@ if (isset($_POST['form_4_submit'])) {
     $form_4_have_bankrot = $_POST['form_4_have_bankrot'];
     $form_4_have_plan_bankot = $_POST['form_4_have_plan_bankot'];
     $form_4_name_app[] = $_POST['form_4_name_app'];
-
+    $explode_court = explode('|', $form_4_court);
     $html = '
-                                            
-                        В ' . $form_4_court . '<br> 
-                        Должник  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>
-                        Место жительства: ' . $results[0]->place_live . '
-                        Дата и место рождения: ' . date("d.m.y", strtotime($results[0]->bird_day)) . ',<br>
-                         ' . $results[0]->place_bird . ' <br>
-                        Телефон: ' . $results[0]->extra_phone . '<br>
-                        E-mail: ' . $results[0]->extra_email . '<br>
-                        Конкурсный<br> 
-                        ';
+    <table style="border: none; width: 100%; " cellpadding="5">
+        <tbody>
+            <tr>
+                <td style="width: 30%;"> </td>
+                <td style="width: 30%; text-align: right;">В:</td>
+                <td style="width: 40%;">' . $explode_court[0] . '  ' . $explode_court[1] . '
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 30%;"> </td>
+                <td style="width: 30%; text-align: right;">Должник:</td>
+                <td style="width: 40%;"> ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>
+                                        Место жительства: ' . $results[0]->place_live . '
+                                        Дата и место рождения: ' . date("d.m.y", strtotime($results[0]->bird_day)) . ',<br>
+                                         ' . $results[0]->place_bird . ' <br>
+                                        Телефон: ' . $results[0]->extra_phone . '<br>
+                                        E-mail: ' . $results[0]->extra_email . '<br>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 30%;"> </td>
+                <td style="width: 30%; text-align: right;">Конкурсный</td>
+                <td style="width: 40%;"></td>
+            </tr>
+
+            ';
     if ($form_4_name_creditor[0]) {
         $count_creditor = 1;
         for ($i = 0; $i < count($form_4_name_creditor[0]); $i++) {
             $html .= '
-                       кредитор ' . $count_creditor . '<br>
-                                   ' . $form_4_name_creditor[0][$i] . '<br>
+                        <tr>
+                        <td style="width: 30%;"> </td>
+                              <td style="width: 30%; text-align: right;"> кредитор ' . $count_creditor . '</td>
+                              <td style="width: 40%;"> ' . $form_4_name_creditor[0][$i] . '<br>
                                    Место нахождения:<br>
                                    ' . $form_4_location[0][$i] . '<br>
                                   ИНН: ' . $form_4_inn[0][$i] . ';ОГРН: ' . $form_4_ogrn[0][$i] . '<br>
                                   Телефон: ' . $form_4_phone[0][$i] . '<br>
                                   Факс: ' . $form_4_fax[0][$i] . '<br>
                                   E-mail: ' . $form_4_email[0][$i] . '<br>
-              
+                        </td>
+                        </tr>
                        ';
 
 
@@ -65,9 +84,20 @@ if (isset($_POST['form_4_submit'])) {
 
 
     $html .= '
-               Дело № ' . $form_4_number_dela . '<br>          
-    
-    
+            <tr>
+                <td style="width: 30%;"> </td>
+                <td style="width: 30%; text-align: right;">Дело №</td>
+                <td style="width: 40%;">' . $form_4_number_dela . '</td>
+            </tr>
+            
+        </tbody>
+    </table>
+           
+            
+            ';
+
+
+    $html .= ' 
      <h1 style="text-align: center;">ХОДАТАЙСТВО<br> о признании гражданина банкротом и введении процедуры<br>
         реализации имущества гражданина 
     </h1>
@@ -120,17 +150,16 @@ if (isset($_POST['form_4_submit'])) {
         $count_app = 1;
         for ($j = 0; $j < count($form_4_name_app[0]); $j++) {
             $html .= 'Приложение:<br>
-        '.$count_app.') '.$form_4_name_app[0][$j].' <br>
+        ' . $count_app . ') ' . $form_4_name_app[0][$j] . ' <br>
         
         ';
             $count_app++;
         }
 
     }
-    $html .=  '' . date("d.m.y") . '         <p style="text-align:right;">
+    $html .= '' . date("d.m.y") . '         <p style="text-align:right;">
         _____________   ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '
     </p>';
-
 
 
     generateform($html, 'form4');

@@ -40,6 +40,9 @@ get_header(); ?>
                 case '[form3]':
                     get_template_part('template-parts/forms/page-form-3');
                     break;
+                case '[form2]':
+                    get_template_part('template-parts/forms/page-form-2');
+                    break;
 
             }
 

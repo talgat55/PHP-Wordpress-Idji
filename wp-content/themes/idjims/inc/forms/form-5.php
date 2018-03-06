@@ -18,12 +18,25 @@ if (isset($_POST['form_5_submit'])) {
     $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");
 
     $html = '
+    <table style="border: none; width: 100%; " cellpadding="5">
+        <tbody>
+            <tr>
+                <td style="width: 30%;"> </td>
+                <td style="width: 30%; text-align: right;">В:</td>
+                <td style="width: 40%;">' . $form_5_name_bank . '<br>Адрес: ' . $form_5_adress_bank . '<br>От  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '<br>Место жительства: '.$results[0]->place_live.'<br>Телефон: '.$results[0]->extra_phone.'
+                </td>
+            </tr>
+        </tbody>
+        </table>
+           
+            
+            ';
+
+
+
+    $html .= '     
                                         
-                        В ' . $form_5_name_bank . '
-                        Адрес: ' . $form_5_adress_bank . '
-                        От  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' 
-                        Место жительства: '.$results[0]->place_live.'
-                        Телефон: '.$results[0]->extra_phone.'
+                     
     <h1 style="text-align: center;">Заявление о предоставлении информации</h1>
     <p>
     Прошу Вас предоставить сведения в виде справки о наличии счетов, вкладов (депозитов),

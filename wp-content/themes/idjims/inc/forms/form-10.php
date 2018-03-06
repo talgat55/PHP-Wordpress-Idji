@@ -32,40 +32,51 @@ if (isset($_POST['form_10_cancel_court_order_submit'])) {
     $table_name = $wpdb->prefix . "addition_informaion";
     $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");
 
+    $html = '
+    <table style="border: none; width: 100%; " cellpadding="5">
+        <tbody>
+            <tr>
+                <td style="width: 30%;"> </td>
+                <td style="width: 30%; text-align: right;">Куда:</td>
+                <td style="width: 40%;">' . $form_10_whom . '<br> ' . $form_10_adress_court . '</td>
+            </tr>
+            <tr>
+                <td style="width: 30%;"> </td>
+                <td style="width: 30%; text-align: right;">Заявитель:</td>
+                <td style="width: 40%;">' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>
+                                         Место жительства: ' . $results[0]->place_live . ' <br>
+                                         Дата и место рождения: ' . date("d.m.y", strtotime($results[0]->bird_day)) . ',<br>
+                                         ' . $results[0]->place_bird . ' <br>
+                                         Телефон: ' . $results[0]->extra_phone . ' <br>
+                                         e-mail: ' . $results[0]->extra_email . ' <br>
+                         </td>
+            </tr>
+            <tr>
+                <td style="width: 30%;"> </td>
+                <td style="width: 30%; text-align: right;">Взыскатель:</td>
+                <td style="width: 40%;"> ' . $form_10_name_creditor . ' <br>
+                                         Место нахождения: ' . $form_10_location . ' <br>
+                                         ИНН: ' . $form_10_inn . '; ОГРН: ' . $form_10_ogrn . ' <br> 
+                                         Телефон: ' . $form_10_phone . ' <br>
+                                         Факс: ' . $form_10_fax . ' <br>
+                                         e-mail: ' . $form_10_email . ' <br></td>
+            </tr>             
+            <tr>
+                <td style="width: 30%;"> </td>
+                <td style="width: 30%; text-align: right;">Дело №:</td>
+                <td style="width: 40%;"> ' . $form_10_case_number . '</td>
+            </tr> 
+            </tbody>
+            </table>
+            ';
 
-    $html = '    
-            <div style="text-align: right;  display: block;">
-                   <div style="text-align: right; width:60%; display: inline-block;">
-                    <p style="    width: 57%; display: inline-block;">Куда:</p> <p style="display: inline-block;width: 40%;">' . $form_10_whom . '<br>
-                        ' . $form_10_adress_court . '</p>
-                    </div>                                 
-            </div>   
-            
+
+
+    $html .= '     
  
-            <div style="text-align: right;  display: block;">
-                    Заявитель:  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>
-                         Место жительства: ' . $results[0]->place_live . ' <br>
-                         Дата и место рождения: ' . date("d.m.y", strtotime($results[0]->bird_day)) . ',<br>
-                         ' . $results[0]->place_bird . ' <br>
-                         Телефон: ' . $results[0]->extra_phone . ' <br>
-                         e-mail: ' . $results[0]->extra_email . ' <br>
-            </div> 
-            <div style="text-align: right;   display: inline-block;">
-                    Взыскатель:                     
-                        ' . $form_10_name_creditor . ' <br>
-                         Место нахождения: ' . $form_10_location . ' <br>
-                         ИНН: ' . $form_10_inn . '; ОГРН: ' . $form_10_ogrn . ' <br> 
-                         Телефон: ' . $form_10_phone . ' <br>
-                         Факс: ' . $form_10_fax . ' <br>
-                         e-mail: ' . $form_10_email . ' <br>
-            </div> 
-                    <div style="text-align: right; width: 40%; display: inline-block;">
-                    Дело №:                    
-            </div>   
-            <div style="text-align: right;  display: inline-block;">
-                        ' . $form_10_case_number . ' <br> 
-            </div>
-          
+            
+            
+               
     
         <h1 style="text-align: center;">Заявление<br> об отмене судебного приказа</h1>
     

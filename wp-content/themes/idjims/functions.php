@@ -43,6 +43,7 @@ include_once('inc/forms/form-6.php');
 include_once('inc/forms/form-5.php');
 include_once('inc/forms/form-4.php');
 include_once('inc/forms/form-3.php');
+include_once('inc/forms/form-2.php');
 
 
 /*

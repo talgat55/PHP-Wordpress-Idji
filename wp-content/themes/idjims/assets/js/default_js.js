@@ -291,7 +291,7 @@ jQuery(document).ready(function () {
     * Add row form 1 row form
     */
 
-    if (jQuery('.add-form.first, .add-form.second, .add-form.first-form-9, .add-form.form-8, .add-form.add-form-6, .add-form.form-4-1, .add-form.form-4-2, .add-form.form-3-1,.add-form.form-3-2').length) {
+    if (jQuery('.add-form.form-2-6, .add-form.form-2-5, .add-form.form-2-4, .add-form.form-2-3, .add-form.form-2-2, .add-form.first, .add-form.second, .add-form.first-form-9, .add-form.form-8, .add-form.add-form-6, .add-form.form-4-1, .add-form.form-4-2, .add-form.form-3-1,.add-form.form-3-2, .add-form.form-2-1').length) {
         jQuery('.add-form.first').click(function (e) {
             e.preventDefault();
 
@@ -400,31 +400,31 @@ jQuery(document).ready(function () {
             var $thisParent = jQuery(this).parent();
             jQuery($thisParent).append('<div class="form-group-one clearfix">\n' +
                 '                                <div class="form-group">\n' +
-                '                                    <input name="form_4_name_creditor" type="text" class="form-control "\n' +
+                '                                    <input name="form_4_name_creditor[]" type="text" class="form-control "\n' +
                 '                                           placeholder="Наименование кредитора полностью">\n' +
                 '                                </div>\n' +
                 '                                <div class="form-group">\n' +
-                '                                    <input name="form_4_location" type="text" class="form-control "\n' +
+                '                                    <input name="form_4_location[]" type="text" class="form-control "\n' +
                 '                                           placeholder="Место нахождения">\n' +
                 '                                </div>\n' +
                 '                                <div class="form-group">\n' +
-                '                                    <input name="form_4_inn" type="text" class="form-control "\n' +
+                '                                    <input name="form_4_inn[]" type="text" class="form-control "\n' +
                 '                                           placeholder="ИНН">\n' +
                 '                                </div>\n' +
                 '                                <div class="form-group">\n' +
-                '                                    <input name="form_4_ogrn" type="text" class="form-control "\n' +
+                '                                    <input name="form_4_ogrn[]" type="text" class="form-control "\n' +
                 '                                           placeholder="ОГРН">\n' +
                 '                                </div>\n' +
                 '                                <div class="form-group">\n' +
-                '                                    <input name="form_4_phone" type="text" class="form-control "\n' +
+                '                                    <input name="form_4_phone[]" type="text" class="form-control "\n' +
                 '                                           placeholder="Телефон">\n' +
                 '                                </div>\n' +
                 '                                <div class="form-group">\n' +
-                '                                    <input name="form_4_fax" type="text" class="form-control "\n' +
+                '                                    <input name="form_4_fax[]" type="text" class="form-control "\n' +
                 '                                           placeholder="Факс">\n' +
                 '                                </div>\n' +
                 '                                <div class="form-group">\n' +
-                '                                    <input name="form_4_email" type="text" class="form-control "\n' +
+                '                                    <input name="form_4_email[]" type="text" class="form-control "\n' +
                 '                                           placeholder="E-mail">\n' +
                 '                                </div>\n' +
                 '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
@@ -489,6 +489,173 @@ jQuery(document).ready(function () {
                 '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
                 '                            </div>');
         });
+
+        jQuery('.add-form.form-2-1').click(function (e) {
+            e.preventDefault();
+            var $thisParent = jQuery(this).parent();
+            jQuery($thisParent).append('<div class="col-md-12-form">\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_kinds_name'+InitTypeProperty(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Вид и наименование имущества">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_kind'+InitTypeProperty(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Вид собственности (1)">\n' +
+                '                            </div>\n' +
+                '<div class="form-group">'+
+                '<input name="form_2_place'+InitTypeProperty(this)+'[]" type="text" class="form-control " placeholder="Местонахождение (адрес)">'+
+                '</div>'+
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_area'+InitTypeProperty(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Площадь (кв.м)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_acquisition_price'+InitTypeProperty(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Основание приобретения (2) и стоимость (3)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_info_zalog'+InitTypeProperty(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Сведения о залоге и залогодержателе (4)">\n' +
+                '                            </div>\n' +
+                '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '                        </div>');
+        });
+        jQuery('.add-form.form-2-2').click(function (e) {
+            e.preventDefault();
+            var $thisParent = jQuery(this).parent();
+            jQuery($thisParent).append('<div class="col-md-12-form">\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_kind_marks'+InitTypeAuto(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Вид, марка, модель транспортного средства, год изготовления">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_id_number'+InitTypeAuto(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Идентификационный номер (6)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_kinds_property'+InitTypeAuto(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Вид собственности (7)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_palce'+InitTypeAuto(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Место нахождения/место хранения (адрес)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_price'+InitTypeAuto(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Стоимость (8)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_info'+InitTypeAuto(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Сведения о залоге и залогодержателе (9)">\n' +
+                '                            </div> \n' +
+                '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '                        </div>');
+        });
+        jQuery('.add-form.form-2-3').click(function (e) {
+            e.preventDefault();
+            var $thisParent = jQuery(this).parent();
+            jQuery($thisParent).append('<div class="col-md-12-form">\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_name_adress_bank[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Наименование и адрес банка или иной кредитной организации">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_kind_valute_chet[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Вид и валюта счета (10)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_date_open_chet[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Дата открытия счета">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_balance_chet[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Остаток на счете (11)">\n' +
+                '                            </div> '+
+                '                            <div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '                        </div>');
+        });
+        jQuery('.add-form.form-2-4').click(function (e) {
+            e.preventDefault();
+            var $thisParent = jQuery(this).parent();
+            jQuery($thisParent).append('<div class="col-md-12-form">\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_4_1_name[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Наименование и организационно-правовая форма организации (12)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_4_2_place[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Местонахождение организации (адрес)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_4_3_kapital[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Уставный, складочный капитал, паевой фонд (13)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_4_4_part_use[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Доля участия (14)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_4_5_main_use[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Основание участия (15)">\n' +
+                '                            </div> \n' +
+                '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '                        </div>');
+        });
+        jQuery('.add-form.form-2-5').click(function (e) {
+            e.preventDefault();
+            var $thisParent = jQuery(this).parent();
+            jQuery($thisParent).append(' <div class="col-md-12-form">\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_5_1_kind_paper[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Вид ценной бумаги (16)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_5_2_face_release[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Лицо, выпустившее ценную бумагу">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_5_3_value_obyazatelstava[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Номинальная величина обязательства (руб.)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_5_4_total_count[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Общее количество">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_5_5_total_price[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Общая стоимость (17)">\n' +
+                '                            </div>\n' +
+                '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '                        </div>');
+
+        });
+        jQuery('.add-form.form-2-6').click(function (e) {
+            e.preventDefault();
+            var $thisParent = jQuery(this).parent();
+            jQuery($thisParent).append('  <div class="col-md-12-form">\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_6_1_kind_property'+InitTypeVI(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Вид и наименование имущества">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_6_2_price'+InitTypeVI(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Стоимость (сумма и валюта) (18)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_6_3_plcae_have'+InitTypeVI(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Место нахождения/место хранения (19)">\n' +
+                '                            </div>\n' +
+                '                            <div class="form-group">\n' +
+                '                                <input name="form_2_6_4_total_info'+InitTypeVI(this)+'[]" type="text" class="form-control "\n' +
+                '                                       placeholder="Сведения о залоге и залогодержателе (20)">\n' +
+                '                            </div>\n' +
+                '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
+                '                        </div>');
+
+        });
+
+
+
 
 
 // end
@@ -558,6 +725,93 @@ function InitTypeFiledNumber(Element) {
     } else if ($dataSectionNumber == '4') {
 
         return $redytype = '_4';
+    }
+
+
+}
+function InitTypeProperty(Element) {
+
+    var $dataSectionNumber = jQuery(Element).parent().data('section');
+
+    if ($dataSectionNumber == '_property') {
+
+        return '_property';
+
+    } else if ($dataSectionNumber == '_home') {
+
+        return '_home';
+
+    } else if ($dataSectionNumber == '_rooms') {
+
+        return '_rooms';
+
+    } else if ($dataSectionNumber == '_garages') {
+
+        return '_garages';
+    } else if ($dataSectionNumber == '_otherproperty') {
+
+        return '_otherproperty';
+    }
+
+
+}
+
+function InitTypeAuto(Element) {
+
+    var $dataSectionNumber = jQuery(Element).parent().data('section');
+
+    if ($dataSectionNumber == '_light') {
+
+        return '_light';
+
+    } else if ($dataSectionNumber == '_cargo') {
+
+        return '_cargo';
+
+    } else if ($dataSectionNumber == '_moto') {
+
+        return '_moto';
+
+    } else if ($dataSectionNumber == '_agricultural_machinery') {
+
+        return '_agricultural_machinery';
+
+    } else if ($dataSectionNumber == '_water_machinery') {
+
+        return '_water_machinery';
+
+    }else if ($dataSectionNumber == '_air_machinery') {
+
+        return '_air_machinery';
+
+    }else if ($dataSectionNumber == '_other_machinery') {
+
+        return '_other_machinery';
+
+    }
+
+
+}
+function InitTypeVI(Element) {
+
+    var $dataSectionNumber = jQuery(Element).parent().data('section');
+
+    if ($dataSectionNumber == '_jewelry') {
+
+        return '_jewelry';
+
+    } else if ($dataSectionNumber == '_artobjects') {
+
+        return '_artobjects';
+
+    } else if ($dataSectionNumber == '_property') {
+
+        return '_property';
+
+    } else if ($dataSectionNumber == '_propertyother') {
+
+        return '_propertyother';
+
     }
 
 
