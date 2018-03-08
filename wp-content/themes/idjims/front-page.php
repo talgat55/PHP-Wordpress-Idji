@@ -276,7 +276,7 @@ get_header(); ?>
         <div class="clearfix">
         <div class="col-md-7">
           <div class="title-offer-list clearfix">
-            <img src="<?php  echo get_theme_file_uri( '/assets/images/cube-2.jpg' ) ?>">
+            <img data-lazy="<?php  echo get_theme_file_uri( '/assets/images/cube-2.jpg' ); ?>">
             <h3>Исключаем:</h3>
           </div>
           <ul class="offer-list">
@@ -312,7 +312,7 @@ get_header(); ?>
             </br>
             Кроме того, вы можете объявить о своей несостоятельности при меньшем долге в том случае, когда рассчитаться со всеми кредитами в установленный срок невозможно</p>
 
-            <img  class="check-bg" src="<?php  echo get_theme_file_uri( '/assets/images/check-bg-2.png' ) ?>">
+            <img  class="check-bg" src="<?php  echo get_theme_file_uri( '/assets/images/check-bg-2.png' ); ?>">
           </div>
 
         </div>
@@ -440,7 +440,7 @@ get_header(); ?>
 
           foreach ($ImagesClient as $key => $value) {
               $value   = aq_resize( $value['full_url'], 173, 173, true );
-                echo '<img src="'.$value.'">';
+                echo '<img data-lazy="'.$value.'">';
             break;
           }
                 echo '

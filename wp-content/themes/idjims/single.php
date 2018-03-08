@@ -2,42 +2,38 @@
 /**
  * The template for displaying all single posts
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
  */
-
 get_header(); ?>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+    <div class="breadscrumb">
+        <div class="container">
+            <h1 class="title-section service center-white "><?php echo get_the_title(get_the_ID()); ?></h1>
+        </div>
+    </div>
+    <div class="wrap blog-row">
+        <div class="container clearfix">
+                <?php
+                $img_url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()), 'full');
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+                echo '
+                                    <div style="position:relative">
+                                    <img src="' . $img_url . '" />
+                                    <div class="overlay-layer-blog"></div>
+                                    <div class="meta-blog">
+                                        <img src="' . get_theme_file_uri("/assets/images/cal-white.png") . '"/>
+                                        <span class="date-blog">' . get_the_date('Y.m.d', get_the_ID()) . '</span>
+                                    </div>
+                                    </div>
+                                
+                                <div class="title-blog"> ' . get_the_title(get_the_ID()) . ' </div>
+                                <div class="except-blog">' .get_the_content(get_the_ID()) . '</div>
+                             ';
 
-				get_template_part( 'template-parts/post/content', get_post_format() );
+                ?>
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
 
-				the_post_navigation( array(
-					'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'twentyseventeen' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'twentyseventeen' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
-				) );
+        </div>
 
-			endwhile; // End of the loop.
-			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
-</div><!-- .wrap -->
+    </div><!-- .wrap -->
 
 <?php get_footer();

@@ -38,28 +38,19 @@ if (isset($_POST['form_10_cancel_court_order_submit'])) {
             <tr>
                 <td style="width: 30%;"> </td>
                 <td style="width: 30%; text-align: right;">Куда:</td>
-                <td style="width: 40%;">' . $form_10_whom . '<br> ' . $form_10_adress_court . '</td>
+                <td style="width: 40%;">' . $form_10_whom . '<br>' . $form_10_adress_court . '</td>
             </tr>
             <tr>
                 <td style="width: 30%;"> </td>
                 <td style="width: 30%; text-align: right;">Заявитель:</td>
-                <td style="width: 40%;">' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>
-                                         Место жительства: ' . $results[0]->place_live . ' <br>
-                                         Дата и место рождения: ' . date("d.m.y", strtotime($results[0]->bird_day)) . ',<br>
-                                         ' . $results[0]->place_bird . ' <br>
-                                         Телефон: ' . $results[0]->extra_phone . ' <br>
-                                         e-mail: ' . $results[0]->extra_email . ' <br>
+                <td style="width: 40%;">' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>Место жительства: ' . $results[0]->place_live . ' <br>Дата и место рождения: ' . date("d.m.y", strtotime($results[0]->bird_day)) . ',<br>
+                                         ' . $results[0]->place_bird . ' <br>Телефон: ' . $results[0]->extra_phone . ' <br>e-mail: ' . $results[0]->extra_email . ' <br>
                          </td>
             </tr>
             <tr>
                 <td style="width: 30%;"> </td>
                 <td style="width: 30%; text-align: right;">Взыскатель:</td>
-                <td style="width: 40%;"> ' . $form_10_name_creditor . ' <br>
-                                         Место нахождения: ' . $form_10_location . ' <br>
-                                         ИНН: ' . $form_10_inn . '; ОГРН: ' . $form_10_ogrn . ' <br> 
-                                         Телефон: ' . $form_10_phone . ' <br>
-                                         Факс: ' . $form_10_fax . ' <br>
-                                         e-mail: ' . $form_10_email . ' <br></td>
+                <td style="width: 40%;">' . $form_10_name_creditor . ' <br>Место нахождения: ' . $form_10_location . ' <br>ИНН: ' . $form_10_inn . '; ОГРН: ' . $form_10_ogrn . ' <br>Телефон: ' . $form_10_phone . ' <br>Факс: ' . $form_10_fax . ' <br>e-mail: ' . $form_10_email . ' <br></td>
             </tr>             
             <tr>
                 <td style="width: 30%;"> </td>

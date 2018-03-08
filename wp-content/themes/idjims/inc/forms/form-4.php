@@ -43,12 +43,7 @@ if (isset($_POST['form_4_submit'])) {
             <tr>
                 <td style="width: 30%;"> </td>
                 <td style="width: 30%; text-align: right;">Должник:</td>
-                <td style="width: 40%;"> ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>
-                                        Место жительства: ' . $results[0]->place_live . '
-                                        Дата и место рождения: ' . date("d.m.y", strtotime($results[0]->bird_day)) . ',<br>
-                                         ' . $results[0]->place_bird . ' <br>
-                                        Телефон: ' . $results[0]->extra_phone . '<br>
-                                        E-mail: ' . $results[0]->extra_email . '<br>
+                <td style="width: 40%;"> ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>Место жительства: ' . $results[0]->place_live . '<br>Дата и место рождения: ' . date("d.m.y", strtotime($results[0]->bird_day)) . ',<br>Телефон: ' . $results[0]->extra_phone . '<br>E-mail: ' . $results[0]->extra_email . '<br>
                 </td>
             </tr>
             <tr>
@@ -65,13 +60,8 @@ if (isset($_POST['form_4_submit'])) {
                         <tr>
                         <td style="width: 30%;"> </td>
                               <td style="width: 30%; text-align: right;"> кредитор ' . $count_creditor . '</td>
-                              <td style="width: 40%;"> ' . $form_4_name_creditor[0][$i] . '<br>
-                                   Место нахождения:<br>
-                                   ' . $form_4_location[0][$i] . '<br>
-                                  ИНН: ' . $form_4_inn[0][$i] . ';ОГРН: ' . $form_4_ogrn[0][$i] . '<br>
-                                  Телефон: ' . $form_4_phone[0][$i] . '<br>
-                                  Факс: ' . $form_4_fax[0][$i] . '<br>
-                                  E-mail: ' . $form_4_email[0][$i] . '<br>
+                              <td style="width: 40%;"> ' . $form_4_name_creditor[0][$i] . '<br>Место нахождения:<br>
+                                   ' . $form_4_location[0][$i] . '<br>ИНН: ' . $form_4_inn[0][$i] . ';ОГРН: ' . $form_4_ogrn[0][$i] . '<br>Телефон: ' . $form_4_phone[0][$i] . '<br>Факс: ' . $form_4_fax[0][$i] . '<br>E-mail: ' . $form_4_email[0][$i] . '<br>
                         </td>
                         </tr>
                        ';
@@ -157,7 +147,7 @@ if (isset($_POST['form_4_submit'])) {
         }
 
     }
-    $html .= '' . date("d.m.y") . '         <p style="text-align:right;">
+    $html .= '<br>' . date("d.m.y") . '         <p style="text-align:right;">
         _____________   ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '
     </p>';
 

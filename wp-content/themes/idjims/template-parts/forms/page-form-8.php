@@ -18,7 +18,7 @@
             ЗАПОЛНИТЕ ДОПОЛНИТЕЛЬНУЮ ИНФОРМАЦИЮ
         </p>
         <form method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">
-            <div class="clearfix">
+            <div class="clearfix page-form-8 ">
                 <div class="form-group-one-walp one-section">
                     <div class="form-group-one clearfix">
 

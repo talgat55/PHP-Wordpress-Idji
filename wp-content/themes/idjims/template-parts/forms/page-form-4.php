@@ -18,7 +18,7 @@
             ЗАПОЛНИТЕ ДОПОЛНИТЕЛЬНУЮ ИНФОРМАЦИЮ
         </p>
         <form method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">
-            <div class="clearfix">
+            <div class="clearfix page-form-4">
                 <div class="form-group-one-walp one-section">
                     <div class="form-group-one clearfix">
 
@@ -286,7 +286,7 @@
                         </div>
 
                         <p>Конкурсные кредиторы</p>
-                        <div class="col-md-12-form clearfix" style="position: relative;     margin-bottom: 90px;">
+                        <div class="col-md-12-form left-border clearfix" style="position: relative;     margin-bottom: 90px;">
                             <div class="form-group-one clearfix">
                                 <div class="form-group">
                                     <input name="form_4_name_creditor[]" type="text" class="form-control "

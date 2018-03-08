@@ -40,30 +40,20 @@ if (isset($_POST['form_8_loan_agreement_submit'])) {
             <tr>
                 <td style="width: 30%;"> </td>
                 <td style="width: 30%; text-align: right;">В:</td>
-                <td style="width: 40%;">' . $form_8_court_name . ' <br>
-                                        Адрес: ' . $form_8_adress_court . '
+                <td style="width: 40%;">' . $form_8_court_name . ' <br>Адрес: ' . $form_8_adress_court . '
                 </td>
             </tr>
             <tr>
                 <td style="width: 30%;"> </td>
                 <td style="width: 30%; text-align: right;">Заявитель:</td>
-                <td style="width: 40%;">' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>
-                                         Место жительства: ' . $results[0]->place_live . ' <br>
-                                         Дата и место рождения: ' . date("d.m.y", strtotime($results[0]->bird_day)) . ',<br>
-                                         ' . $results[0]->place_bird . ' <br>
-                                         Телефон: ' . $results[0]->extra_phone . ' <br>
-                                         e-mail: ' . $results[0]->extra_email . ' <br>
+                <td style="width: 40%;">' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>Место жительства: ' . $results[0]->place_live . ' <br>Дата и место рождения: ' . date("d.m.y", strtotime($results[0]->bird_day)) . ',<br>
+                                         ' . $results[0]->place_bird . ' <br>Телефон: ' . $results[0]->extra_phone . ' <br>e-mail: ' . $results[0]->extra_email . ' <br>
                 </td>
             </tr>
             <tr>
                 <td style="width: 30%;"> </td>
                 <td style="width: 30%; text-align: right;">Истец:</td>
-                <td style="width: 40%;"> ' . $form_8_name_i . ' <br>
-                                         Место нахождения: ' . $form_8_adress_i . ' <br>
-                         ИНН: ' . $form_8_inn_i . '; ОГРН: ' . $form_8_ogrn_i . ' <br> 
-                         Телефон: ' . $form_8_phone_exist . ' <br>
-                         Факс: ' . $form_8_fax_exist . ' <br>
-                         e-mail: ' . $form_8_email_exist . ' <br>
+                <td style="width: 40%;"> ' . $form_8_name_i . ' <br>Место нахождения: ' . $form_8_adress_i . ' <br>ИНН: ' . $form_8_inn_i . '; ОГРН: ' . $form_8_ogrn_i . ' <br>Телефон: ' . $form_8_phone_exist . ' <br>Факс: ' . $form_8_fax_exist . ' <br>e-mail: ' . $form_8_email_exist . ' <br>
                 </td>
             </tr>             
             <tr>

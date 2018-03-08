@@ -17,7 +17,7 @@
             ЗАПОЛНИТЕ ДОПОЛНИТЕЛЬНУЮ ИНФОРМАЦИЮ
         </p>
         <form method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">
-            <div class="clearfix">
+            <div class="clearfix page-form-2">
 
                 <div class="form-group-one-walp one-section">
                     <h3>I. Недвижимое имущество</h3>

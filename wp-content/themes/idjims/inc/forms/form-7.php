@@ -17,18 +17,10 @@ if (isset($_POST['form_7_submit'])) {
 
     $html = '
      <h1 style="text-align: center;">Заявление<br> об отказе взаимодействия</h1>
-     Заявитель: ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '<br>
-     Документ, удостоверяющий личность: паспорт гражданина РФ<br>
-     серия: ' . $results[0]->passport_serial . '  номер:  ' . $results[0]->passport_number . '  дата выдачи:  ' . date("d.m.y", strtotime($results[0]->passport_issued_date)) . ' <br>
-     кем выдан: ' . $results[0]->passport_issued_by . ' <br>
-     
-     Адрес места жительства заявителя: 
-     ' . $results[0]->registrtation_index . ', ' . $results[0]->registrtation_city . ',  ' . $results[0]->registrtation_locality . '<br>
-     Контактные телефоны заявителя:  ' . $results[0]->extra_phone . '<br>
-     Адрес электронной почты заявителя:  ' . $results[0]->extra_email . '<br>
-     При совершении действий, направленных на возврат просроченной задолженности,<br>
-     '.$form_7_number_doc.' ' . date("d.m.y", strtotime($form_7_date_doc)) . '<br>
-     Заявление составлено: ' . date("d.m.y") . '         <p style="text-align:right;">
+     Заявитель: ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '<br>Документ, удостоверяющий личность: паспорт гражданина РФ<br>серия: ' . $results[0]->passport_serial . '  номер:  ' . $results[0]->passport_number . '  дата выдачи:  ' . date("d.m.y", strtotime($results[0]->passport_issued_date)) . ' <br>кем выдан: ' . $results[0]->passport_issued_by . ' <br>Адрес места жительства заявителя: 
+     ' . $results[0]->registrtation_index . ', ' . $results[0]->registrtation_city . ',  ' . $results[0]->registrtation_locality . '<br>Контактные телефоны заявителя:  ' . $results[0]->extra_phone . '<br>Адрес электронной почты заявителя:  ' . $results[0]->extra_email . '<br>При совершении действий, направленных на возврат просроченной задолженности,<br>
+     '.$form_7_number_doc.' ' . date("d.m.y", strtotime($form_7_date_doc)) . '<br>Заявление составлено: ' . date("d.m.y") . '         
+            <p style="text-align:right;">
                 Подпись заявителя _____________/  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' 
             </p>
      ';

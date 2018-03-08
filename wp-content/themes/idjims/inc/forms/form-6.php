@@ -39,11 +39,7 @@ if (isset($_POST['form_6_submit'])) {
             <tr>
                 <td style="width: 30%;"> </td>
                 <td style="width: 30%; text-align: right;">Должник:<br> (Заявитель)</td>
-                <td style="width: 40%;"> ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>
-                                                    паспорт:  ' . $results[0]->passport_serial . '  ' . $results[0]->passport_number . '<br>
-                                                    выдан:  ' . $results[0]->passport_issued_by . ' <br>
-                                                    дата выдачи:  ' . date("d.m.y", strtotime($results[0]->passport_issued_date)) . '  <br>
-                                                    адрес регистрации:
+                <td style="width: 40%;"> ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>паспорт:  ' . $results[0]->passport_serial . '  ' . $results[0]->passport_number . '<br>выдан:  ' . $results[0]->passport_issued_by . ' <br>дата выдачи:  ' . date("d.m.y", strtotime($results[0]->passport_issued_date)) . '  <br>адрес регистрации:
                                                     ' . $results[0]->registrtation_index . ', ' . $results[0]->registrtation_city . ',  ' . $results[0]->registrtation_locality . '<br>
                 </td>
             </tr>

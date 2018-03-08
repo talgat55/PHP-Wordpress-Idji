@@ -2,6 +2,10 @@
 // !!!!!!!!!!!!!!!!!document ready!!!!!!!!!!!!!!!!!!!!!!!!!!
 // ---------------------------------------------------------
 
+jQuery(window).resize(function() {
+    "use strict";
+    accordionQAPage();
+});
 
 jQuery(document).ready(function () {
     "use strict";
@@ -15,6 +19,7 @@ jQuery(document).ready(function () {
     InitActionPriceTables();
     InitChooseOld();
     InitSliderReview();
+    accordionQAPage();
     jQuery(".tabs").lightTabs();
 
 
@@ -37,6 +42,16 @@ jQuery(document).ready(function () {
         });
     }
 
+    jQuery("#map").hover(function () {
+
+            var $this = jQuery('.overlay-map');
+            $this.css('opacity', 0);
+
+        }, function () {
+            var $this = jQuery('.overlay-map');
+            $this.css('opacity', 1);
+        }
+    );
 
     /*
     * hide label in form
@@ -77,11 +92,10 @@ jQuery(document).ready(function () {
             if (!$thisvalue.length) {
                 $this.parent().parent().find('label').show();
             }
-
+            jQuery(this).parent().find('.telephone').inputmask('remove');
         });
 
-
-        jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
+        $this.parent().find('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
 
     });
     /*
@@ -103,6 +117,7 @@ jQuery(document).ready(function () {
         var $this = jQuery(this);
         var $thisParent = jQuery(this).parent();
         $this.hide();
+        $this.parent().find('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
 
         $this.parent().find('input').focus();
         $thisParent.mouseleave(function () {
@@ -111,16 +126,16 @@ jQuery(document).ready(function () {
             if (!$thisvalue.length) {
                 $this.show();
             }
+            jQuery(this).parent().find('.telephone').inputmask('remove');
 
         });
 
 
-        jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
     });
 
     jQuery("form input").focusout(function () {
 
-        jQuery('.telephone').inputmask();
+        jQuery(this).parent().find('.telephone').inputmask('remove');
     });
     /*
     * Modal Form
@@ -495,26 +510,26 @@ jQuery(document).ready(function () {
             var $thisParent = jQuery(this).parent();
             jQuery($thisParent).append('<div class="col-md-12-form">\n' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_kinds_name'+InitTypeProperty(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_kinds_name' + InitTypeProperty(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Вид и наименование имущества">\n' +
                 '                            </div>\n' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_kind'+InitTypeProperty(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_kind' + InitTypeProperty(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Вид собственности (1)">\n' +
                 '                            </div>\n' +
-                '<div class="form-group">'+
-                '<input name="form_2_place'+InitTypeProperty(this)+'[]" type="text" class="form-control " placeholder="Местонахождение (адрес)">'+
-                '</div>'+
+                '<div class="form-group">' +
+                '<input name="form_2_place' + InitTypeProperty(this) + '[]" type="text" class="form-control " placeholder="Местонахождение (адрес)">' +
+                '</div>' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_area'+InitTypeProperty(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_area' + InitTypeProperty(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Площадь (кв.м)">\n' +
                 '                            </div>\n' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_acquisition_price'+InitTypeProperty(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_acquisition_price' + InitTypeProperty(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Основание приобретения (2) и стоимость (3)">\n' +
                 '                            </div>\n' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_info_zalog'+InitTypeProperty(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_info_zalog' + InitTypeProperty(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Сведения о залоге и залогодержателе (4)">\n' +
                 '                            </div>\n' +
                 '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
@@ -525,27 +540,27 @@ jQuery(document).ready(function () {
             var $thisParent = jQuery(this).parent();
             jQuery($thisParent).append('<div class="col-md-12-form">\n' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_kind_marks'+InitTypeAuto(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_kind_marks' + InitTypeAuto(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Вид, марка, модель транспортного средства, год изготовления">\n' +
                 '                            </div>\n' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_id_number'+InitTypeAuto(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_id_number' + InitTypeAuto(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Идентификационный номер (6)">\n' +
                 '                            </div>\n' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_kinds_property'+InitTypeAuto(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_kinds_property' + InitTypeAuto(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Вид собственности (7)">\n' +
                 '                            </div>\n' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_palce'+InitTypeAuto(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_palce' + InitTypeAuto(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Место нахождения/место хранения (адрес)">\n' +
                 '                            </div>\n' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_price'+InitTypeAuto(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_price' + InitTypeAuto(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Стоимость (8)">\n' +
                 '                            </div>\n' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_info'+InitTypeAuto(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_info' + InitTypeAuto(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Сведения о залоге и залогодержателе (9)">\n' +
                 '                            </div> \n' +
                 '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
@@ -570,7 +585,7 @@ jQuery(document).ready(function () {
                 '                            <div class="form-group">\n' +
                 '                                <input name="form_2_balance_chet[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Остаток на счете (11)">\n' +
-                '                            </div> '+
+                '                            </div> ' +
                 '                            <div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
                 '                        </div>');
         });
@@ -634,19 +649,19 @@ jQuery(document).ready(function () {
             var $thisParent = jQuery(this).parent();
             jQuery($thisParent).append('  <div class="col-md-12-form">\n' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_6_1_kind_property'+InitTypeVI(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_6_1_kind_property' + InitTypeVI(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Вид и наименование имущества">\n' +
                 '                            </div>\n' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_6_2_price'+InitTypeVI(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_6_2_price' + InitTypeVI(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Стоимость (сумма и валюта) (18)">\n' +
                 '                            </div>\n' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_6_3_plcae_have'+InitTypeVI(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_6_3_plcae_have' + InitTypeVI(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Место нахождения/место хранения (19)">\n' +
                 '                            </div>\n' +
                 '                            <div class="form-group">\n' +
-                '                                <input name="form_2_6_4_total_info'+InitTypeVI(this)+'[]" type="text" class="form-control "\n' +
+                '                                <input name="form_2_6_4_total_info' + InitTypeVI(this) + '[]" type="text" class="form-control "\n' +
                 '                                       placeholder="Сведения о залоге и залогодержателе (20)">\n' +
                 '                            </div>\n' +
                 '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
@@ -655,22 +670,19 @@ jQuery(document).ready(function () {
         });
 
 
-
-
-
 // end
     }
     /*
     * Show input if check in form pages
      */
 
-        jQuery('.сheckbox-with-input').change(function() {
-            if(jQuery(this).is(":checked")) {
-                jQuery(this).parent().addClass('showInput');
-            } else{
-                jQuery(this).parent().removeClass('showInput');
-            }
-        });
+    jQuery('.сheckbox-with-input').change(function () {
+        if (jQuery(this).is(":checked")) {
+            jQuery(this).parent().addClass('showInput');
+        } else {
+            jQuery(this).parent().removeClass('showInput');
+        }
+    });
 
     /*
     * Response Height in bloks  Same
@@ -683,6 +695,35 @@ jQuery(document).ready(function () {
 
 // end redy function
 });
+
+/*
+* Accordion for Query Ansver Page
+ */
+
+function accordionQAPage() {
+    if (jQuery(window).width() < 800) {
+
+        jQuery(".q-a-block").click(function () {
+
+            jQuery(this).toggleClass('showaccordion')
+
+            return false;
+        });
+    } else {
+        jQuery(".q-a-block").click(function () {
+            jQuery(this).css('height', 63);
+            if (jQuery(this).hasClass('showaccordion')) {
+                jQuery(this).removeClass('showaccordion');
+
+            } else {
+                var $thisblock = jQuery(this).find('.block-q-a-accordion').height();
+                jQuery(this).css('height', $thisblock + 143);
+                jQuery(this).addClass('showaccordion');
+            }
+            return false;
+        });
+    }
+}
 
 /*
 * Choose Old in Calculate Page
@@ -729,6 +770,7 @@ function InitTypeFiledNumber(Element) {
 
 
 }
+
 function InitTypeProperty(Element) {
 
     var $dataSectionNumber = jQuery(Element).parent().data('section');
@@ -780,11 +822,11 @@ function InitTypeAuto(Element) {
 
         return '_water_machinery';
 
-    }else if ($dataSectionNumber == '_air_machinery') {
+    } else if ($dataSectionNumber == '_air_machinery') {
 
         return '_air_machinery';
 
-    }else if ($dataSectionNumber == '_other_machinery') {
+    } else if ($dataSectionNumber == '_other_machinery') {
 
         return '_other_machinery';
 
@@ -792,6 +834,7 @@ function InitTypeAuto(Element) {
 
 
 }
+
 function InitTypeVI(Element) {
 
     var $dataSectionNumber = jQuery(Element).parent().data('section');
@@ -994,6 +1037,7 @@ function InitSlider() {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        lazyLoad: 'progressive',
         dots: true,
         autoplay: true,
         speed: 1000,
@@ -1017,7 +1061,7 @@ function InitSliderReview() {
             slidesToScroll: 1,
             dots: false,
             infinite: false,
-            //	autoplay: true,
+            autoplay: true,
             speed: 1000,
             arrows: false
         });
@@ -1046,9 +1090,10 @@ function InitCarouselClients() {
     jQuery('.slider-wallpaper-clients').slick({
         infinite: true,
         slidesToShow: 3,
+        lazyLoad: 'progressive',
         slidesToScroll: 1,
         dots: false,
-        //autoplay: true,
+        autoplay: true,
         speed: 1000,
         responsive: [
             {

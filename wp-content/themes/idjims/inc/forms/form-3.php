@@ -66,27 +66,18 @@ if (isset($_POST['form_3_submit'])) {
             <tr>
                 <td style="width: 30%;"> </td>
                 <td style="width: 30%; text-align: right;">Должник</td>
-                <td style="width: 40%;">' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>
-                                        Место жительства: ' . $results[0]->place_live . '
-                                        Дата и место рождения: ' . date("d.m.y", strtotime($results[0]->bird_day)) . ',<br>
-                                         ' . $results[0]->place_bird . ' <br>
-                                        Телефон: ' . $results[0]->extra_phone . '<br>
-                                        E-mail: ' . $results[0]->extra_email . '<br></td>
+                <td style="width: 40%;"> ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>Место жительства: ' . $results[0]->place_live . '<br>Дата и место рождения: ' . date("d.m.y", strtotime($results[0]->bird_day)) . ',<br>
+                                         ' . $results[0]->place_bird . ' <br>Телефон: ' . $results[0]->extra_phone . '<br>E-mail: ' . $results[0]->extra_email . '<br></td>
             </tr>';
     $count_creditor = 1;
     for ($i = 0; $i < count($form_3_name_creditor[0]); $i++) {
         $html .= '
     
-        <tr>
+            <tr>
                 <td style = "width: 30%;" > </td >
                 <td style = "width: 30%; text-align: right;" > Конкурсный<br > кредитор ' . $count_creditor . ' </td >
-                <td style = "width: 40%;" > ' . $form_3_name_creditor[0][$i] . '<br>
-                                   Место нахождения:<br>
-                                   ' . $form_3_location[0][$i] . '<br>
-                                  ИНН: ' . $form_3_inn[0][$i] . ';ОГРН: ' . $form_4_ogrn[0][$i] . '<br>
-                                  Телефон: ' . $form_3_phone[0][$i] . '<br>
-                                  Факс: ' . $form_3_fax[0][$i] . '<br>
-                                  E-mail: ' . $form_3_email[0][$i] . '<br>
+                <td style = "width: 40%;" > ' . $form_3_name_creditor[0][$i] . '<br>Место нахождения:<br>
+                                   ' . $form_3_location[0][$i] . '<br>ИНН: ' . $form_3_inn[0][$i] . ';ОГРН: ' . $form_4_ogrn[0][$i] . '<br>Телефон: ' . $form_3_phone[0][$i] . '<br>Факс: ' . $form_3_fax[0][$i] . '<br>E-mail: ' . $form_3_email[0][$i] . '<br>
                  </td>
             </tr >
             ';

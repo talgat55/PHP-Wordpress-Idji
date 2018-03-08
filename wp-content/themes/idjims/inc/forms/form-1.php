@@ -3,69 +3,68 @@
 
 if (isset($_POST['form_reg_submit'])) {
 
-  //		$cur_user_id = get_current_user_id();
-        $cur_user_id =1;
-        global $wpdb;
-        $table_name = $wpdb->prefix . "addition_informaion";
-        $results = $wpdb->get_results("SELECT * FROM ".$table_name." WHERE id_user ='".$cur_user_id."'");
+    //		$cur_user_id = get_current_user_id();
+    $cur_user_id = 1;
+    global $wpdb;
+    $table_name = $wpdb->prefix . "addition_informaion";
+    $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");
 
-        $form_1_entity[] = $_POST['form_1_entity'];  //Содержание обязательства
-        $form_1_creditor[] = $_POST['form_1_creditor'];  //Кредитор
-        $form_1_place_life[] = $_POST['form_1_place_life'];  //Место нахождения (место жительства) кредитора
-        $form_1_main_emite[] = $_POST['form_1_main_emite'];  //Основание возникновения
-        $form_1_total_all[] = $_POST['form_1_total_all'];  //Сумма обязательства (всего)
-        $form_1_total_all_indebtedness[] = $_POST['form_1_total_all_indebtedness'];  //Сумма обязательства (в том числе задолженность)
-        $form_1_penaltie_fines[] = $_POST['form_1_penaltie_fines'];  // Штрафы, пени и иные санкции
+    $form_1_entity[] = $_POST['form_1_entity'];  //Содержание обязательства
+    $form_1_creditor[] = $_POST['form_1_creditor'];  //Кредитор
+    $form_1_place_life[] = $_POST['form_1_place_life'];  //Место нахождения (место жительства) кредитора
+    $form_1_main_emite[] = $_POST['form_1_main_emite'];  //Основание возникновения
+    $form_1_total_all[] = $_POST['form_1_total_all'];  //Сумма обязательства (всего)
+    $form_1_total_all_indebtedness[] = $_POST['form_1_total_all_indebtedness'];  //Сумма обязательства (в том числе задолженность)
+    $form_1_penaltie_fines[] = $_POST['form_1_penaltie_fines'];  // Штрафы, пени и иные санкции
 
-        $form_1_row2_name_tax[] = $_POST['form_1_row2_name_tax'];  // Наименование налога, сбора или иного обязательного платежа
-        $form_1_row2_arrears[] = $_POST['form_1_row2_arrears'];  // Недоимка
-        $form_1_row2_penaltie_fines[] = $_POST['form_1_row2_penaltie_fines'];  // Штрафы, пени и иные санкции
+    $form_1_row2_name_tax[] = $_POST['form_1_row2_name_tax'];  // Наименование налога, сбора или иного обязательного платежа
+    $form_1_row2_arrears[] = $_POST['form_1_row2_arrears'];  // Недоимка
+    $form_1_row2_penaltie_fines[] = $_POST['form_1_row2_penaltie_fines'];  // Штрафы, пени и иные санкции
 
-        // 2
+    // 2
 
-        $form_1_entity_2[] = $_POST['form_1_entity_2'];  //Содержание обязательства
-        $form_1_creditor_2[] = $_POST['form_1_creditor_2'];  //Кредитор
-        $form_1_place_life_2[] = $_POST['form_1_place_life_2'];  //Место нахождения (место жительства) кредитора
-        $form_1_main_emite_2[] = $_POST['form_1_main_emite_2'];  //Основание возникновения
-        $form_1_total_all_2[] = $_POST['form_1_total_all_2'];  //Сумма обязательства (всего)
-        $form_1_total_all_indebtedness_2[] = $_POST['form_1_total_all_indebtedness_2'];  //Сумма обязательства (в том числе задолженность)
-        $form_1_penaltie_fines_2[] = $_POST['form_1_penaltie_fines_2'];  // Штрафы, пени и иные санкции
+    $form_1_entity_2[] = $_POST['form_1_entity_2'];  //Содержание обязательства
+    $form_1_creditor_2[] = $_POST['form_1_creditor_2'];  //Кредитор
+    $form_1_place_life_2[] = $_POST['form_1_place_life_2'];  //Место нахождения (место жительства) кредитора
+    $form_1_main_emite_2[] = $_POST['form_1_main_emite_2'];  //Основание возникновения
+    $form_1_total_all_2[] = $_POST['form_1_total_all_2'];  //Сумма обязательства (всего)
+    $form_1_total_all_indebtedness_2[] = $_POST['form_1_total_all_indebtedness_2'];  //Сумма обязательства (в том числе задолженность)
+    $form_1_penaltie_fines_2[] = $_POST['form_1_penaltie_fines_2'];  // Штрафы, пени и иные санкции
 
-        $form_1_row2_name_tax_2[] = $_POST['form_1_row2_name_tax_2'];  // Наименование налога, сбора или иного обязательного платежа
-        $form_1_row2_arrears_2[] = $_POST['form_1_row2_arrears_2'];  // Недоимка
-        $form_1_row2_penaltie_fines_2[] = $_POST['form_1_row2_penaltie_fines_2'];  // Штрафы, пени и иные санкции
+    $form_1_row2_name_tax_2[] = $_POST['form_1_row2_name_tax_2'];  // Наименование налога, сбора или иного обязательного платежа
+    $form_1_row2_arrears_2[] = $_POST['form_1_row2_arrears_2'];  // Недоимка
+    $form_1_row2_penaltie_fines_2[] = $_POST['form_1_row2_penaltie_fines_2'];  // Штрафы, пени и иные санкции
 
-        // 3
+    // 3
 
-        $form_1_entity_3[] = $_POST['form_1_entity_3'];  //Содержание обязательства
-        $form_1_creditor_3[] = $_POST['form_1_creditor_3'];  //Кредитор
-        $form_1_place_life_3[] = $_POST['form_1_place_life_3'];  //Место нахождения (место жительства) кредитора
-        $form_1_main_emite_3[] = $_POST['form_1_main_emite_3'];  //Основание возникновения
-        $form_1_total_all_3[] = $_POST['form_1_total_all_3'];  //Сумма обязательства (всего)
-        $form_1_total_all_indebtedness_3[] = $_POST['form_1_total_all_indebtedness_3'];  //Сумма обязательства (в том числе задолженность)
-        $form_1_penaltie_fines_3[] = $_POST['form_1_penaltie_fines_3'];  // Штрафы, пени и иные санкции
+    $form_1_entity_3[] = $_POST['form_1_entity_3'];  //Содержание обязательства
+    $form_1_creditor_3[] = $_POST['form_1_creditor_3'];  //Кредитор
+    $form_1_place_life_3[] = $_POST['form_1_place_life_3'];  //Место нахождения (место жительства) кредитора
+    $form_1_main_emite_3[] = $_POST['form_1_main_emite_3'];  //Основание возникновения
+    $form_1_total_all_3[] = $_POST['form_1_total_all_3'];  //Сумма обязательства (всего)
+    $form_1_total_all_indebtedness_3[] = $_POST['form_1_total_all_indebtedness_3'];  //Сумма обязательства (в том числе задолженность)
+    $form_1_penaltie_fines_3[] = $_POST['form_1_penaltie_fines_3'];  // Штрафы, пени и иные санкции
 
-        $form_1_row2_name_tax_3[] = $_POST['form_1_row2_name_tax_3'];  // Наименование налога, сбора или иного обязательного платежа
-        $form_1_row2_arrears_3[] = $_POST['form_1_row2_arrears_3'];  // Недоимка
-        $form_1_row2_penaltie_fines_3[] = $_POST['form_1_row2_penaltie_fines_3'];  // Штрафы, пени и иные санкции
+    $form_1_row2_name_tax_3[] = $_POST['form_1_row2_name_tax_3'];  // Наименование налога, сбора или иного обязательного платежа
+    $form_1_row2_arrears_3[] = $_POST['form_1_row2_arrears_3'];  // Недоимка
+    $form_1_row2_penaltie_fines_3[] = $_POST['form_1_row2_penaltie_fines_3'];  // Штрафы, пени и иные санкции
 
-        //4
+    //4
 
-        $form_1_entity_4[] = $_POST['form_1_entity_4'];  //Содержание обязательства
-        $form_1_creditor_4[] = $_POST['form_1_creditor_4'];  //Кредитор
-        $form_1_place_life_4[] = $_POST['form_1_place_life_4'];  //Место нахождения (место жительства) кредитора
-        $form_1_main_emite_4[] = $_POST['form_1_main_emite_4'];  //Основание возникновения
-        $form_1_total_all_4[] = $_POST['form_1_total_all_4'];  //Сумма обязательства (всего)
-        $form_1_total_all_indebtedness_4[] = $_POST['form_1_total_all_indebtedness_4'];  //Сумма обязательства (в том числе задолженность)
-        $form_1_penaltie_fines_4[] = $_POST['form_1_penaltie_fines_4'];  // Штрафы, пени и иные санкции
+    $form_1_entity_4[] = $_POST['form_1_entity_4'];  //Содержание обязательства
+    $form_1_creditor_4[] = $_POST['form_1_creditor_4'];  //Кредитор
+    $form_1_place_life_4[] = $_POST['form_1_place_life_4'];  //Место нахождения (место жительства) кредитора
+    $form_1_main_emite_4[] = $_POST['form_1_main_emite_4'];  //Основание возникновения
+    $form_1_total_all_4[] = $_POST['form_1_total_all_4'];  //Сумма обязательства (всего)
+    $form_1_total_all_indebtedness_4[] = $_POST['form_1_total_all_indebtedness_4'];  //Сумма обязательства (в том числе задолженность)
+    $form_1_penaltie_fines_4[] = $_POST['form_1_penaltie_fines_4'];  // Штрафы, пени и иные санкции
 
-        $form_1_row2_name_tax_4[] = $_POST['form_1_row2_name_tax_4'];  // Наименование налога, сбора или иного обязательного платежа
-        $form_1_row2_arrears_4[] = $_POST['form_1_row2_arrears_4'];  // Недоимка
-        $form_1_row2_penaltie_fines_4[] = $_POST['form_1_row2_penaltie_fines_4'];  // Штрафы, пени и иные санкции
+    $form_1_row2_name_tax_4[] = $_POST['form_1_row2_name_tax_4'];  // Наименование налога, сбора или иного обязательного платежа
+    $form_1_row2_arrears_4[] = $_POST['form_1_row2_arrears_4'];  // Недоимка
+    $form_1_row2_penaltie_fines_4[] = $_POST['form_1_row2_penaltie_fines_4'];  // Штрафы, пени и иные санкции
 
 
-
-        $html = '
+    $html = '
 
         <style>
 
@@ -118,7 +117,7 @@ if (isset($_POST['form_reg_submit'])) {
 
                     </td>
                     <td  width="20%"  valign="middle">
-                    '.$results[0]->first_name.'
+                    ' . $results[0]->first_name . '
                     </td>
                 </tr>
                 <tr>
@@ -129,7 +128,7 @@ if (isset($_POST['form_reg_submit'])) {
                             обязательно
                     </td>
                     <td  width="20%" valign="middle">
-                    '.$results[0]->second_name.'
+                    ' . $results[0]->second_name . '
                     </td>
                 </tr>
                 <tr>
@@ -140,7 +139,7 @@ if (isset($_POST['form_reg_submit'])) {
                             при наличии
                     </td>
                     <td   width="20%" valign="middle">
-                    '.$results[0]->third_name.'
+                    ' . $results[0]->third_name . '
                     </td>
                 </tr>
                 <tr>
@@ -152,7 +151,7 @@ if (isset($_POST['form_reg_submit'])) {
                             при наличии
                     </td>
                     <td  width="20%"  valign="middle">
-                    '.$results[0]->last_name.'
+                    ' . $results[0]->last_name . '
                     </td>
                 </tr>
                 <tr>
@@ -163,7 +162,7 @@ if (isset($_POST['form_reg_submit'])) {
                             обязательно
                     </td>
                     <td  width="20%" valign="middle">
-                    '.date("d.m.y",strtotime($results[0]->bird_day)).'
+                    ' . date("d.m.y", strtotime($results[0]->bird_day)) . '
                     </td>
                 </tr>
                 <tr>
@@ -174,7 +173,7 @@ if (isset($_POST['form_reg_submit'])) {
                             обязательно
                     </td>
                     <td  width="20%" valign="middle">
-                    '.$results[0]->place_bird.'
+                    ' . $results[0]->place_bird . '
                     </td>
                 </tr>
                 <tr>
@@ -185,7 +184,7 @@ if (isset($_POST['form_reg_submit'])) {
                             обязательно
                     </td>
                     <td   width="20%" valign="middle">
-                    '.$results[0]->extra_snils.'
+                    ' . $results[0]->extra_snils . '
                     </td>
                 </tr>
                 <tr>
@@ -196,7 +195,7 @@ if (isset($_POST['form_reg_submit'])) {
                             при наличии
                     </td>
                     <td  width="20%" valign="middle">
-                    '.$results[0]->extra_inn.'
+                    ' . $results[0]->extra_inn . '
                     </td>
                 </tr>
                 <tr>
@@ -223,7 +222,7 @@ if (isset($_POST['form_reg_submit'])) {
                             обязательно
                     </td>
                     <td   width="20%" valign="middle">
-                      '.$results[0]->passport_serial.'   '.$results[0]->passport_number.'
+                      ' . $results[0]->passport_serial . '   ' . $results[0]->passport_number . '
                     </td>
                 </tr>
                 <tr>
@@ -240,7 +239,7 @@ if (isset($_POST['form_reg_submit'])) {
                             обязательно
                     </td>
                     <td  width="20%" valign="middle">
-                    '.$results[0]->registrtation_city.'
+                    ' . $results[0]->registrtation_city . '
                     </td>
                 </tr>
                 <tr>
@@ -252,7 +251,7 @@ if (isset($_POST['form_reg_submit'])) {
                     </td>
                     <td  width="20%" valign="middle">
 
-                      '.$results[0]->registrtation_city.'
+                      ' . $results[0]->registrtation_city . '
                     </td>
                 </tr>
                 <tr>
@@ -263,7 +262,7 @@ if (isset($_POST['form_reg_submit'])) {
                             при наличии
                     </td>
                     <td  width="20%"  valign="middle">
-                    '.$results[0]->registrtation_locality.'
+                    ' . $results[0]->registrtation_locality . '
                     </td>
                 </tr>
                 <tr>
@@ -274,7 +273,7 @@ if (isset($_POST['form_reg_submit'])) {
                             при наличии
                     </td>
                     <td  width="20%" valign="middle">
-                    '.$results[0]->registrtation_locality.'
+                    ' . $results[0]->registrtation_locality . '
                     </td>
                 </tr>
                 <tr>
@@ -285,7 +284,7 @@ if (isset($_POST['form_reg_submit'])) {
                             при наличии
                     </td>
                     <td   width="20%" valign="middle">
-                    '.$results[0]->registrtation_street.'
+                    ' . $results[0]->registrtation_street . '
                     </td>
                 </tr>
                 <tr>
@@ -296,7 +295,7 @@ if (isset($_POST['form_reg_submit'])) {
                             при наличии
                     </td>
                     <td  width="20%"  valign="middle">
-                    '.$results[0]->registrtation_number_hourse.'
+                    ' . $results[0]->registrtation_number_hourse . '
                     </td>
                 </tr>
                 <tr>
@@ -307,7 +306,7 @@ if (isset($_POST['form_reg_submit'])) {
                             при наличии
                     </td>
                     <td   width="20%" valign="middle">
-                      '.$results[0]->registrtation_number_housing.'
+                      ' . $results[0]->registrtation_number_housing . '
                     </td>
                 </tr>
                 <tr>
@@ -318,7 +317,7 @@ if (isset($_POST['form_reg_submit'])) {
                             при наличии
                     </td>
                     <td  width="20%"  valign="middle">
-                      '.$results[0]->registrtation_number_apartments.'
+                      ' . $results[0]->registrtation_number_apartments . '
                     </td>
                 </tr>
             </tbody>
@@ -389,53 +388,56 @@ if (isset($_POST['form_reg_submit'])) {
                             В том числе задолженность<sup>5</sup>
                     </td>
                 </tr>';
-                $curent_1_row = 1;
+    $curent_1_row = 1;
 
-                for($i=0;$i<count($form_1_entity[0]);$i++){
+    for ($i = 0; $i < count($form_1_entity[0]); $i++) {
 
-                  $html .='
+        $html .= '
                             <tr>
-                                <td  valign="middle">
-                                      1.'.$curent_1_row.'
+                                <td  >
+                                      <span style="vertical-align: middle;">
+                                      1.' . $curent_1_row . '
+                                      </span>
                                 </td>
                                 <td >
-                                '.$form_1_entity[0][$i].'
+                                ' . $form_1_entity[0][$i] . '
                                 </td>
                                 <td >
-                                '.$form_1_creditor[0][$i].'
+                                ' . $form_1_creditor[0][$i] . '
                                 </td>
                                 <td  colspan="2" >
-                                '.$form_1_place_life[0][$i].'
+                                ' . $form_1_place_life[0][$i] . '
                                 </td>
                                 <td  >
-                                '.$form_1_main_emite[0][$i].'
+                                ' . $form_1_main_emite[0][$i] . '
                                 </td>
                                 <td >
-                                '.$form_1_total_all[0][$i].'
+                                ' . $form_1_total_all[0][$i] . '
                                 </td>
                                 <td  >
-                                '.$form_1_total_all_indebtedness[0][$i].'
+                                ' . $form_1_total_all_indebtedness[0][$i] . '
                                 </td>
                                 <td>
-                                '.$form_1_penaltie_fines[0][$i].'
+                                ' . $form_1_penaltie_fines[0][$i] . '
                                 </td>
                             </tr>
                   ';
-                  $curent_1_row++;
-                }
+        $curent_1_row++;
+    }
 
-                if($form_1_row2_name_tax[0]){
+    if ($form_1_row2_name_tax[0]) {
 
-                    $html .='
-                      <tr>
+        $html .= '
+                      <tr nobr="true">
                           <td width="6%"  >
+                          
                                   2
                           </td>
                           <td width="94%" colspan="8"  >
                                   Обязательные платежи
                           </td>
                       </tr>
-                      <tr>
+                      <tr nobr="true">
                           <td  >
                                   <div>
                                   №
@@ -459,30 +461,32 @@ if (isset($_POST['form_reg_submit'])) {
                           </td>
                       </tr>
                       ';
-                      $curent_1_row2 = 1;
-                      for($q=0;$q<count($form_1_row2_name_tax[0]);$q++){
-                      $html .='
-                      <tr>
-                          <td>
-                                  2.'.$curent_1_row2.'
+        $curent_1_row2 = 1;
+        for ($q = 0; $q < count($form_1_row2_name_tax[0]); $q++) {
+            $html .= '
+                      <tr nobr="true">
+                          <td> 
+                           <span style="vertical-align: middle;">
+                                  2.' . $curent_1_row2 . ' 
+                                  </span>
                           </td>
                           <td   colspan="3" >
-                            '.$form_1_row2_name_tax[0][$q].'
+                            ' . $form_1_row2_name_tax[0][$q] . '
                           </td>
                           <td  colspan="3"  >
-                            '.$form_1_row2_arrears[0][$q].'
+                            ' . $form_1_row2_arrears[0][$q] . '
                           </td>
                           <td  colspan="2" >
-                            '.$form_1_row2_penaltie_fines[0][$q].'
+                            ' . $form_1_row2_penaltie_fines[0][$q] . '
                           </td>
                       </tr>
                        ';
 
-                      $curent_1_row2++;
-                    }
+            $curent_1_row2++;
+        }
 
-              }
-          $html .= '
+    }
+    $html .= '
             </tbody>
         </table>
 
@@ -497,11 +501,11 @@ if (isset($_POST['form_reg_submit'])) {
             </p>
         <br>';
 
-          // 2
+    // 2
 
-        if($form_1_entity_2[0]){
+    if ($form_1_entity_2[0]) {
 
-        $html .='
+        $html .= '
             <p>
                 II. Сведения о кредиторах гражданина (по денежным обязательствам и
                 (или) обязанности по уплате обязательных платежей, которые возникли в
@@ -519,7 +523,7 @@ if (isset($_POST['form_reg_submit'])) {
                                 деятельности)
                     </td>
                 </tr>
-                <tr>
+                <tr nobr="true">
                     <td width="6%" valign="middle">
                             1
                     </td>
@@ -527,7 +531,7 @@ if (isset($_POST['form_reg_submit'])) {
                             Денежные обязательства
                     </td>
                 </tr>
-                <tr>
+                <tr nobr="true">
                     <td width="6%" rowspan="2" valign="middle">
                             №
                             п/п
@@ -551,7 +555,7 @@ if (isset($_POST['form_reg_submit'])) {
                             Штрафы, пени и иные санкции
                     </td>
                 </tr>
-                <tr>
+                <tr nobr="true">
                     <td   valign="middle">
                             Всего<sup>9</sup>
                     </td>
@@ -559,43 +563,43 @@ if (isset($_POST['form_reg_submit'])) {
                             В том числе задолженность<sup>10</sup>
                     </td>
                 </tr>';
-                $curent_2_row = 1;
-                for($w=0;$w<count($form_1_entity_2[0]);$w++){
-                  $html .='
-                            <tr>
+        $curent_2_row = 1;
+        for ($w = 0; $w < count($form_1_entity_2[0]); $w++) {
+            $html .= '
+                            <tr nobr="true">
                                 <td  valign="middle">
-                                    <p align="center">
-                                        1.'.$curent_2_row.'
-                                    </p>
+                                     <span style="vertical-align: middle;">
+                                        1.' . $curent_2_row . '
+                                    </span>
                                 </td>
                                 <td  valign="center">
-                                '.$form_1_entity_2[0][$w].'
+                                ' . $form_1_entity_2[0][$w] . '
                                 </td>
                                 <td valign="center">
-                                '.$form_1_creditor_2[0][$w].'
+                                ' . $form_1_creditor_2[0][$w] . '
                                 </td>
                                 <td  colspan="2" valign="center">
-                                '.$form_1_place_life_2[0][$w].'
+                                ' . $form_1_place_life_2[0][$w] . '
                                 </td>
                                 <td valign="center">
-                                '.$form_1_main_emite_2[0][$w].'
+                                ' . $form_1_main_emite_2[0][$w] . '
                                 </td>
                                 <td valign="center">
-                                '.$form_1_total_all_2[0][$w].'
+                                ' . $form_1_total_all_2[0][$w] . '
                                 </td>
                                 <td   valign="center">
-                                '.$form_1_total_all_indebtedness_2[0][$w].'
+                                ' . $form_1_total_all_indebtedness_2[0][$w] . '
                                 </td>
                                 <td  valign="center">
-                                '.$form_1_penaltie_fines_2[0][$w].'
+                                ' . $form_1_penaltie_fines_2[0][$w] . '
                                 </td>
                             </tr>
                   ';
-                  $curent_2_row++;
-                }
-                if($form_1_row2_name_tax_2[0]){
-                $html .= '
-                <tr>
+            $curent_2_row++;
+        }
+        if ($form_1_row2_name_tax_2[0]) {
+            $html .= '
+                <tr nobr="true">
                     <td width="6%" valign="middle">
                             2
                     </td>
@@ -603,7 +607,7 @@ if (isset($_POST['form_reg_submit'])) {
                             Обязательные платежи
                     </td>
                 </tr>
-                <tr>
+                <tr nobr="true">
                     <td width="6%" valign="middle">
                             №
                             п/п
@@ -619,30 +623,32 @@ if (isset($_POST['form_reg_submit'])) {
                     </td>
                 </tr>';
 
-                $curent_2_row2 = 1;
-                for($e=0;$e<count($form_1_row2_name_tax_2[0]);$e++){
-                $html .='
-                <tr>
+            $curent_2_row2 = 1;
+            for ($e = 0; $e < count($form_1_row2_name_tax_2[0]); $e++) {
+                $html .= '
+                <tr nobr="true">
                     <td   valign="middle">
-                            2.'.$curent_2_row2.'
+                            <span style="vertical-align: middle;">
+                            2.' . $curent_2_row2 . '
+                            </span>
                     </td>
                     <td  colspan="3" valign="center">
-                      '.$form_1_row2_name_tax_2[0][$e].'
+                      ' . $form_1_row2_name_tax_2[0][$e] . '
                     </td>
                     <td  colspan="3" valign="center">
-                      '.$form_1_row2_arrears_2[0][$e].'
+                      ' . $form_1_row2_arrears_2[0][$e] . '
                     </td>
                     <td  colspan="2" valign="center">
-                      '.$form_1_row2_penaltie_fines_2[0][$e].'
+                      ' . $form_1_row2_penaltie_fines_2[0][$e] . '
                     </td>
                 </tr>
                  ';
 
                 $curent_2_row2++;
-              }
+            }
 
-              }
-              $html .='
+        }
+        $html .= '
             </tbody>
         </table>
 
@@ -653,25 +659,24 @@ if (isset($_POST['form_reg_submit'])) {
                 (в том числе о передаче имущества в собственность, выполнении работ и
                 оказании услуг и так далее):
             </p>
-            <p>____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-            </p>
-        	</br>';
+             ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+             ';
 
-        }
-          // 3
+    }
+    // 3
 
-        if($form_1_entity_3[0]){
-          $html .='
+    if ($form_1_entity_3[0]) {
+        $html .= '
             <p>
                 III. Сведения о должниках гражданина (по денежным обязательствам и
                 (или) обязанности по уплате обязательных платежей, за исключением
                 возникших в результате осуществления гражданином предпринимательской
                 деятельности)
             </p>
-        <table border="1" cellspacing="0" cellpadding="5" align="left" width="100%">
+        <table border="1" cellspacing="0" cellpadding="5"  width="100%">
             <tbody>
-                <tr>
-                    <td width="100%" colspan="9" valign="middle">
+                <tr nobr="true">
+                    <td width="100%" colspan="9"  >
                                 III. Сведения о должниках гражданина (по денежным
                                 обязательствам и (или) обязанности по уплате
                                 обязательных платежей, за исключением возникших в
@@ -679,7 +684,7 @@ if (isset($_POST['form_reg_submit'])) {
                                 предпринимательской деятельности)
                     </td>
                 </tr>
-                <tr>
+                <tr nobr="true">
                     <td width="6%" >
                             1
                     </td>
@@ -688,76 +693,79 @@ if (isset($_POST['form_reg_submit'])) {
                             Денежные обязательства
                     </td>
                 </tr>
-                <tr>
+                <tr nobr="true">
                     <td width="6%" rowspan="2" >
-                    <div>
+                     
                             №
                             п/п
-                    </div>
+                    
                     </td>
                     <td width="15%" rowspan="2"  >
-                            <div>Содержание обязательства<sup>11</sup></div>
+                             Содержание обязательства<sup>11</sup> 
                     </td>
                     <td width="12%" rowspan="2"  >
-                    <div>Кредитор<sup>12</sup></div>
+                   Кредитор<sup>12</sup> 
                     </td>
                     <td width="15%" colspan="2" rowspan="2"  >
-                    <div>Место нахождения (место жительства кредитора)</div>
+                    Место нахождения (место жительства кредитора)
+                    
                     </td>
                     <td width="15%" rowspan="2" >
-                    <div>Основание   Возникновения<sup>13</sup></div>
+                    Основание   Возникновения<sup>13</sup>
                     </td>
                     <td width="25%" colspan="2"  >
-                    <div>Сумма обязательства</div>
+                    Сумма обязательства
                     </td>
                     <td width="12%" rowspan="2"  >
-                    <div>Штрафы, пени и иные санкции</div>
+                    Штрафы, пени и иные санкции
                     </td>
                 </tr>
-                <tr>
+                <tr nobr="true">
                     <td>
-                    <div>Всего<sup>14</sup></div>
+                    Всего<sup>14</sup>
                     </td>
                     <td >
-                      <div>В том числе задолженность<sup>15</sup></div>
+                     В том числе задолженность<sup>15</sup>
                     </td>
                 </tr>';
-                $curent_3_row = 1;
-                for($r=0;$r<count($form_1_entity_3[0]);$r++){
-                  $html .='
-                            <tr>
-                                <td   valign="middle">
-                                        1.'.$curent_3_row.'
+        $curent_3_row = 1;
+        for ($r = 0; $r < count($form_1_entity_3[0]); $r++) {
+            $html .= '
+                            <tr nobr="true">
+                                <td  >
+                                        <span style="vertical-align: middle;">
+                                        1.' . $curent_3_row . '
+                                        </span>
                                 </td>
-                                <td  valign="center">
-                                '.$form_1_entity_3[0][$r].'
+                                <td >
+                                ' . $form_1_entity_3[0][$r] . '
                                 </td>
-                                <td  valign="center">
-                                '.$form_1_creditor_3[0][$r].'
+                                <td >
+                                ' . $form_1_creditor_3[0][$r] . '
                                 </td>
-                                <td colspan="2" valign="center">
-                                '.$form_1_place_life_3[0][$r].'
+                                <td colspan="2" >
+                                ' . $form_1_place_life_3[0][$r] . '
                                 </td>
-                                <td  valign="center">
-                                '.$form_1_main_emite_3[0][$r].'
+                                <td >
+                                ' . $form_1_main_emite_3[0][$r] . '
                                 </td>
-                                <td  valign="center">
-                                '.$form_1_total_all_3[0][$r].'
+                                <td >
+                                ' . $form_1_total_all_3[0][$r] . '
                                 </td>
-                                <td  valign="center">
-                                '.$form_1_total_all_indebtedness_3[0][$r].'
+                                <td >
+                                ' . $form_1_total_all_indebtedness_3[0][$r] . '
                                 </td>
-                                <td   valign="center">
-                                '.$form_1_penaltie_fines_3[0][$r].'
+                                <td >
+                                ' . $form_1_penaltie_fines_3[0][$r] . '
                                 </td>
                             </tr>
                   ';
-                  $curent_3_row++;
-                }
+            $curent_3_row++;
+        }
 
-                if($form_1_row2_name_tax_3[0]){
-                $html .= '
-                <tr>
+        if ($form_1_row2_name_tax_3[0]) {
+            $html .= '
+                <tr nobr="true">
                     <td width="6%" valign="middle">
                             2
                     </td>
@@ -765,7 +773,7 @@ if (isset($_POST['form_reg_submit'])) {
                             Обязательные платежи
                     </td>
                 </tr>
-                <tr>
+                <tr nobr="true">
                     <td   rowspan="2" valign="middle">
                         <div>
                             №
@@ -783,7 +791,7 @@ if (isset($_POST['form_reg_submit'])) {
                         </div>
                     </td>
                 </tr>
-                <tr>
+                <tr nobr="true">
                     <td   colspan="3" valign="middle">
                         <div align="center">
                             всего
@@ -795,29 +803,31 @@ if (isset($_POST['form_reg_submit'])) {
                         </div>
                     </td>
                 </tr>';
-                $curent_3_row2 = 1;
-                for($e=0;$e<count($form_1_row2_name_tax_3[0]);$e++){
-                $html .='
-                <tr>
+            $curent_3_row2 = 1;
+            for ($e = 0; $e < count($form_1_row2_name_tax_3[0]); $e++) {
+                $html .= '
+                <tr nobr="true">
                     <td   valign="middle">
-                            2.'.$curent_3_row2.'
+                            <span style="vertical-align: middle;">
+                            2.' . $curent_3_row2 . '
+                            </span>
                     </td>
                     <td   colspan="3" valign="center">
-                      '.$form_1_row2_name_tax_3[0][$e].'
+                      ' . $form_1_row2_name_tax_3[0][$e] . '
                     </td>
                     <td   colspan="3" valign="center">
-                      '.$form_1_row2_arrears_3[0][$e].'
+                      ' . $form_1_row2_arrears_3[0][$e] . '
                     </td>
                     <td   colspan="2" valign="center">
-                      '.$form_1_row2_penaltie_fines_3[0][$e].'
+                      ' . $form_1_row2_penaltie_fines_3[0][$e] . '
                     </td>
                 </tr>
                  ';
 
                 $curent_3_row2++;
-              }
+            }
 
-             }
+        }
         $html .= '
             </tbody>
         </table>
@@ -833,10 +843,10 @@ if (isset($_POST['form_reg_submit'])) {
                       </p>
         	</br>
           ';
-        }
-            // 4
-        if($form_1_entity_4[0]){
-          $html .='
+    }
+    // 4
+    if ($form_1_entity_4[0]) {
+        $html .= '
             <p>
                 IV. Сведения о должниках гражданина (по денежным обязательствам и (или)
                 обязанности по уплате обязательных платежей, которые возникли в
@@ -845,7 +855,7 @@ if (isset($_POST['form_reg_submit'])) {
 
         <table border="1" cellspacing="0" cellpadding="5" align="left" width="100%">
             <tbody>
-                <tr>
+                <tr nobr="true">
                     <td width="100%" colspan="9" valign="middle">
                       IV. Сведения о должниках гражданина (по денежным
                       обязательствам и (или) обязанности по уплате
@@ -854,7 +864,7 @@ if (isset($_POST['form_reg_submit'])) {
                       деятельности)
                     </td>
                 </tr>
-                <tr>
+                <tr nobr="true">
                     <td width="6%" valign="middle">
                             1
                     </td>
@@ -862,7 +872,7 @@ if (isset($_POST['form_reg_submit'])) {
                             Денежные обязательства
                     </td>
                 </tr>
-                <tr>
+                <tr nobr="true">
                     <td width="6%" rowspan="2" valign="middle">
                             №
                             п/п
@@ -898,7 +908,7 @@ if (isset($_POST['form_reg_submit'])) {
                         </div>
                     </td>
                 </tr>
-                <tr>
+                <tr nobr="true">
                     <td  valign="middle">
                         <div>
                             Всего<sup>20</sup>
@@ -910,42 +920,44 @@ if (isset($_POST['form_reg_submit'])) {
                         </div>
                     </td>
                 </tr>';
-                $curent_4_row = 1;
-                for($t=0;$t<count($form_1_entity_4[0]);$t++){
-                  $html .='
-                            <tr>
+        $curent_4_row = 1;
+        for ($t = 0; $t < count($form_1_entity_4[0]); $t++) {
+            $html .= '
+                            <tr nobr="true">
                                 <td >
-                                        1.'.$curent_4_row.'
+                                        <span style="vertical-align: middle;">
+                                        1.' . $curent_4_row . '
+                                        </span>
                                 </td>
                                 <td >
-                                '.$form_1_entity_4[0][$t].'
+                                ' . $form_1_entity_4[0][$t] . '
                                 </td>
                                 <td >
-                                '.$form_1_creditor_4[0][$t].'
+                                ' . $form_1_creditor_4[0][$t] . '
                                 </td>
                                 <td colspan="2" >
-                                '.$form_1_place_life_4[0][$t].'
+                                ' . $form_1_place_life_4[0][$t] . '
                                 </td>
                                 <td >
-                                '.$form_1_main_emite_4[0][$t].'
+                                ' . $form_1_main_emite_4[0][$t] . '
                                 </td>
                                 <td >
-                                '.$form_1_total_all_4[0][$t].'
+                                ' . $form_1_total_all_4[0][$t] . '
                                 </td>
                                 <td >
-                                '.$form_1_total_all_indebtedness_4[0][$t].'
+                                ' . $form_1_total_all_indebtedness_4[0][$t] . '
                                 </td>
                                 <td >
-                                '.$form_1_penaltie_fines_4[0][$t].'
+                                ' . $form_1_penaltie_fines_4[0][$t] . '
                                 </td>
                             </tr>
                   ';
-                  $curent_4_row++;
-                }
+            $curent_4_row++;
+        }
 
-                if($form_1_row2_name_tax_4[0]){
-                $html .= '
-                <tr>
+        if ($form_1_row2_name_tax_4[0]) {
+            $html .= '
+                <tr nobr="true">
                     <td width="6%" valign="middle">
                             2
                     </td>
@@ -953,7 +965,7 @@ if (isset($_POST['form_reg_submit'])) {
                             Обязательные платежи
                     </td>
                 </tr>
-                <tr>
+                <tr nobr="true">
                     <td  rowspan="2" valign="middle">
                         <div align="center">
                             п/п
@@ -970,7 +982,7 @@ if (isset($_POST['form_reg_submit'])) {
                         </div>
                     </td>
                 </tr>
-                <tr>
+                <tr nobr="true">
                     <td  colspan="3" valign="middle">
                         <div align="center">
                             всего
@@ -983,30 +995,32 @@ if (isset($_POST['form_reg_submit'])) {
                     </td>
                 </tr>
                 ';
-                $curent_4_row2 = 1;
-                for($y=0;$y<count($form_1_row2_name_tax_4[0]);$y++){
-                $html .='
-                <tr>
+            $curent_4_row2 = 1;
+            for ($y = 0; $y < count($form_1_row2_name_tax_4[0]); $y++) {
+                $html .= '
+                <tr nobr="true">
                     <td width="6%" valign="middle">
-                            2.'.$curent_4_row2.'
+                            <span style="vertical-align: middle;">
+                            2.' . $curent_4_row2 . '
+                            </span>
                     </td>
                     <td  colspan="3" valign="center">
-                      '.$form_1_row2_name_tax_4[0][$y].'
+                      ' . $form_1_row2_name_tax_4[0][$y] . '
                     </td>
                     <td   colspan="3" valign="center">
-                      '.$form_1_row2_arrears_4[0][$y].'
+                      ' . $form_1_row2_arrears_4[0][$y] . '
                     </td>
                     <td  colspan="2" valign="center">
-                      '.$form_1_row2_penaltie_fines_4[0][$y].'
+                      ' . $form_1_row2_penaltie_fines_4[0][$y] . '
                     </td>
                 </tr>
                  ';
 
                 $curent_4_row2++;
-              }
+            }
         }
 
-        $html .='
+        $html .= '
 
             </tbody>
         </table>
@@ -1022,8 +1036,8 @@ if (isset($_POST['form_reg_submit'])) {
                       </p>
         	</br>
           ';
-        }
-        $html .='
+    }
+    $html .= '
             <p>
                 Достоверность и полноту настоящих сведений потверждаю:
             </p>
@@ -1158,17 +1172,17 @@ if (isset($_POST['form_reg_submit'])) {
 
 
         ';
-      /*  $uniq = uniqid();
-        $namefile = "form1".$uniq.".html";
-        $fp = fopen($namefile, "w");
+    /*  $uniq = uniqid();
+      $namefile = "form1".$uniq.".html";
+      $fp = fopen($namefile, "w");
 
-        // записываем в файл текст
-        fwrite($fp, $html);
+      // записываем в файл текст
+      fwrite($fp, $html);
 
-        // закрываем
-        fclose($fp);*/
+      // закрываем
+      fclose($fp);*/
 
-        generateform ($html,'form1');
+    generateform($html, 'form1');
 
 }
 

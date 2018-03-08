@@ -430,11 +430,11 @@ if (isset($_POST['form_2_submit'])) {
             <td width="17%"  style="text-align: center;">Основание приобритения<sup>2</sup> и стоимость<sup>3</sup></td>
             <td width="17%"  style="text-align: center;">Сведения о залогодержателе<sup>4</sup></td>
         </tr>
-        <tr>
+        <tr nobr="true">
             <td width="6%" rowspan="' . $count_rows_property . '" valign="top">
-                <p>
+                <span style="vertical-align: middle;">
                     1.1
-                </p>
+                </span>
             </td>
             <td width="94%" colspan="6" valign="top"> 
                     Земельные участки<sup>5</sup>: 
@@ -444,7 +444,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($z = 0; $z < count($form_2_kinds_name_property[0]); $z++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td>
                 ' . $form_2_kinds_name_property_count . ')  ' . $form_2_kinds_name_property[0][$z] . '
                 </td>
@@ -468,11 +468,11 @@ if (isset($_POST['form_2_submit'])) {
     }
     //  1.2
     $count_rows_home = count($form_2_kinds_name_home[0]) + 1;
-    $html .= '<tr>
+    $html .= '<tr nobr="true">
             <td width="6%" rowspan="' . $count_rows_home . '" valign="top">
-                <p>
+                <span style="vertical-align: middle;">
                     1.2
-                </p>
+                </span>
             </td>
             <td width="94%" colspan="6" valign="top"> 
                    Жилые дома, дачи: 
@@ -483,7 +483,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($x = 0; $x < count($form_2_kinds_name_home[0]); $x++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td>
                 ' . $form_2_kinds_name_home_count . ')  ' . $form_2_kinds_name_home[0][$x] . '
                 </td>
@@ -507,11 +507,11 @@ if (isset($_POST['form_2_submit'])) {
     }
     // 1.3
     $count_rows_rooms = count($form_2_kinds_name_rooms[0]) + 1;
-    $html .= '<tr>
+    $html .= '<tr nobr="true">
             <td width="6%" rowspan="' . $count_rows_rooms . '" valign="top">
-                <p>
+                <span style="vertical-align: middle;">
                     1.3
-                </p>
+                </span>
             </td>
             <td width="94%" colspan="6" valign="top"> 
                   Квартиры:
@@ -521,7 +521,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($c = 0; $c < count($form_2_kinds_name_rooms[0]); $c++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td>
                 ' . $form_2_kinds_name_rooms_count . ')  ' . $form_2_kinds_name_rooms[0][$c] . '
                 </td>
@@ -545,11 +545,11 @@ if (isset($_POST['form_2_submit'])) {
     }
     // 1.4
     $count_rows_garages = count($form_2_kinds_name_garages[0]) + 1;
-    $html .= '<tr>
+    $html .= '<tr nobr="true">
             <td width="6%" rowspan="' . $count_rows_garages . '" valign="top">
-                <p>
+                <span style="vertical-align: middle;">
                     1.4
-                </p>
+                </span>
             </td>
             <td width="94%" colspan="6" valign="top"> 
                   Гаражи:
@@ -559,7 +559,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($c = 0; $c < count($form_2_kinds_name_garages[0]); $c++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td>
                 ' . $form_2_kinds_name_garages_count . ')  ' . $form_2_kinds_name_garages[0][$c] . '
                 </td>
@@ -585,11 +585,11 @@ if (isset($_POST['form_2_submit'])) {
     // 1.5
 
     $count_rows_otherproperty = count($form_2_kinds_name_otherproperty[0]) + 1;
-    $html .= '<tr>
+    $html .= '<tr nobr="true">
             <td width="6%" rowspan="' . $count_rows_otherproperty . '" valign="top">
-                <p>
+                <span style="vertical-align: middle;">
                     1.5
-                </p>
+                </span>
             </td>
             <td width="94%" colspan="6" valign="top"> 
                   Иное недвижимое имущество:
@@ -599,7 +599,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($c = 0; $c < count($form_2_kinds_name_otherproperty[0]); $c++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td>
                 ' . $form_2_kinds_name_otherproperty_count . ')  ' . $form_2_kinds_name_otherproperty[0][$c] . '
                 </td>
@@ -655,12 +655,12 @@ if (isset($_POST['form_2_submit'])) {
     
     <table border="1" cellspacing="0" cellpadding="5" style="font-size:10px;">
     <tbody>
-        <tr>
+        <tr nobr="true">
             <td width="100%" colspan="7" valign="top" style="text-align: center;"> 
                     Движимое имущество 
             </td>
         </tr>
-        <tr>
+        <tr nobr="true">
             <td width="6%" valign="top"> 
                     № п/п 
             </td>
@@ -671,9 +671,11 @@ if (isset($_POST['form_2_submit'])) {
             <td width="17%"  style="text-align: center;">Стоимость<sup>8</sup></td>
             <td width="17%"  style="text-align: center;">Сведения о залоге и залогодержателе<sup>9</sup></td>
         </tr>
-        <tr>
+        <tr nobr="true">
             <td width="6%" rowspan="' . $count_kind_marks_light . '" valign="top"> 
+                   <span style="vertical-align: middle;">
                     2.1 
+                    </span>
             </td>
             <td width="94%" colspan="6" valign="top"> 
                    Автомобили легковые:
@@ -684,7 +686,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($c = 0; $c < count($form_2_kind_marks_light[0]); $c++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td>
                 ' . $form_2_kind_marks_light_count . ')  ' . $form_2_kind_marks_light[0][$c] . '
                 </td>
@@ -709,11 +711,11 @@ if (isset($_POST['form_2_submit'])) {
     }
     // 2
     $count_rows_cargo = count($form_2_kind_marks_cargo[0]) + 1;
-    $html .= '<tr>
+    $html .= '<tr nobr="true">
             <td width="6%" rowspan="' . $count_rows_cargo . '" valign="top">
-                <p>
+                <span style="vertical-align: middle;">
                     2.2
-                </p>
+                </span>
             </td>
             <td width="94%" colspan="6" valign="top"> 
                   Автомобили грузовые:
@@ -723,7 +725,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($c = 0; $c < count($form_2_kind_marks_cargo[0]); $c++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td>
                 ' . $form_2_kind_marks_cargo_count . ')  ' . $form_2_kind_marks_cargo[0][$c] . '
                 </td>
@@ -748,11 +750,11 @@ if (isset($_POST['form_2_submit'])) {
     }
     // 3
     $count_rows_moto = count($form_2_kind_marks_moto[0]) + 1;
-    $html .= '<tr>
+    $html .= '<tr nobr="true">
             <td width="6%" rowspan="' . $count_rows_moto . '" valign="top">
-                <p>
+                <span style="vertical-align: middle;">
                     2.3
-                </p>
+                </span>
             </td>
             <td width="94%" colspan="6" valign="top"> 
                   Мототранспортные средства:
@@ -763,7 +765,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($c = 0; $c < count($form_2_kind_marks_moto[0]); $c++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td>
                 ' . $form_2_kind_marks_moto_count . ')  ' . $form_2_kind_marks_moto[0][$c] . '
                 </td>
@@ -789,11 +791,11 @@ if (isset($_POST['form_2_submit'])) {
 
     // 4
     $count_rows_agricultural_machinery = count($form_2_kind_marks_agricultural_machinery[0]) + 1;
-    $html .= '<tr>
+    $html .= '<tr nobr="true">
             <td width="6%" rowspan="' . $count_rows_agricultural_machinery . '" valign="top">
-                <p>
+                <span style="vertical-align: middle;">
                     2.4
-                </p>
+                </span>
             </td>
             <td width="94%" colspan="6" valign="top"> 
                   Сельскохозяйственная техника:
@@ -804,7 +806,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($c = 0; $c < count($form_2_kind_marks_agricultural_machinery[0]); $c++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td>
                 ' . $form_2_kind_marks_agricultural_machinery_count . ')  ' . $form_2_kind_marks_agricultural_machinery[0][$c] . '
                 </td>
@@ -830,11 +832,11 @@ if (isset($_POST['form_2_submit'])) {
 
     // 5
     $count_rows_water_machinery = count($form_2_kind_marks_water_machinery[0]) + 1;
-    $html .= '<tr>
+    $html .= '<tr nobr="true">
             <td width="6%" rowspan="' . $count_rows_water_machinery . '" valign="top">
-                <p>
+                <span style="vertical-align: middle;">
                     2.5
-                </p>
+                </span>
             </td>
             <td width="94%" colspan="6" valign="top"> 
                  Водный транспорт:
@@ -845,7 +847,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($c = 0; $c < count($form_2_kind_marks_water_machinery[0]); $c++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td>
                 ' . $form_2_kind_marks_water_machinery_count . ')  ' . $form_2_kind_marks_water_machinery[0][$c] . '
                 </td>
@@ -872,11 +874,11 @@ if (isset($_POST['form_2_submit'])) {
 
     // 6
     $count_rows_air_machinery = count($form_2_kind_marks_air_machinery[0]) + 1;
-    $html .= '<tr>
+    $html .= '<tr nobr="true">
             <td width="6%" rowspan="' . $count_rows_air_machinery . '" valign="top">
-                <p>
+                <span style="vertical-align: middle;">
                     2.6
-                </p>
+                </span>
             </td>
             <td width="94%" colspan="6" valign="top"> 
                  Воздушный транспорт:
@@ -887,7 +889,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($c = 0; $c < count($form_2_kind_marks_air_machinery[0]); $c++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td>
                 ' . $form_2_kind_marks_air_machinery_count . ')  ' . $form_2_kind_marks_air_machinery[0][$c] . '
                 </td>
@@ -912,11 +914,11 @@ if (isset($_POST['form_2_submit'])) {
     }
     // 7
     $count_rows_other_machinery = count($form_2_kind_marks_other_machinery[0]) + 1;
-    $html .= '  <tr>
+    $html .= '  <tr nobr="true">
                     <td width="6%" rowspan="' . $count_rows_other_machinery . '" valign="top">
-                        <p>
+                        <span style="vertical-align: middle;">
                             2.7
-                        </p>
+                        </span>
                     </td>
                     <td width="94%" colspan="6" valign="top"> 
                          Иные транспортные средства:
@@ -927,7 +929,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($c = 0; $c < count($form_2_kind_marks_other_machinery[0]); $c++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td>
                 ' . $form_2_kind_marks_other_machinery_count . ')  ' . $form_2_kind_marks_other_machinery[0][$c] . '
                 </td>
@@ -979,12 +981,12 @@ if (isset($_POST['form_2_submit'])) {
     </h1> 
     <table border="1" cellspacing="0" cellpadding="5" style="font-size:10px;">
     <tbody> 
-        <tr>
+        <tr nobr="true">
             <td width="100%" colspan="7" valign="top" style="text-align: center;"> 
                     III. Сведения о счетах в банках и иных кредитных организациях 
             </td>
         </tr>
-        <tr>
+        <tr nobr="true">
             <td width="10%" valign="top"> 
                     № п/п 
             </td>
@@ -997,9 +999,11 @@ if (isset($_POST['form_2_submit'])) {
     for ($c = 0; $c < count($form_2_name_adress_bank[0]); $c++) {
 
         $html .= '        
-        <tr>
+        <tr nobr="true">
             <td width="10%" valign="top"> 
+                <span style="vertical-align: middle;">
                 3.' . $form_2_name_adress_bank_count . '
+                </span>
             </td>
             <td width="45%" style="text-align: center;">' . $form_2_name_adress_bank[0][$c] . '</td>
             <td width="15%"  style="text-align: center;">' . $form_2_kind_valute_chet[0][$c] . '</td>
@@ -1026,12 +1030,12 @@ if (isset($_POST['form_2_submit'])) {
     </h1> 
     <table border="1" cellspacing="0" cellpadding="5" style="font-size:10px;">
     <tbody> 
-        <tr>
+        <tr nobr="true">
             <td width="100%" colspan="7" valign="top" style="text-align: center;"> 
                     IV. Акции и иное участие в коммерческих организациях
             </td>
         </tr>
-        <tr>
+        <tr nobr="true">
             <td width="10%" valign="top"> 
                     № п/п 
             </td>
@@ -1045,9 +1049,11 @@ if (isset($_POST['form_2_submit'])) {
     for ($c = 0; $c < count($form_2_4_1_name[0]); $c++) {
 
         $html .= '    
-        <tr>
+        <tr nobr="true">
             <td width="10%" valign="top"> 
+                <span style="vertical-align: middle;">
                 4.' . $form_2_4_1_name_count . '
+                </span>
             </td>
             <td width="25%" style="text-align: center;">' . $form_2_4_1_name[0][$c] . '</td>
             <td width="15%"  style="text-align: center;">' . $form_2_4_2_place[0][$c] . '</td>
@@ -1087,12 +1093,12 @@ if (isset($_POST['form_2_submit'])) {
     </h1> 
     <table border="1" cellspacing="0" cellpadding="5" style="font-size:10px;">
     <tbody> 
-        <tr>
+        <tr nobr="true">
             <td width="100%" colspan="7" valign="top" style="text-align: center;"> 
                    V. Иные ценные бумаги
             </td>
         </tr>
-        <tr>
+        <tr nobr="true">
             <td width="8%" valign="top"> 
                     № п/п 
             </td>
@@ -1106,9 +1112,11 @@ if (isset($_POST['form_2_submit'])) {
     for ($c = 0; $c < count($form_2_5_1_kind_paper[0]); $c++) {
 
         $html .= '    
-        <tr>
+        <tr nobr="true">
             <td width="8%" valign="top"> 
-                4.' . $form_2_5_1_kind_paper_count . '
+                <span style="vertical-align: middle;">
+                5.' . $form_2_5_1_kind_paper_count . '
+                </span>
             </td>
             <td width="12%" style="text-align: center;">' . $form_2_5_1_kind_paper[0][$c] . '</td>
             <td width="20%"  style="text-align: center;">' . $form_2_5_2_face_release[0][$c] . '</td>
@@ -1143,12 +1151,12 @@ if (isset($_POST['form_2_submit'])) {
     </h1> 
        <table border="1" cellspacing="0" cellpadding="5" style="font-size:10px;">
     <tbody>
-        <tr  >
+        <tr nobr="true"  >
             <td width="100%" colspan="7" valign="top" style="text-align: center;"> 
                    VI. Сведения о наличных денежных средствах и ином ценном имуществе
             </td>
         </tr>
-        <tr  >
+        <tr nobr="true"  >
             <td width="10%" valign="top"> 
                     № п/п 
             </td>
@@ -1157,11 +1165,11 @@ if (isset($_POST['form_2_submit'])) {
             <td width="25%"  style="text-align: center;">Место нахождения/место хранения<sup>19</sup> (адрес)</td>
             <td width="25%"  style="text-align: center;">Сведения о залоге и залогодержателе<sup>20</sup></td>
         </tr>
-        <tr>
+        <tr nobr="true">
             <td width="10%" rowspan="' . $count_2_6_1_kind_property_jewelry . '" valign="top"> 
-                   <p>
+                   <span style="vertical-align: middle;">
                     6.1 
-                    </p>
+                    </span>
             </td>
             <td width="90%" colspan="6" valign="top"> 
                     Драгоценности, в том числе ювелирные украшения, и другие предметы роскоши:
@@ -1172,7 +1180,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($z = 0; $z < count($form_2_6_1_kind_property_jewelry[0]); $z++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td width="25%">
                 ' . $form_2_6_1_jewelry_count . ')  ' . $form_2_6_1_kind_property_jewelry[0][$z] . '
                 </td>
@@ -1191,11 +1199,11 @@ if (isset($_POST['form_2_submit'])) {
     // 2
     $count_2_6_1_kind_property_artobjects = count($form_2_6_1_kind_property_artobjects[0]) + 1;
     $html .= '        
-        <tr>
+        <tr nobr="true">
             <td width="10%" rowspan="' . $count_2_6_1_kind_property_artobjects . '" valign="top"> 
-                   <p>
+                   <span style="vertical-align: middle;">
                     6.2 
-                    </p>
+                    </span>
             </td>
             <td width="90%" colspan="6" valign="top"> 
                     Предметы искусства:
@@ -1206,7 +1214,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($z = 0; $z < count($form_2_6_1_kind_property_artobjects[0]); $z++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td width="25%">
                 ' . $form_2_6_1_kind_property_artobjects_count . ')  ' . $form_2_6_1_kind_property_artobjects[0][$z] . '
                 </td>
@@ -1225,11 +1233,11 @@ if (isset($_POST['form_2_submit'])) {
     // 3
      $count_form_2_6_1_kind_property_property = count($form_2_6_1_kind_property_property[0]) + 1;
     $html .= '        
-        <tr>
+        <tr nobr="true">
             <td width="10%" rowspan="' . $count_form_2_6_1_kind_property_property . '" valign="top"> 
-                   <p>
+                   <span style="vertical-align: middle;">
                     6.3 
-                    </p>
+                    </span>
             </td>
             <td width="90%" colspan="6" valign="top"> 
                     Имущество, необходимое для профессиональных занятий:
@@ -1240,7 +1248,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($z = 0; $z < count($form_2_6_1_kind_property_property[0]); $z++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td width="25%">
                 ' . $form_2_6_1_kind_property_property_count . ')  ' . $form_2_6_1_kind_property_property[0][$z] . '
                 </td>
@@ -1259,11 +1267,11 @@ if (isset($_POST['form_2_submit'])) {
     // 4
     $count_form_2_6_1_kind_property_propertyother = count($form_2_6_1_kind_property_propertyother[0]) + 1;
     $html .= '        
-        <tr>
+        <tr nobr="true">
             <td width="10%" rowspan="' . $count_form_2_6_1_kind_property_propertyother . '" valign="top"> 
-                   <p>
+                   <span style="vertical-align: middle;">
                     6.4 
-                    </p>
+                    </span>
             </td>
             <td width="90%" colspan="6" valign="top"> 
                     Иное ценное имущество:
@@ -1274,7 +1282,7 @@ if (isset($_POST['form_2_submit'])) {
     for ($z = 0; $z < count($form_2_6_1_kind_property_propertyother[0]); $z++) {
 
         $html .= '        
-            <tr>
+            <tr nobr="true">
                 <td width="25%">
                 ' . $form_2_6_1_kind_property_propertyother_count . ')  ' . $form_2_6_1_kind_property_propertyother[0][$z] . '
                 </td>
