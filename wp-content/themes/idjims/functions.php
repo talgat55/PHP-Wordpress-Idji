@@ -70,6 +70,7 @@ function th_scripts()
     wp_enqueue_script('lightbox.min', get_theme_file_uri('/assets/js/lightbox.min.js'), array(), '2');
     wp_enqueue_script('slick.min', get_theme_file_uri('/assets/js/slick.min.js'), array(), '2');
     wp_enqueue_script('tabs', get_theme_file_uri('/assets/js/tabs.js'), array(), '2');
+    wp_enqueue_script('lazyload.min', get_theme_file_uri('/assets/js/lazyload.min.js'), array(), '2');
     if ( is_page( 'contact' )){
         wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDkewQZi7iY6eOtlXajXXHFWHECGYWqfMs', array(), '2');
 
@@ -361,6 +362,41 @@ if (isset($_POST['login_submit'])) {
     }
 
 }
+/*
+ *  Registration
+ */
+if (isset($_POST['reg_submit'])) {
+    $userdata = array(
+        'user_login' => esc_attr($_POST['reg_name']),
+        'user_email' => esc_attr($_POST['reg_email']),
+        'user_pass' => esc_attr($_POST['reg_password']),
+    );
+    $register_user = wp_insert_user($userdata);
+    if (!is_wp_error($register_user)) {
+
+        //$_SESSION['error_registration'] = 'Регистрация успешна завершена';
+        wp_redirect( home_url() );
+        exit;
+    } else {
+
+         $_SESSION['error_registration'] = $register_user->get_error_message();
+
+    }
+}
+
+
+
+function wpse_lost_password_redirect() {
+
+    // Check if have submitted
+    $confirm = ( isset($_GET['checkemail'] ) ? $_GET['checkemail'] : '' );
+
+    if( $confirm ) {
+        wp_redirect( home_url('/login') );
+        exit;
+    }
+}
+add_action('login_headerurl', 'wpse_lost_password_redirect');
 
 
 /*

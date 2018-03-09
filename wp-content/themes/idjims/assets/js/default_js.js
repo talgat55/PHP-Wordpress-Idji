@@ -5,6 +5,8 @@
 jQuery(window).resize(function() {
     "use strict";
     accordionQAPage();
+    fiveblocks();
+    MobileMenu();
 });
 
 jQuery(document).ready(function () {
@@ -13,34 +15,18 @@ jQuery(document).ready(function () {
     InitUISlider();
     InitCarouselClients();
     InitOpenContentReview();
+    MobileMenu();
     InitUISliderPage();
     InitShowTooltip();
     InitUISliderPageProperty();
     InitActionPriceTables();
     InitChooseOld();
     InitSliderReview();
+    ConfimPassword();
+    fiveblocks();
     accordionQAPage();
     jQuery(".tabs").lightTabs();
 
-
-    if (jQuery(window).width() > 1200) {
-
-
-        jQuery(".block-five-step-arrow a").hover(function () {
-
-            var $this = jQuery(this);
-            var tooltipblock = $this.parent().parent().find('.tooltip-five-step');
-            tooltipblock.show();
-
-
-            tooltipblock.mouseleave(function () {
-
-                tooltipblock.hide();
-
-            });
-
-        });
-    }
 
     jQuery("#map").hover(function () {
 
@@ -254,28 +240,6 @@ jQuery(document).ready(function () {
 
 
     });
-    /*
-    * Mobile Menu
-    */
-
-    jQuery('#mobile-bar').click(function () {
-        jQuery('.navigation').toggleClass("menu-open");
-        jQuery('#mobile-bar a').toggleClass(" is-active");
-
-        return false;
-    });
-
-    /**
-     * Accordion menu for mobile
-     */
-    if (jQuery(window).width() < 1200) {
-
-
-        jQuery('.navigation').find('li a').click(function () {
-            jQuery(this).next().stop().slideToggle();
-            jQuery(this).toggleClass("accordion-open");
-        }).next().stop().hide();
-    }
 
     /**
      * Accordion menu  block in first bllocks
@@ -1205,4 +1169,74 @@ function InitUISliderPageProperty() {
 
         }
     });
+}
+
+/*
+* Confim password
+ */
+function ConfimPassword() {
+    if(jQuery(".registration-page").length) {
+        var password = document.getElementById("reg-pass")
+            , confirm_password = document.getElementById("confim-reg-pass");
+
+        function validatePassword() {
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Пароли не совпадают");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    }
+}
+/*
+*  Tooltips for Five steps part
+*/
+
+function fiveblocks(){
+    if (jQuery(window).width() > 1200) {
+
+
+        jQuery(".block-five-step-arrow a").hover(function () {
+
+            var $this = jQuery(this);
+            var tooltipblock = $this.parent().parent().find('.tooltip-five-step');
+            tooltipblock.show();
+
+
+            tooltipblock.mouseleave(function () {
+
+                tooltipblock.hide();
+
+            });
+
+        });
+
+    }
+}
+
+/*
+* Mobile Menu
+*/
+function MobileMenu(){
+jQuery('#mobile-bar').click(function () {
+    jQuery('.navigation').toggleClass("menu-open");
+    jQuery('#mobile-bar a').toggleClass(" is-active");
+
+    return false;
+});
+
+/**
+ * Accordion menu for mobile
+ */
+if (jQuery(window).width() < 1200) {
+
+
+    jQuery('.navigation').find('li a').click(function () {
+        jQuery(this).next().stop().slideToggle();
+        jQuery(this).toggleClass("accordion-open");
+    }).next().stop().hide();
+}
 }
