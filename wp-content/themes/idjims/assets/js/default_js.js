@@ -27,6 +27,10 @@ jQuery(document).ready(function () {
     accordionQAPage();
     jQuery(".tabs").lightTabs();
 
+    /*
+    * Lazy Load
+     */
+    var myLazyLoad = new LazyLoad();
 
     jQuery("#map").hover(function () {
 
@@ -1221,11 +1225,12 @@ function fiveblocks(){
 * Mobile Menu
 */
 function MobileMenu(){
-jQuery('#mobile-bar').click(function () {
+jQuery('#mobile-bar').click(function (e) {
+    e.preventDefault();
     jQuery('.navigation').toggleClass("menu-open");
     jQuery('#mobile-bar a').toggleClass(" is-active");
 
-    return false;
+
 });
 
 /**
@@ -1234,7 +1239,8 @@ jQuery('#mobile-bar').click(function () {
 if (jQuery(window).width() < 1200) {
 
 
-    jQuery('.navigation').find('li a').click(function () {
+    jQuery('.navigation').find('li a').click(function (e) {
+        e.preventDefault();
         jQuery(this).next().stop().slideToggle();
         jQuery(this).toggleClass("accordion-open");
     }).next().stop().hide();

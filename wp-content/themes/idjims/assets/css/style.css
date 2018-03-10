@@ -1025,14 +1025,16 @@ body {
     border-radius: 23px;
     cursor: pointer;
 }
-
+.why-img{
+    min-height: 75px;
+}
 .HowWeWorkBlockTab li a::after {
     content: "";
     border-top: 6px solid #eee;
     width: 165px;
     display: block;
     position: absolute;
-    left: 42px;
+    left: 43px;
     top: 17px;
 }
 
@@ -1364,10 +1366,12 @@ body {
     position: relative;
 }
 
-.SendMessage img {
+/*.SendMessage img {*/
+.SendMessage-img{
     position: absolute;
     right: -95px;
     bottom: 0;
+    width: 302px;
 }
 
 input.wpcf7-form-control {
@@ -1608,11 +1612,12 @@ form {
     margin-bottom: 30px;
 }
 
-.offer-list li img {
+.offer-list li .offer-img {
     display: table-cell;
-    margin-right: 20px;
+    padding-right: 20px;
     position: relative;
     top: 7px;
+    width: 22px;
 }
 
 .offer-list li p {
@@ -1660,7 +1665,9 @@ form {
     max-width: 100%;
     vertical-align: middle;
 }
-
+.ourservice-last-block{
+    min-height: 142px;
+}
 .ourServiceBlock {
     position: relative;
 }
@@ -1886,8 +1893,11 @@ footer {
     display: inline-block;
 }
 
-.SendMessage-2 img {
+.SendMessage-2 .send-maessage-2 {
     right: -259px;
+    position: absolute;
+    bottom: 0;
+    width: 456px;
 }
 
 .SendMessage-2 p {
@@ -1937,7 +1947,9 @@ footer {
 #first-section-service .col-md-3 {
     padding-right: 8%;
 }
-
+.accrotdions-blocks.fl-block{
+    margin-bottom: 30px;
+}
 #first-section-service .with-quote {
     border-left: 5px solid #ffe1c2;
     padding-left: 12px;
@@ -2034,13 +2046,16 @@ footer {
     border-radius: 4px;
     display: table;
     min-height: 100px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.dont-wait-block img {
+.dont-wait-block .dont-wait-img {
     display: table-cell;
     vertical-align: middle;
-    margin-right: 30px;
+    padding-right: 30px;
     padding-top: 12px;
+    width: 80px;
 }
 
 #dont-wait .col-md-6 {
@@ -2359,12 +2374,14 @@ footer {
     min-height: 74px;
 }
 
-.live-idji-block img {
+.live-idji-block .live-idji-img {
     display: table-cell;
     vertical-align: middle;
     padding-right: 30px;
     padding-top: 11px;
+    width: 49px;
 }
+
 
 #live-idji .col-md-6 {
     padding-right: 1.5%;
@@ -3352,10 +3369,12 @@ footer {
 
 }
 
-.feature-service-one img {
+.feature-service-one .feature-service-img {
     display: table-cell;
     vertical-align: top;
     padding-right: 30px;
+    width: 76px;
+
 }
 
 .feature-service-one div {
@@ -4081,9 +4100,9 @@ footer {
   #first-section-service img{
     max-width: 100%;
   }*/
-    .dont-wait-block p {
+   /* .dont-wait-block p {
         display: block;
-    }
+    }*/
 
     .dont-wait-block {
         min-height: 235px;
@@ -4116,9 +4135,6 @@ footer {
         min-height: 99px;
     }
 
-    .live-idji-block img {
-        padding-top: 24px;
-    }
 
     .footer-block-list li {
         padding-right: 17px;
@@ -4415,7 +4431,9 @@ footer {
     #Myth .col-md-4:nth-of-type(2n+2) {
         padding-right: 0;
     }
-
+    #Myth .col-md-4:nth-of-type(2n+1){
+        padding-right: 1.5%!important;
+    }
     .right-top-header, .center-top-heder {
         display: initial;
     }
@@ -4433,11 +4451,18 @@ footer {
     .review-content {
         padding: 15px 0 0 0;
     }
-
+    .feature-service-img,
+    .dont-wait-block .dont-wait-img,
+    .live-idji-block .live-idji-img{
+        display: block!important;
+    }
     .tooltip-five-step {
         width: 100% !important;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
+    }
+    .bg-live{
+        display: none;
     }
 
     .col-five-step-block.Two_step .Two_step-img_first,
