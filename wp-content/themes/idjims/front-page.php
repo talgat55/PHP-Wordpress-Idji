@@ -90,7 +90,7 @@ get_header(); ?>
     <section id="get-use-our">
         <div class="container clearfix">
             <div class="title-section">Что вы получите от обращения к нам?</div>
-            <div class="col-md-6">
+            <div class="col-md-6 animation-block  opacity-zero" data-animation="slideInLeft">
                 <div class="block-use-our">
                     <div id="contentSlider">Общая сумма долга: <span id="valueidslider">500000</span> руб</div>
                     <div id="slider-ui"></div>
@@ -101,7 +101,7 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6  no-padding-right">
+            <div class="col-md-6 animation-block  opacity-zero no-padding-right" data-animation="slideInRight">
                 <div class="block-use-our">
                     <a href="#" class="btn btn-link-to-modal">Узнать, как получить выгоду</a>
                     <p class="spec-block-text-use-our">Оставьте заявку и наш специалист бесплатно расскажет, как
@@ -109,7 +109,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="border-use-our"></div>
-            <div class="col-md-6">
+            <div class="col-md-6 animation-block  opacity-zero" data-animation="slideInLeft">
                 <div class="block-use-our">
                     <a href="http://idgis.trekweb.ru/calculate/" class="block-use-our-walp-2 clearfix">
 
@@ -123,7 +123,7 @@ get_header(); ?>
                 </div>
 
             </div>
-            <div class="col-md-6 no-padding-right">
+            <div class="col-md-6 no-padding-right animation-block  opacity-zero" data-animation="slideInRight">
                 <div class="block-use-our">
                     <div class="block-use-our-walp-2 clearfix">
                         <h3>Бесплатное <span>банкротство</span></h3>
@@ -144,7 +144,7 @@ get_header(); ?>
         <div class="container">
             <div class="title-section center-white">Почему выгодно с нами работать?</div>
             <div>
-                <div class="col-md-3 benefit-cols">
+                <div class="col-md-3 benefit-cols animation-block  opacity-zero"  data-animation="slideInUp">
                     <div class="benefit-block">
                         <div class="why-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/shape6-2.jpg') ?>">
@@ -154,7 +154,7 @@ get_header(); ?>
                             посредниками.</p>
                     </div>
                 </div>
-                <div class="col-md-3 benefit-cols">
+                <div class="col-md-3 benefit-cols animation-block  opacity-zero"   data-animation="slideInUp">
                     <div class="benefit-block">
                         <div class="why-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/shape5-2.jpg') ?>">
@@ -164,7 +164,7 @@ get_header(); ?>
                             завершения процедуры банкротства!</p>
                     </div>
                 </div>
-                <div class="col-md-3  benefit-cols no-padding-right">
+                <div class="col-md-3  benefit-cols no-padding-right animation-block  opacity-zero"   data-animation="slideInUp">
                     <div class="benefit-block">
                         <div class="why-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/shape4-2.jpg') ?>">
@@ -174,7 +174,7 @@ get_header(); ?>
                             столкнуться. Поэтому мы готовы дать Вам рассрочку по оплате за оказываемые услуги</p>
                     </div>
                 </div>
-                <div class="col-md-3 benefit-cols">
+                <div class="col-md-3 benefit-cols animation-block  opacity-zero"   data-animation="slideInUp">
                     <div class="benefit-block">
                         <div class="why-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/shape3-2.jpg') ?>">
@@ -183,7 +183,7 @@ get_header(); ?>
                         <p>Если суд не признает Вас банкротом— вернем деньги. Это прописано в договоре!</p>
                     </div>
                 </div>
-                <div class="col-md-3 benefit-cols">
+                <div class="col-md-3 benefit-cols animation-block  opacity-zero"   data-animation="slideInUp">
                     <div class="benefit-block">
                         <div class="why-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/shape2-2.jpg') ?>">
@@ -193,7 +193,7 @@ get_header(); ?>
                             профессиональный юрист. Мы работаем-Вы отдыхаете!</p>
                     </div>
                 </div>
-                <div class="col-md-3 benefit-cols no-padding-right">
+                <div class="col-md-3 benefit-cols no-padding-right animation-block  opacity-zero"   data-animation="slideInUp">
                     <div class="benefit-block">
                         <div class="why-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/shape1-2.jpg') ?>">

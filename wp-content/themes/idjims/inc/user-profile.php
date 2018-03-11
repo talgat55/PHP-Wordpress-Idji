@@ -33,12 +33,12 @@ if (isset($_POST['user_profile_reg_submit'])) {
 
 
     global $wpdb;
-    //		$cur_user_id = get_current_user_id();
-    /*if(!$cur_user_id){   // dont verify user
+    		$cur_user_id = get_current_user_id();
+    if(!$cur_user_id){   // dont verify user
 
-        wp_redirect( home_url());
+        wp_redirect( home_url('/login'));
         exit;
-    }*/
+    }
     $table_name = $wpdb->prefix . "addition_informaion";
 
 
@@ -73,6 +73,15 @@ if (isset($_POST['user_profile_reg_submit'])) {
             $registrationNumberOportoment
         )
     ));
+//
+// Change pasword
+//
+
+    if($_POST['accessNewPassword']){
+
+            wp_set_password( $_POST['accessNewPassword'], $cur_user_id);
+
+    }
 
     wp_redirect("/");
     exit;

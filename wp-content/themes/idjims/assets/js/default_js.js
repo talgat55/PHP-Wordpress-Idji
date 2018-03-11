@@ -2,10 +2,11 @@
 // !!!!!!!!!!!!!!!!!document ready!!!!!!!!!!!!!!!!!!!!!!!!!!
 // ---------------------------------------------------------
 
-jQuery(window).resize(function() {
+jQuery(window).resize(function () {
     "use strict";
     accordionQAPage();
     fiveblocks();
+    animationblocks();
     MobileMenu();
 });
 
@@ -16,6 +17,7 @@ jQuery(document).ready(function () {
     InitCarouselClients();
     InitOpenContentReview();
     MobileMenu();
+    animationblocks();
     InitUISliderPage();
     InitShowTooltip();
     InitUISliderPageProperty();
@@ -24,6 +26,7 @@ jQuery(document).ready(function () {
     InitSliderReview();
     ConfimPassword();
     fiveblocks();
+    AddBlockTextInFormFields();
     accordionQAPage();
     jQuery(".tabs").lightTabs();
 
@@ -1179,7 +1182,7 @@ function InitUISliderPageProperty() {
 * Confim password
  */
 function ConfimPassword() {
-    if(jQuery(".registration-page").length) {
+    if (jQuery(".registration-page, .page-user-profile").length) {
         var password = document.getElementById("reg-pass")
             , confirm_password = document.getElementById("confim-reg-pass");
 
@@ -1195,11 +1198,12 @@ function ConfimPassword() {
         confirm_password.onkeyup = validatePassword;
     }
 }
+
 /*
 *  Tooltips for Five steps part
 */
 
-function fiveblocks(){
+function fiveblocks() {
     if (jQuery(window).width() > 1200) {
 
 
@@ -1224,25 +1228,68 @@ function fiveblocks(){
 /*
 * Mobile Menu
 */
-function MobileMenu(){
-jQuery('#mobile-bar').click(function (e) {
-    e.preventDefault();
-    jQuery('.navigation').toggleClass("menu-open");
-    jQuery('#mobile-bar a').toggleClass(" is-active");
-
-
-});
-
-/**
- * Accordion menu for mobile
- */
-if (jQuery(window).width() < 1200) {
-
-
-    jQuery('.navigation').find('li a').click(function (e) {
+function MobileMenu() {
+    jQuery('#mobile-bar').click(function (e) {
         e.preventDefault();
-        jQuery(this).next().stop().slideToggle();
-        jQuery(this).toggleClass("accordion-open");
-    }).next().stop().hide();
+        jQuery('.navigation').toggleClass("menu-open");
+        jQuery('#mobile-bar a').toggleClass(" is-active");
+
+
+    });
+
+    /**
+     * Accordion menu for mobile
+     */
+    if (jQuery(window).width() < 1200) {
+
+
+        jQuery('.navigation').find('li a').click(function (e) {
+            e.preventDefault();
+            jQuery(this).next().stop().slideToggle();
+            jQuery(this).toggleClass("accordion-open");
+        }).next().stop().hide();
+    }
 }
+
+/*
+* Animation
+*/
+function animationblocks() {
+
+    var windowwidth = jQuery(window).width();
+    if (windowwidth >= 899) {
+        jQuery('.animation-block').each(function () {
+            jQuery(this).appear(function () {
+
+                var $this = jQuery(this);
+                var animcalass = $this.data('animation');
+                $this.addClass(' animated ' + animcalass);
+
+            }, {accX: 0, accY: -50})
+        });
+    } else {
+        jQuery('.animation-block').addClass(' animated ');
+    }
+}
+
+//  row-doc-form
+//
+
+/*
+*  Add Block Text for Input for Form generate page
+ */
+function AddBlockTextInFormFields() {
+    if (jQuery('.row-doc-form').length) {
+
+        jQuery('input').on('input', function () {
+            var $findp = jQuery(this).parent().find('p');
+
+            if ($findp.length == 0) {
+                var $value = jQuery(this).attr('placeholder');
+                jQuery(this).parent().prepend('<p class="tooltips">' + $value + '</p>');
+            }
+
+        })
+    }
+
 }

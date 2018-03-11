@@ -81,7 +81,7 @@ get_header(); ?>
                 банкротства. Иначе могут начаться необратимые последствия:
             </p>
             <div class="clearfix">
-                <div class="col-md-6 dont-wait-block-auto-height">
+                <div class="col-md-6 dont-wait-block-auto-height  animation-block  opacity-zero"  data-animation="slideInUp">
                     <div class="dont-wait-block">
                         <div class="dont-wait-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/dontwait1-2.png') ?>">
@@ -91,7 +91,7 @@ get_header(); ?>
 
                     </div>
                 </div>
-                <div class="col-md-6 dont-wait-block-auto-height no-padding-right">
+                <div class="col-md-6 dont-wait-block-auto-height no-padding-right  animation-block  opacity-zero"  data-animation="slideInUp">
                     <div class="dont-wait-block">
                         <div class="dont-wait-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/dontwait2-2.png') ?>">
@@ -104,7 +104,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <div class="dont-wait-block" style="padding: 35px 174px;">
+                    <div class="dont-wait-block  animation-block  opacity-zero" style="padding: 35px 174px;"  data-animation="slideInUp">
                         <div class="dont-wait-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/dontwait3-2.png') ?>">
                         </div>
@@ -122,7 +122,7 @@ get_header(); ?>
     <section id="get-use-our ">
         <div class="container clearfix">
             <div class="title-section">Что вы получите от обращения к нам?</div>
-            <div class="col-md-6">
+            <div class="col-md-6  animation-block  opacity-zero"  data-animation="slideInLeft">
                 <div class="block-use-our">
                     <div id="contentSlider">Общая сумма долга: <span id="valueidslider">1000</span> руб</div>
                     <div id="slider-ui"></div>
@@ -133,7 +133,7 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6  no-padding-right">
+            <div class="col-md-6  no-padding-right  animation-block  opacity-zero"  data-animation="slideInRight">
                 <div class="block-use-our">
                     <a href="#" class="btn btn-link-to-modal">Узнать, как получить выгоду</a>
                     <p class="spec-block-text-use-our">Оставьте заявку и наш специалист бесплатно расскажет, как
@@ -141,7 +141,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="border-use-our"></div>
-            <div class="col-md-6">
+            <div class="col-md-6  animation-block  opacity-zero"  data-animation="slideInLeft">
                 <div class="block-use-our">
                     <a href="http://idgis.trekweb.ru/calculate/" class="block-use-our-walp-2 clearfix">
                         <h3>Калькулятор <span>банкротства</span></h3>
@@ -153,7 +153,7 @@ get_header(); ?>
                 </div>
 
             </div>
-            <div class="col-md-6 no-padding-right">
+            <div class="col-md-6 no-padding-right  animation-block  opacity-zero"  data-animation="slideInRight">
                 <div class="block-use-our">
                     <div class="block-use-our-walp-2 clearfix">
                         <h3>Бесплатное <span>банкротство</span></h3>
@@ -173,11 +173,11 @@ get_header(); ?>
 
     <section id="five-step" class="service-page-five-step">
         <div class="title-section center"><span class="red">5 шагов</span> к банкротству</div>
-        <img class="check-bg-service" src="<?php echo get_theme_file_uri('/assets/images/bg-check-2.png') ?>">
+        <img class="check-bg-service" data-src="<?php echo get_theme_file_uri('/assets/images/bg-check-2.png') ?>">
 
         <div class="container ">
             <div class="clearfix ">
-                <div class="col-md-4">
+                <div class="col-md-4  animation-block  opacity-zero"  data-animation="zoomIn">
                     <div class="col-five-step-block One_step">
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/1-2.png') ?>">
                         <div class="block-five-step-arrow">
@@ -195,7 +195,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4  animation-block  opacity-zero"  data-animation="zoomIn">
                     <div class="col-five-step-block Two_step">
                         <img class="Two_step-img_first"
                              src="<?php echo get_theme_file_uri('/assets/images/2-2.png') ?>">
@@ -214,7 +214,7 @@ get_header(); ?>
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4  animation-block  opacity-zero"  data-animation="zoomIn">
                     <div class="col-five-step-block Tree_Step">
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/3-2.png') ?>">
                         <div class="block-five-step-arrow">
@@ -232,7 +232,7 @@ get_header(); ?>
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6  animation-block  opacity-zero"  data-animation="zoomIn">
                     <div class="col-five-step-block Tree_one_step">
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/3_1-2.png') ?>">
                         <div class="block-five-step-arrow">
@@ -248,7 +248,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6  animation-block  opacity-zero"  data-animation="zoomIn">
                     <div class="col-five-step-block Tree_two_step">
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/3_2-2.png') ?>">
                         <div class="block-five-step-arrow">
@@ -268,7 +268,7 @@ get_header(); ?>
                 </div>
 
 
-                <div class="col-md-6">
+                <div class="col-md-6  animation-block  opacity-zero"  data-animation="zoomIn">
                     <div class="col-five-step-block Four_one_step">
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/4_1-2.png') ?>">
                         <div class="block-five-step-arrow">
@@ -287,7 +287,7 @@ get_header(); ?>
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6  animation-block  opacity-zero"  data-animation="zoomIn">
                     <div class="col-five-step-block Four_two_step">
                         <img class="img-Four_two_step"
                              data-src="<?php echo get_theme_file_uri('/assets/images/4_2-2.png') ?>">
@@ -315,7 +315,7 @@ get_header(); ?>
 
             <div class="five-step-block-bottom">
                 <p>
-                    Минимальный срок процедуры банкротства ипотечного заемщика — <b>10 месяцев</b>, в среднем же он
+                    Минимальный срок процедуры банкротства гражданина — <b>10 месяцев</b>, в среднем же он
                     составляет <b>12 месяцев</b> в случае утверждения процедуры реализации имущества, и <b>3 года</b> -
                     в случае утверждения плана реструктуризации.
                 </p>
@@ -469,19 +469,19 @@ get_header(); ?>
         <div class="container relative">
             <div class="title-section center"><span class="red">Распространённые</span> мифы о банкротстве</div>
             <div class="clearfix">
-                <div class="col-md-4 center">
+                <div class="col-md-4 center  animation-block  opacity-zero"  data-animation="flipInX">
                     <div class="myth-block">
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/label-2.png') ?>">
                         <p>Ярлык банкрота на всю жизнь</p>
                     </div>
                 </div>
-                <div class="col-md-4 center">
+                <div class="col-md-4 center  animation-block  opacity-zero"  data-animation="flipInX">
                     <div class="myth-block">
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/queen-2.png') ?>">
                         <p>Вы не сможете занять руководящую должность</p>
                     </div>
                 </div>
-                <div class="col-md-4 center no-padding-right">
+                <div class="col-md-4 center no-padding-right  animation-block  opacity-zero"  data-animation="flipInX">
                     <div class="myth-block">
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/air-2.png') ?>">
                         <p>Закроют выезд за границу</p>
@@ -491,19 +491,19 @@ get_header(); ?>
             <div class="title-section center">Что происходит на самом деле</div>
             <p class="center">При варианте с реализацией имущества Вы:</p>
             <div class="clearfix myth-custom-margin">
-                <div class="col-md-4 center">
+                <div class="col-md-4 center  animation-block  opacity-zero"  data-animation="flipInY">
                     <div class="myth-block-alt">
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/myth-cal5-2.png') ?>">
                         <p>В течение 5-ти лет обязаны указывать факт банкротства при получении кредита</p>
                     </div>
                 </div>
-                <div class="col-md-4 center">
+                <div class="col-md-4 center  animation-block  opacity-zero"  data-animation="flipInY">
                     <div class="myth-block-alt">
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/myth-cal5-2.png') ?>">
                         <p>В течение 5-ти лет нельзя повторно банкротиться</p>
                     </div>
                 </div>
-                <div class="col-md-4 center no-padding-right">
+                <div class="col-md-4 center no-padding-right  animation-block  opacity-zero"  data-animation="flipInY">
                     <div class="myth-block-alt">
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/myth-cal3-2.png') ?>">
                         <p>В течение 3-ех лет нельзя быть директором юридического лица или входить в совет

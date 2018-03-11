@@ -103,6 +103,7 @@ if (isset($_POST['form_10_cancel_court_order_submit'])) {
     Дата: ' . date("d.m.y") . '
     
     ';
+    /*
     $uniq = uniqid();
     $namefile = "form10" . $uniq . ".html";
     $fp = fopen($namefile, "w");
@@ -111,7 +112,7 @@ if (isset($_POST['form_10_cancel_court_order_submit'])) {
     fwrite($fp, $html);
 
     // закрываем
-    fclose($fp);
+    fclose($fp);*/
 
     generateform($html, 'form10');
 }

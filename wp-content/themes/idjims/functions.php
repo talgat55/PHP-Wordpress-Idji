@@ -80,6 +80,7 @@ function th_scripts()
     wp_enqueue_script('lightbox.min', get_theme_file_uri('/assets/js/lightbox.min.js'), array(), '2');
     wp_enqueue_script('slick.min', get_theme_file_uri('/assets/js/slick.min.js'), array(), '2');
     wp_enqueue_script('tabs', get_theme_file_uri('/assets/js/tabs.js'), array(), '2');
+    wp_enqueue_script('appear', get_theme_file_uri('/assets/js/appear.js'), array(), '2');
     wp_enqueue_script('lazyload.min', get_theme_file_uri('/assets/js/lazyload.min.js'), array(), '2');
     if ( is_page( 'contact' )){
         wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDkewQZi7iY6eOtlXajXXHFWHECGYWqfMs', array(), '2');
