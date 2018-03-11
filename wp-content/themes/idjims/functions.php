@@ -30,7 +30,7 @@ if (!is_home()) {
 
 
 // forms
-    include_once('inc/forms/form-1.php');
+    include_once('inc/forms/form-11.php');
     include_once('inc/forms/form-10.php');
     include_once('inc/forms/form-9.php');
     include_once('inc/forms/form-8.php');
@@ -40,7 +40,7 @@ if (!is_home()) {
     include_once('inc/forms/form-4.php');
     include_once('inc/forms/form-3.php');
     include_once('inc/forms/form-2.php');
-
+    include_once('inc/forms/form-1.php');
 
     /*
     * User Profile
@@ -71,18 +71,18 @@ function th_scripts()
     // Theme stylesheet.
     wp_enqueue_style('th-style', get_theme_file_uri('style.css'), array(), '');
     wp_enqueue_style('style', get_theme_file_uri('/assets/css/style.css'), array(), '');
-   // wp_enqueue_style('style', get_theme_file_uri('/assets/css/minify.css'), array(), '');
+    // wp_enqueue_style('style', get_theme_file_uri('/assets/css/minify.css'), array(), '');
     wp_enqueue_style('lightbox.min', get_theme_file_uri('/assets/css/lightbox.min.css'), array(), '');
 
     wp_enqueue_script('jquery', get_theme_file_uri('/assets/js/jquery-3.2.1.min.js'), array(), '1');
-   wp_enqueue_script('default', get_theme_file_uri('/assets/js/default_js.js'), array(), '2');
- //   wp_enqueue_script('compressed', get_theme_file_uri('/assets/js/compressed.js'), array(), '2');
+    wp_enqueue_script('default', get_theme_file_uri('/assets/js/default_js.js'), array(), '2');
+    //   wp_enqueue_script('compressed', get_theme_file_uri('/assets/js/compressed.js'), array(), '2');
     wp_enqueue_script('lightbox.min', get_theme_file_uri('/assets/js/lightbox.min.js'), array(), '2');
     wp_enqueue_script('slick.min', get_theme_file_uri('/assets/js/slick.min.js'), array(), '2');
     wp_enqueue_script('tabs', get_theme_file_uri('/assets/js/tabs.js'), array(), '2');
     wp_enqueue_script('appear', get_theme_file_uri('/assets/js/appear.js'), array(), '2');
     wp_enqueue_script('lazyload.min', get_theme_file_uri('/assets/js/lazyload.min.js'), array(), '2');
-    if ( is_page( 'contact' )){
+    if (is_page('contact')) {
         wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDkewQZi7iY6eOtlXajXXHFWHECGYWqfMs', array(), '2');
 
         wp_enqueue_script('maps', get_theme_file_uri('/assets/js/maps.js'), array(), '2');
@@ -95,12 +95,11 @@ function th_scripts()
 
     global $wp_query;
     $args = array(
-        'url'   => admin_url( 'admin-ajax.php' ),
+        'url' => admin_url('admin-ajax.php'),
         'query' => $wp_query->query,
     );
-    wp_enqueue_script( 'be-load-more', get_theme_file_uri(  '/assets/js/load-more.js'),array(), '' );
-    wp_localize_script( 'be-load-more', 'beloadmore', $args );
-
+    wp_enqueue_script('be-load-more', get_theme_file_uri('/assets/js/load-more.js'), array(), '');
+    wp_localize_script('be-load-more', 'beloadmore', $args);
 
 
 }
@@ -386,27 +385,28 @@ if (isset($_POST['reg_submit'])) {
     if (!is_wp_error($register_user)) {
 
         //$_SESSION['error_registration'] = 'Регистрация успешна завершена';
-        wp_redirect( home_url() );
+        wp_redirect(home_url());
         exit;
     } else {
 
-         $_SESSION['error_registration'] = $register_user->get_error_message();
+        $_SESSION['error_registration'] = $register_user->get_error_message();
 
     }
 }
 
 
-
-function wpse_lost_password_redirect() {
+function wpse_lost_password_redirect()
+{
 
     // Check if have submitted
-    $confirm = ( isset($_GET['checkemail'] ) ? $_GET['checkemail'] : '' );
+    $confirm = (isset($_GET['checkemail']) ? $_GET['checkemail'] : '');
 
-    if( $confirm ) {
-        wp_redirect( home_url('/login') );
+    if ($confirm) {
+        wp_redirect(home_url('/login'));
         exit;
     }
 }
+
 add_action('login_headerurl', 'wpse_lost_password_redirect');
 
 
@@ -513,7 +513,8 @@ function morph($n, $f1, $f2, $f5)
  * AJAX Load More
  */
 
-function be_ajax_load_more(){
+function be_ajax_load_more()
+{
     $args = isset($_POST['query']) ? array_map('esc_attr', $_POST['query']) : array();
     //$args['post_type'] = isset( $args['post_type'] ) ? esc_attr( $args['post_type'] ) : 'post';
     $args['post_type'] = $_POST['query'];
@@ -546,8 +547,8 @@ function be_post_summary()
                                     <img class="blog-img" src="' . $image . '" />
                                     <div class="overlay-layer-blog"></div>
                                     <div class="meta-blog">
-                                        <img src="'.get_theme_file_uri( "/assets/images/cal-white.png" ).'"/>
-                                        <span class="date-blog">'.get_the_date('Y.m.d',get_the_ID()).'</span>
+                                        <img src="' . get_theme_file_uri("/assets/images/cal-white.png") . '"/>
+                                        <span class="date-blog">' . get_the_date('Y.m.d', get_the_ID()) . '</span>
                                     </div>
                                 </a>
                                 
@@ -556,5 +557,100 @@ function be_post_summary()
                             </div>
             </li>';
 
+
+}
+
+
+/*
+ *  Links  to URL
+ */
+
+function LinksTheme($link){
+
+    switch ($link) {
+        case 'user-profile':
+            return home_url('/user-profile/');
+            break;
+        case 'login':
+            return home_url("/login");
+            break;
+        case 'user-doc':
+            return home_url("/doc/");
+            break;
+        case 'banlrotstvo-fl':
+            return home_url("/banlrotstvo-fl/");
+            break;
+        case 'bankrotstvo-ipotechikov':
+            return home_url("/bankrotstvo-ipotechikov/");
+            break;
+        case 'bankrotstvo-poruchitelya':
+            return home_url("/bankrotstvo-poruchitelya/");
+            break;
+        case 'bankrotstvo-ip':
+            return home_url("/bankrotstvo-ip/");
+            break;
+        case 'reviews':
+            return home_url("/reviews/");
+            break;
+        case 'blog':
+            return home_url("/blog/");
+            break;
+        case 'question-answer':
+            return home_url("/question-answer/");
+            break;
+        case 'calculate':
+            return home_url("/calculate/");
+            break;
+        case 'policy':
+            return home_url("/policy/");
+            break;
+        case 'policy':
+            return home_url("/policy/");
+            break;
+        case 'registration':
+            return home_url("/registration/");
+            break;
+        case 'form10':
+            return home_url("/doc-form10/");
+            break;
+        case 'form11':
+            return home_url("/doc-form11/");
+            break;
+        case 'form9':
+            return home_url("/doc-form9/");
+            break;
+
+        case 'form8':
+            return home_url("/doc-form8/");
+            break;
+        case 'form7':
+            return home_url("/doc-form7/");
+            break;
+        case 'form6':
+            return home_url("/doc-form6/");
+            break;
+        case 'form5':
+            return home_url("/doc-form5/");
+            break;
+        case 'form4':
+            return home_url("/doc-form4/");
+            break;
+        case 'form3':
+            return home_url("/doc-form3/");
+            break;
+        case 'form2':
+            return home_url("/doc-form2/");
+            break;
+        case 'form1':
+            return home_url("/doc-form1/");
+            break;
+        case 'perechen':
+            return home_url("/perechen-doc/");
+            break;
+        case 'contact':
+            return home_url("/contact/");
+            break;
+
+    }
 
 }

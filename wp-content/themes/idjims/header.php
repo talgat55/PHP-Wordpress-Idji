@@ -23,8 +23,8 @@
 
                 echo '  <div class="top-header-user clearfix">
                             <div class="container">
-                                <a href="' . wp_logout_url( home_url("/login") ) . '"  >Выйти</a>
-                                <a href="' . home_url("/login") . '"  ><img src="' . get_theme_file_uri('/assets/images/user.png') . '" alt=""/>Личный кабинет</a>
+                                <a href="' . wp_logout_url(LinksTheme('login')) . '"  >Выйти</a>
+                                <a href="'.LinksTheme('user-profile').'"  ><img src="' . get_theme_file_uri('/assets/images/user.png') . '" alt=""/>Личный кабинет</a>
                                 
                             </div>
                         </div>';
@@ -33,7 +33,7 @@
 
                 echo '  <div class="top-header-user clearfix">
                             <div class="container">
-                                <a href="' . home_url("/login") . '"><img src="' . get_theme_file_uri('/assets/images/user.png') . '" alt=""/> Войти/Зарегистрироваться</a>
+                                <a href="' . LinksTheme('login') . '"><img src="' . get_theme_file_uri('/assets/images/user.png') . '" alt=""/> Войти/Зарегистрироваться</a>
                             </div>
                         </div>';
 
@@ -94,16 +94,16 @@
                                 Услуги
                                 <i class="icon-down-dir"></i>
                                 <ul class="sub-menu">
-                                    <li><a href="#">Финансовая защита</a></li>
-                                    <li><a href="http://idgis.trekweb.ru/banlrotstvo-fl/">Банкротство гражданина</a>
+                                    <!--<li><a href="#">Финансовая защита</a></li>-->
+                                    <li><a href="<?php echo LinksTheme('banlrotstvo-fl'); ?>">Банкротство гражданина</a>
                                     </li>
-                                    <li><a href="http://idgis.trekweb.ru/bankrotstvo-ipotechikov/">Банкротство
+                                    <li><a href="<?php echo LinksTheme('bankrotstvo-ipotechikov'); ?>">Банкротство
                                             ипотечника</a></li>
-                                    <li><a href="http://idgis.trekweb.ru/bankrotstvo-poruchitelya/">Банкротство
+                                    <li><a href="<?php echo LinksTheme('bankrotstvo-poruchitelya');?>">Банкротство
                                             поручителя</a></li>
-                                    <li><a href="http://idgis.trekweb.ru/bankrotstvo-ip/">Банкротство ИП</a></li>
-                                    <li><a href="#">Банкротство ООО</a></li>
-                                    <li><a href="#">Юрист по банкротству</a></li>
+                                    <li><a href="<?php echo LinksTheme('bankrotstvo-ip'); ?>">Банкротство ИП</a></li>
+                                    <!--<li><a href="#">Банкротство ООО</a></li>
+                                    <li><a href="#">Юрист по банкротству</a></li>-->
                                 </ul>
                             </a>
                         </li>
@@ -112,19 +112,18 @@
                                 Полезная информация
                                 <i class="icon-down-dir"></i>
                                 <ul class="sub-menu">
-                                    <li><a href="#">Наша практика</a></li>
-                                    <li><a href="http://idgis.trekweb.ru/reviews/">Отзывы</a></li>
-                                    <li><a href="#">Блог</a></li>
-                                    <li><a href="#">Вопрос-ответ</a></li>
+                                    <li><a href="<?php echo LinksTheme('contact'); ?>">Контакты</a></li>
+                                    <li><a href="<?php echo LinksTheme('reviews'); ?>">Отзывы</a></li>
+                                    <li><a href="<?php echo LinksTheme('blog'); ?>">Блог</a></li>
+                                    <li><a href="<?php echo LinksTheme('question-answer'); ?>">Вопрос-ответ</a></li>
                                 </ul>
                             </a>
                         </li>
 
 
-                        <li><a href="http://idgis.trekweb.ru/calculate/">Калькулятор банкротсва</a></li>
-                        <li><a href="#">Банкротсво бесплатно</a></li>
+                        <li><a href="<?php echo LinksTheme('calculate'); ?>">Калькулятор банкротсва</a></li>
+                        <li><a href="<?php echo LinksTheme('login'); ?>">Банкротсво бесплатно</a></li>
                     </ul>
-
 
                 </div>
                 <div id="mobile-bar">

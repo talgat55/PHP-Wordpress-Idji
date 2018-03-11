@@ -671,7 +671,7 @@ get_header(); ?>
 
                 <a href="#" class="slider-arrow-right"><span class="icon-right-open"></span></a>
             </div>
-            <div class="block-link-client"><a href="#" class="link-client-more">Читать больше</a></div>
+            <div class="block-link-client"><a href="http://idgis.trekweb.ru/reviews/" class="link-client-more">Читать больше</a></div>
         </div>
     </section>
 

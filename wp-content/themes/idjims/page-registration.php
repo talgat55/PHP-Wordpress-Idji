@@ -54,7 +54,7 @@ $ValueForHash = wp_create_nonce('ASMART');
                                     <div class="checkboxFourInput" for="checkboxFourInput"></div>
                                 </div>
                                 <div class="form-policy clearfix">я согласен с <a target="_blank"
-                                                                                  href="http://servisvektor.ru/privacy_policy/">«Политикой
+                                                                                  href="<?php echo LinksTheme('policy'); ?>">«Политикой
                                         конфиденциальности»</a>сайта
                                 </div>
                             </div>

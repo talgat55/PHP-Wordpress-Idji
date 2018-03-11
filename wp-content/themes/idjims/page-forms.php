@@ -9,12 +9,18 @@ get_header(); ?>
     <div class="wrap">
 
         <?php
+        if (!is_user_logged_in()) {
+            wp_redirect(LinksTheme('login'));
+            exit;
+
+        }
         while (have_posts()) : the_post();
 
 
             switch (get_the_content()) {
-                case '[form1]':
-                    get_template_part('template-parts/forms/page-form-1');
+
+                case '[form11]':
+                    get_template_part('template-parts/forms/page-form-11');
                     break;
                 case '[form10]':
                     get_template_part('template-parts/forms/page-form-10');
@@ -43,7 +49,9 @@ get_header(); ?>
                 case '[form2]':
                     get_template_part('template-parts/forms/page-form-2');
                     break;
-
+                case '[form1]':
+                    get_template_part('template-parts/forms/page-form-1');
+                    break;
             }
 
         endwhile;

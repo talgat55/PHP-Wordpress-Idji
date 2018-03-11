@@ -7,7 +7,7 @@ get_header(); ?>
 
     <div class="breadscrumb">
         <div class="container">
-            <h1 class="title-section service center-white ">Блог</h1>
+            <h1 class="title-section service center-white "><?php  echo get_the_title(); ?></h1>
         </div>
     </div>
     <div class="wrap qa-row">

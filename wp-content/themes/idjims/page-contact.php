@@ -35,8 +35,9 @@ get_header(); ?>
             <?php echo do_shortcode('[contact-form-7 id="15" title="Untitled"]'); ?>
 
         </div>
-        <img src="<?php  echo get_theme_file_uri( '/assets/images/smart2-2.png' ) ?>">
-
+        <div class="SendMessage-img">
+            <img data-src="<?php echo get_theme_file_uri('/assets/images/smart2-2.png') ?>">
+        </div>
 
     </section>
 <?php get_footer();

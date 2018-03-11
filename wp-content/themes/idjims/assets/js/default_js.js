@@ -640,7 +640,7 @@ jQuery(document).ready(function () {
 
         });
 
-
+        AddBlockTextInFormFields(); /// add p  placeholder text prepend input
 // end
     }
     /*
@@ -1285,8 +1285,10 @@ function AddBlockTextInFormFields() {
             var $findp = jQuery(this).parent().find('p');
 
             if ($findp.length == 0) {
-                var $value = jQuery(this).attr('placeholder');
-                jQuery(this).parent().prepend('<p class="tooltips">' + $value + '</p>');
+                if (jQuery(this).is('input:text')) {
+                    var $value = jQuery(this).attr('placeholder');
+                    jQuery(this).parent().prepend('<p class="tooltips">' + $value + '</p>');
+                }
             }
 
         })

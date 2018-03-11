@@ -36,7 +36,7 @@ if (isset($_POST['user_profile_reg_submit'])) {
     		$cur_user_id = get_current_user_id();
     if(!$cur_user_id){   // dont verify user
 
-        wp_redirect( home_url('/login'));
+        wp_redirect( LinksTheme('login'));
         exit;
     }
     $table_name = $wpdb->prefix . "addition_informaion";
@@ -47,7 +47,7 @@ if (isset($_POST['user_profile_reg_submit'])) {
          %d, %d, %s, %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, %s)",
         array(
             0,
-            0,
+            $cur_user_id,
             $firstName,
             $secondName,
             $lastName,
@@ -83,6 +83,6 @@ if (isset($_POST['user_profile_reg_submit'])) {
 
     }
 
-    wp_redirect("/");
+    wp_redirect(LinksTheme('user-doc'));
     exit;
 }

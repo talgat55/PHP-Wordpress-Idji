@@ -4,10 +4,18 @@
  */
 
 get_header();
+if (!is_user_logged_in()) {
+    wp_redirect(LinksTheme('login'));
+    exit;
 
+}
 $user_info = get_userdata(get_current_user_id());
 
-
+$cur_user_id = get_current_user_id();
+//	$cur_user_id =1;
+global $wpdb;
+$table_name = $wpdb->prefix . "addition_informaion";
+$results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");
 ?>
 
     <div class="wrap">
@@ -19,7 +27,7 @@ $user_info = get_userdata(get_current_user_id());
                     </a>
                 </div>
                 <div class="col-lg-6 no-padding">
-                    <a href="#" class="user-page-link-breadscrumb ">
+                    <a href="<?php echo LinksTheme('user-doc'); ?>" class="user-page-link-breadscrumb ">
                         Оформление документов
                     </a>
                 </div>
@@ -38,26 +46,26 @@ $user_info = get_userdata(get_current_user_id());
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>Фамилия</div>
-                                        <input name="firstName" type="text" class="form-control" placeholder="Фамилия"/>
+                                        <input name="firstName" type="text" class="form-control" value="<?php echo $results[0]->first_name; ?>" placeholder="Фамилия"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>Имя</div>
-                                        <input name="secondName" type="text" class="form-control" placeholder="Имя"/>
+                                        <input name="secondName" type="text" class="form-control"  value="<?php echo $results[0]->second_name; ?>" placeholder="Имя"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>Отчество</div>
-                                        <input name="lastName" type="text" class="form-control" placeholder="Отчество"/>
+                                        <input name="lastName" type="text" class="form-control"  value="<?php echo $results[0]->third_name; ?>" placeholder="Отчество"/>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>День Рождения</div>
-                                        <input name="birdDay" type="date" class="form-control"
+                                        <input name="birdDay" type="date"  class="form-control"  value="<?php echo $results[0]->bird_day; ?>"
                                                placeholder="День Рождения"/>
                                     </div>
                                 </div>
@@ -65,14 +73,14 @@ $user_info = get_userdata(get_current_user_id());
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>Место Рождения</div>
-                                        <input name="placeBirdDay" type="text" class="form-control"
+                                        <input name="placeBirdDay" type="text" class="form-control"  value="<?php echo $results[0]->place_bird; ?>"
                                                placeholder="Место Рождения"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>Прежние фамилии</div>
-                                        <input name="PreviousFirstName" type="text" class="form-control"
+                                        <input name="PreviousFirstName"  value="<?php echo $results[0]->last_name; ?>" type="text" class="form-control"
                                                placeholder="Прежние фамилии"/>
                                     </div>
                                 </div>
@@ -80,7 +88,7 @@ $user_info = get_userdata(get_current_user_id());
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>Место проживания</div>
-                                        <input name="PlaceLive" type="text" class="form-control"
+                                        <input name="PlaceLive" type="text"  value="<?php echo $results[0]->place_live; ?>" class="form-control"
                                                placeholder="Место проживания"/>
                                     </div>
                                 </div>
@@ -91,34 +99,34 @@ $user_info = get_userdata(get_current_user_id());
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>Номер </div>
-                                        <input name="NumberPassport" type="text" class="form-control"
+                                        <input name="NumberPassport"  value="<?php echo $results[0]->passport_serial; ?>" type="text" class="form-control"
                                                placeholder="Номер"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>Серия</div>
-                                        <input name="SeriaPassport" type="text" class="form-control"
+                                        <input name="SeriaPassport"  value="<?php echo $results[0]->passport_number; ?>" type="text" class="form-control"
                                                placeholder="Серия"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>Кем Выдан</div>
-                                        <input name="WhoGetPassport" type="text" class="form-control"
+                                        <input name="WhoGetPassport"  value="<?php echo $results[0]->passport_issued_by; ?>" type="text" class="form-control"
                                                placeholder="Кем Выдан"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>Дата Выдачи</div>
-                                        <input name="datPassport" type="date" class="form-control"/>
+                                        <input name="datPassport"  value="<?php echo $results[0]->passport_issued_date; ?>" type="date" class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>Код подразделения</div>
-                                        <input name="KeyDepartmentPassport" type="text" class="form-control"
+                                        <input name="KeyDepartmentPassport"  value="<?php echo $results[0]->passport_issued_key; ?>" type="text" class="form-control"
                                                placeholder="Код подразделения"/>
                                     </div>
                                 </div>
@@ -132,27 +140,27 @@ $user_info = get_userdata(get_current_user_id());
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>ИНН </div>
-                                        <input name="additionalInn" type="text" class="form-control" placeholder="ИНН"/>
+                                        <input name="additionalInn"  value="<?php echo $results[0]->extra_inn; ?>" type="text" class="form-control" placeholder="ИНН"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>СНИЛС</div>
-                                        <input name="additionalSnils" type="text" class="form-control"
+                                        <input name="additionalSnils"  value="<?php echo $results[0]->extra_snils; ?>" type="text" class="form-control"
                                                placeholder="СНИЛС"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>Телефон</div>
-                                        <input name="additionalPhone" type="text" class="form-control"
+                                        <input name="additionalPhone"  value="<?php echo $results[0]->extra_phone; ?>" type="text" class="form-control"
                                                placeholder="Телефон"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-group-walp">
                                         <div>E-mail</div>
-                                        <input name="additionalEmail" type="text" class="form-control"
+                                        <input name="additionalEmail" type="text" class="form-control" value="<?php echo $user_info->user_email; ?>"
                                                placeholder="E-mail"/
                                         />
                                     </div>
@@ -168,14 +176,23 @@ $user_info = get_userdata(get_current_user_id());
                             <div class="form-group">
                                 <div class="form-group-walp">
                                     <div>Индекс</div>
-                                    <input name="registrationIndex" type="text" class="form-control"
+                                    <input name="registrationIndex"  value="<?php echo $results[0]->registrtation_index; ?>" type="text" class="form-control"
                                            placeholder="Индекс"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div>Регион</div>
                                 <select class="select-box" name="registrationRegion">
-                                    <option value="Москва" selected="selected">Москва</option>
+                                    <?php   if($results[0]->registrtation_city){
+
+                                        echo '<option value="'.$results[0]->registrtation_city.'" selected="selected">'.$results[0]->registrtation_city.'</option>';
+
+                                    }else{
+
+                                        echo '<option value="Москва" selected="selected">Москва</option>';
+                                    }
+                                    ?>
+
                                     <option value="Санкт-Петербург">Санкт-Петербург</option>
                                     <option value="Адыгея Республика">Адыгея Республика</option>
                                     <option value="Алтай Республика">Алтай Республика</option>
@@ -275,14 +292,14 @@ $user_info = get_userdata(get_current_user_id());
                             <div class="form-group">
                                 <div class="form-group-walp">
                                     <div>Населёный пункт</div>
-                                    <input name="registrationPoint" type="text" class="form-control"
+                                    <input name="registrationPoint"  value="<?php echo $results[0]->registrtation_locality; ?>"  type="text" class="form-control"
                                            placeholder="Населёный пункт"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-group-walp">
                                     <div>Улица</div>
-                                    <input name="registrationStreet" type="text" class="form-control"
+                                    <input name="registrationStreet"  value="<?php echo $results[0]->registrtation_street; ?>" type="text" class="form-control"
                                            placeholder="Улица"/
                                     />
                                 </div>
@@ -291,21 +308,21 @@ $user_info = get_userdata(get_current_user_id());
                             <div class="form-group">
                                 <div class="form-group-walp">
                                     <div>Номер дома</div>
-                                    <input name="registrationNumberHouse" type="text" class="form-control"
+                                    <input name="registrationNumberHouse"  value="<?php echo $results[0]->registrtation_number_hourse; ?>" type="text" class="form-control"
                                            placeholder="Номер дома"/ />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-group-walp">
                                     <div>Номер корпуса</div>
-                                    <input name="registrationNumberKorpus" type="text" class="form-control"
+                                    <input name="registrationNumberKorpus"  value="<?php echo $results[0]->registrtation_number_housing; ?>" type="text" class="form-control"
                                            placeholder="Номер корпуса"/ />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-group-walp">
                                     <div>Номер квартиры</div>
-                                    <input name="registrationNumberOportoment" type="text" class="form-control"
+                                    <input name="registrationNumberOportoment"  value="<?php echo $results[0]->registrtation_number_apartments; ?>" type="text" class="form-control"
                                            placeholder="Номер квартиры"/ />
                                 </div>
                             </div>

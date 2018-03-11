@@ -24,7 +24,7 @@ get_header(); ?>
 
 				<div class="done-generate-form-walp">
 					<a href="<?php  echo get_theme_file_uri( '/inc/redypdf/'.$query["file"].'' ); ?>  " class="btn btn-form-page-gen-doc"> Сохранить документ</a>
-					<a href="#" class="btn btn-form-page-gen-doc">Сформировать новый</a>
+					<a href="<?php echo LinksTheme('user-doc'); ?>" class="btn btn-form-page-gen-doc">Сформировать новый</a>
 				</div>
 		 </div>
 

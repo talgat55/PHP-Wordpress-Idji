@@ -410,6 +410,7 @@ select {
     height: 3em;
     max-width: 100%;
     width: 100%;
+    padding: 9px;
     border-radius: 0;
     background: #f7fcff;
 }
@@ -419,7 +420,9 @@ body {
     font-family: Calibri, sans-serif;
     overflow-x: hidden;
 }
-
+.modal-form .checkboxFour::after {
+    background: #cb454c;
+}
 .content-area {
     margin-bottom: 50px;
 }
@@ -3576,7 +3579,13 @@ footer {
     position: absolute;
     bottom: -80px;
 }
-
+.page-form-3 .form-group-one-walp,
+.page-form-4 .form-group-one-walp,
+.page-form-11 .form-group-one-walp,
+.page-form-6 .form-group-one-walp,
+.page-form-10 .form-group-one-walp{
+    margin-bottom: 20px;
+}
 .btn-form-page-gen-doc {
     cursor: pointer;
     border: 2px solid #008dd0 !important;
@@ -3771,6 +3780,9 @@ footer {
     margin-top: 65px;
     border: 1px solid #dcdcdc;
     line-height: 40px;
+}
+.contact-page-adress a:hover{
+    text-decoration: underline;
 }
 
 #map {
@@ -4007,7 +4019,9 @@ footer {
 .registration-form {
     margin-bottom: 30px;
 }
-
+.registration-page .checkboxFour::after{
+    background: #cb454c;
+}
 @media (min-width: 1201px) {
     .navigation li:hover .sub-menu {
         display: block;

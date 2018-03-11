@@ -5,7 +5,11 @@
 
 get_header(); ?>
 <?php
+if (is_user_logged_in()) {
+    wp_redirect(LinksTheme('user-doc'));
+    exit;
 
+}
 $ValueForHash = wp_create_nonce('ASMART');
 
 ?>
@@ -45,7 +49,7 @@ $ValueForHash = wp_create_nonce('ASMART');
                     <input class="btn btn-primary btn-lg btn-block btn-form-login" type="submit"
                            name="login_submit" value="Войти"/>
 
-                    <span>Вы не зарегистрированы? <a href="<?php echo home_url('/registration'); ?>">Зарегистрируйтесь</a></span>
+                    <span>Вы не зарегистрированы? <a href="<?php echo LinksTheme('registration'); ?>">Зарегистрируйтесь</a></span>
                 </div>
             </form>
         </div><!-- #primary -->
