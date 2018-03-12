@@ -193,7 +193,7 @@ get_header(); ?>
                                 <a href="<?php echo LinksTheme('form5'); ?>"> <img
                                             src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
                                     <p>
-                                        Запрос в банк о предоставлении сведений по счетам и вкладам
+                                        Запрос в банк о предоставлении сведений по счетам и вкладам <span class="question-page-doc">?</span>
                                     </p>
                                 </a>
                             </li>
@@ -201,7 +201,7 @@ get_header(); ?>
                                 <a href="<?php echo LinksTheme('form11'); ?>"> <img
                                             src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
                                     <p>
-                                        Заявление о предоставлении сведений о задолженности
+                                        Заявление о предоставлении сведений о задолженности <span class="question-page-doc">?</span>
                                     </p>
                                 </a>
                             </li>
@@ -217,7 +217,7 @@ get_header(); ?>
                                 <a href="<?php echo LinksTheme('form3'); ?>"> <img
                                             src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
                                     <p>
-                                        Заявление о признании гражданина банкротом
+                                        Заявление о признании гражданина банкротом <span class="question-page-doc">?</span>
                                     </p>
                                 </a>
                             </li>
@@ -225,7 +225,7 @@ get_header(); ?>
                                 <a href="<?php echo LinksTheme('form1'); ?>"> <img
                                             src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
                                     <p>
-                                        Список кредиторов гражданина по установленной форме
+                                        Список кредиторов гражданина по установленной</br> форме <span class="question-page-doc">?</span>
                                     </p>
                                 </a>
                             </li>
@@ -233,7 +233,7 @@ get_header(); ?>
                                 <a href="<?php echo LinksTheme('form2'); ?>"> <img
                                             src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
                                     <p>
-                                        Опись имущества гражданина по установленной форме
+                                        Опись имущества гражданина по установленной</br> форме <span class="question-page-doc">?</span>
                                     </p>
                                 </a>
                             </li>
@@ -273,7 +273,7 @@ get_header(); ?>
                                             src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
                                     <p>
                                         Ходатайство об ежемесячных исключениях денежных
-                                        средств из конкурсной массы на личные нужды.
+                                        средств из конкурсной массы на личные нужды. <span class="question-page-doc">?</span>
                                     </p>
                                 </a>
                             </li>
@@ -290,7 +290,7 @@ get_header(); ?>
                             <p>
                                 Заявление об отказе взаимодействия с кредитором, взыскателем. Вы вправе отказаться от
                                 общения с кредиторами, коллекторами, если просрочка
-                                превысила 4 месяца
+                                превысила 4 месяца <span class="question-page-doc">?</span>
                             </p>
                         </a>
 
@@ -299,7 +299,7 @@ get_header(); ?>
                         <a href="<?php echo LinksTheme('form8'); ?>"> <img src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
                             <p>
                                 Ходатайство о снижении неустойки по кредитному договору (договору займа) для
-                                самостоятельной защиты своих интересов в суде
+                                самостоятельной защиты своих</br> интересов в суде <span class="question-page-doc">?</span>
                             </p>
                         </a>
                     </li>
@@ -307,14 +307,14 @@ get_header(); ?>
                         <a href="<?php echo LinksTheme('form9'); ?>"> <img src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
                             <p>
                                 Краткая информация о задолженности перед банком для бесплатного финансового анализа у
-                                нас в офисе
+                                нас в офисе <span class="question-page-doc">?</span>
                             </p>
                         </a>
                     </li>
                     <li>
                         <a href="<?php echo LinksTheme('form10'); ?>"> <img src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
                             <p>
-                                Заявление об отмене судебного приказа
+                                Заявление об отмене судебного приказа <span class="question-page-doc">?</span>
                             </p>
                         </a>
                     </li>

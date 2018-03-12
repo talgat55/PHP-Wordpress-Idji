@@ -76,7 +76,7 @@ jQuery(document).ready(function () {
                 jQuery('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
     });*/
 
-    jQuery("form input").focus(function () {
+    jQuery("form input, form textarea").focus(function () {
 
         jQuery(this).parent().parent().find('label').hide();
         var $this = jQuery(this);
@@ -106,7 +106,7 @@ jQuery(document).ready(function () {
         });
     });
     */
-    jQuery('form input').on('input', function () {
+    jQuery('form input, form textarea').on('input', function () {
         jQuery(this).parent().parent().find('label').hide();
 
     });
@@ -130,7 +130,7 @@ jQuery(document).ready(function () {
 
     });
 
-    jQuery("form input").focusout(function () {
+    jQuery("form input, form textarea").focusout(function () {
 
         jQuery(this).parent().find('.telephone').inputmask('remove');
     });
@@ -150,6 +150,14 @@ jQuery(document).ready(function () {
 
         jQuery('.overlay-layer').addClass('overlay-display');
         jQuery('.modal-form').addClass(' overlay-display ');
+
+        return false;
+    });
+
+    jQuery(".qa-btn").click(function () {
+
+        jQuery('.overlay-layer').addClass('overlay-display');
+        jQuery('.block-qa-answer').addClass(' overlay-display ');
 
         return false;
     });

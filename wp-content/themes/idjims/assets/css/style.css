@@ -391,6 +391,7 @@ textarea {
     box-sizing: border-box;
     background: #f7fcff;
     border-radius: 0;
+    resize: none;
 }
 
 .form-control.form-4 {
@@ -1416,7 +1417,6 @@ body {
     font-weight: bold;
     font-size: 23px;
     color: #cb454c;
-
 }
 
 .list-docs-user-page li {
@@ -1427,6 +1427,9 @@ body {
 .list-docs-user-page p {
     margin: 0;
     line-height: 33px;
+    /*text-decoration: underline;*/
+}
+.list-docs-user-page a:hover p{
     text-decoration: underline;
 }
 
@@ -2633,8 +2636,8 @@ footer {
 }
 
 .overlay-display {
-    visibility: visible;
-    opacity: 1;
+    visibility: visible!important;
+    opacity: 1!important;
 }
 
 /*
@@ -2863,7 +2866,20 @@ footer {
 .pagec-calc-field-total-debt-fwalp.property {
     display: table-cell;
 }
-
+.question-page-doc{
+    padding: 5px;
+    text-align: center;
+    background: #cb454c;
+    width: 20px;
+    line-height: 22px;
+    font-size: 23px;
+    display: inline-block;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    margin: 10px 0 10px 10px;
+}
 .question-page-calc {
     padding: 5px;
     text-align: center;
@@ -3887,17 +3903,20 @@ footer {
     border-color: #cb454c;
 
 }
-
+.block-qa-answer{
+    visibility: hidden;
+    opacity: 0;
+}
 .block-qa-answer .field {
     margin-bottom: 30px;
 }
-
+/*
 .block-qa-answer input[] {
     box-sizing: border-box;
     background: #f7fcff;
     border-radius: 0;
-}
-
+}*/
+/*
 .block-qa-answer form label {
     position: absolute;
     z-index: 9;
@@ -3911,7 +3930,7 @@ footer {
     margin: 0;
     line-height: 50px;
 }
-
+*/
 .showaccordion {
     height: 100%;
 }

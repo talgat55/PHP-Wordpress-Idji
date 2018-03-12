@@ -220,10 +220,7 @@ get_header(); ?>
                                                                                                          value="1000"
                                                                                                          required>
                                     </div>
-                                    <div class="question-page-calc">?
-
-
-                                    </div>
+                                    <div class="question-page-calc">?</div>
 
                                 </div>
                                 <div class="slider-ui slider-ui-property"></div>

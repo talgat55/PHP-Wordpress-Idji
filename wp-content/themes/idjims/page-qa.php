@@ -92,11 +92,16 @@ get_header(); ?>
 
 
             </div>
-            <a href="#" class="btn   qa-btn">Не нашли ответ? Напишите нам!</a>
+            <a href="#" class="btn qa-btn">Не нашли ответ? Напишите нам!</a>
 
 
-            <div class="block-qa-answer">
-                <?php echo do_shortcode('[contact-form-7 id="151" title="Untitled"]'); ?>
+            <div class="block-qa-answer modal-form ">
+                <div class="close-modal-block">
+                    <div class="close-modal-block_wallpaper"></div>
+                </div>
+                <div class="title-section center white">Задать вопрос</div>
+                <?php echo do_shortcode('[contact-form-7 id="136" title="qa"]'); ?>
+                <img src="<?php echo get_theme_file_uri('/assets/images/bg-modal-2.png') ?>">
             </div>
         </div>
 
