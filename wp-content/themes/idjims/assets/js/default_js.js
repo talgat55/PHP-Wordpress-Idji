@@ -77,6 +77,7 @@ jQuery(document).ready(function () {
     });*/
 
     jQuery("form input").focus(function () {
+
         jQuery(this).parent().parent().find('label').hide();
         var $this = jQuery(this);
         $this.mouseleave(function () {
@@ -105,7 +106,10 @@ jQuery(document).ready(function () {
         });
     });
     */
+    jQuery('form input').on('input', function () {
+        jQuery(this).parent().parent().find('label').hide();
 
+    });
     jQuery("form label").click(function () {
         var $this = jQuery(this);
         var $thisParent = jQuery(this).parent();
@@ -1243,7 +1247,7 @@ function MobileMenu() {
     if (jQuery(window).width() < 1200) {
 
 
-        jQuery('.navigation').find('li a').click(function (e) {
+        jQuery('.navigation').find('li a.open-ul').click(function (e) {
             e.preventDefault();
             jQuery(this).next().stop().slideToggle();
             jQuery(this).toggleClass("accordion-open");

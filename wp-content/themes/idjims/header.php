@@ -90,7 +90,7 @@
                     <ul class="navigation clearfix">
                         <li><a href="<?php echo home_url(); ?>">Главная</a></li>
                         <li>
-                            <a href="#">
+                            <a class="open-ul" href="#">
                                 Услуги
                                 <i class="icon-down-dir"></i>
                                 <ul class="sub-menu">
@@ -108,7 +108,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a  class="open-ul" href="#">
                                 Полезная информация
                                 <i class="icon-down-dir"></i>
                                 <ul class="sub-menu">

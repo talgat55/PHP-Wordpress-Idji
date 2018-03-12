@@ -21,8 +21,10 @@
 					if(res.data == ''){
                         button.hide();
 						$('.row-blog').append( '<p class="no-more-load-posts opacity-zero">Нет больше записей</p>' );
-						//$('.no-more-load-posts').addClass(' show-no-posts-load ');
+						$('.no-more-load-posts').addClass(' show-no-posts-load ');
+
 						$('.no-more-load-posts').delay(2000).fadeOut();
+                        $('.blog-row').addClass(' blog-row-nopadding-bottom ');
 					}
 					$('.blog-row-list').append( res.data );
 					$('.row-blog').append( button );

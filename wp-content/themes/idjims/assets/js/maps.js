@@ -35,6 +35,6 @@
                     position: new google.maps.LatLng(55.343567,86.076389),
                     map: map,
                     icon: image,
-                    title: 'Snazzy!'
+                    title: 'Иджис!'
                 });
             }

@@ -91,6 +91,7 @@ function th_scripts()
     wp_enqueue_script('jquery.inputmask', get_theme_file_uri('/assets/js/jquery.inputmask.js'), array(), '2');
     wp_enqueue_script('jquery.equalheightresponsive.min', get_theme_file_uri('/assets/js/jquery.equalheightresponsive.min.js'), array(), '2');
     wp_enqueue_script('jquery.ui-slider', get_theme_file_uri('/assets/js/jquery-ui.min.js'), array(), '2');
+    wp_enqueue_script('jquery.ui.touch-punch.min', get_theme_file_uri('/assets/js/jquery.ui.touch-punch.min.js'), array(), '2');
 
 
     global $wp_query;

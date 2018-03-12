@@ -370,9 +370,11 @@ a:focus {
     width: 32%;
     padding-right: 2%;
 }
-.page-user-profile .col-lg-3:nth-of-type(3n+3){
+
+.page-user-profile .col-lg-3:nth-of-type(3n+3) {
     padding-right: 0;
 }
+
 .col-lg-3 {
     width: 25%;
 }
@@ -396,9 +398,11 @@ textarea {
     position: relative;
     top: 9px;
 }
-.current.no-hover{
-    color: #fff!important;
+
+.current.no-hover {
+    color: #fff !important;
 }
+
 .form-4 {
     line-height: 25px;
     margin-bottom: 1px;
@@ -420,9 +424,11 @@ body {
     font-family: Calibri, sans-serif;
     overflow-x: hidden;
 }
+
 .modal-form .checkboxFour::after {
     background: #cb454c;
 }
+
 .content-area {
     margin-bottom: 50px;
 }
@@ -447,12 +453,12 @@ body {
 /*
  * Header
  */
-.top-header-user{
+.top-header-user {
     background-color: #eeeeee;
     padding: 5px 0;
 }
 
-.top-header-user a{
+.top-header-user a {
     text-decoration: underline;
     font-size: 14px;
     float: right;
@@ -461,17 +467,21 @@ body {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
-.top-header-user a:hover{
+
+.top-header-user a:hover {
     color: #cb454c;
 }
-.top-header-user a img{
+
+.top-header-user a img {
     padding-right: 8px;
     vertical-align: middle;
     padding-bottom: 4px;
 }
-.top-header-user a:last-child{
+
+.top-header-user a:last-child {
     padding-right: 10px;
 }
+
 .top-hedaer-block {
     display: table;
     width: 100%;
@@ -1288,9 +1298,11 @@ body {
 .user-page-link-breadscrumb.current {
     text-decoration: none;
 }
-.page-user-profile{
+
+.page-user-profile {
     margin: 50px 0;
 }
+
 .reviews-block-walp,
 .review-content {
     -webkit-transition: all .3s ease;
@@ -1342,21 +1354,26 @@ body {
     margin: 0 auto;
     text-align: center;
 }
-.form-group-walp{
+
+.form-group-walp {
     position: relative;
 }
-.page-user-profile h3{
+
+.page-user-profile h3 {
     display: inline;
 }
-.form-group-walp div{
+
+.form-group-walp div {
     margin-bottom: 10px;
 }
+
 .form-group-walp input {
     border: 1px solid #bbb;
     border-radius: 0;
     background: #f7fcff;
 }
-.btn-block-user-profile{
+
+.btn-block-user-profile {
     cursor: pointer;
     border: 2px solid #008dd0 !important;
     color: #008dd0 !important;
@@ -1368,16 +1385,20 @@ body {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
-.btn-block-user-profile:hover{
+
+.btn-block-user-profile:hover {
     background-color: #008dd0 !important;
     color: #fff !important;
 }
-.form-group-walp{
+
+.form-group-walp {
     margin-bottom: 20px;
 }
-.tooltips{
+
+.tooltips {
     margin-bottom: 10px;
 }
+
 .block-user-page-first p,
 .block-user-page-first h1 {
     font-size: 22px;
@@ -1748,6 +1769,7 @@ form {
 
 .ourServiceBlock {
     position: relative;
+    min-height: 250px;
 }
 
 .col-md-6.service-col {
@@ -3068,7 +3090,7 @@ footer {
 
 .table-price li img {
 
-    margin-right: 15px !important;
+    margin-right: 30px !important;
 }
 
 .table-prices .price-part.third,
@@ -3579,13 +3601,15 @@ footer {
     position: absolute;
     bottom: -80px;
 }
+
 .page-form-3 .form-group-one-walp,
 .page-form-4 .form-group-one-walp,
 .page-form-11 .form-group-one-walp,
 .page-form-6 .form-group-one-walp,
-.page-form-10 .form-group-one-walp{
+.page-form-10 .form-group-one-walp {
     margin-bottom: 20px;
 }
+
 .btn-form-page-gen-doc {
     cursor: pointer;
     border: 2px solid #008dd0 !important;
@@ -3668,6 +3692,9 @@ footer {
 .blog-row {
     padding: 100px 0 70px 0;
 }
+.blog-row-nopadding-bottom{
+    padding-bottom: 0!important;
+}
 
 .blog-img-link {
     display: block;
@@ -3704,6 +3731,9 @@ footer {
 
 .no-more-load-posts {
     text-align: center;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .load-more.blog-btn:hover {
@@ -3781,7 +3811,8 @@ footer {
     border: 1px solid #dcdcdc;
     line-height: 40px;
 }
-.contact-page-adress a:hover{
+
+.contact-page-adress a:hover {
     text-decoration: underline;
 }
 
@@ -4019,9 +4050,11 @@ footer {
 .registration-form {
     margin-bottom: 30px;
 }
-.registration-page .checkboxFour::after{
+
+.registration-page .checkboxFour::after {
     background: #cb454c;
 }
+
 @media (min-width: 1201px) {
     .navigation li:hover .sub-menu {
         display: block;
@@ -4098,6 +4131,10 @@ footer {
 @media (min-width: 992px)  and (max-width: 1200px) {
     .container {
         width: 900px;
+    }
+
+    .ourServiceBlock {
+        min-height: 199px;
     }
 
     .blog-row-list li {
@@ -4228,18 +4265,38 @@ footer {
     .footer-block-list li {
         padding-right: 17px;
     }
+
+    .ourservice-last-block img {
+        min-width: 100%;
+        max-width: none !important;
+    }
+
+    .ourservice-last-block {
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 991px) {
     .first-block-img {
         height: 200px;
     }
+
+    .ourservice-last-block {
+        overflow: hidden;
+    }
+
+    .ourservice-last-block img {
+        min-width: 100%;
+        max-width: none;
+    }
+
     .page-user-profile .col-lg-9,
     .page-user-profile .col-lg-3 {
         width: 100%;
-        padding-right: 0!important;
+        padding-right: 0 !important;
 
     }
+
     .q-a-img {
         display: none;
     }
@@ -4397,6 +4454,7 @@ footer {
 
     .benefit-block {
         min-height: 145px;
+        margin-right: 0 !important;
     }
 
     #how-we-work .col-md-2 {
@@ -4547,11 +4605,34 @@ footer {
     .review-content {
         padding: 15px 0 0 0;
     }
+    .table-price li img {
+        margin-right: 30px !important;
+    }
+    .Plus-minus-block,
+    .Plus-block {
+        padding: 30px 15px;
+
+    }
+    .tabs .margin-top {
+        margin-top: 20px;
+    }
+    .SendMessage-2 .label--checkbox,
+    .label--checkbox {
+        margin: 10px auto 40px
+    }
+
+    .col-md-plus-block img {
+        margin-bottom: 20px;
+    }
 
     .feature-service-img,
     .dont-wait-block .dont-wait-img,
     .live-idji-block .live-idji-img {
         display: block !important;
+    }
+
+    .ourServiceBlock {
+        min-height: 145px;
     }
 
     .tooltip-five-step {
@@ -4635,9 +4716,8 @@ footer {
         background: #cb454c;
         color: #fff;
         padding: 5px 10px 5px 0;
-        top: -81px;
         position: relative;
-        right: 34px;
+        right: -24px;
     }
 
     .block-calc p {
@@ -5115,6 +5195,7 @@ footer {
     -webkit-animation-name: flipInY;
     animation-name: flipInY;
 }
+
 .animated {
     opacity: 1;
     animation-duration: 1s;
