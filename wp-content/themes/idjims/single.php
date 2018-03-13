@@ -26,11 +26,11 @@ get_header(); ?>
                                     </div>
                                 
                                 <div class="title-blog"> ' . get_the_title(get_the_ID()) . ' </div>
-                                <div class="except-blog">' .get_the_content(get_the_ID()) . '</div>
+                                
                              ';
 
                 ?>
-
+            <div class="except-blog"><?php if ( have_posts() ) : while ( have_posts() ) : the_post();  the_content();  endwhile; endif; ?></div>
 
         </div>
 

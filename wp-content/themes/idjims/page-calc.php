@@ -202,7 +202,7 @@ get_header(); ?>
                         <div class="calculator-page">
                             <div class="field"><label>Единиц залогового имущества</span></label>
 
-                                <input type="number" min="1" name="valuecollateral" class="calculate-valueincome"
+                                <input type="number" min="1" name="valuecollateral" class="number-valueproperty"
                                        value="">
 
                             </div>
@@ -258,7 +258,7 @@ get_header(); ?>
                         <div class="calculator-page">
                             <div class="field"><label>Кол-во иждивенцев</span></label>
 
-                                <input type="number" min="1" name="fake-izdiv" class="calculate-valueincome">
+                                <input type="number" min="1" name="fake-izdiv" class="calculate-vakklueidwdncome">
 
                             </div>
                         </div>

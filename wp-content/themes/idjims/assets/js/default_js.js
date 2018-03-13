@@ -142,6 +142,7 @@ jQuery(document).ready(function () {
 
         jQuery('.overlay-layer').removeClass('overlay-display');
         jQuery('.modal-form').removeClass(' overlay-display ');
+        jQuery('.block-qa-answer').removeClass(' overlay-display ');
 
         return false;
     });
@@ -149,7 +150,7 @@ jQuery(document).ready(function () {
     jQuery(".btn-link-modal, .btn-link-to-modal").click(function () {
 
         jQuery('.overlay-layer').addClass('overlay-display');
-        jQuery('.modal-form').addClass(' overlay-display ');
+        jQuery('.modal-form.header-modal').addClass(' overlay-display ');
 
         return false;
     });
@@ -206,6 +207,7 @@ jQuery(document).ready(function () {
         var valuecredits = jQuery(".calculate-valuecredits").val();
         var checkmortgage = jQuery(".calculate-checkmortgage").val();
         var valueproperty = jQuery(".calculate-valueproperty").val();
+        var numberproperty = jQuery(".number-valueproperty").val();
         var checkproperty = jQuery(".checkboxprop").val();
 
 
@@ -228,9 +230,9 @@ jQuery(document).ready(function () {
                 addText = 'Для ипотечных клиентов у нас действуют скидки';
                 $addproperty = 0;
             } else {
-                if (checkproperty == 1) {
+                if (numberproperty > 1) {
 
-                    $addproperty = Number(parseInt(valueproperty) + 10000);
+                    $addproperty = parseInt(10000);
 
                 } else {
 
@@ -839,8 +841,6 @@ function InitTypeVI(Element) {
         return '_propertyother';
 
     }
-
-
 }
 
 
@@ -854,12 +854,29 @@ function InitActionPriceTables() {
     jQuery('.view-plan-play-calc-page').click(function (e) {
         e.preventDefault();
         var $this = jQuery(this);
+
+
+
         $this.parent().parent().parent().find('.price-part').removeClass('active-price-choose');
         $this.parent().parent().parent().find('.price-payment-result').css('height', '0');
         $this.parent().parent().parent().find('.price-payment-result').html('');
 
 
         $this.parent().parent().addClass('active-price-choose');
+        if( $this.hasClass('showpayment')){
+            $this.html('');
+            $this.html('Посмотреть платеж');
+            $this.removeClass('showpayment');
+            $this.parent().parent().removeClass('active-price-choose');
+            $this.parent().find('.price-payment-result').css('height', '0');
+            $this.parent().find('.price-payment-result').html('');
+            return false;
+        }else{
+
+            $this.html('');
+            $this.html('Скрыть платеж');
+            $this.addClass(' showpayment ');
+        }
 
         var $method = 'percent';   // may be  'percent' and  'plain'
         var $currentPrice = $this.parent().parent().find('.total-price span').html();

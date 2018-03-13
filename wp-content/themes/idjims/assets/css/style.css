@@ -1059,7 +1059,9 @@ body {
     /* display: table; */
     margin: 0 auto;
 }
-
+.tabs .col-md-2{
+    min-height: 334px;
+}
 .HowWeWorkBlockTab li a {
 
     top: -9px;
@@ -1934,6 +1936,9 @@ form {
     vertical-align: middle;
 
 }
+.footer-block-list a:hover{
+    text-decoration: underline;
+}
 
 .footer-block-list li {
     list-style: none;
@@ -2096,12 +2101,20 @@ footer {
     height: 0;
     bottom: 0px;
 }
-
+/*
 .feature-service::before {
     content: "";
     border-bottom: 127.5px solid transparent;
     border-left: 30px solid #fff;
     right: -30px;
+    position: absolute;
+    bottom: 0;
+}*/
+.feature-service::before {
+    content: "";
+    border-bottom: 127.5px solid transparent;
+    border-left: 32px solid #fff;
+    right: -32px;
     position: absolute;
     bottom: 0;
 }
@@ -2246,6 +2259,7 @@ footer {
     position: absolute;
     top: 145px;
     right: 0;
+    z-index: -1;
 }
 
 .tooltip-five-step {
@@ -2878,7 +2892,7 @@ footer {
     border-radius: 50%;
     cursor: pointer;
     height: 20px;
-    margin: 10px 0 10px 10px;
+    margin-right:  10px;
 }
 .question-page-calc {
     padding: 5px;
@@ -3907,6 +3921,9 @@ footer {
     visibility: hidden;
     opacity: 0;
 }
+.block-qa-answer.modal-form{
+    width: 470px;
+}
 .block-qa-answer .field {
     margin-bottom: 30px;
 }
@@ -4894,7 +4911,9 @@ footer {
     #how-we-work img {
         height: 100px;
     }
-
+    .tabs .col-md-2 {
+        min-height: auto;
+    }
     .label--checkbox {
         width: 100%;
     }

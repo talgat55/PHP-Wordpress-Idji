@@ -137,7 +137,7 @@
 
                 </div>
                 <ul class="social-top clearfix">
-                    <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+                    <li><a target="_blank" href="https://vk.com/bankruptcy42"><i class="icon-vkontakte"></i></a></li>
                     <li><a href="#"><i class="icon-facebook"></i></a></li>
                     <li><a href="#"><i class="icon-odnoklassniki"></i></a></li>
                 </ul>
@@ -148,7 +148,7 @@
 
 </header>
 <div class="overlay-layer"></div>
-<div class="modal-form">
+<div class="modal-form header-modal">
     <div class="close-modal-block">
         <div class="close-modal-block_wallpaper"></div>
     </div>
