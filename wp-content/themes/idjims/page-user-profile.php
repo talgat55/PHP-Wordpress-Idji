@@ -16,6 +16,7 @@ $cur_user_id = get_current_user_id();
 global $wpdb;
 $table_name = $wpdb->prefix . "addition_informaion";
 $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");
+
 ?>
 
     <div class="wrap">
