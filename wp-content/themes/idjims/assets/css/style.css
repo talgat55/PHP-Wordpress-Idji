@@ -21,6 +21,13 @@ a:focus {
 .error-404 {
     padding: 50px 0;
 }
+span.wpcf7-not-valid-tip {
+    color: #000!important;
+    padding-top: 4px;
+    font-size: 1em;
+    font-weight: normal;
+    display: block;
+}
 
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
@@ -1524,7 +1531,8 @@ form input {
 .wpcf7-submit {
     background-color: transparent;
     border: 1.5px solid #fff;
-    padding: 10px 80px;
+    padding: 10px 0;
+    width: 100%;
     font-size: 18px;
     line-height: 24px;
     font-family: "Minsk" !important;
@@ -1987,6 +1995,7 @@ footer {
 
 }
 
+
 .SendMessage-2 .block-submit .wpcf7-submit:hover {
     background-color: #008fdb;
     border-color: #008fdb;
@@ -2256,7 +2265,7 @@ footer {
 }
 
 .check-bg-service {
-    position: absolute;
+    position: absolute!important;
     top: 145px;
     right: 0;
     z-index: -1;
@@ -2924,7 +2933,7 @@ footer {
     padding: 10px;
     opacity: 0;
     visibility: hidden;
-    z-index: 18;
+    z-index: 99999999;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
@@ -3320,8 +3329,8 @@ footer {
 }
 
 .col-five-step-block.One_step .tooltip-five-step {
-    top: 25px;
-    right: -128px;
+    top: -1px;
+    right: -65px;
     width: 354px;
 }
 
@@ -3355,8 +3364,8 @@ footer {
 }
 
 .col-five-step-block.Two_step .tooltip-five-step {
-    top: 100px;
-    right: -259px;
+    top: 0;
+    right: 3px;
     width: 354px;
 
 }
@@ -3369,7 +3378,7 @@ footer {
 }
 
 .col-five-step-block.Tree_Step .tooltip-five-step {
-    top: 150px;
+    top: 108px;
     left: 75px;
     width: 354px;
 
@@ -3393,8 +3402,8 @@ footer {
 }
 
 .col-five-step-block.Tree_one_step .tooltip-five-step {
-    top: 36px;
-    left: 219px;
+    top: 3px;
+    left: 194px;
     width: 354px;
     height: 150px;
 }
@@ -3417,8 +3426,8 @@ footer {
 }
 
 .col-five-step-block.Tree_two_step .tooltip-five-step {
-    top: 25px;
-    left: 195px;
+    top: -7px;
+    left: 164px;
     width: 354px;
 }
 

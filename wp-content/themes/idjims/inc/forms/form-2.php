@@ -428,7 +428,7 @@ if (isset($_POST['form_2_submit'])) {
             <td width="17%"  style="text-align: center;">Местонахождение (адрес)</td>
             <td width="11%"  style="text-align: center;">Площадь (кв. м)</td>
             <td width="17%"  style="text-align: center;">Основание приобритения<sup>2</sup> и стоимость<sup>3</sup></td>
-            <td width="17%"  style="text-align: center;">Сведения о залогодержателе<sup>4</sup></td>
+            <td width="17%"  style="text-align: center;">Сведения о залоге и залогодержателе<sup>4</sup></td>
         </tr>
         <tr nobr="true">
             <td width="6%" rowspan="' . $count_rows_property . '" valign="top">
@@ -1231,7 +1231,7 @@ if (isset($_POST['form_2_submit'])) {
         $form_2_6_1_kind_property_artobjects_count++;
     }
     // 3
-     $count_form_2_6_1_kind_property_property = count($form_2_6_1_kind_property_property[0]) + 1;
+    $count_form_2_6_1_kind_property_property = count($form_2_6_1_kind_property_property[0]) + 1;
     $html .= '        
         <tr nobr="true">
             <td width="10%" rowspan="' . $count_form_2_6_1_kind_property_property . '" valign="top"> 
@@ -1300,8 +1300,6 @@ if (isset($_POST['form_2_submit'])) {
     }
 
 
-
-
     $html .= '
     </tbody>
     </table> 
@@ -1315,11 +1313,30 @@ if (isset($_POST['form_2_submit'])) {
         <br>
         <sup>20</sup> Указываются сведения о договоре залога, иной сделке, на основании которой возникает залог в силу закона, а также наименование юридического лица или фамилия, имя и отчество
         (последнее - при наличии) физического лица, в залоге у которого находится имущество.<br>
-        Достоверность и полноту настоящих сведений подтверждаю:
-  
-        <p style="text-align: right;">
-        «____» _________________ 20____ г.
-    </p>
+        Достоверность и полноту настоящих сведений подтверждаю.<br>
+      <table  nobr="true" style="border: none; width: 100%; " cellpadding="0">
+        <tbody>
+            <tr>
+                <td style="width: 30%;"></td>
+                <td style="width: 30%;"></td>
+                <td style="width:40%; text-align: right;"> Представитель по</td>
+            </tr>
+             <tr>
+                <td style="width: 30%;"></td>
+                <td style="width: 30%;"></td>
+                <td style="width:40%; text-align: right;"  >доверенности</td>
+            </tr>
+             <tr>
+                <td style="width: 30%;"> «__» ___________ 20<span style="text-decoration: underline;padding: 3px;"> ' . date("y") . ' </span> г.</td>
+                <td style="width: 30%;  text-align: center;">__________________</td>
+                <td style="width:40%;  text-align: right;"><span style="text-decoration: underline;padding: 3px;">Старокорова С.В.</span></td>
+            </tr>
+         
+            </tbody>
+            </table>
+   
+                 
+    
     ';
 
 

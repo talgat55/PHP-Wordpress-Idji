@@ -81,7 +81,7 @@
                             </div>
                             <div class="form-group">
                                 <input name="form_1_total_all_indebtedness[]" type="number" class="form-control "
-                                       placeholder="Сумма обязательства (в том числе задолженность) (5)" required>
+                                       placeholder="Сумма обязательства (в том числе задолженность) (5)" >
                             </div>
                             <div class="form-group ">
                                 <input name="form_1_penaltie_fines[]" type="number" class="form-control "

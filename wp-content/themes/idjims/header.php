@@ -24,7 +24,7 @@
                 echo '  <div class="top-header-user clearfix">
                             <div class="container">
                                 <a href="' . wp_logout_url(LinksTheme('login')) . '"  >Выйти</a>
-                                <a href="'.LinksTheme('user-profile').'"  ><img src="' . get_theme_file_uri('/assets/images/user.png') . '" alt=""/>Личный кабинет</a>
+                                <a href="' . LinksTheme('user-profile') . '"  ><img src="' . get_theme_file_uri('/assets/images/user.png') . '" alt=""/>Личный кабинет</a>
                                 
                             </div>
                         </div>';
@@ -93,31 +93,32 @@
                             <a class="open-ul" href="#">
                                 Услуги
                                 <i class="icon-down-dir"></i>
-                                <ul class="sub-menu">
-                                    <!--<li><a href="#">Финансовая защита</a></li>-->
-                                    <li><a href="<?php echo LinksTheme('banlrotstvo-fl'); ?>">Банкротство гражданина</a>
-                                    </li>
-                                    <li><a href="<?php echo LinksTheme('bankrotstvo-ipotechikov'); ?>">Банкротство
-                                            ипотечника</a></li>
-                                    <li><a href="<?php echo LinksTheme('bankrotstvo-poruchitelya');?>">Банкротство
-                                            поручителя</a></li>
-                                    <li><a href="<?php echo LinksTheme('bankrotstvo-ip'); ?>">Банкротство ИП</a></li>
-                                    <!--<li><a href="#">Банкротство ООО</a></li>
-                                    <li><a href="#">Юрист по банкротству</a></li>-->
-                                </ul>
                             </a>
+                            <ul class="sub-menu">
+                                <!--<li><a href="#">Финансовая защита</a></li>-->
+                                <li><a href="<?php echo LinksTheme('banlrotstvo-fl'); ?>">Банкротство гражданина</a>
+                                </li>
+                                <li><a href="<?php echo LinksTheme('bankrotstvo-ipotechikov'); ?>">Банкротство
+                                        ипотечника</a></li>
+                                <li><a href="<?php echo LinksTheme('bankrotstvo-poruchitelya'); ?>">Банкротство
+                                        поручителя</a></li>
+                                <li><a href="<?php echo LinksTheme('bankrotstvo-ip'); ?>">Банкротство ИП</a></li>
+                                <!--<li><a href="#">Банкротство ООО</a></li>
+                                <li><a href="#">Юрист по банкротству</a></li>-->
+                            </ul>
+
                         </li>
                         <li>
-                            <a  class="open-ul" href="#">
+                            <a class="open-ul" href="#">
                                 Полезная информация
                                 <i class="icon-down-dir"></i>
-                                <ul class="sub-menu">
-                                    <li><a href="<?php echo LinksTheme('contact'); ?>">Контакты</a></li>
-                                    <li><a href="<?php echo LinksTheme('reviews'); ?>">Отзывы</a></li>
-                                    <li><a href="<?php echo LinksTheme('blog'); ?>">Блог</a></li>
-                                    <li><a href="<?php echo LinksTheme('question-answer'); ?>">Вопрос-ответ</a></li>
-                                </ul>
                             </a>
+                            <ul class="sub-menu">
+                                <li><a href="<?php echo LinksTheme('contact'); ?>">Контакты</a></li>
+                                <li><a href="<?php echo LinksTheme('reviews'); ?>">Отзывы</a></li>
+                                <li><a href="<?php echo LinksTheme('blog'); ?>">Блог</a></li>
+                                <li><a href="<?php echo LinksTheme('question-answer'); ?>">Вопрос-ответ</a></li>
+                            </ul>
                         </li>
 
 

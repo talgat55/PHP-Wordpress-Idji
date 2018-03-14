@@ -389,6 +389,7 @@ if (isset($_POST['form_reg_submit'])) {
                     </td>
                 </tr>';
     $curent_1_row = 1;
+    $total_all_price_one = 0;
 
     for ($i = 0; $i < count($form_1_entity[0]); $i++) {
 
@@ -423,6 +424,19 @@ if (isset($_POST['form_reg_submit'])) {
                             </tr>
                   ';
         $curent_1_row++;
+        $total_all_price_one = $total_all_price_one + $form_1_total_all[0][$i];
+    }
+    if(count($form_1_entity[0]) > 1){
+        $html .='
+                <tr nobr="true">
+                    <td  colspan="6" style="text-align: right;" >ИТОГО:</td>
+                    <td> 
+                    <strong>'.$total_all_price_one.'</strong> 
+                    </td> 
+                    <td></td>  
+                    <td></td>
+                </tr>
+        ';
     }
 
     if ($form_1_row2_name_tax[0]) {
@@ -564,6 +578,7 @@ if (isset($_POST['form_reg_submit'])) {
                     </td>
                 </tr>';
         $curent_2_row = 1;
+        $total_all_price_two = 0;
         for ($w = 0; $w < count($form_1_entity_2[0]); $w++) {
             $html .= '
                             <tr nobr="true">
@@ -596,6 +611,19 @@ if (isset($_POST['form_reg_submit'])) {
                             </tr>
                   ';
             $curent_2_row++;
+            $total_all_price_two = $total_all_price_two + $form_1_total_all_2[0][$w];
+        }
+        if(count($form_1_entity_2[0]) > 1){
+            $html .='
+                <tr nobr="true">
+                    <td  colspan="6" style="text-align: right;" >ИТОГО:</td>
+                    <td> 
+                    <strong>'.$total_all_price_two.'</strong> 
+                    </td> 
+                    <td></td>  
+                    <td></td>
+                </tr>
+        ';
         }
         if ($form_1_row2_name_tax_2[0]) {
             $html .= '
@@ -729,6 +757,7 @@ if (isset($_POST['form_reg_submit'])) {
                     </td>
                 </tr>';
         $curent_3_row = 1;
+        $total_all_price_tree = 0;
         for ($r = 0; $r < count($form_1_entity_3[0]); $r++) {
             $html .= '
                             <tr nobr="true">
@@ -761,6 +790,19 @@ if (isset($_POST['form_reg_submit'])) {
                             </tr>
                   ';
             $curent_3_row++;
+            $total_all_price_tree = $total_all_price_tree + $form_1_total_all_3[0][$r];
+        }
+        if(count($form_1_entity_3[0]) > 1){
+            $html .='
+                <tr nobr="true">
+                    <td  colspan="6" style="text-align: right;" >ИТОГО:</td>
+                    <td> 
+                    <strong>'.$total_all_price_tree.'</strong> 
+                    </td> 
+                    <td></td>  
+                    <td></td>
+                </tr>
+        ';
         }
 
         if ($form_1_row2_name_tax_3[0]) {
@@ -921,6 +963,7 @@ if (isset($_POST['form_reg_submit'])) {
                     </td>
                 </tr>';
         $curent_4_row = 1;
+        $total_all_price_four = 0;
         for ($t = 0; $t < count($form_1_entity_4[0]); $t++) {
             $html .= '
                             <tr nobr="true">
@@ -953,6 +996,19 @@ if (isset($_POST['form_reg_submit'])) {
                             </tr>
                   ';
             $curent_4_row++;
+            $total_all_price_four = $total_all_price_four + $form_1_total_all_4[0][$t];
+        }
+        if(count($form_1_entity_4[0]) > 1){
+            $html .='
+                <tr nobr="true">
+                    <td  colspan="6" style="text-align: right;" >ИТОГО:</td>
+                    <td> 
+                    <strong>'.$total_all_price_four.'</strong> 
+                    </td> 
+                    <td></td>  
+                    <td></td>
+                </tr>
+        ';
         }
 
         if ($form_1_row2_name_tax_4[0]) {
@@ -1038,15 +1094,27 @@ if (isset($_POST['form_reg_submit'])) {
           ';
     }
     $html .= '
-            <p>
-                Достоверность и полноту настоящих сведений потверждаю:
-            </p>
-            <p style="text-align:right;">
-                «___» _____________ 20___г.
-            </p>
-            <p>
-                _______
-            </p>
+      <table  nobr="true" style="border: none; width: 100%; " cellpadding="0">
+        <tbody>
+            <tr>
+                <td style="width: 30%;"></td>
+                <td style="width: 30%;"></td>
+                <td style="width:40%; text-align: right;"> Представитель по</td>
+            </tr>
+             <tr>
+                <td style="width: 30%;"></td>
+                <td style="width: 30%;"></td>
+                <td style="width:40%; text-align: right;"  >доверенности</td>
+            </tr>
+             <tr>
+                <td style="width: 30%;"> «__» ___________ 20<span style="text-decoration: underline;line-height: 30px;"> ' . date("y") . ' </span> г.</td>
+                <td style="width: 30%;  text-align: center;">__________________</td>
+                <td style="width:40%;  text-align: right;"><span style="text-decoration: underline;line-height: 30px;">Старокорова С.В.</span></td>
+            </tr>
+         
+            </tbody>
+      </table>
+      <br>
             <p>
                 1 - Указывается существо обязательства (например, заем, кредит).
             </p>

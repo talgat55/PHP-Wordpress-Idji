@@ -15,7 +15,7 @@ get_header(); ?>
             <div class="contact-page-adress clearfix">
                 <div class="col-md-7">
                     <span>Адрес:</span> Кемерово, пр. Ленина, 33/2 - 403, БЦ "Томь"</br>
-                    <span>Email:</span><a href="email:aegis@иджис.рф"> aegis@иджис.рф</a>
+                    <span>Email:</span><a href="mailto:aegis@иджис.рф"> aegis@иджис.рф</a>
                 </div>
                 <div class="col-md-5">
 

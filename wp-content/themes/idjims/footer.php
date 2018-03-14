@@ -47,7 +47,7 @@
 					<div class="bottom-header-wallpaper">
 						 <ul class="footer-block-list clearfix">
 							 <li>г. Кемерово, пр. Ленина, 33/2 - 403</li>
-							 <li>e-mail:<a href="email:aegis@иджис.рф">aegis@иджис.рф</a></li>
+							 <li>e-mail:<a href="mailto:aegis@иджис.рф">aegis@иджис.рф</a></li>
 							 <li>ООО "Иджис", ОГРН 1174205021407</li>
 						 </ul>
 						 <ul class="social-top clearfix">

@@ -102,7 +102,8 @@ if (isset($_POST['user_profile_reg_submit'])) {
                 'registrtation_number_hourse' =>  $registrationNumberHouse,
                 'registrtation_number_housing' =>  $registrationNumberKorpus,
                 'registrtation_number_apartments' => $registrationNumberOportoment
-            )
+            ),
+            array( 'id_user' => $cur_user_id )
         );
     }
 //

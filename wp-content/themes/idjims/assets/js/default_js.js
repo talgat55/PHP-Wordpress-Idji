@@ -293,6 +293,7 @@ jQuery(document).ready(function () {
 
     if (jQuery('.add-form.form-2-6, .add-form.form-2-5, .add-form.form-2-4, .add-form.form-2-3, .add-form.form-2-2, .add-form.first, .add-form.second, .add-form.first-form-9, .add-form.form-8, .add-form.add-form-6, .add-form.form-4-1, .add-form.form-4-2, .add-form.form-3-1,.add-form.form-3-2, .add-form.form-2-1').length) {
         jQuery('.add-form.first').click(function (e) {
+
             e.preventDefault();
 
             var $thisParent = jQuery(this).parent();
@@ -301,27 +302,27 @@ jQuery(document).ready(function () {
                 '<div class="clearfix">' +
                 '<div class="col-md-6-form">' +
                 '<div class="form-group">' +
-                '<input name="form_1_entity' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control " placeholder="Содержание обязательства (1)" required>' +
+                '<input name="form_1_entity' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control " placeholder="Содержание обязательства (1)" >' +
                 '</div>' +
                 '<div class="form-group">' +
-                ' <input name="form_1_creditor' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control " placeholder="Кредитор (2)" required>' +
+                ' <input name="form_1_creditor' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control " placeholder="Кредитор (2)" >' +
                 '</div>' +
                 '<div class="form-group">' +
-                '<input name="form_1_place_life' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" required>' +
+                '<input name="form_1_place_life' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control "  placeholder="Место нахождения (место жительства) кредитора" >' +
                 '</div>' +
                 '<div class="form-group no-padding">' +
-                '<input name="form_1_main_emite' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control " placeholder="Основание возникновения (3)" required>' +
+                '<input name="form_1_main_emite' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control " placeholder="Основание возникновения (3)" >' +
                 '</div>' +
                 '</div>' +
                 '<div class="col-md-6-form no-padding-right">' +
                 '<div class="form-group">' +
-                ' <input name="form_1_total_all' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (4)" required>' +
+                ' <input name="form_1_total_all' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (4)" >' +
                 '</div>' +
                 '<div class="form-group">' +
-                '<input name="form_1_total_all_indebtedness' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (5)" required>' +
+                '<input name="form_1_total_all_indebtedness' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (5)" >' +
                 '</div>' +
                 '<div class="form-group">' +
-                '<input name="form_1_penaltie_fines' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" required>' +
+                '<input name="form_1_penaltie_fines' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >' +
                 '</div>' +
                 '</div>' +
                 '</div>' +
@@ -856,14 +857,13 @@ function InitActionPriceTables() {
         var $this = jQuery(this);
 
 
-
         $this.parent().parent().parent().find('.price-part').removeClass('active-price-choose');
         $this.parent().parent().parent().find('.price-payment-result').css('height', '0');
         $this.parent().parent().parent().find('.price-payment-result').html('');
 
 
         $this.parent().parent().addClass('active-price-choose');
-        if( $this.hasClass('showpayment')){
+        if ($this.hasClass('showpayment')) {
             $this.html('');
             $this.html('Посмотреть платеж');
             $this.removeClass('showpayment');
@@ -871,7 +871,7 @@ function InitActionPriceTables() {
             $this.parent().find('.price-payment-result').css('height', '0');
             $this.parent().find('.price-payment-result').html('');
             return false;
-        }else{
+        } else {
 
             $this.html('');
             $this.html('Скрыть платеж');
@@ -981,8 +981,34 @@ function InitActionPriceTables() {
 function InitShowTooltip() {
     jQuery('.question-page-calc').click(function (e) {
         e.preventDefault();
-        jQuery('.tooltip.calc-page').toggleClass('show-tooltip');
-    })
+        var $thisClass = jQuery(this).parent().parent().find('.tooltip.calc-page');
+        if (!$thisClass.hasClass('show-tooltip')) {
+            $thisClass.addClass('show-tooltip');
+
+        } else {
+            $thisClass.removeClass('show-tooltip');
+        }
+/*
+        $thisClass.mouseleave(function () {
+            jQuery('body').click(function (e) {
+                e.preventDefault();
+
+                    $thisClass.removeClass('show-tooltip');
+
+            });
+        });*/
+
+        jQuery('.tooltip.calc-page').click(function (e) {
+
+            e.preventDefault();
+            var $this = jQuery(this);
+
+                $this.removeClass('show-tooltip');
+
+
+        });
+    });
+
 
 }
 
@@ -1314,7 +1340,7 @@ function AddBlockTextInFormFields() {
             var $findp = jQuery(this).parent().find('p');
 
             if ($findp.length == 0) {
-                if (jQuery(this).is('input:text')) {
+                if (jQuery(this).is('input:text') || jQuery(this).is('input:number')) {
                     var $value = jQuery(this).attr('placeholder');
                     jQuery(this).parent().prepend('<p class="tooltips">' + $value + '</p>');
                 }
