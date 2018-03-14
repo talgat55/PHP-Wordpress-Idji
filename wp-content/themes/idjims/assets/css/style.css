@@ -2370,8 +2370,14 @@ footer {
     text-align: center;
     font-style: italic;
 }
-
+/*
 .col-md-plus-block img {
+    float: left;
+    margin-right: 20px;
+}*/
+.plus-block-image{
+    width: 46px;
+    height: 46px;
     float: left;
     margin-right: 20px;
 }
@@ -2450,7 +2456,17 @@ footer {
     min-height: 145px;
     border-radius: 4px;
 }
-
+.myth-block-image-alt{
+    width: auto;
+    height: 96px;
+}
+.myth-block-image{
+    width: 64px;
+    height: 64px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
 #Myth .col-md-4 {
     width: 32.333%;
     padding-right: 1.5%;
@@ -2509,8 +2525,13 @@ footer {
     padding-right: 30px;
     padding-top: 11px;
     width: 49px;
+    height: 74px;
 }
-
+.live-idji-block-bottom .live-idji-img {
+    width: 49px;
+    padding-right: 25px;
+    height: 49px;
+}
 #live-idji .col-md-6 {
     padding-right: 1.5%;
     padding-bottom: 1.5%;
@@ -4650,6 +4671,9 @@ footer {
     .review-content {
         padding: 15px 0 0 0;
     }
+    .live-idji-block-bottom .live-idji-img {
+        height: 74px;
+    }
     .table-price li img {
         margin-right: 30px !important;
     }
@@ -4666,7 +4690,7 @@ footer {
         margin: 10px auto 40px
     }
 
-    .col-md-plus-block img {
+    .col-md-plus-block .plus-block-image {
         margin-bottom: 20px;
     }
 

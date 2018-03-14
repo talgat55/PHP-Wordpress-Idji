@@ -357,7 +357,9 @@ get_header(); ?>
                     </p>
                     <div class="col-md-6">
                         <div class="col-md-plus-block">
-                            <img data-src="<?php echo get_theme_file_uri('/assets/images/check-red2-2.png') ?>">
+                            <div class="plus-block-image">
+                                <img data-src="<?php echo get_theme_file_uri('/assets/images/check-red2-2.png') ?>">
+                            </div>
                             <p>
                                 Не придется лишний раз общаться с банком,
                                 вся процедура утверждается судом!
@@ -367,7 +369,9 @@ get_header(); ?>
 
                     <div class="col-md-6">
                         <div class="col-md-plus-block">
-                            <img data-src="<?php echo get_theme_file_uri('/assets/images/check-red2-2.png') ?>">
+                            <div class="plus-block-image">
+                                <img data-src="<?php echo get_theme_file_uri('/assets/images/check-red2-2.png') ?>">
+                            </div>
                             <p>
                                 Пока план реструктуризации не утвержден, вы освобождаетесь от платежей по кредиту на
                                 срок до 4 месяцев.
@@ -376,7 +380,9 @@ get_header(); ?>
                     </div>
                     <div class="col-md-6">
                         <div class="col-md-plus-block">
-                            <img data-src="<?php echo get_theme_file_uri('/assets/images/check-red2-2.png') ?>">
+                            <div class="plus-block-image">
+                                <img data-src="<?php echo get_theme_file_uri('/assets/images/check-red2-2.png') ?>">
+                            </div>
                             <p>
                                 Ваш долг «заморозят», а штрафы и пени не будут начисляться.
                             </p>
@@ -384,7 +390,9 @@ get_header(); ?>
                     </div>
                     <div class="col-md-6">
                         <div class="col-md-plus-block">
-                            <img data-src="<?php echo get_theme_file_uri('/assets/images/check-red2-2.png') ?>">
+                            <div class="plus-block-image">
+                                <img data-src="<?php echo get_theme_file_uri('/assets/images/check-red2-2.png') ?>">
+                            </div>
                             <p>
                                 Избавитесь от преследования коллекторов и кредиторов.
                             </p>
@@ -392,7 +400,9 @@ get_header(); ?>
                     </div>
                     <div class="col-md-6">
                         <div class="col-md-plus-block">
-                            <img data-src="<?php echo get_theme_file_uri('/assets/images/check-red2-2.png') ?>">
+                            <div class="plus-block-image">
+                                <img data-src="<?php echo get_theme_file_uri('/assets/images/check-red2-2.png') ?>">
+                            </div>
                             <p>
                                 Приставы приостановят свои действия по отношению к Вам.
                             </p>
@@ -400,7 +410,9 @@ get_header(); ?>
                     </div>
                     <div class="col-md-6">
                         <div class="col-md-plus-block">
-                            <img data-src="<?php echo get_theme_file_uri('/assets/images/check-red2-2.png') ?>">
+                            <div class="plus-block-image">
+                                <img data-src="<?php echo get_theme_file_uri('/assets/images/check-red2-2.png') ?>">
+                            </div>
                             <p>
                                 Окупите затраты на банкротство через несколько
                                 месяцев, а после начнете значительно экономить, ведь
@@ -421,7 +433,9 @@ get_header(); ?>
                         </p>
                         <div class="col-md-6">
                             <div class="col-md-plus-block">
-                                <img data-src="<?php echo get_theme_file_uri('/assets/images/check-blue2-2.png') ?>">
+                                <div class="plus-block-image">
+                                    <img data-src="<?php echo get_theme_file_uri('/assets/images/check-blue2-2.png') ?>">
+                                </div>
                                 <p>
                                     Ваш долг «заморозят», а штрафы и пени
                                     не будут начисляться.
@@ -431,7 +445,9 @@ get_header(); ?>
 
                         <div class="col-md-6">
                             <div class="col-md-plus-block">
-                                <img data-src="<?php echo get_theme_file_uri('/assets/images/check-blue2-2.png') ?>">
+                                <div class="plus-block-image">
+                                    <img data-src="<?php echo get_theme_file_uri('/assets/images/check-blue2-2.png') ?>">
+                                </div>
                                 <p>
                                     Избавитесь от преследования коллекторов и кредиторов.
                                 </p>
@@ -439,7 +455,9 @@ get_header(); ?>
                         </div>
                         <div class="col-md-6">
                             <div class="col-md-plus-block">
-                                <img data-src="<?php echo get_theme_file_uri('/assets/images/check-blue2-2.png') ?>">
+                                <div class="plus-block-image">
+                                    <img data-src="<?php echo get_theme_file_uri('/assets/images/check-blue2-2.png') ?>">
+                                </div>
                                 <p>
                                     Приставы приостановят свои действия
                                     по отношению к Вам.
@@ -448,7 +466,9 @@ get_header(); ?>
                         </div>
                         <div class="col-md-6">
                             <div class="col-md-plus-block">
-                                <img data-src="<?php echo get_theme_file_uri('/assets/images/check-blue2-2.png') ?>">
+                                <div class="plus-block-image">
+                                    <img data-src="<?php echo get_theme_file_uri('/assets/images/check-blue2-2.png') ?>">
+                                </div>
                                 <p>
                                     После завершения реализации имущества
                                     остаток долга спишут, а Вы не будете должны банку!
@@ -491,21 +511,27 @@ get_header(); ?>
         <div class="container relative">
             <div class="title-section center"><span class="red">Распространённые</span> мифы о банкротстве</div>
             <div class="clearfix">
-                <div class="col-md-4 center animation-block  opacity-zero"  data-animation="flipInX">
+                <div class="col-md-4 center animation-block  opacity-zero" data-animation="flipInX">
                     <div class="myth-block">
-                        <img data-src="<?php echo get_theme_file_uri('/assets/images/label-2.png') ?>">
+                        <div class="myth-block-image">
+                            <img data-src="<?php echo get_theme_file_uri('/assets/images/label-2.png') ?>">
+                        </div>
                         <p>Ярлык банкрота на всю жизнь</p>
                     </div>
                 </div>
-                <div class="col-md-4 center animation-block  opacity-zero"  data-animation="flipInX">
+                <div class="col-md-4 center animation-block  opacity-zero" data-animation="flipInX">
                     <div class="myth-block">
-                        <img data-src="<?php echo get_theme_file_uri('/assets/images/queen-2.png') ?>">
+                        <div class="myth-block-image">
+                            <img data-src="<?php echo get_theme_file_uri('/assets/images/queen-2.png') ?>">
+                        </div>
                         <p>Вы не сможете занять руководящую должность</p>
                     </div>
                 </div>
-                <div class="col-md-4 center no-padding-right animation-block  opacity-zero"  data-animation="flipInX">
+                <div class="col-md-4 center no-padding-right animation-block  opacity-zero" data-animation="flipInX">
                     <div class="myth-block">
-                        <img data-src="<?php echo get_theme_file_uri('/assets/images/air-2.png') ?>">
+                        <div class="myth-block-image">
+                            <img data-src="<?php echo get_theme_file_uri('/assets/images/air-2.png') ?>">
+                        </div>
                         <p>Закроют выезд за границу</p>
                     </div>
                 </div>
@@ -513,21 +539,27 @@ get_header(); ?>
             <div class="title-section center">Что происходит на самом деле</div>
             <p class="center">При варианте с реализацией имущества Вы:</p>
             <div class="clearfix myth-custom-margin">
-                <div class="col-md-4 center animation-block  opacity-zero"  data-animation="flipInY">
+                <div class="col-md-4 center animation-block  opacity-zero" data-animation="flipInY">
                     <div class="myth-block-alt">
-                        <img data-src="<?php echo get_theme_file_uri('/assets/images/myth-cal5-2.png') ?>">
+                        <div class="myth-block-image-alt">
+                            <img data-src="<?php echo get_theme_file_uri('/assets/images/myth-cal5-2.png') ?>">
+                        </div>
                         <p>В течение 5-ти лет обязаны указывать факт банкротства при получении кредита</p>
                     </div>
                 </div>
-                <div class="col-md-4 center animation-block  opacity-zero"  data-animation="flipInY">
+                <div class="col-md-4 center animation-block  opacity-zero" data-animation="flipInY">
                     <div class="myth-block-alt">
-                        <img data-src="<?php echo get_theme_file_uri('/assets/images/myth-cal5-2.png') ?>">
+                        <div class="myth-block-image-alt">
+                            <img data-src="<?php echo get_theme_file_uri('/assets/images/myth-cal5-2.png') ?>">
+                        </div>
                         <p>В течение 5-ти лет нельзя повторно банкротиться</p>
                     </div>
                 </div>
-                <div class="col-md-4 center no-padding-right animation-block  opacity-zero"  data-animation="flipInY">
+                <div class="col-md-4 center no-padding-right animation-block  opacity-zero" data-animation="flipInY">
                     <div class="myth-block-alt">
-                        <img data-src="<?php echo get_theme_file_uri('/assets/images/myth-cal3-2.png') ?>">
+                        <div class="myth-block-image-alt">
+                            <img data-src="<?php echo get_theme_file_uri('/assets/images/myth-cal3-2.png') ?>">
+                        </div>
                         <p>В течение 3-ех лет нельзя быть директором юридического лица или входить в совет
                             директоров</p>
                     </div>
@@ -650,7 +682,8 @@ get_header(); ?>
 
                 <a href="#" class="slider-arrow-right"><span class="icon-right-open"></span></a>
             </div>
-            <div class="block-link-client"><a href="http://idgis.trekweb.ru/reviews/" class="link-client-more">Читать больше</a></div>
+            <div class="block-link-client"><a href="http://idgis.trekweb.ru/reviews/" class="link-client-more">Читать
+                    больше</a></div>
         </div>
     </section>
 
