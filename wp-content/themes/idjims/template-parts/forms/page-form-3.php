@@ -294,23 +294,23 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <input name="form_3_inn[]" type="number" class="form-control "
+                                    <input name="form_3_inn[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                            placeholder="ИНН">
 
                                 </div>
 
                                 <div class="form-group">
-                                    <input name="form_3_ogrn[]" type="number" class="form-control "
+                                    <input name="form_3_ogrn[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                            placeholder="ОГРН">
 
                                 </div>
                                 <div class="form-group">
-                                    <input name="form_3_phone[]" type="number" class="form-control "
+                                    <input name="form_3_phone[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                            placeholder="Телефон">
 
                                 </div>
                                 <div class="form-group">
-                                    <input name="form_3_fax[]" type="number" class="form-control "
+                                    <input name="form_3_fax[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                            placeholder="Факс">
 
                                 </div>
@@ -351,17 +351,17 @@
                             <div class="form-group clearfix ">
                                 <input name="form_3_prosrochka" type="checkbox" class="form-4 form-control сheckbox-with-input ">
                                 <p class="form-4">Имеется просрочка исполнения?</p>
-                                <input name="form_3_prosrochka_number" type="number" class="form-4 form-control hide-input" placeholder="Сумма долга цифрами">
+                                <input name="form_3_prosrochka_number" type="number"  pattern="[0-9]+([\.,][0-9]+)?"  class="form-4 form-control  number-field hide-input" placeholder="Сумма долга цифрами">
                             </div>
                             <div class="form-group clearfix  ">
                                 <input name="form_3_have_property" type="checkbox" class="form-4 form-control сheckbox-with-input">
                                 <p class="form-4">Имеется имущество?</p>
-                                <input name="form_3_have_property_number" type="number" class="form-4 form-control hide-input" placeholder="Имущество на сумму цифрами">
+                                <input name="form_3_have_property_number" type="number" pattern="[0-9]+([\.,][0-9]+)?"   class="form-4  number-field form-control hide-input" placeholder="Имущество на сумму цифрами">
                             </div>
                             <div class="form-group clearfix  ">
                                 <input name="form_3_have_work" type="checkbox" class="form-4 form-control сheckbox-with-input">
                                 <p class="form-4">Имеется доход?</p>
-                                <input name="form_3_have_work_number" type="number" class="form-4 form-control hide-input" placeholder="Ежемесячный доход на сумму  цифрами">
+                                <input name="form_3_have_work_number" type="number" pattern="[0-9]+([\.,][0-9]+)?"  class="form-4  number-field form-control hide-input" placeholder="Ежемесячный доход на сумму  цифрами">
                             </div>
                         </div>
                         <h3>На момент обращения в арбитражный суд, фактически являюсь неплатёжеспособным, поскольку,
@@ -607,7 +607,7 @@
                             <div class="form-group">
                                 <input name="form_3_privlechenie" type="checkbox" class="form-control form-4 сheckbox-with-input ">
                                 <p class="form-4">Привлекать ли лиц, обеспечивающих исполнение возложенных на финансового управляющего обязанностей?</p>
-                                <input name="form_3_privlechenie_number" type="number" class="form-4 form-control hide-input" placeholder="Количество лиц">
+                                <input name="form_3_privlechenie_number" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-4  number-field form-control hide-input" placeholder="Количество лиц">
                             </div>
                         </div>
 

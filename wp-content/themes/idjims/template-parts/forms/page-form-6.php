@@ -320,7 +320,7 @@
                             </div>
                             <div class="form-group">
 
-                                <input name="form_6_amount_money" type="number" class="form-control"   placeholder="Размер денежных средств">
+                                <input name="form_6_amount_money" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"   placeholder="Размер денежных средств">
 
                             </div>
                         </div>

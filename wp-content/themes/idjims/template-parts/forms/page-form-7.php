@@ -27,7 +27,7 @@
                                        placeholder="Получатель">
                             </div>
                             <div class="form-group">
-                                <input name="form_7_number_doc" type="number" class="form-control "
+                                <input name="form_7_number_doc" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                        placeholder="Номер документа">
                             </div>
                             <div class="form-group">

@@ -43,19 +43,19 @@
                                        placeholder="Адрес истца">
                             </div>
                             <div class="form-group">
-                                <input name="form_8_inn_i" type="number" class="form-control "
+                                <input name="form_8_inn_i" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                        placeholder="ИНН истца">
                             </div>
                             <div class="form-group">
-                                <input name="form_8_ogrn_i" type="number" class="form-control "
+                                <input name="form_8_ogrn_i" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                        placeholder="ОГРН истца">
                             </div>
                             <div class="form-group">
-                                <input name="form_8_phone_exist" type="number" class="form-control "
+                                <input name="form_8_phone_exist" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                        placeholder="Телефон истца, если известен">
                             </div>
                             <div class="form-group">
-                                <input name="form_8_fax_exist" type="number" class="form-control "
+                                <input name="form_8_fax_exist" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                        placeholder="Факс истца, если известен">
                             </div>
                             <div class="form-group">

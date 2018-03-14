@@ -292,10 +292,11 @@ jQuery(document).ready(function () {
     */
 
     if (jQuery('.add-form.form-2-6, .add-form.form-2-5, .add-form.form-2-4, .add-form.form-2-3, .add-form.form-2-2, .add-form.first, .add-form.second, .add-form.first-form-9, .add-form.form-8, .add-form.add-form-6, .add-form.form-4-1, .add-form.form-4-2, .add-form.form-3-1,.add-form.form-3-2, .add-form.form-2-1').length) {
-        jQuery('.add-form.first').click(function (e) {
+
+      //  jQuery('.add-form.first').click(function (e) {
+        jQuery("body").on( "click", ".add-form.first", function(e) {
 
             e.preventDefault();
-
             var $thisParent = jQuery(this).parent();
 
             jQuery($thisParent).append('<div class="form-group-one clearfix">' +
@@ -316,13 +317,13 @@ jQuery(document).ready(function () {
                 '</div>' +
                 '<div class="col-md-6-form no-padding-right">' +
                 '<div class="form-group">' +
-                ' <input name="form_1_total_all' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control "  placeholder="Сумма обязательства (всего) (4)" >' +
+                ' <input name="form_1_total_all' + InitTypeFiledNumber(this) + '[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"  placeholder="Сумма обязательства (всего) (4)" >' +
                 '</div>' +
                 '<div class="form-group">' +
-                '<input name="form_1_total_all_indebtedness' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control "  placeholder="Сумма обязательства (в том числе задолженность) (5)" >' +
+                '<input name="form_1_total_all_indebtedness' + InitTypeFiledNumber(this) + '[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"  placeholder="Сумма обязательства (в том числе задолженность) (5)" >' +
                 '</div>' +
                 '<div class="form-group">' +
-                '<input name="form_1_penaltie_fines' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >' +
+                '<input name="form_1_penaltie_fines' + InitTypeFiledNumber(this) + '[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field" placeholder="Штрафы, пени и иные санкции" >' +
                 '</div>' +
                 '</div>' +
                 '</div>' +
@@ -343,10 +344,10 @@ jQuery(document).ready(function () {
                 '<input name="form_1_row2_name_tax' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа" >' +
                 '</div>' +
                 '<div class="form-group">' +
-                '<input name="form_1_row2_arrears' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control " placeholder="Недоимка" >' +
+                '<input name="form_1_row2_arrears' + InitTypeFiledNumber(this) + '[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field" placeholder="Недоимка" >' +
                 '</div>' +
                 '<div class="form-group">' +
-                '<input name="form_1_row2_penaltie_fines' + InitTypeFiledNumber(this) + '[]" type="number" class="form-control "  placeholder="Штрафы, пени и иные санкции" >' +
+                '<input name="form_1_row2_penaltie_fines' + InitTypeFiledNumber(this) + '[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"  placeholder="Штрафы, пени и иные санкции" >' +
                 '</div>' +
                 '</div>' +
                 '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
@@ -362,10 +363,10 @@ jQuery(document).ready(function () {
                 '<input name="form_9_name_credit_bank_mfo[]" type="text" class="form-control " placeholder="Наименование кредитора: банка, МФО, физического лица и т.д.">' +
                 '</div>' +
                 '<div class="form-group">' +
-                '<input name="form_9_balance_owed[]" type="number" class="form-control " placeholder="Остаток долга, руб.">' +
+                '<input name="form_9_balance_owed[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field" placeholder="Остаток долга, руб.">' +
                 '</div>' +
                 '<div class="form-group">' +
-                '<input name="form_9_amount_overdue_debt[]" type="number" class="form-control " placeholder="Размер просроченной задолженности, руб.">' +
+                '<input name="form_9_amount_overdue_debt[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field" placeholder="Размер просроченной задолженности, руб.">' +
                 '</div>' +
                 '<div class="form-group">' +
                 '<input name="form_9_default_period[]" type="text" class="form-control " placeholder="Срок просрочки, мес">' +
@@ -456,23 +457,23 @@ jQuery(document).ready(function () {
                 '                                           placeholder="Место нахождения">\n' +
                 '                                </div>\n' +
                 '                                <div class="form-group">\n' +
-                '                                    <input name="form_3_inn[]" type="number" class="form-control "\n' +
+                '                                    <input name="form_3_inn[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"\n' +
                 '                                           placeholder="ИНН">\n' +
                 '                                </div>\n' +
                 '                                <div class="form-group">\n' +
-                '                                    <input name="form_3_ogrn[]" type="number" class="form-control "\n' +
+                '                                    <input name="form_3_ogrn[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"\n' +
                 '                                           placeholder="ОГРН">\n' +
                 '                                </div>\n' +
                 '                                <div class="form-group">\n' +
-                '                                    <input name="form_3_phone[]" type="number" class="form-control "\n' +
+                '                                    <input name="form_3_phone[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"\n' +
                 '                                           placeholder="Телефон">\n' +
                 '                                </div>\n' +
                 '                                <div class="form-group">\n' +
-                '                                    <input name="form_3_fax[]" type="number" class="form-control "\n' +
+                '                                    <input name="form_3_fax[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"\n' +
                 '                                           placeholder="Факс">\n' +
                 '                                </div>\n' +
                 '                                <div class="form-group">\n' +
-                '                                    <input name="form_3_email[]" type="text" class="form-control "\n' +
+                '                                    <input name="form_3_email[]" type="text" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"\n' +
                 '                                           placeholder="E-mail">\n' +
                 '                                </div>\n' +
                 '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
@@ -655,7 +656,7 @@ jQuery(document).ready(function () {
 
         });
 
-        AddBlockTextInFormFields(); /// add p  placeholder text prepend input
+
 // end
     }
     /*
@@ -1334,13 +1335,15 @@ function animationblocks() {
 *  Add Block Text for Input for Form generate page
  */
 function AddBlockTextInFormFields() {
+
     if (jQuery('.row-doc-form').length) {
 
-        jQuery('input').on('input', function () {
-            var $findp = jQuery(this).parent().find('p');
+        jQuery('input').live('input', function () {
 
+            var $findp = jQuery(this).parent().find('p');
+            var $this = jQuery(this);
             if ($findp.length == 0) {
-                if (jQuery(this).is('input:text') || jQuery(this).is('input:number')) {
+                if ($this.is('input:text') || $this.is('.number-field')) {
                     var $value = jQuery(this).attr('placeholder');
                     jQuery(this).parent().prepend('<p class="tooltips">' + $value + '</p>');
                 }

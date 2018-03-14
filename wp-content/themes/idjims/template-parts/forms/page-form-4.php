@@ -299,23 +299,23 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <input name="form_4_inn[]" type="number" class="form-control "
+                                    <input name="form_4_inn[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                            placeholder="ИНН">
 
                                 </div>
 
                                 <div class="form-group">
-                                    <input name="form_4_ogrn[]" type="number" class="form-control "
+                                    <input name="form_4_ogrn[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                            placeholder="ОГРН">
 
                                 </div>
                                 <div class="form-group">
-                                    <input name="form_4_phone[]" type="number" class="form-control "
+                                    <input name="form_4_phone[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                            placeholder="Телефон">
 
                                 </div>
                                 <div class="form-group">
-                                    <input name="form_4_fax[]" type="number" class="form-control "
+                                    <input name="form_4_fax[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                            placeholder="Факс">
 
                                 </div>

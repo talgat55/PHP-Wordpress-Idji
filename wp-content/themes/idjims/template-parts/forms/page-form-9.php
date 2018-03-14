@@ -27,11 +27,11 @@
                                        placeholder="Наименование кредитора: банка, МФО, физического лица и т.д.">
                             </div>
                             <div class="form-group">
-                                <input name="form_9_balance_owed[]" type="number" class="form-control "
+                                <input name="form_9_balance_owed[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                        placeholder="Остаток долга, руб.">
                             </div>
                             <div class="form-group">
-                                <input name="form_9_amount_overdue_debt[]" type="number" class="form-control "
+                                <input name="form_9_amount_overdue_debt[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                        placeholder="Размер просроченной задолженности, руб.">
                             </div>
                             <div class="form-group">

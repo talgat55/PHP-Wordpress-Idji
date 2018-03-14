@@ -88,7 +88,7 @@
                                        placeholder="Номер кредитного договора (прим.: №123 от 01 февраля 2015 г.)">
                             </div>
                             <div class="form-group">
-                                <input name="form_10_total" type="number" class="form-control "
+                                <input name="form_10_total" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                        placeholder="Сумма">
                             </div>
 
