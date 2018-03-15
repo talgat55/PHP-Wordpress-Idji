@@ -427,28 +427,34 @@ function my_string_limit_words($string, $word_limit)
 /*
 * Delete pdf files
 *
-*//*
-function destroy() {
-		$days = 1;
-		$dir = dirname (__DIR__.'/inc/redypdf/');
+*/
+add_action('wp', 'my_cron_delete_files');
+function my_cron_delete_files() {
+    if( ! wp_next_scheduled( 'my_cron_delete_files_event' ) ) {
+        wp_schedule_event( time(), 'daily ', 'my_cron_delete_files_event');
+    }
+}
 
-		$nofiles = 0;
+add_action('my_cron_delete_files_event', 'destroyFiles');
 
-		    if ($handle = opendir($dir)) {
-		    while (( $file = readdir($handle)) !== false ) {
-		        if ( $file == '.' || $file == '..' || is_dir($dir.'/'.$file) ) {
-		            continue;
-		        }
+function destroyFiles(){
 
-		        if ((time() - filemtime($dir.'/'.$file)) > ($days *86400)) {
-		            $nofiles++;
-		            unlink($dir.'/'.$file);
-		        }
-		    }
-		    closedir($handle);
-		   // echo "Total files deleted: $nofiles \n";
-		}
-}*/
+
+    $dir = __DIR__.'/inc/redypdf/';
+    if ($handle = opendir($dir)) {
+        while (($file = readdir($handle)) !== false) {
+            if ($file == '.' || $file == '..' || is_dir($dir . '/' . $file)) {
+                continue;
+            }
+
+
+             unlink($dir.'/'.$file);
+
+        }
+        closedir($handle);
+    }
+
+}
 
 
 /**
@@ -566,7 +572,8 @@ function be_post_summary()
  *  Links  to URL
  */
 
-function LinksTheme($link){
+function LinksTheme($link)
+{
 
     switch ($link) {
         case 'user-profile':

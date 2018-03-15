@@ -18,7 +18,7 @@ get_header(); ?>
 		parse_str($parts['query'], $query);
 		//var_dump($query);
 
-		//	destroy();  // delete files
+
      ?>
 		 <div class="container">
 
