@@ -400,7 +400,34 @@ textarea {
     border-radius: 0;
     resize: none;
 }
-
+div.wpcf7 .ajax-loader{
+    background-image: url(../images/loading-form.svg)!important;
+    width: 29px;
+    height: 29px;
+}
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+    border: 2px solid #cb454c;
+    color: #fff;
+}
+span.wpcf7-not-valid-tip {
+    text-align: center;
+}
+.modal-form div.wpcf7-validation-errors, div.wpcf7-acceptance-missing,
+.modal-form span.wpcf7-not-valid-tip,
+.SendMessage-2 span.wpcf7-not-valid-tip,
+.SendMessage-2 div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
+    border-color: #008fdb;
+}
+span.wpcf7-not-valid-tip {
+    color: #fff!important;
+    padding-top: 4px;
+    font-size: 1em;
+    padding-bottom: 4px;
+    margin-top: 4px;
+    font-weight: normal;
+    display: block;
+    border: 2px solid #cb454c;
+}
 .form-control.form-4 {
     float: left;
     position: relative;
@@ -493,7 +520,7 @@ body {
 .top-hedaer-block {
     display: table;
     width: 100%;
-    margin-top: 25px;
+    margin: 20px 0;
 }
 
 #logo {
@@ -534,6 +561,7 @@ body {
     margin-left: 22px;
     font-family: Georgia, sans-serif;
     font-weight: 400;
+    margin-bottom: 0;
 }
 
 .center-top-heder .center-top-heder-holder p {
@@ -542,6 +570,7 @@ body {
     font-family: Calibri, sans-serif;
     font-weight: 200;
     font-size: 17px;
+    line-height: .7;
 }
 
 .center-top-heder .center-top-heder-holder {
@@ -557,6 +586,7 @@ body {
 .center-top-heder-holder div {
     font-family: "Minsk";
     font-size: 23px;
+    line-height: 42px;
 }
 
 .center-top-heder-walpaper:first-child {
@@ -573,7 +603,7 @@ body {
 
 .center-top-heder-bre {
     display: table;
-    margin: 0 auto;
+    margin: 17px auto 0 auto;
 }
 
 .right-top-header div {
@@ -596,17 +626,20 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+
 .btn.btn-link-modal {
     border: 2px solid #008dd0 !important;
     display: block;
     padding: 12px 16px;
     text-align: center;
-    border-radius: 13px;
-    margin-bottom: 12px;
+    border-radius: 7px;
+   /* margin-bottom: 12px;*/
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
-
+header .right-top-header .btn.btn-link-modal{
+    margin-bottom: 0;
+}
 .btn.btn-link-modal:hover {
 
     background: #008dd0;
@@ -759,7 +792,7 @@ body {
     width: 47%;
     color: #fff;
     float: right;
-    margin-right: 30px;
+    margin-right: 70px;
 }
 
 .title-slider {
@@ -775,7 +808,7 @@ body {
     font-size: 34px;
     font-family: "Minsk";
     /*text-align: right;*/
-    margin: 55px 0 0 0;
+    margin: 100px 0 0 0;
 }
 
 .title-slider::after {
@@ -914,14 +947,14 @@ body {
 }
 
 .block-use-our-walp-2 {
-    height: 148px;
+   /* height: 148px;*/
     margin-bottom: 40px;
 }
 
 .block-use-our-walp-2 p {
     font-family: Calibri, sans-serif;
     font-weight: 200;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
     line-height: 19px;
     margin-bottom: 0;
@@ -1564,8 +1597,8 @@ form {
 
 .ajax-loader {
     position: absolute;
-    right: -18px;
-    top: 15px;
+    right: -34px;
+    top: 9px;
 }
 
 .checkboxFour {

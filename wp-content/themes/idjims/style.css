@@ -570,7 +570,7 @@ html[lang^="zh-"] h6 {
 	font-weight: 700;
 }
 
-
+/*
 html[lang="bg-BG"] h1,
 html[lang="bg-BG"] h2,
 html[lang="bg-BG"] h3,
@@ -592,7 +592,7 @@ html[lang="uk"] h6 {
 	font-weight: 700;
 	line-height: 1.2;
 }
-
+*/
 /* Typography for Devanagari Font */
 
 html[lang="bn-BD"] body,
@@ -612,7 +612,7 @@ html[lang="mr-IN"] select,
 html[lang="mr-IN"] textarea {
 	font-family: Arial, sans-serif;
 }
-
+/*
 html[lang="bn-BD"] h1,
 html[lang="bn-BD"] h2,
 html[lang="bn-BD"] h3,
@@ -633,7 +633,7 @@ html[lang="mr-IN"] h5,
 html[lang="mr-IN"] h6 {
 	font-weight: 700;
 }
-
+*/
 /* Typography for Greek Font */
 
 html[lang="el"] body,

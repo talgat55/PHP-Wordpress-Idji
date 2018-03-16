@@ -122,8 +122,8 @@
                         </li>
 
 
-                        <li><a href="<?php echo LinksTheme('calculate'); ?>">Калькулятор банкротсва</a></li>
-                        <li><a href="<?php echo LinksTheme('login'); ?>">Банкротсво бесплатно</a></li>
+                        <li><a href="<?php echo LinksTheme('calculate'); ?>">Калькулятор банкротства</a></li>
+                        <li><a href="<?php echo LinksTheme('login'); ?>">Банкротство бесплатно</a></li>
                     </ul>
 
                 </div>
