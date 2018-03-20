@@ -218,7 +218,7 @@ get_header(); ?>
                                                                                                          min="1"
                                                                                                          name="valueproperty"
                                                                                                          value="1000"
-                                                                                                         required>
+                                                                                                         >
                                     </div>
                                     <div class="question-page-calc">?</div>
 

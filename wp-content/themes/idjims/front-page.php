@@ -116,7 +116,7 @@ get_header(); ?>
                         <h3>Калькулятор <span>банкротства</span></h3>
                         <p>Узнайте, подходит ли банкротство в Вашем
                             случае, а также узнайте стоимость наших услуг!</p>
-                        <img class="align-right" style="height: 127px;"
+                        <img class="align-right" style="height: 131px;"
                              data-src="<?php echo get_theme_file_uri('/assets/images/calc-2.png') ?>">
 
                     </a>

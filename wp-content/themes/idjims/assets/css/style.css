@@ -926,7 +926,7 @@ header .right-top-header .btn.btn-link-modal{
     position: relative;
     padding: 17px 20px;
     color: #fff;
-    min-height: 93px;
+    min-height: 97px;
     display: block;
 }
 
@@ -2125,14 +2125,24 @@ footer {
 }
 
 .feature-service {
-    background-color: #fff;
-    padding: 30px;
+    background-image: url(../images/bg-services.png);
+    padding: 35px;
     position: relative;
     margin: 50px 78px;
-    min-height: 67px;
-    z-index: 5;
-}
 
+    z-index: 5;
+    background-repeat: no-repeat;
+}
+.feature-service.ipoteka-service{
+    padding: 32px;
+}
+.ind-p-sevice p{
+    padding-top: 10px;
+}
+.fl-service p{
+    padding-top: 8px;
+}
+/*
 .feature-service::after {
     content: "";
     border-top: 128px solid transparent;
@@ -2143,6 +2153,7 @@ footer {
     height: 0;
     bottom: 0px;
 }
+*/
 /*
 .feature-service::before {
     content: "";
@@ -2151,7 +2162,7 @@ footer {
     right: -30px;
     position: absolute;
     bottom: 0;
-}*/
+}*//*
 .feature-service::before {
     content: "";
     border-bottom: 127.5px solid transparent;
@@ -2160,7 +2171,7 @@ footer {
     position: absolute;
     bottom: 0;
 }
-
+*/
 .calibri {
     font-weight: 400 !important;
     text-align: center;
@@ -2190,7 +2201,6 @@ footer {
 .feature-service img {
     float: left;
     padding-right: 30px;
-    padding-bottom: 41px;
 }
 
 #get-use-our {
@@ -2525,7 +2535,9 @@ footer {
     position: relative;
     background-color: #008fdb;
 }
-
+.yellow-live-color{
+    color:#e0e009;
+}
 .bg-live {
     position: absolute;
     top: 0;
@@ -4231,7 +4243,6 @@ footer {
     .container {
         width: 900px;
     }
-
     .ourServiceBlock {
         min-height: 199px;
     }
@@ -4379,7 +4390,10 @@ footer {
     .first-block-img {
         height: 200px;
     }
-
+    .feature-service {
+        background-color: #fff;
+        background-image: none;
+    }
     .ourservice-last-block {
         overflow: hidden;
     }
@@ -4775,7 +4789,9 @@ footer {
     .modal-form {
         width: 100%;
     }
-
+    .feature-service img {
+        padding-bottom: 41px;
+    }
     .row-blog {
         margin: 0;
     }

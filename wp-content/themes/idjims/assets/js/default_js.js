@@ -731,7 +731,7 @@ function InitChooseOld() {
 
 
 /*
-* Function for froms pages add arrays fields
+* Functions for froms pages add arrays fields
 */
 
 function InitTypeFiledNumber(Element) {
@@ -879,7 +879,7 @@ function InitActionPriceTables() {
             $this.addClass(' showpayment ');
         }
 
-        var $method = 'percent';   // may be  'percent' and  'plain'
+        var $method = 'plain';   // may be  'percent' and  'plain'
         var $currentPrice = $this.parent().parent().find('.total-price span').html();
         var $firstTwoPayment;
         var $firstMountPayment;
@@ -902,7 +902,8 @@ function InitActionPriceTables() {
             $firstTwoPayment = parseInt(20000 + 25000);
             $firstMountPayment = parseInt(20000);
             $secondMountPayment = parseInt(25000);
-            $mountPayment = parseInt(10000);
+          //  $mountPayment = parseInt(10000);
+            $mountPayment = parseInt($currentPrice) / 10;
 
 
         }
@@ -1170,8 +1171,8 @@ function InitUISlider() {
 
     jQuery("#slider-ui").slider({
         value: 0,//Значение, которое будет выставлено слайдеру при загрузке
-        min: 500000,//Минимально возможное значение на ползунке
-        max: 15000000,//Максимально возможное значение на ползунке
+        min: 150000,//Минимально возможное значение на ползунке
+        max: 3000000,//Максимально возможное значение на ползунке
         step: 1000,//Шаг, с которым будет двигаться ползунок
         create: function (event, ui) {
             val = jQuery("#slider-ui").slider("value");//При создании слайдера, получаем его значение в перемен. val
@@ -1197,7 +1198,7 @@ function InitUISliderPage() {
     var $this = jQuery(".slider-ui");
     $this.slider({
         value: 0,//Значение, которое будет выставлено слайдеру при загрузке
-        min: 500000,//Минимально возможное значение на ползунке
+        min: 150000,//Минимально возможное значение на ползунке
         max: 15000000,//Максимально возможное значение на ползунке
         step: 1000,//Шаг, с которым будет двигаться ползунок
         create: function (event, ui) {
@@ -1263,14 +1264,14 @@ function fiveblocks() {
     if (jQuery(window).width() > 1200) {
 
 
-        jQuery(".block-five-step-arrow a").hover(function () {
+        jQuery(".col-five-step-block").hover(function () {
 
             var $this = jQuery(this);
-            var tooltipblock = $this.parent().parent().find('.tooltip-five-step');
+            var tooltipblock = $this.parent().find('.tooltip-five-step');
             tooltipblock.show();
 
 
-            tooltipblock.mouseleave(function () {
+            $this.mouseleave(function () {
 
                 tooltipblock.hide();
 

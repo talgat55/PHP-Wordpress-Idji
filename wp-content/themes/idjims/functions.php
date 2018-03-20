@@ -360,7 +360,7 @@ if (isset($_POST['login_submit'])) {
         }
         if (!is_wp_error($user)) {
 
-            wp_redirect(home_url());
+            wp_redirect(LinksTheme('user-doc'));
             exit;
 
         }
@@ -386,7 +386,7 @@ if (isset($_POST['reg_submit'])) {
     if (!is_wp_error($register_user)) {
 
         //$_SESSION['error_registration'] = 'Регистрация успешна завершена';
-        wp_redirect(home_url());
+        wp_redirect(LinksTheme('user-profile'));
         exit;
     } else {
 
@@ -403,7 +403,7 @@ function wpse_lost_password_redirect()
     $confirm = (isset($_GET['checkemail']) ? $_GET['checkemail'] : '');
 
     if ($confirm) {
-        wp_redirect(home_url('/login'));
+        wp_redirect(LinksTheme('login'));
         exit;
     }
 }
