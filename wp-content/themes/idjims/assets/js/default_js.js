@@ -237,6 +237,8 @@ jQuery(document).ready(function () {
                 .addClass(' no-payment-way ')
                 .html('Процедура реструктуризации невозможна.');
 
+            jQuery('#result-calculate').addClass(' overflow-hidden ');
+            jQuery('#result-calculate').css('height', 0);
         } else {
             jQuery('.check-capability-payment')
                 .html('')
@@ -1026,7 +1028,13 @@ function InitActionPriceTables() {
             lastPayment = false;
         }
         //lastPayment = false;
-        if (lastPayment) {
+
+        var valuecredits = jQuery(".calculate-valuecredits").val();
+        if( parentClass.hasClass('third')  &&  valuecredits< 5){  // for VIP plan  if credit less 5
+
+            lastPayment = false;
+        }
+        if (lastPayment ) {
 
             if ($firstTwoPayment == $currentPrice) {  // check price first Two Mounth  Price and total Price ==   3 mouth don't need
 
