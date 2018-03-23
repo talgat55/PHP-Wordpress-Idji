@@ -218,7 +218,7 @@ get_header(); ?>
                                                                                                          min="0"
                                                                                                          name="valueproperty"
                                                                                                          value="0"
-                                                                                                         >
+                                        >
                                     </div>
                                     <div class="question-page-calc">?</div>
 
@@ -282,7 +282,7 @@ get_header(); ?>
                         <div class="calculator-page">
                             <div class="field">
                                 <div class="custom-old-calc">
-                                    <div class="calc-pointer choose-old"  data-value="1">
+                                    <div class="calc-pointer choose-old" data-value="1">
                                         <img src="<?php echo get_theme_file_uri('/assets/images/teen-2.png') ?>">
                                         <h4>Трудоспособный</h4>
                                     </div>
@@ -290,7 +290,7 @@ get_header(); ?>
                                         <h3>Возраст</h3>
 
                                     </div>
-                                    <div class="calc-pointer"   data-value="0">
+                                    <div class="calc-pointer" data-value="0">
                                         <img src="<?php echo get_theme_file_uri('/assets/images/grand-2.png') ?>">
                                         <h4>Пенсионер</h4>
                                     </div>
@@ -311,7 +311,9 @@ get_header(); ?>
 
             <div class="check-capability-payment"></div>
             <div id="result-calculate" class="clearfix overflow-hidden">
-                <h3 class="choose-plan-title">В Иджис всегда заботятся о своих клиентах и их финансовом благополучии. Поэтому мы предлагаем несколько вариантов тарифов на наши услуги. Выберите для себя подходящий и Ваше банкротство пройдет быстро, просто и без лишних хлопот!</h3>
+                <h3 class="choose-plan-title">В Иджис всегда заботятся о своих клиентах и их финансовом благополучии.
+                    Поэтому мы предлагаем несколько вариантов тарифов на наши услуги. Выберите для себя подходящий и
+                    Ваше банкротство пройдет быстро, просто и без лишних хлопот!</h3>
                 <div class="block-for-mortage"></div>
                 <ul class="table-prices clearfix">
                     <li class="price-part first">
@@ -365,11 +367,13 @@ get_header(); ?>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check-red.png') ?>">
                                     <p>Будем представлять Ваши интересы в суде и на собраниях кредиторов</p></li>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check-red.png') ?>">
-                                    <p>Составим и подадим в суд заявление о банкротстве с приложениями и уведомлениями</p>
+                                    <p>Составим и подадим в суд заявление о банкротстве с приложениями и
+                                        уведомлениями</p>
                                 </li>
 
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check-red.png') ?>">
-                                    <p>Оплатим гос. пошлину, депозит суда, публикации и прочие судебные издержки</p></li>
+                                    <p>Оплатим гос. пошлину, депозит суда, публикации и прочие судебные издержки</p>
+                                </li>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check-red.png') ?>">
                                     <p>Доведем процедуру до завершения "под ключ"</p></li>
 
@@ -401,7 +405,8 @@ get_header(); ?>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
                                     <p>Будем представлять Ваши интересы в суде и на собраниях кредиторов</p></li>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
-                                    <p>Составим и подадим в суд заявление о банкротстве с приложениями и уведомлениями</p></li>
+                                    <p>Составим и подадим в суд заявление о банкротстве с приложениями и
+                                        уведомлениями</p></li>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
                                     <p>Оплатим гос. пошлину, депозит суда, публикации и прочие судебные издержки</p>
                                 </li>
@@ -429,7 +434,7 @@ get_header(); ?>
 
             </div>
         </div><!-- #primary -->
-        <section class="SendMessage  SendMessage-2">
+        <section class="SendMessage  SendMessage-2  Calc-page">
             <div class="container relative">
 
                 <?php
@@ -463,7 +468,8 @@ get_header(); ?>
 
 
                 <?php echo do_shortcode('[contact-form-7 id="16" title="Untitled"]'); ?>
-                <img class="send-maessage-2" data-src="<?php echo get_theme_file_uri('/assets/images/bg-send-2.png') ?>">
+                <img class="send-maessage-2"
+                     data-src="<?php echo get_theme_file_uri('/assets/images/bg-send-2.png') ?>">
             </div>
 
 

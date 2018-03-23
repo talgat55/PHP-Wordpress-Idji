@@ -1561,6 +1561,9 @@ input.wpcf7-form-control {
     margin: 0;
     line-height: 50px;
 }
+.SendMessage-2.Calc-page .wpcf7-submit{
+    background-color: transparent;
+}
 
 .custom-cal-marg {
 
