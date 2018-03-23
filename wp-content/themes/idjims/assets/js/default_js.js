@@ -17,7 +17,9 @@ jQuery(document).ready(function () {
     InitCarouselClients();
     InitOpenContentReview();
     MobileMenu();
+    backToTop();
     animationblocks();
+    InitServiceOOO();
     InitUISliderPage();
     InitShowTooltip();
     InitUISliderPageProperty();
@@ -676,6 +678,7 @@ jQuery(document).ready(function () {
     */
 
     jQuery('.benefit-cols .benefit-block').equalHeightResponsive();
+    jQuery('.block-dont-self').equalHeightResponsive();
     jQuery('.live-idji-walp .live-idji-block').equalHeightResponsive();
     jQuery('.dont-wait-block-auto-height .dont-wait-block').equalHeightResponsive();
 
@@ -710,6 +713,33 @@ function accordionQAPage() {
             return false;
         });
     }
+}
+/*
+* Service Page
+ */
+
+function InitServiceOOO() {
+    jQuery(".block-acc-ooo").click(function () {
+
+        if(jQuery(this).hasClass('show-acc')){
+            jQuery(this).removeClass('show-acc');
+            jQuery(this).find('.content-accordion-ooo').css('height', 0);
+            jQuery(this).find('.change-state-link-accordion-ooo').html('');
+            jQuery(this).find('.change-state-link-accordion-ooo').html('Подробнее');
+            jQuery(this).find('.arrow-down-accordion-ooo').removeClass(' close').addClass(' open');
+
+
+        }else{
+            jQuery(this).addClass('show-acc');
+            var $thisheight = jQuery(this).find('.content-accordion-ooo-walp').height();
+            jQuery(this).find('.content-accordion-ooo').css('height', $thisheight+ 50);
+            jQuery(this).find('.change-state-link-accordion-ooo').html('');
+            jQuery(this).find('.change-state-link-accordion-ooo').html('Скрыть');
+            jQuery(this).find('.arrow-down-accordion-ooo').removeClass(' open ').addClass('  close ');
+        }
+
+        return false;
+    });
 }
 
 /*
@@ -1352,5 +1382,25 @@ function AddBlockTextInFormFields() {
 
         })
     }
+
+}
+
+// ---------------------------------------------------------
+// Back To Top
+// ---------------------------------------------------------
+function backToTop(){
+    "use strict";
+    jQuery(window).scroll(function () {
+        if (jQuery(this).scrollTop() > 100) {
+            jQuery('#back_to_top').addClass('backactive');
+        } else {
+            jQuery('#back_to_top').removeClass('backactive');
+        }
+    });
+    jQuery(document).on('click','#back_to_top',function(e){
+        e.preventDefault();
+
+        jQuery('body,html').animate({scrollTop: 0}, jQuery(window).scrollTop()/3, 'linear');
+    });
 
 }

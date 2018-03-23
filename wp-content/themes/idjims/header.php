@@ -103,8 +103,8 @@
                                 <li><a href="<?php echo LinksTheme('bankrotstvo-poruchitelya'); ?>">Банкротство
                                         поручителя</a></li>
                                 <li><a href="<?php echo LinksTheme('bankrotstvo-ip'); ?>">Банкротство ИП</a></li>
-                                <!--<li><a href="#">Банкротство ООО</a></li>
-                                <li><a href="#">Юрист по банкротству</a></li>-->
+                                <li><a href="<?php echo LinksTheme('bankrotstvo-ooo'); ?>">Банкротство ООО</a></li>
+                                <!--<li><a href="#">Юрист по банкротству</a></li>-->
                             </ul>
 
                         </li>

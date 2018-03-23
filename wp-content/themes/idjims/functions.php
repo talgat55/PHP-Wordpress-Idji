@@ -594,6 +594,9 @@ function LinksTheme($link)
         case 'bankrotstvo-poruchitelya':
             return home_url("/bankrotstvo-poruchitelya/");
             break;
+        case 'bankrotstvo-ooo':
+            return home_url("/bankrotstvo-ooo/");
+            break;
         case 'bankrotstvo-ip':
             return home_url("/bankrotstvo-ip/");
             break;

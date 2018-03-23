@@ -58,7 +58,14 @@
 					</div>
 				</div><!-- end container-->
 			</div><!-- end bottom header-->
-
+            <!-- Go To Top -->
+            <a id="back_to_top" href="#">
+			<span>
+				<svg   width="23" height="23" viewBox="0 0 23 23">
+                <path fill="#fff" d="M12.313 8.107l-0.813-0.813-6.506 6.506 1.626 1.626 4.879-4.878 4.879 4.878 1.626-1.626z"></path>
+                </svg>
+			</span>
+            </a>
 			<p class="footer-oth" ><a target="_blank" title="Перейти на сайт разработчика" href="http://asmart-group.ru/">Сайт создан в  IT-Company ASMART</a></p>
 		</footer><!-- #colophon -->
 </div><!-- #page -->
