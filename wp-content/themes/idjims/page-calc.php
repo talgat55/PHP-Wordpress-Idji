@@ -215,9 +215,9 @@ get_header(); ?>
                                     <div class="pagec-calc-field-total-debt-fwalp property">
                                         <p class="custom-filed-text">Стоимость имущества, руб.</p><input type="number"
                                                                                                          class="calculate-valueproperty slider-result-input-property"
-                                                                                                         min="1"
+                                                                                                         min="0"
                                                                                                          name="valueproperty"
-                                                                                                         value="1000"
+                                                                                                         value="0"
                                                                                                          >
                                     </div>
                                     <div class="question-page-calc">?</div>
@@ -258,7 +258,7 @@ get_header(); ?>
                         <div class="calculator-page">
                             <div class="field"><label>Кол-во иждивенцев</span></label>
 
-                                <input type="number" min="1" name="fake-izdiv" class="calculate-vakklueidwdncome">
+                                <input type="number" min="1" name="fake-izdiv" class="calculate-number-dependents">
 
                             </div>
                         </div>
@@ -282,7 +282,7 @@ get_header(); ?>
                         <div class="calculator-page">
                             <div class="field">
                                 <div class="custom-old-calc">
-                                    <div class="calc-pointer choose-old">
+                                    <div class="calc-pointer choose-old"  data-value="1">
                                         <img src="<?php echo get_theme_file_uri('/assets/images/teen-2.png') ?>">
                                         <h4>Трудоспособный</h4>
                                     </div>
@@ -290,7 +290,7 @@ get_header(); ?>
                                         <h3>Возраст</h3>
 
                                     </div>
-                                    <div class="calc-pointer">
+                                    <div class="calc-pointer"   data-value="0">
                                         <img src="<?php echo get_theme_file_uri('/assets/images/grand-2.png') ?>">
                                         <h4>Пенсионер</h4>
                                     </div>
@@ -309,9 +309,10 @@ get_header(); ?>
                 </div>
             </form>
 
-
+            <div class="check-capability-payment"></div>
             <div id="result-calculate" class="clearfix overflow-hidden">
-                <h3 class="choose-plan-title">Выберите план</h3>
+                <h3 class="choose-plan-title">В Иджис всегда заботятся о своих клиентах и их финансовом благополучии. Поэтому мы предлагаем несколько вариантов тарифов на наши услуги. Выберите для себя подходящий и Ваше банкротство пройдет быстро, просто и без лишних хлопот!</h3>
+                <div class="block-for-mortage"></div>
                 <ul class="table-prices clearfix">
                     <li class="price-part first">
                         <div class="price-overlay"></div>
@@ -323,16 +324,16 @@ get_header(); ?>
                             </div>
                             <ul class="table-price">
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
-                                    <p>Заключим договор и оформим нотариальную доверенность</p></li>
+                                    <p>Заключим договор, разработаем стратегию банкротства</p></li>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
-                                    <p>Предоставим независимого финансового управляющего</p></li>
+                                    <p>Составим и подадим в суд заявление о банкротстве</p></li>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
-                                    <p>Соберем все необходимые документы, составим и направим запросы в ведомства</p>
+                                    <p>Подготовим все необходимые приложения к заявлению в суд</p>
                                 </li>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
-                                    <p>Проконтролируем процесс подачи заявления в арбитражный суд</p></li>
+                                    <p>Подготовим и направим уведомления Вашим кредиторам</p></li>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
-                                    <p>Возьмем на себя все рутинные дела по банкротству</p></li>
+                                    <p>Предоставим независимого финансового управляющего</p></li>
 
                             </ul>
 
@@ -355,18 +356,22 @@ get_header(); ?>
                             </div>
                             <ul class="table-price">
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
-                                    <p>Заключим договор и оформим нотариальную доверенность</p></li>
+                                    <p>Заключим договор и оформим нотариальную довернность</p></li>
+                                <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
+                                    <p>Поможем в сборе документов для Вашего банкротства</p></li>
+
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
                                     <p>Предоставим независимого финансового управляющего</p></li>
-                                <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
-                                    <p>Соберем все необходимые документы, составим и направим запросы в ведомства</p>
-                                </li>
-                                <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
-                                    <p>Проконтролируем процесс подачи заявления в арбитражный суд</p></li>
-                                <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
-                                    <p>Возьмем на себя все рутинные дела по банкротству</p></li>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check-red.png') ?>">
-                                    <p>Оплатим судебные издержки</p></li>
+                                    <p>Будем представлять Ваши интересы в суде и на собраниях кредиторов</p></li>
+                                <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check-red.png') ?>">
+                                    <p>Составим и подадим в суд заявление о банкротстве с приложениями и уведомлениями</p>
+                                </li>
+
+                                <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check-red.png') ?>">
+                                    <p>Оплатим гос. пошлину, депозит суда, публикации и прочие судебные издержки</p></li>
+                                <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check-red.png') ?>">
+                                    <p>Доведем процедуру до завершения "под ключ"</p></li>
 
                             </ul>
 
@@ -389,18 +394,25 @@ get_header(); ?>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
                                     <p>Заключим договор и оформим нотариальную доверенность</p></li>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
+                                    <p>Поможем в сборе документов для Вашего банкротства</p></li>
+
+                                <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
                                     <p>Предоставим независимого финансового управляющего</p></li>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
-                                    <p>Соберем все необходимые документы, составим и направим запросы в ведомства</p>
+                                    <p>Будем представлять Ваши интересы в суде и на собраниях кредиторов</p></li>
+                                <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
+                                    <p>Составим и подадим в суд заявление о банкротстве с приложениями и уведомлениями</p></li>
+                                <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
+                                    <p>Оплатим гос. пошлину, депозит суда, публикации и прочие судебные издержки</p>
                                 </li>
+
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
-                                    <p>Проконтролируем процесс подачи заявления в арбитражный суд</p></li>
-                                <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
-                                    <p>Возьмем на себя все рутинные дела по банкротству</p></li>
-                                <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
-                                    <p>Оплатим судебные издержки</p></li>
+                                    <p>Доведем процедуру до завершения "под ключ"</p></li>
+
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check-red.png') ?>">
-                                    <p>Гарантия возврата денег</p></li>
+                                    <p>Минимизируем риски уголовной и субсидиарной ответственности</p></li>
+                                <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check-red.png') ?>">
+                                    <p>Гарантируем возврат денег</p></li>
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check-red.png') ?>">
                                     <p>Общаемся с коллекторами за Вас</p></li>
 
@@ -417,6 +429,45 @@ get_header(); ?>
 
             </div>
         </div><!-- #primary -->
+        <section class="SendMessage  SendMessage-2">
+            <div class="container relative">
+
+                <?php
+
+                $argsaction = array(
+                    'posts_per_page' => -1,
+                    'post_type' => 'action'
+                );
+
+                $the_query = new WP_Query($argsaction);
+
+                while ($the_query->have_posts()) :
+                    $the_query->the_post();
+                    $post_id = $the_query->post->ID;
+
+                    //$img_url = wp_get_attachment_url( get_post_thumbnail_id($post_id) ,'full'); // Get img URL
+
+                    $ShowChecbox = get_post_meta($post_id, 'check_show', true);
+                    if ($ShowChecbox) {
+                        echo '
+          <div class="title-section white">' . get_the_title($post_id) . '</div>
+
+          <p>' . get_the_content($post_id) . '</p>
+
+          ';
+
+                    }
+                endwhile;
+                ?>
+
+
+
+                <?php echo do_shortcode('[contact-form-7 id="16" title="Untitled"]'); ?>
+                <img class="send-maessage-2" data-src="<?php echo get_theme_file_uri('/assets/images/bg-send-2.png') ?>">
+            </div>
+
+
+        </section>
     </div><!-- .wrap -->
 
 <?php get_footer();

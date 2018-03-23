@@ -174,7 +174,7 @@ get_header(); ?>
 
 
                 <div class="block-user-page-first">
-                    <h1>Вы можете бесплатно сформировать,</br> в режиме онлайн документы:</h1>
+                    <h1>Вы можете бесплатно сформировать</br> в режиме онлайн документы:</h1>
                     <p>Процесс банкротства физических лиц:</p>
                 </div>
                 <div class="clearfix">
@@ -185,7 +185,7 @@ get_header(); ?>
                                 <a href="<?php echo LinksTheme('perechen'); ?>"> <img
                                             src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
                                     <p>
-                                        Перечень документов необходимых для банкротства
+                                        Перечень документов, необходимых для банкротства
                                     </p>
                                 </a>
                             </li>

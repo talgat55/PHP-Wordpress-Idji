@@ -210,29 +210,54 @@ jQuery(document).ready(function () {
         var checkmortgage = jQuery(".calculate-checkmortgage").val();
         var valueproperty = jQuery(".calculate-valueproperty").val();
         var numberproperty = jQuery(".number-valueproperty").val();
-        var checkproperty = jQuery(".checkboxprop").val();
+        var valueNumberDependents = jQuery(".calculate-number-dependents").val();
+        var valueCalculateAliments = jQuery(".calculate-aliments").val();
 
+        // Get Old
 
-        var check_before_result = (parseInt(valuesumm) - parseInt(valueproperty)) / (parseInt(valueincome) - 9500);
+         var valueOld =  jQuery('.choose-old').data("value");
+
+        // var checkproperty = jQuery(".checkboxprop").val();
+        if (isNaN(parseInt(valueNumberDependents))) {     // check value Number Dependents
+            valueNumberDependents = 0;
+        }
+        if (isNaN(parseInt(valueCalculateAliments))) {    // check value Value Aliments
+            valueCalculateAliments = 0;
+        }
+
+        var $totalvaluesum = parseInt(valuesumm) - (valueNumberDependents * parseInt(9500)) - valueCalculateAliments;  //  income without  Dependents
+
+        var check_before_result = ($totalvaluesum - parseInt(valueproperty)) / (parseInt(valueincome) - 9500);
 //console.log('Долг:  '+ valuesumm,'Доход: '+valueincome,'Количекство кредитов: '+ valuecredits,'Ипотека: '+checkmortgage,'Имущество: '+valueproperty,check_before_result);
         if (check_before_result >= 36) {
 
-            jQuery('#result-calculate').html('Процедура реструктуризации невозможна.');
+            jQuery('.check-capability-payment')
+                .html('')
+                .removeClass(' no-payment-way ')
+                .addClass(' no-payment-way ')
+                .html('Процедура реструктуризации невозможна.');
 
         } else {
+            jQuery('.check-capability-payment')
+                .html('')
+                .removeClass(' no-payment-way ')
+                .html('Cуд может утвердить план реструктуризации, нужна консультация специалиста, и что подробнее можно прочесть в соответствующем разделе сайта');
 
-            var $addCreditPrice, addText, $addproperty;
+            var $addCreditPrice, addText, $addproperty, $addCreditPriceEco, $numberpropertyprice;
+
             if (valuecredits > 5) {
                 $addCreditPrice = Number(parseInt(valuecredits) * 2000);
+                $addCreditPriceEco = Number(parseInt(valuecredits) * 1000);
             } else {
                 $addCreditPrice = 0;
+                $addCreditPriceEco = 0;
             }
 
             if (checkmortgage == 1) {
                 addText = 'Для ипотечных клиентов у нас действуют скидки';
                 $addproperty = 0;
             } else {
-                if (numberproperty > 1) {
+                if (valueproperty > 0) {
 
                     $addproperty = parseInt(10000);
 
@@ -243,16 +268,39 @@ jQuery(document).ready(function () {
                 }
                 addText = '';
             }
-
-
-            var $resultprice = Number(100000 + $addCreditPrice + $addproperty);
+            if (parseInt(numberproperty) > 0) {
+                $numberpropertyprice = parseInt(numberproperty) * parseInt(5000);
+            } else {
+                $numberpropertyprice = 0;
+            }
+            if(valueOld == 0){  // calc Old Value
+                var $valueOld = parseInt(5000);
+            }else{
+                var $valueOld = 0;
+            }
+            var $resultprice = Number(100000 + $addCreditPrice + $addproperty + $numberpropertyprice - $valueOld);
+            var $resulteco = Number(35000 + $addCreditPriceEco + $addproperty + $numberpropertyprice - $valueOld);
 
             jQuery('html, body').animate({scrollTop: jQuery('#result-calculate').offset().top - 100}, 500);
 
             //jQuery('#result-calculate').html('Cуд может утвердить план реструктуризации, нужна консультация специалиста, подробнее можно прочесть в соответствующем разделе сайта </br> <div>Цена наших услуг:'+ $resultprice+' руб.</div></br><p>'+ addText+'</p>');
             jQuery('.price-part .total-price span').html('');
-            jQuery('.price-part.second .total-price span').html($resultprice);
-            jQuery('.price-part.first .total-price span').html($resultprice - parseInt(40000));
+            if (addText.length) {
+                jQuery('.block-for-mortage')
+                    .html('')
+                    .html(addText);
+
+            } else {
+                jQuery('.block-for-mortage').html('');
+            }
+
+
+
+
+            jQuery('.price-part.second .total-price span')
+                .html('')
+                .html($resultprice);
+            jQuery('.price-part.first .total-price span').html($resulteco);
             jQuery('.price-part.third .total-price span').html($resultprice + parseInt(50000));
 
             jQuery('#result-calculate').css('height', jQuery('.table-prices').height());
@@ -295,8 +343,8 @@ jQuery(document).ready(function () {
 
     if (jQuery('.add-form.form-2-6, .add-form.form-2-5, .add-form.form-2-4, .add-form.form-2-3, .add-form.form-2-2, .add-form.first, .add-form.second, .add-form.first-form-9, .add-form.form-8, .add-form.add-form-6, .add-form.form-4-1, .add-form.form-4-2, .add-form.form-3-1,.add-form.form-3-2, .add-form.form-2-1').length) {
 
-      //  jQuery('.add-form.first').click(function (e) {
-        jQuery("body").on( "click", ".add-form.first", function(e) {
+        //  jQuery('.add-form.first').click(function (e) {
+        jQuery("body").on("click", ".add-form.first", function (e) {
 
             e.preventDefault();
             var $thisParent = jQuery(this).parent();
@@ -714,6 +762,7 @@ function accordionQAPage() {
         });
     }
 }
+
 /*
 * Service Page
  */
@@ -721,7 +770,7 @@ function accordionQAPage() {
 function InitServiceOOO() {
     jQuery(".block-acc-ooo").click(function () {
 
-        if(jQuery(this).hasClass('show-acc')){
+        if (jQuery(this).hasClass('show-acc')) {
             jQuery(this).removeClass('show-acc');
             jQuery(this).find('.content-accordion-ooo').css('height', 0);
             jQuery(this).find('.change-state-link-accordion-ooo').html('');
@@ -729,10 +778,10 @@ function InitServiceOOO() {
             jQuery(this).find('.arrow-down-accordion-ooo').removeClass(' close').addClass(' open');
 
 
-        }else{
+        } else {
             jQuery(this).addClass('show-acc');
             var $thisheight = jQuery(this).find('.content-accordion-ooo-walp').height();
-            jQuery(this).find('.content-accordion-ooo').css('height', $thisheight+ 50);
+            jQuery(this).find('.content-accordion-ooo').css('height', $thisheight + 50);
             jQuery(this).find('.change-state-link-accordion-ooo').html('');
             jQuery(this).find('.change-state-link-accordion-ooo').html('Скрыть');
             jQuery(this).find('.arrow-down-accordion-ooo').removeClass(' open ').addClass('  close ');
@@ -892,25 +941,35 @@ function InitActionPriceTables() {
         $this.parent().parent().parent().find('.price-payment-result').css('height', '0');
         $this.parent().parent().parent().find('.price-payment-result').html('');
 
+        var parentClass = $this.parent().parent();
 
-        $this.parent().parent().addClass('active-price-choose');
-        if ($this.hasClass('showpayment')) {
+        parentClass.addClass('active-price-choose');
+
+
+        if ($this.hasClass('showpayment')) { // effects for hide or show payments plan
             $this.html('');
             $this.html('Посмотреть платеж');
             $this.removeClass('showpayment');
             $this.parent().parent().removeClass('active-price-choose');
+            $this.parent().parent().parent().find('.view-plan-play-calc-page').removeClass('showpayment');
+            $this.parent().parent().parent().find('.view-plan-play-calc-page').html('');
+
+            $this.parent().parent().parent().find('.view-plan-play-calc-page').html('Посмотреть платеж');
             $this.parent().find('.price-payment-result').css('height', '0');
             $this.parent().find('.price-payment-result').html('');
             return false;
         } else {
+            $this.parent().parent().parent().find('.view-plan-play-calc-page').removeClass('showpayment');
+            $this.parent().parent().parent().find('.view-plan-play-calc-page').html('');
 
+            $this.parent().parent().parent().find('.view-plan-play-calc-page').html('Посмотреть платеж');
             $this.html('');
             $this.html('Скрыть платеж');
             $this.addClass(' showpayment ');
         }
 
         var $method = 'plain';   // may be  'percent' and  'plain'
-        var $currentPrice = $this.parent().parent().find('.total-price span').html();
+        var $currentPrice = $this.parent().parent().find('.total-price span').html();  //  get price in table
         var $firstTwoPayment;
         var $firstMountPayment;
         var $secondMountPayment;
@@ -919,7 +978,7 @@ function InitActionPriceTables() {
         var lastPayment;
 
         if ($method == 'percent') {
-
+            // now don`t use
             $firstMountPayment = parseInt($currentPrice) / 5;
             $secondMountPayment = parseInt($currentPrice) / 4;
             $firstTwoPayment = $firstMountPayment + $secondMountPayment;
@@ -928,12 +987,20 @@ function InitActionPriceTables() {
 
 
         } else {
+            if (parentClass.hasClass('first')) {  // this Eco price
+                $firstTwoPayment = parseInt(20000 + 15000);
+                $firstMountPayment = parseInt(20000);
+                $secondMountPayment = parseInt(15000);
+                //  $mountPayment = parseInt(10000);
+                $mountPayment = parseInt($currentPrice) / 10;
+            } else {
 
-            $firstTwoPayment = parseInt(20000 + 25000);
-            $firstMountPayment = parseInt(20000);
-            $secondMountPayment = parseInt(25000);
-          //  $mountPayment = parseInt(10000);
-            $mountPayment = parseInt($currentPrice) / 10;
+                $firstTwoPayment = parseInt(20000 + 25000);
+                $firstMountPayment = parseInt(20000);
+                $secondMountPayment = parseInt(25000);
+                //  $mountPayment = parseInt(10000);
+                $mountPayment = parseInt($currentPrice) / 10;
+            }
 
 
         }
@@ -941,16 +1008,16 @@ function InitActionPriceTables() {
 
         var $priceWithOutFirstTwoMouth = parseInt($currentPrice) - $firstTwoPayment;
 
-        var Subtotal = $priceWithOutFirstTwoMouth - $fiveMountPayment;
-        var Subtotal = Math.floor($priceWithOutFirstTwoMouth / $mountPayment);
+        // var Subtotal = $priceWithOutFirstTwoMouth - $fiveMountPayment;
+        var Subtotal = Math.floor($priceWithOutFirstTwoMouth / $mountPayment);  // count  remainder  mouths
 
 
         $fiveMountPayment = parseInt($mountPayment * Subtotal);
 
-        var $lastMountPayment = parseInt($priceWithOutFirstTwoMouth - $fiveMountPayment);
+        //var $lastMountPayment = parseInt($priceWithOutFirstTwoMouth - $fiveMountPayment);
         var $lastMountPayment = parseInt($priceWithOutFirstTwoMouth - $fiveMountPayment);
 
-        if ($lastMountPayment > 0) {
+        if ($lastMountPayment >= 0) {
 
             lastPayment = true;
 
@@ -960,11 +1027,21 @@ function InitActionPriceTables() {
         }
         //lastPayment = false;
         if (lastPayment) {
-            var template = '<li><p>3 месяц: <span>' + $mountPayment + '</span> руб.</p></li>';
+
+            if ($firstTwoPayment == $currentPrice) {  // check price first Two Mounth  Price and total Price ==   3 mouth don't need
+
+                var template = '';
+
+            } else {
+                var template = '<li><p>3 месяц: <span>' + $mountPayment + '</span> руб.</p></li>';
+
+            }
+
+
             var template2 = '';
             var temporarytemplate = '';
             var redytemplate;
-            var maxvalue = Subtotal + parseInt(3);
+            var maxvalue = Subtotal + parseInt(2);
             var lastmounth = maxvalue + 1;
 
             for (var i = 4; i <= maxvalue; i++) {
@@ -974,8 +1051,10 @@ function InitActionPriceTables() {
 
             }
             redytemplate = template.concat(template2);
+            if ($lastMountPayment > 0) {  // this for last payment remainder
+                redytemplate = redytemplate.concat('<li><p>' + lastmounth + ' месяц: <span>' + $lastMountPayment + '</span> руб.</p></li>');
+            }
 
-            redytemplate = redytemplate.concat('<li><p>' + lastmounth + ' месяц: <span>' + $lastMountPayment + '</span> руб.</p></li>');
             //console.log(redytemplate);
 
 
@@ -995,7 +1074,7 @@ function InitActionPriceTables() {
             //	$this.find('.price-payment-result').html();
         } else {
             $this.parent().parent().find('.price-payment-result').html('Оплата суммы происходит в рассрочку по 10 000 то в месяц, подробности у специалиста');
-
+            $this.parent().parent().find('.price-payment-result').css('height', 80);
         }
 
 
@@ -1020,22 +1099,22 @@ function InitShowTooltip() {
         } else {
             $thisClass.removeClass('show-tooltip');
         }
-/*
-        $thisClass.mouseleave(function () {
-            jQuery('body').click(function (e) {
-                e.preventDefault();
+        /*
+                $thisClass.mouseleave(function () {
+                    jQuery('body').click(function (e) {
+                        e.preventDefault();
 
-                    $thisClass.removeClass('show-tooltip');
+                            $thisClass.removeClass('show-tooltip');
 
-            });
-        });*/
+                    });
+                });*/
 
         jQuery('.tooltip.calc-page').click(function (e) {
 
             e.preventDefault();
             var $this = jQuery(this);
 
-                $this.removeClass('show-tooltip');
+            $this.removeClass('show-tooltip');
 
 
         });
@@ -1250,7 +1329,7 @@ function InitUISliderPageProperty() {
     var $this = jQuery(".slider-ui-property");
     $this.slider({
         value: 0,//Значение, которое будет выставлено слайдеру при загрузке
-        min: 1000,//Минимально возможное значение на ползунке
+        min: 0,//Минимально возможное значение на ползунке
         max: 1500000,//Максимально возможное значение на ползунке
         step: 1000,//Шаг, с которым будет двигаться ползунок
         create: function (event, ui) {
@@ -1388,7 +1467,7 @@ function AddBlockTextInFormFields() {
 // ---------------------------------------------------------
 // Back To Top
 // ---------------------------------------------------------
-function backToTop(){
+function backToTop() {
     "use strict";
     jQuery(window).scroll(function () {
         if (jQuery(this).scrollTop() > 100) {
@@ -1397,10 +1476,10 @@ function backToTop(){
             jQuery('#back_to_top').removeClass('backactive');
         }
     });
-    jQuery(document).on('click','#back_to_top',function(e){
+    jQuery(document).on('click', '#back_to_top', function (e) {
         e.preventDefault();
 
-        jQuery('body,html').animate({scrollTop: 0}, jQuery(window).scrollTop()/3, 'linear');
+        jQuery('body,html').animate({scrollTop: 0}, jQuery(window).scrollTop() / 3, 'linear');
     });
 
 }

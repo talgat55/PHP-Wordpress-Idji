@@ -563,9 +563,9 @@ body {
 }
 
 #logo p {
-    font-size: 17px;
+    font-size: 19.5px;
     float: left;
-    margin-left: 22px;
+    margin-left: 12px;
     font-family: Georgia, sans-serif;
     font-weight: 400;
     margin-bottom: 0;
@@ -1049,7 +1049,17 @@ header .right-top-header .btn.btn-link-modal {
     font-size: 30px;
     color: #cb454c;
 }
-
+.check-capability-payment,
+.block-for-mortage{
+    padding: 30px 0;
+    color: #ffd25e;
+}
+.check-capability-payment{
+    text-align: center;
+}
+.no-payment-way{
+    color: red;
+}
 /*
 * Benefit
 */
