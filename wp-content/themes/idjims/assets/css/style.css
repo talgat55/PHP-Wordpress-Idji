@@ -373,7 +373,10 @@ span.wpcf7-not-valid-tip {
 .col-md-5-doc {
     width: 45%;
 }
-
+#reg-code{
+    display: none;
+    margin-top: 30px;
+}
 .page-user-profile .col-lg-3 {
     width: 32%;
     padding-right: 2%;
@@ -4626,7 +4629,16 @@ footer {
     border-radius: 0;
     margin-bottom: 20px;
 }
+.confirm.btn-registration{
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+}
+.confirm.btn-registration:hover{
+    background-color: #cb454c;;
 
+}
+.confirm-form ,
 .registration-form {
     margin-bottom: 30px;
 }

@@ -4,14 +4,12 @@
  */
 
 get_header();
-if (!is_user_logged_in()) {
-    wp_redirect(LinksTheme('login'));
-    exit;
+ checkUser(); // check logged user
 
-}
 $user_info = get_userdata(get_current_user_id());
 
 $cur_user_id = get_current_user_id();
+
 //	$cur_user_id =1;
 global $wpdb;
 $table_name = $wpdb->prefix . "addition_informaion";

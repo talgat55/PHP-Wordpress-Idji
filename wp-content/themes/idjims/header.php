@@ -11,9 +11,13 @@
     <title><?php bloginfo('name'); ?></title>
 
     <?php wp_head(); ?>
+    <script type="text/javascript">
+        var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+
+    </script>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
 <div id="page" class="site">
 
     <header class="site-header">

@@ -5,7 +5,6 @@
 
 get_header(); ?>
 <?php
-
 $ValueForHash = wp_create_nonce('ASMART');
 
 ?>
@@ -48,6 +47,7 @@ $ValueForHash = wp_create_nonce('ASMART');
                             <input name="confim_reg_password" type="password" class="form-control login-field"
                                    value="<?php echo(isset($_REQUEST['confim_reg_password']) ? $_REQUEST['confim_reg_password'] : null); ?>"
                                    placeholder="Потверждение Пароля" id="confim-reg-pass">
+
                             <div class="form-group choose-checkbox">
                                 <div class="checkboxFour">
                                     <input type="checkbox" checked name="check-998">
@@ -59,9 +59,8 @@ $ValueForHash = wp_create_nonce('ASMART');
                                 </div>
                             </div>
                         </div>
+
                     </div>
-
-
                     <input class="btn btn-primary btn-registration btn-block" type="submit" name="reg_submit"
                            value="Регистрация"/>
                 </form>

@@ -34,11 +34,7 @@ if (isset($_POST['user_profile_reg_submit'])) {
 
     global $wpdb;
     $cur_user_id = get_current_user_id();
-    if (!$cur_user_id) {   // dont verify user
-
-        wp_redirect(LinksTheme('login'));
-        exit;
-    }
+    checkUser(); // check logged user
     $table_name = $wpdb->prefix . "addition_informaion";
 
     $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");

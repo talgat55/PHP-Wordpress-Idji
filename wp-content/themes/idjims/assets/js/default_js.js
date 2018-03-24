@@ -215,7 +215,7 @@ jQuery(document).ready(function () {
 
         // Get Old
 
-         var valueOld =  jQuery('.choose-old').data("value");
+        var valueOld = jQuery('.choose-old').data("value");
 
         // var checkproperty = jQuery(".checkboxprop").val();
         if (isNaN(parseInt(valueNumberDependents))) {     // check value Number Dependents
@@ -275,9 +275,9 @@ jQuery(document).ready(function () {
             } else {
                 $numberpropertyprice = 0;
             }
-            if(valueOld == 0){  // calc Old Value
+            if (valueOld == 0) {  // calc Old Value
                 var $valueOld = parseInt(5000);
-            }else{
+            } else {
                 var $valueOld = 0;
             }
             var $resultprice = Number(100000 + $addCreditPrice + $addproperty + $numberpropertyprice - $valueOld);
@@ -295,8 +295,6 @@ jQuery(document).ready(function () {
             } else {
                 jQuery('.block-for-mortage').html('');
             }
-
-
 
 
             jQuery('.price-part.second .total-price span')
@@ -1030,11 +1028,11 @@ function InitActionPriceTables() {
         //lastPayment = false;
 
         var valuecredits = jQuery(".calculate-valuecredits").val();
-        if( parentClass.hasClass('third')  &&  valuecredits< 5){  // for VIP plan  if credit less 5
+        if (parentClass.hasClass('third') && valuecredits < 5) {  // for VIP plan  if credit less 5
 
             lastPayment = false;
         }
-        if (lastPayment ) {
+        if (lastPayment) {
 
             if ($firstTwoPayment == $currentPrice) {  // check price first Two Mounth  Price and total Price ==   3 mouth don't need
 
@@ -1491,3 +1489,4 @@ function backToTop() {
     });
 
 }
+

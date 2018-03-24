@@ -9,11 +9,7 @@ get_header(); ?>
     <div class="wrap">
 
         <?php
-        if (!is_user_logged_in()) {
-            wp_redirect(LinksTheme('login'));
-            exit;
-
-        }
+        checkUser(); // check logged user
         while (have_posts()) : the_post();
 
 

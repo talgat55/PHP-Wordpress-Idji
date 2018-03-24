@@ -49,6 +49,11 @@ if (!is_home()) {
 
     include_once('inc/user-profile.php');
 
+    /*
+     *  SMS Service
+     */
+    require_once('inc/sms.ru.php');
+
 
 }
 /*
@@ -91,6 +96,7 @@ function th_scripts()
     wp_enqueue_script('jquery.inputmask', get_theme_file_uri('/assets/js/jquery.inputmask.js'), array(), '2');
     wp_enqueue_script('jquery.equalheightresponsive.min', get_theme_file_uri('/assets/js/jquery.equalheightresponsive.min.js'), array(), '2');
     wp_enqueue_script('jquery.ui-slider', get_theme_file_uri('/assets/js/jquery-ui.min.js'), array(), '2');
+    wp_enqueue_script('ajax-confirm', get_theme_file_uri('/assets/js/ajax-confirm.js'), array(), '2');
     wp_enqueue_script('jquery.ui.touch-punch.min', get_theme_file_uri('/assets/js/jquery.ui.touch-punch.min.js'), array(), '2');
 
 
@@ -384,9 +390,20 @@ if (isset($_POST['reg_submit'])) {
     );
     $register_user = wp_insert_user($userdata);
     if (!is_wp_error($register_user)) {
+        $creds = array();
+        $creds['user_login'] = esc_attr($_POST['reg_name']);
+        $creds['user_password'] = esc_attr($_POST['reg_password']);
+        $creds['remember'] = true;
 
+        $user = wp_signon($creds, false);
+        if (is_wp_error($user)) {
+            $_SESSION['error_registration'] = $user->get_error_message();
+        } else {
+            wp_redirect(LinksTheme('confirm')); // confirm phone number
+        }
         //$_SESSION['error_registration'] = 'Регистрация успешна завершена';
-        wp_redirect(LinksTheme('user-profile'));
+
+
         exit;
     } else {
 
@@ -429,18 +446,20 @@ function my_string_limit_words($string, $word_limit)
 *
 */
 add_action('wp', 'my_cron_delete_files');
-function my_cron_delete_files() {
-    if( ! wp_next_scheduled( 'my_cron_delete_files_event' ) ) {
-        wp_schedule_event( time(), 'daily ', 'my_cron_delete_files_event');
+function my_cron_delete_files()
+{
+    if (!wp_next_scheduled('my_cron_delete_files_event')) {
+        wp_schedule_event(time(), 'daily ', 'my_cron_delete_files_event');
     }
 }
 
 add_action('my_cron_delete_files_event', 'destroyFiles');
 
-function destroyFiles(){
+function destroyFiles()
+{
 
 
-    $dir = __DIR__.'/inc/redypdf/';
+    $dir = __DIR__ . '/inc/redypdf/';
     if ($handle = opendir($dir)) {
         while (($file = readdir($handle)) !== false) {
             if ($file == '.' || $file == '..' || is_dir($dir . '/' . $file)) {
@@ -448,7 +467,7 @@ function destroyFiles(){
             }
 
 
-             unlink($dir.'/'.$file);
+            unlink($dir . '/' . $file);
 
         }
         closedir($handle);
@@ -661,7 +680,130 @@ function LinksTheme($link)
         case 'contact':
             return home_url("/contact/");
             break;
+        case 'confirm':
+            return home_url("/confirm/");
+            break;
 
     }
 
 }
+
+/*
+ *  Check User
+ */
+function checkUser()
+{
+
+    if (!is_user_logged_in()) {
+        wp_redirect(LinksTheme('login'));
+        exit;
+
+    } else {
+        $cur_user_id = get_current_user_id();
+        global $wpdb;
+        $table_name = $wpdb->prefix . "addition_informaion";
+        $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");
+        if (!is_page('confirm')) {  // check page Confirm   fix self redirect
+
+            if (!isset($results[0]->extra_phone)) {
+                wp_redirect(LinksTheme('confirm'));
+                exit;
+            }
+        }
+
+    }
+
+}
+
+/**
+ * AJAX Confirm account
+ */
+
+function check_account()
+{
+
+
+    $number = isset($_POST['number']) ? $_POST['number'] : $_POST['number'] = '0';
+    $code = isset($_POST['code']) ? $_POST['code'] : $_POST['code'] = 0;
+    $check = isset($_POST['check']) ? $_POST['check'] : $_POST['check'] = false;
+    ob_start();
+
+
+
+    if ($number AND $code == 0) {
+
+        $six_digit_random_number = mt_rand(100000, 999999);
+
+
+
+        $updatenumber = substr_replace($number, '7', 0, 1);
+
+        $smsru = new SMSRU('BD789B4B-A7F8-D5C2-A36E-D40CAC1DF37F'); // Ваш уникальный программный ключ, который можно получить на главной странице
+
+        $data = new stdClass();
+        $data->to = $updatenumber;
+        $data->text = 'Введите код:' . $six_digit_random_number; // Текст сообщения
+// $data->from = ''; // Если у вас уже одобрен буквенный отправитель, его можно указать здесь, в противном случае будет использоваться ваш отправитель по умолчанию
+// $data->time = time() + 7*60*60; // Отложить отправку на 7 часов
+// $data->translit = 1; // Перевести все русские символы в латиницу (позволяет сэкономить на длине СМС)
+// $data->test = 1; // Позволяет выполнить запрос в тестовом режиме без реальной отправки сообщения
+// $data->partner_id = '1'; // Можно указать ваш ID партнера, если вы интегрируете код в чужую систему
+
+        $sms = $smsru->send_one($data); // Отправка сообщения и возврат данных в переменную
+
+        if ($sms->status == "OK") { // Запрос выполнен успешно
+            $a = array(
+                'status' => ok,
+                'value' => $six_digit_random_number
+            );
+            echo json_encode($a);
+            // echo "ID сообщения: $sms->sms_id. ";
+            //  echo "Ваш новый баланс: $sms->balance";
+        } else {
+            $a = array(
+                'status' => false,
+                'value' => $sms->status_code." ".$sms->status_text
+            );
+            echo json_encode($a);
+        }
+
+    }
+    if ($code > 0) {
+
+        if ($check == 'true') {
+            $cur_user_id = get_current_user_id();
+            global $wpdb;
+            $table_name = $wpdb->prefix . "addition_informaion";
+            $wpdb->query($wpdb->prepare(
+                "INSERT INTO `" . $table_name . "` (id, id_user,extra_phone) VALUES ( %d, %d, %s)",
+                array(
+                    0,
+                    $cur_user_id,
+                    $number
+                )
+            ));
+            $a = array(
+                'status' => success,
+                'url' => LinksTheme('user-profile')
+            );
+            echo json_encode($a);
+
+        } else {
+
+            $a = array(
+                'status' => falsecheck
+            );
+            echo json_encode($a);
+        }
+
+    }
+
+    wp_reset_postdata();
+    $data = ob_get_clean();
+    wp_send_json_success($data);
+
+    wp_die();
+}
+
+add_action('wp_ajax_check_account', 'check_account');
+add_action('wp_ajax_nopriv_check_account', 'check_account');

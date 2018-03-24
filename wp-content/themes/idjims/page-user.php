@@ -22,11 +22,7 @@ get_header(); ?>
             </div>
         </div>
         <?php
-        if (!is_user_logged_in()) {
-            wp_redirect(LinksTheme('login'));
-            exit;
-
-        }
+        checkUser(); // check logged user
         /*
         * Print emty Fileds User profile
         */
