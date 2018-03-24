@@ -738,7 +738,7 @@ function check_account()
 
         $updatenumber = substr_replace($number, '7', 0, 1);
 
-        $smsru = new SMSRU('BD789B4B-A7F8-D5C2-A36E-D40CAC1DF37F'); // Ваш уникальный программный ключ, который можно получить на главной странице
+        $smsru = new SMSRU(''); // Ваш уникальный программный ключ, который можно получить на главной странице
 
         $data = new stdClass();
         $data->to = $updatenumber;
