@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b0d8af4-c7ca-47f8-9bfd-f84269594049" name="Default" comment="" />
+    <list default="true" id="8b0d8af4-c7ca-47f8-9bfd-f84269594049" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/idjims/assets/css/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/idjims/assets/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/idjims/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/idjims/functions.php" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/idjims/page-service-ipp.php" afterPath="$PROJECT_DIR$/wp-content/themes/idjims/page-service-ipp.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,14 +16,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="377" column="21" lean-forward="false" selection-start-line="377" selection-start-column="21" selection-end-line="377" selection-end-column="21" />
+            <state relative-caret-position="256">
+              <caret line="1051" column="20" lean-forward="false" selection-start-line="1051" selection-start-column="20" selection-end-line="1051" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page-service-ip.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/page-service-ip.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="670" column="0" lean-forward="false" selection-start-line="670" selection-start-column="0" selection-end-line="680" selection-end-column="14" />
               <folding>
-                <element signature="e#73120#73275#2" expanded="true" />
-                <element signature="e#74069#74224#2" expanded="true" />
+                <marker date="1521802618200" expanded="true" signature="34277:34385" ph="..." />
               </folding>
             </state>
           </provider>
@@ -27,7 +41,7 @@
       <file leaf-file-name="page-calc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/page-calc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
+            <state relative-caret-position="10062">
               <caret line="389" column="47" lean-forward="false" selection-start-line="389" selection-start-column="42" selection-end-line="389" selection-end-column="47" />
               <folding />
             </state>
@@ -37,26 +51,26 @@
       <file leaf-file-name="default_js.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/js/default_js.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-509">
-              <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+            <state relative-caret-position="702">
+              <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="740" column="28" lean-forward="false" selection-start-line="740" selection-start-column="28" selection-end-line="740" selection-end-column="28" />
+            <state relative-caret-position="19344">
+              <caret line="744" column="37" lean-forward="false" selection-start-line="744" selection-start-column="37" selection-end-line="744" selection-end-column="37" />
               <folding>
-                <marker date="1521886670456" expanded="true" signature="8174:8886" ph="CREATE TABLE... $" />
-                <marker date="1521886670456" expanded="true" signature="15377:16429" ph="..." />
-                <marker date="1521886670456" expanded="true" signature="15434:16411" ph="..." />
-                <marker date="1521886670456" expanded="true" signature="15539:16063" ph="..." />
-                <marker date="1521886670456" expanded="true" signature="15756:16026" ph="..." />
-                <marker date="1521886670456" expanded="true" signature="19451:19522" ph="SELECT * FRO... ${$table_name}" />
-                <marker date="1521886670456" expanded="true" signature="21928:22008" ph="INSERT INTO `${$table_name}`... " />
+                <marker date="1521886736030" expanded="true" signature="8174:8886" ph="CREATE TABLE... $" />
+                <marker date="1521886736030" expanded="true" signature="15377:16429" ph="..." />
+                <marker date="1521886736030" expanded="true" signature="15434:16411" ph="..." />
+                <marker date="1521886736030" expanded="true" signature="15539:16063" ph="..." />
+                <marker date="1521886736030" expanded="true" signature="15756:16026" ph="..." />
+                <marker date="1521886736030" expanded="true" signature="19451:19522" ph="SELECT * FRO... ${$table_name}" />
+                <marker date="1521886736030" expanded="true" signature="21964:22044" ph="INSERT INTO `${$table_name}`... " />
               </folding>
             </state>
           </provider>
@@ -65,8 +79,8 @@
       <file leaf-file-name="ajax-confirm.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/js/ajax-confirm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+            <state relative-caret-position="1040">
+              <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -75,7 +89,7 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
+            <state relative-caret-position="364">
               <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="19" />
               <folding>
                 <marker date="1521873101808" expanded="true" signature="942:1361" ph="..." />
@@ -90,7 +104,7 @@
       <file leaf-file-name="load-more.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/js/load-more.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="260">
               <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="44" />
               <folding />
             </state>
@@ -100,8 +114,8 @@
       <file leaf-file-name="page-confirm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/page-confirm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="598">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#6#60#0#PHP" expanded="true" />
               </folding>
@@ -156,7 +170,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/idjims/page-service-oo.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/idjims/page-service-fl.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/idjims/page-service-ip.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/idjims/page-service-ipp.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/idjims/page-service-p.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/idjims/page-calc.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/idjims/page-registration.php" />
@@ -167,10 +180,11 @@
         <option value="$PROJECT_DIR$/wp-content/themes/idjims/page-user-profile.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/idjims/page-confirm.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/idjims/header.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/idjims/assets/css/style.css" />
         <option value="$PROJECT_DIR$/wp-config.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/idjims/assets/js/ajax-confirm.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/idjims/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/idjims/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/idjims/page-service-ipp.php" />
       </list>
     </option>
   </component>
@@ -182,8 +196,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1873" />
-    <option name="height" value="1030" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -202,7 +218,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -257,6 +272,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -294,18 +310,20 @@
       <workItem from="1521206270730" duration="4000" />
       <workItem from="1521500884696" duration="8848000" />
       <workItem from="1521695857556" duration="598000" />
-      <workItem from="1521676655008" duration="88457000" />
+      <workItem from="1521676655008" duration="89348000" />
+      <workItem from="1521968591960" duration="63000" />
+      <workItem from="1522053239196" duration="49000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104579000" />
+    <option name="totallyTimeSpent" value="105582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14554243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14983888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -313,7 +331,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -358,14 +376,121 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <marker date="1521873101808" expanded="true" signature="942:1361" ph="..." />
+            <marker date="1521873101808" expanded="true" signature="994:1330" ph="..." />
+            <marker date="1521873101808" expanded="true" signature="1449:1740" ph="..." />
+            <marker date="1521873101808" expanded="true" signature="1501:1709" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/js/load-more.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/page-confirm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9802">
+          <caret line="377" column="21" lean-forward="false" selection-start-line="377" selection-start-column="21" selection-end-line="377" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/page-calc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10062">
+          <caret line="389" column="47" lean-forward="false" selection-start-line="389" selection-start-column="42" selection-end-line="389" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/js/default_js.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/js/ajax-confirm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1040">
+          <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <marker date="1521873101808" expanded="true" signature="942:1361" ph="..." />
+            <marker date="1521873101808" expanded="true" signature="994:1330" ph="..." />
+            <marker date="1521873101808" expanded="true" signature="1449:1740" ph="..." />
+            <marker date="1521873101808" expanded="true" signature="1501:1709" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/js/load-more.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/page-confirm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19344">
+          <caret line="744" column="37" lean-forward="true" selection-start-line="744" selection-start-column="37" selection-end-line="744" selection-end-column="37" />
+          <folding>
+            <marker date="1521886736030" expanded="true" signature="8174:8886" ph="CREATE TABLE... $" />
+            <marker date="1521886736030" expanded="true" signature="15377:16429" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="15434:16411" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="15539:16063" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="15756:16026" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="19451:19522" ph="SELECT * FRO... ${$table_name}" />
+            <marker date="1521886736030" expanded="true" signature="21964:22044" ph="INSERT INTO `${$table_name}`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#73120#73275#2" expanded="true" />
-            <element signature="e#74069#74224#2" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -373,7 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -389,9 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-          <folding>
-            <marker date="1521799404415" expanded="true" signature="46658:46766" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -399,10 +520,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65988">
           <caret line="2538" column="17" lean-forward="false" selection-start-line="2538" selection-start-column="17" selection-end-line="2538" selection-end-column="17" />
-          <folding>
-            <element signature="e#73120#73275#2" expanded="true" />
-            <element signature="e#74069#74224#2" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -410,7 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -426,10 +543,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10738">
           <caret line="413" column="1" lean-forward="false" selection-start-line="413" selection-start-column="1" selection-end-line="413" selection-end-column="1" />
-          <folding>
-            <element signature="e#73120#73275#2" expanded="true" />
-            <element signature="e#74069#74224#2" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -445,13 +559,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521886670456" expanded="true" signature="8174:8886" ph="CREATE TABLE... $" />
-            <marker date="1521886670456" expanded="true" signature="15377:16429" ph="..." />
-            <marker date="1521886670456" expanded="true" signature="15434:16411" ph="..." />
-            <marker date="1521886670456" expanded="true" signature="15539:16063" ph="..." />
-            <marker date="1521886670456" expanded="true" signature="15756:16026" ph="..." />
-            <marker date="1521886670456" expanded="true" signature="19451:19522" ph="SELECT * FRO... ${$table_name}" />
-            <marker date="1521886670456" expanded="true" signature="21928:22008" ph="INSERT INTO `${$table_name}`... " />
+            <marker date="1521886736030" expanded="true" signature="8174:8886" ph="CREATE TABLE... $" />
+            <marker date="1521886736030" expanded="true" signature="15377:16429" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="15434:16411" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="15539:16063" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="15756:16026" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="19451:19522" ph="SELECT * FRO... ${$table_name}" />
+            <marker date="1521886736030" expanded="true" signature="21964:22044" ph="INSERT INTO `${$table_name}`... " />
           </folding>
         </state>
       </provider>
@@ -460,10 +574,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10738">
           <caret line="413" column="1" lean-forward="false" selection-start-line="413" selection-start-column="1" selection-end-line="413" selection-end-column="1" />
-          <folding>
-            <element signature="e#73120#73275#2" expanded="true" />
-            <element signature="e#74069#74224#2" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -479,13 +590,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521886670456" expanded="true" signature="8174:8886" ph="CREATE TABLE... $" />
-            <marker date="1521886670456" expanded="true" signature="15377:16429" ph="..." />
-            <marker date="1521886670456" expanded="true" signature="15434:16411" ph="..." />
-            <marker date="1521886670456" expanded="true" signature="15539:16063" ph="..." />
-            <marker date="1521886670456" expanded="true" signature="15756:16026" ph="..." />
-            <marker date="1521886670456" expanded="true" signature="19451:19522" ph="SELECT * FRO... ${$table_name}" />
-            <marker date="1521886670456" expanded="true" signature="21928:22008" ph="INSERT INTO `${$table_name}`... " />
+            <marker date="1521886736030" expanded="true" signature="8174:8886" ph="CREATE TABLE... $" />
+            <marker date="1521886736030" expanded="true" signature="15377:16429" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="15434:16411" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="15539:16063" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="15756:16026" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="19451:19522" ph="SELECT * FRO... ${$table_name}" />
+            <marker date="1521886736030" expanded="true" signature="21964:22044" ph="INSERT INTO `${$table_name}`... " />
           </folding>
         </state>
       </provider>
@@ -494,10 +605,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10738">
           <caret line="413" column="1" lean-forward="true" selection-start-line="413" selection-start-column="1" selection-end-line="413" selection-end-column="1" />
-          <folding>
-            <element signature="e#73120#73275#2" expanded="true" />
-            <element signature="e#74069#74224#2" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -526,7 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -534,7 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -542,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="610">
           <caret line="68" column="15" lean-forward="false" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -550,29 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="284" column="55" lean-forward="false" selection-start-line="284" selection-start-column="55" selection-end-line="284" selection-end-column="55" />
-          <folding>
-            <marker date="1521802746233" expanded="true" signature="35683:35791" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/page-service-ipp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
-          <caret line="305" column="77" lean-forward="false" selection-start-line="305" selection-start-column="77" selection-end-line="305" selection-end-column="77" />
-          <folding>
-            <marker date="1521802650232" expanded="true" signature="37088:37196" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/page-service-ip.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="287" column="77" lean-forward="false" selection-start-line="287" selection-start-column="77" selection-end-line="287" selection-end-column="77" />
-          <folding>
-            <marker date="1521802618200" expanded="true" signature="34277:34385" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -580,9 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
           <caret line="293" column="54" lean-forward="false" selection-start-line="293" selection-start-column="32" selection-end-line="293" selection-end-column="54" />
-          <folding>
-            <marker date="1521802595941" expanded="true" signature="34663:34771" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -590,9 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="641" column="54" lean-forward="false" selection-start-line="641" selection-start-column="32" selection-end-line="641" selection-end-column="54" />
-          <folding>
-            <marker date="1521799404415" expanded="true" signature="46658:46766" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -600,9 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="454" column="14" lean-forward="true" selection-start-line="454" selection-start-column="14" selection-end-line="454" selection-end-column="14" />
-          <folding>
-            <marker date="1521395190607" expanded="true" signature="27093:27203" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -610,11 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="41" />
-          <folding>
-            <marker date="1521847464541" expanded="true" signature="1317:1337" ph="..." />
-            <marker date="1521847464541" expanded="true" signature="2222:2242" ph="..." />
-            <marker date="1521847464541" expanded="true" signature="4591:4662" ph="SELECT * FRO... ${$table_name}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -622,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -630,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -638,17 +704,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <marker date="1521847753342" expanded="true" signature="1487:1558" ph="SELECT * FRO... ${$table_name}" />
-            <marker date="1521847753342" expanded="true" signature="1643:2198" ph="INSERT INTO `${$table_name}`... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/page-confirm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="598">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#6#60#0#PHP" expanded="true" />
           </folding>
@@ -659,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="72" column="29" lean-forward="true" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,15 +728,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <marker date="1521872475530" expanded="true" signature="310:381" ph="SELECT * FRO... ${$table_name}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/js/load-more.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="260">
           <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="44" />
           <folding />
         </state>
@@ -683,26 +741,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/page-calc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
+        <state relative-caret-position="10062">
           <caret line="389" column="47" lean-forward="false" selection-start-line="389" selection-start-column="42" selection-end-line="389" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="377" column="21" lean-forward="false" selection-start-line="377" selection-start-column="21" selection-end-line="377" selection-end-column="21" />
-          <folding>
-            <element signature="e#73120#73275#2" expanded="true" />
-            <element signature="e#74069#74224#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
+        <state relative-caret-position="364">
           <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="19" />
           <folding>
             <marker date="1521873101808" expanded="true" signature="942:1361" ph="..." />
@@ -715,33 +762,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/js/default_js.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-509">
-          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        <state relative-caret-position="702">
+          <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/js/ajax-confirm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        <state relative-caret-position="1040">
+          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="740" column="28" lean-forward="false" selection-start-line="740" selection-start-column="28" selection-end-line="740" selection-end-column="28" />
+        <state relative-caret-position="19344">
+          <caret line="744" column="37" lean-forward="false" selection-start-line="744" selection-start-column="37" selection-end-line="744" selection-end-column="37" />
           <folding>
-            <marker date="1521886670456" expanded="true" signature="8174:8886" ph="CREATE TABLE... $" />
-            <marker date="1521886670456" expanded="true" signature="15377:16429" ph="..." />
-            <marker date="1521886670456" expanded="true" signature="15434:16411" ph="..." />
-            <marker date="1521886670456" expanded="true" signature="15539:16063" ph="..." />
-            <marker date="1521886670456" expanded="true" signature="15756:16026" ph="..." />
-            <marker date="1521886670456" expanded="true" signature="19451:19522" ph="SELECT * FRO... ${$table_name}" />
-            <marker date="1521886670456" expanded="true" signature="21928:22008" ph="INSERT INTO `${$table_name}`... " />
+            <marker date="1521886736030" expanded="true" signature="8174:8886" ph="CREATE TABLE... $" />
+            <marker date="1521886736030" expanded="true" signature="15377:16429" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="15434:16411" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="15539:16063" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="15756:16026" ph="..." />
+            <marker date="1521886736030" expanded="true" signature="19451:19522" ph="SELECT * FRO... ${$table_name}" />
+            <marker date="1521886736030" expanded="true" signature="21964:22044" ph="INSERT INTO `${$table_name}`... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/page-service-ip.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="670" column="0" lean-forward="false" selection-start-line="670" selection-start-column="0" selection-end-line="680" selection-end-column="14" />
+          <folding>
+            <marker date="1521802618200" expanded="true" signature="34277:34385" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/page-service-ipp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="727" column="14" lean-forward="false" selection-start-line="727" selection-start-column="14" selection-end-line="727" selection-end-column="14" />
+          <folding>
+            <marker date="1522053297332" expanded="true" signature="37088:37196" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/idjims/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="1051" column="20" lean-forward="false" selection-start-line="1051" selection-start-column="20" selection-end-line="1051" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

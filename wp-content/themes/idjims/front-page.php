@@ -411,7 +411,7 @@ get_header(); ?>
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/service1-2.jpg') ?>">
                         <div class="service-text-block">
                             <h3>Банкротство гражданина</h3>
-                            <a href="http://idgis.trekweb.ru/banlrotstvo-fl/">Узнать подробнее</a>
+                            <a href="<?php echo LinksTheme('banlrotstvo-fl'); ?>">Узнать подробнее</a>
                         </div>
                     </div>
                 </div>
@@ -420,7 +420,7 @@ get_header(); ?>
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/service2-2.jpg') ?>">
                         <div class="service-text-block">
                             <h3>Банкротство ипотечника</h3>
-                            <a href="http://idgis.trekweb.ru/bankrotstvo-ipotechikov/">Узнать подробнее</a>
+                            <a href="<?php echo LinksTheme('bankrotstvo-ipotechikov'); ?>">Узнать подробнее</a>
                         </div>
                     </div>
                 </div>
@@ -429,7 +429,7 @@ get_header(); ?>
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/service3-2.jpg') ?>">
                         <div class="service-text-block">
                             <h3>Банкротство поручителя</h3>
-                            <a href="http://idgis.trekweb.ru/bankrotstvo-poruchitelya/">Узнать подробнее</a>
+                            <a href="<?php echo LinksTheme('bankrotstvo-poruchitelya'); ?>">Узнать подробнее</a>
                         </div>
                     </div>
                 </div>
@@ -438,7 +438,7 @@ get_header(); ?>
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/service4-2.jpg') ?>">
                         <div class="service-text-block">
                             <h3>Банкротство ИП</h3>
-                            <a href="http://idgis.trekweb.ru/bankrotstvo-ip/">Узнать подробнее</a>
+                            <a href="<?php echo LinksTheme('bankrotstvo-ip'); ?>">Узнать подробнее</a>
                         </div>
                     </div>
                 </div>
@@ -448,7 +448,7 @@ get_header(); ?>
                 <img data-src="<?php echo get_theme_file_uri('/assets/images/service5-2.jpg') ?>">
                 <div class="service-text-block">
                     <h3>Банкротство ООО</h3>
-                    <a href="#">Узнать подробнее</a>
+                    <a href="<?php echo LinksTheme('bankrotstvo-ooo'); ?>">Узнать подробнее</a>
                 </div>
             </div>
 
@@ -543,7 +543,7 @@ get_header(); ?>
 
                 <a href="#" class="slider-arrow-right"><span class="icon-right-open"></span></a>
             </div>
-            <div class="block-link-client"><a href="http://idgis.trekweb.ru/reviews/" class="link-client-more">Читать
+            <div class="block-link-client"><a href="<?php echo LinksTheme('reviews'); ?>" class="link-client-more">Читать
                     больше</a></div>
         </div>
     </section>
