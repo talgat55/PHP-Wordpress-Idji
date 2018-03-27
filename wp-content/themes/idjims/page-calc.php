@@ -83,7 +83,7 @@ get_header(); ?>
                         <div class="calculator-page">
                             <div class="field">
                                 <select class="select-box" name="registrationRegion">
-                                    <option value="default" selected="selected">Выберите регион</option>
+                                    <option value="default" >Выберите регион</option>
                                     <option value="Москва">Москва</option>
                                     <option value="Санкт-Петербург">Санкт-Петербург</option>
                                     <option value="Адыгея Республика">Адыгея Республика</option>
@@ -115,7 +115,7 @@ get_header(); ?>
                                     <option value="Карачаево-Черкесская Республика">Карачаево-Черкесская Республика
                                     </option>
                                     <option value="Карелия Республика">Карелия Республика</option>
-                                    <option value="Кемеровская область">Кемеровская область</option>
+                                    <option value="Кемеровская область" selected="selected">Кемеровская область</option>
                                     <option value="Кировская область">Кировская область</option>
                                     <option value="Коми Республика">Коми Республика</option>
                                     <option value="Костромская область">Костромская область</option>
@@ -322,7 +322,7 @@ get_header(); ?>
                             <div class="top-price-content">
                                 <img src="<?php echo get_theme_file_uri('/assets/images/cup-half.png') ?>">
                                 <h3>Пакет</br> Эконом</h3>
-                                <span>ОПТИМАЛЬНЫЙ</span>
+
                             </div>
                             <ul class="table-price">
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">
@@ -355,6 +355,7 @@ get_header(); ?>
                             <div class="top-price-content">
                                 <img src="<?php echo get_theme_file_uri('/assets/images/cup-third.png') ?>">
                                 <h3>Пакет</br> Стандарт</h3>
+                                <span>ОПТИМАЛЬНЫЙ</span>
                             </div>
                             <ul class="table-price">
                                 <li><img src="<?php echo get_theme_file_uri('/assets/images/price-check.png') ?>">

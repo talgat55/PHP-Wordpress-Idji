@@ -149,7 +149,7 @@ get_header(); ?>
                     <div class="block-calc clearfix">
                         <img data-src="<?php echo get_theme_file_uri('/assets/images/mon-2.jpg') ?>">
                         <p>Вы получите :</p>
-                        <div class="result-calc"><span>0</span> руб.</div>
+                        <div class="result-calc"><span>95000</span> руб.</div>
                     </div>
                 </div>
             </div>
@@ -163,7 +163,7 @@ get_header(); ?>
             <div class="border-use-our"></div>
             <div class="col-md-6  animation-block  opacity-zero" data-animation="slideInLeft">
                 <div class="block-use-our">
-                    <a href="http://idgis.trekweb.ru/calculate/" class="block-use-our-walp-2 clearfix">
+                    <a href="<?php echo LinksTheme('calculate');  ?>" class="block-use-our-walp-2 clearfix">
                         <h3>Калькулятор <span>банкротства</span></h3>
                         <p>Узнайте, подходит ли банкротство в Вашем
                             случае, а также узнайте стоимость наших услуг!</p>
@@ -175,14 +175,14 @@ get_header(); ?>
             </div>
             <div class="col-md-6 no-padding-right  animation-block  opacity-zero" data-animation="slideInRight">
                 <div class="block-use-our">
-                    <div class="block-use-our-walp-2 clearfix">
+                    <a  href="<?php echo LinksTheme('user-doc');  ?>"  class="block-use-our-walp-2 clearfix">
                         <h3>Бесплатное <span>банкротство</span></h3>
                         <p>Зарегистрируйтесь на сайте и получите
                             возможность бесплатно подготовить все документы
                             для прохождения процедуры банкротства своими силами!</p>
                         <img class="align-right"
                              data-src="<?php echo get_theme_file_uri('/assets/images/paper1-2.png') ?>">
-                    </div>
+                    </a>
 
                 </div>
             </div>
@@ -711,7 +711,7 @@ get_header(); ?>
 
                 <a href="#" class="slider-arrow-right"><span class="icon-right-open"></span></a>
             </div>
-            <div class="block-link-client"><a href="http://idgis.trekweb.ru/reviews/" class="link-client-more">Читать
+            <div class="block-link-client"><a href="<?php echo LinksTheme('reviews'); ?>" class="link-client-more">Читать
                     больше</a></div>
         </div>
     </section>

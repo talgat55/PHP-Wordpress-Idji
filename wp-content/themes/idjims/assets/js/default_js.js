@@ -237,14 +237,14 @@ jQuery(document).ready(function () {
                 .addClass(' no-payment-way ')
                 .html('Процедура реструктуризации невозможна.');
 
-            jQuery('#result-calculate').addClass(' overflow-hidden ');
-            jQuery('#result-calculate').css('height', 0);
+           // jQuery('#result-calculate').addClass(' overflow-hidden ');
+           // jQuery('#result-calculate').css('height', 0);
         } else {
             jQuery('.check-capability-payment')
                 .html('')
                 .removeClass(' no-payment-way ')
                 .html('Cуд может утвердить план реструктуризации, нужна консультация специалиста, и что подробнее можно прочесть в соответствующем разделе сайта');
-
+        }
             var $addCreditPrice, addText, $addproperty, $addCreditPriceEco, $numberpropertyprice;
 
             if (valuecredits > 5) {
@@ -307,7 +307,7 @@ jQuery(document).ready(function () {
             jQuery('#result-calculate').removeClass('overflow-hidden');
 
 
-        }
+
 
 
     });
@@ -1297,7 +1297,7 @@ function InitUISlider() {
             jQuery("#valueidslider").html(ui.value);//При изменении значения ползунка заполняем элемент с id contentSlider
             var $result = ui.value * 1.3 - 100000;
 
-            if ($result > 0 && ui.value >= 500000) {
+            if ($result > 0 && ui.value >= 150000) {
                 jQuery(".result-calc span").html($result);//При изменении значения ползунка заполняем элемент с id contentSlider
             } else {
                 jQuery(".result-calc span").html('0');
