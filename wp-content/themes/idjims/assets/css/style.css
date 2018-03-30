@@ -805,6 +805,11 @@ header .right-top-header .btn.btn-link-modal {
     float: right;
     margin-right: 70px;
 }
+.slider-block-content-walpaper.second{
+    width: 60%;
+
+}
+
 
 .title-slider {
     font-size: 63px;
@@ -814,7 +819,27 @@ header .right-top-header .btn.btn-link-modal {
     padding: 12px 14px;
     position: relative;
 }
+.second .title-slider{
+    background-color: transparent;
+    padding: 12px 0;
+}
+.second .title-slider::after{
+    display: none;
+}
+.second  .title-slider span{
+    background-color: #008fdb;
+    padding: 0 7px 7px 7px;
+    line-height: 56px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.second .text-slider {
+    border-bottom: 2px solid #ffcc00;
+    display: inline-block;
+    line-height: 39px;
+    margin-top: 50px;
 
+}
 .text-slider {
     font-size: 34px;
     font-family: "Minsk";
@@ -5319,6 +5344,13 @@ footer {
 @media (max-width: 767px) {
     .modal-form {
         width: 100%;
+    }
+    .second .title-slider {
+        text-align: left;
+    }
+    .second .text-slider {
+        margin-top: 4px;
+        margin-right: 0;
     }
     #plus-arbitrazh .col-md-3{
         width: 100%;

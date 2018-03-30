@@ -203,36 +203,6 @@ function post_type_action()
     register_post_type('action', $args);
 }
 
-/*
-* Meta box Slider
-*/
-add_filter('rwmb_meta_boxes', 'your_prefix_file_demo');
-function your_prefix_file_demo($meta_boxes)
-{
-    $meta_boxes[] = array(
-        'title' => __('Дополнительное поле', 'your-prefix'),
-        'post_types' => 'slider',
-        'fields' => array(
-            array(
-                'id' => 'title_meta',
-                'name' => 'Заголовок',
-                'type' => 'text',
-            ),
-            array(
-                'name' => 'Текст',
-                'id' => 'text_meta',
-                'type' => 'text'
-            ),
-            array(
-                'name' => 'Выделеное слово',
-                'id' => 'select_meta',
-                'type' => 'text'
-            )
-        ),
-    );
-    return $meta_boxes;
-}
-
 
 /*
 * Meta Box for CLients
@@ -742,7 +712,7 @@ function check_account()
 
         $data = new stdClass();
         $data->to = $updatenumber;
-        $data->text = 'Введите код:' . $six_digit_random_number; // Текст сообщения
+        $data->text = 'Компания Иджис\n Подтверждение регистрации. \n Введите код:' . $six_digit_random_number; // Текст сообщения
 // $data->from = ''; // Если у вас уже одобрен буквенный отправитель, его можно указать здесь, в противном случае будет использоваться ваш отправитель по умолчанию
 // $data->time = time() + 7*60*60; // Отложить отправку на 7 часов
 // $data->translit = 1; // Перевести все русские символы в латиницу (позволяет сэкономить на длине СМС)

@@ -6,7 +6,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?php echo get_theme_file_uri('/assets/images/favicon-2.png') ?>"
+    <link rel="shortcut icon" href="<?php echo get_theme_file_uri('/assets/images/favicon-alt.png') ?>"
           type="image/x-icon"/>
     <title><?php bloginfo('name'); ?></title>
 
@@ -15,6 +15,16 @@
         var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
 
     </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116537806-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116537806-1');
+</script>
+
 </head>
 
 <body <?php body_class(); ?> >

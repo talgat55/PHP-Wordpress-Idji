@@ -20,23 +20,39 @@ get_header(); ?>
                 //  $image   = aq_resize( $img_url, 1920, 720, true ); // Resize & crop img
 
                 //	$image ? $image:$img_url;
-                $WordSelect = get_post_meta($post_id_slider, 'select_meta', true);
-                $ArrayText = explode(' ', get_post_meta($post_id_slider, 'text_meta', true));
-                foreach ($ArrayText as $key => $value) {
-                    if ($WordSelect == $value) {
+                $WordSelect = get_field('select_word');
 
-                        $ArrayText[$key] = '<span>' . $value . '</span>';
+                $StyleSlder = get_field('style_slider');
 
+                if ($StyleSlder == 'first') {
+                    $ArrayText = explode(' ', get_field('text'));
+                    foreach ($ArrayText as $key => $value) {
+                        if ($WordSelect == $value) {
+
+                            $ArrayText[$key] = '<span>' . $value . '</span>';
+
+                        }
                     }
-                }
+                    $TitleSlider = get_field('title');
+                    $RedyText = implode(" ", $ArrayText);
+                } else {
+                    $ArrayTitle = explode(' ', get_field('title'));
+                    foreach ($ArrayTitle as $key => $value) {
+                        if ($WordSelect == $value) {
 
-                $RedyText = implode(" ", $ArrayText);
+                            $ArrayTitle[$key] = '<span>' . $value . '</span>';
+
+                        }
+                    }
+                    $RedyText = get_field('text');
+                    $TitleSlider = implode(" ", $ArrayTitle);
+                }
                 echo '	<div  class="slider-walpaper" style="   background: url(' . esc_url($img_url) . ');  background-position: center; ">
 
             <div class="slider-block-content">
             <div class="container">
-            <div class="slider-block-content-walpaper">
-              <div class="title-slider" >' . get_post_meta($post_id_slider, 'title_meta', true) . '</div>
+            <div class="slider-block-content-walpaper ' . $StyleSlder . '">
+              <div class="title-slider" >' . $TitleSlider . '</div>
               <p class="text-slider" >
               ' . $RedyText . '
               </p>
@@ -111,7 +127,7 @@ get_header(); ?>
             <div class="border-use-our"></div>
             <div class="col-md-6 animation-block  opacity-zero" data-animation="slideInLeft">
                 <div class="block-use-our">
-                    <a href="<?php echo LinksTheme('calculate');  ?>" class="block-use-our-walp-2 clearfix">
+                    <a href="<?php echo LinksTheme('calculate'); ?>" class="block-use-our-walp-2 clearfix">
 
                         <h3>Калькулятор <span>банкротства</span></h3>
                         <p>Узнайте, подходит ли банкротство в Вашем
@@ -125,7 +141,7 @@ get_header(); ?>
             </div>
             <div class="col-md-6 no-padding-right animation-block  opacity-zero" data-animation="slideInRight">
                 <div class="block-use-our">
-                    <a href="<?php echo LinksTheme('user-doc');  ?>"  class="block-use-our-walp-2 clearfix">
+                    <a href="<?php echo LinksTheme('user-doc'); ?>" class="block-use-our-walp-2 clearfix">
                         <h3>Бесплатное <span>банкротство</span></h3>
                         <p>Зарегистрируйтесь на сайте и получите
                             возможность бесплатно подготовить все документы
@@ -144,7 +160,7 @@ get_header(); ?>
         <div class="container">
             <div class="title-section center-white">Почему выгодно с нами работать?</div>
             <div>
-                <div class="col-md-3 benefit-cols animation-block  opacity-zero"  data-animation="slideInUp">
+                <div class="col-md-3 benefit-cols animation-block  opacity-zero" data-animation="slideInUp">
                     <div class="benefit-block">
                         <div class="why-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/shape6-2.jpg') ?>">
@@ -154,7 +170,7 @@ get_header(); ?>
                             посредниками.</p>
                     </div>
                 </div>
-                <div class="col-md-3 benefit-cols animation-block  opacity-zero"   data-animation="slideInUp">
+                <div class="col-md-3 benefit-cols animation-block  opacity-zero" data-animation="slideInUp">
                     <div class="benefit-block">
                         <div class="why-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/shape5-2.jpg') ?>">
@@ -164,7 +180,8 @@ get_header(); ?>
                             завершения процедуры банкротства!</p>
                     </div>
                 </div>
-                <div class="col-md-3  benefit-cols no-padding-right animation-block  opacity-zero"   data-animation="slideInUp">
+                <div class="col-md-3  benefit-cols no-padding-right animation-block  opacity-zero"
+                     data-animation="slideInUp">
                     <div class="benefit-block">
                         <div class="why-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/shape4-2.jpg') ?>">
@@ -174,7 +191,7 @@ get_header(); ?>
                             столкнуться. Поэтому мы готовы дать Вам рассрочку по оплате за оказываемые услуги</p>
                     </div>
                 </div>
-                <div class="col-md-3 benefit-cols animation-block  opacity-zero"   data-animation="slideInUp">
+                <div class="col-md-3 benefit-cols animation-block  opacity-zero" data-animation="slideInUp">
                     <div class="benefit-block">
                         <div class="why-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/shape3-2.jpg') ?>">
@@ -183,7 +200,7 @@ get_header(); ?>
                         <p>Если суд не признает Вас банкротом— вернем деньги. Это прописано в договоре!</p>
                     </div>
                 </div>
-                <div class="col-md-3 benefit-cols animation-block  opacity-zero"   data-animation="slideInUp">
+                <div class="col-md-3 benefit-cols animation-block  opacity-zero" data-animation="slideInUp">
                     <div class="benefit-block">
                         <div class="why-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/shape2-2.jpg') ?>">
@@ -193,7 +210,8 @@ get_header(); ?>
                             профессиональный юрист. Мы работаем-Вы отдыхаете!</p>
                     </div>
                 </div>
-                <div class="col-md-3 benefit-cols no-padding-right animation-block  opacity-zero"   data-animation="slideInUp">
+                <div class="col-md-3 benefit-cols no-padding-right animation-block  opacity-zero"
+                     data-animation="slideInUp">
                     <div class="benefit-block">
                         <div class="why-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/shape1-2.jpg') ?>">

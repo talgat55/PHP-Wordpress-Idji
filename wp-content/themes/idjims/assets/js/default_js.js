@@ -1489,4 +1489,21 @@ function backToTop() {
     });
 
 }
+/*
+* Target yandex
+ */
+document.addEventListener('wpcf7mailsent', function( event ) {
 
+    if(event.detail.contactFormId=="17"){
+
+        yaCounter48236498.reachGoal('Stay_statement');
+    } else if(event.detail.contactFormId=="15"){
+
+        yaCounter48236498.reachGoal('Stay_statement_home');
+    }  else if(event.detail.contactFormId=="16"){
+
+        yaCounter48236498.reachGoal('Statement_sale');
+    }
+
+
+}, false );
