@@ -8,12 +8,17 @@ get_header(); ?>
     <div class="wrap user-page-doc">
         <div class="breadscrumb blue">
             <div class="container">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <a href="<?php echo LinksTheme('user-profile'); ?>" class="user-page-link-breadscrumb">
                         Ваш профиль
                     </a>
                 </div>
-                <div class="col-lg-6 no-padding">
+                <div class="col-lg-4 ">
+                    <a href="<?php echo LinksTheme('instruction'); ?>" class="user-page-link-breadscrumb ">
+                        Инструкция по банкротству
+                    </a>
+                </div>
+                <div class="col-lg-4 no-padding">
                     <a href="#" class="user-page-link-breadscrumb current no-hover">
                         Оформление документов
                     </a>

@@ -414,12 +414,12 @@ if (isset($_POST['form_2_submit'])) {
     </h1>
     <table border="1" cellspacing="0" cellpadding="5" style="font-size:10px;">
     <tbody>
-        <tr  >
+        <tr nobr="true" >
             <td width="100%" colspan="7" valign="top" style="text-align: center;"> 
                     Недвижимое имущество 
             </td>
         </tr>
-        <tr  >
+        <tr nobr="true" >
             <td width="6%" valign="top"> 
                     № п/п 
             </td>

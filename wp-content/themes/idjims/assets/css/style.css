@@ -352,6 +352,7 @@ span.wpcf7-not-valid-tip {
 .col-md-7-doc,
 .col-md-4,
 .col-lg-6,
+.col-lg-4,
 .col-md-5,
 .col-md-7 {
     float: left;
@@ -370,6 +371,9 @@ span.wpcf7-not-valid-tip {
     padding-right: 2%;
 }
 
+.col-lg-4 {
+    width: 33.33%;
+}
 .col-md-5-doc {
     width: 45%;
 }
@@ -843,6 +847,7 @@ header .right-top-header .btn.btn-link-modal {
 .text-slider {
     font-size: 34px;
     font-family: "Minsk";
+    line-height: 69px;
     /*text-align: right;*/
     margin: 100px 0 0 0;
 }
@@ -4900,6 +4905,7 @@ footer {
     .first-block-img {
         height: 200px;
     }
+    .col-lg-4,
     #dont-self .col-md-4{
         width: 100%;
     }
@@ -5344,6 +5350,10 @@ footer {
 @media (max-width: 767px) {
     .modal-form {
         width: 100%;
+    }
+    .user-page-link-breadscrumb{
+        font-size: 15px;
+        padding: 10px 0;
     }
     .second .title-slider {
         text-align: left;

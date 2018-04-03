@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="yandex-verification" content="d1e66d86f8329b3a" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?php echo get_theme_file_uri('/assets/images/favicon-alt.png') ?>"
           type="image/x-icon"/>
@@ -132,6 +133,7 @@
                                 <li><a href="<?php echo LinksTheme('reviews'); ?>">Отзывы</a></li>
                                 <li><a href="<?php echo LinksTheme('blog'); ?>">Блог</a></li>
                                 <li><a href="<?php echo LinksTheme('question-answer'); ?>">Вопрос-ответ</a></li>
+                                <li><a href="<?php echo LinksTheme('instruction'); ?>">Инструкция по банкротству</a></li>
                             </ul>
                         </li>
 

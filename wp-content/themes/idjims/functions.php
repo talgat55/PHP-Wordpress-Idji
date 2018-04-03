@@ -653,6 +653,9 @@ function LinksTheme($link)
         case 'confirm':
             return home_url("/confirm/");
             break;
+        case 'instruction':
+            return home_url("/instruction/");
+            break;
 
     }
 

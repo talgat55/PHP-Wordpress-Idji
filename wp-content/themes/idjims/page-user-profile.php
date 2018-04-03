@@ -20,12 +20,17 @@ $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user =
     <div class="wrap">
         <div class="breadscrumb blue">
             <div class="container">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <a href="#" class="user-page-link-breadscrumb current no-hover">
                         Ваш профиль
                     </a>
                 </div>
-                <div class="col-lg-6 no-padding">
+                <div class="col-lg-4 ">
+                    <a href="<?php echo LinksTheme('instruction'); ?>" class="user-page-link-breadscrumb ">
+                        Инструкция по банкротству
+                    </a>
+                </div>
+                <div class="col-lg-4 no-padding">
                     <a href="<?php echo LinksTheme('user-doc'); ?>" class="user-page-link-breadscrumb ">
                         Оформление документов
                     </a>
