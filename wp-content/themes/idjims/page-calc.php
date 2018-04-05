@@ -12,7 +12,7 @@ get_header(); ?>
             </div>
         </div>
         <div class="container">
-            <form class="form-calculate clearfix" action="" method="post">
+            <form class="form-calculate clearfix" action="" method="post"  onSubmit="yaCounter48236498.reachGoal("button_calculate");">
                 <div class="clearfix">
                     <div class="col-md-12 clearfix custom-cal-marg-bottom ">
                         <div class="col-lg-2-calc clearfix">
@@ -341,7 +341,7 @@ get_header(); ?>
 
 
                             <div class="total-price">Итог: <span>0</span> руб.</div>
-                            <a href="#" class="view-plan-play-calc-page">Посмотреть платеж</a>
+                            <a href="#" class="view-plan-play-calc-page"  onClick="yaCounter48236498.reachGoal('tarif_eco');">Посмотреть платеж</a>
 
                             <div class="price-payment-result clearfix"></div>
                         </div>
@@ -381,7 +381,7 @@ get_header(); ?>
                             </ul>
 
                             <div class="total-price">Итог: <span>0</span> руб.</div>
-                            <a href="#" class="view-plan-play-calc-page">Посмотреть платеж</a>
+                            <a href="#" class="view-plan-play-calc-page"  onClick="yaCounter48236498.reachGoal('tarif_standart');">Посмотреть платеж</a>
                             <div class="price-payment-result clearfix">
 
                             </div>
@@ -425,7 +425,7 @@ get_header(); ?>
                             </ul>
 
                             <div class="total-price">Итог: <span>0</span> руб.</div>
-                            <a href="#" class="view-plan-play-calc-page">Посмотреть платеж</a>
+                            <a href="#" class="view-plan-play-calc-page"   onClick="yaCounter48236498.reachGoal('tarif_vip');">Посмотреть платеж</a>
                             <div class="price-payment-result clearfix"></div>
                         </div>
                     </li>

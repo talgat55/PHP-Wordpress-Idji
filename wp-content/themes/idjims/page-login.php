@@ -31,7 +31,7 @@ $ValueForHash = wp_create_nonce('ASMART');
                     <?php unset($_SESSION['error_login']); ?>
                 <?php } ?>
             </div>
-            <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+            <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>"  onSubmit="yaCounter48236498.reachGoal("login_form");">
                 <div class="login-form">
                     <div class="form-group">
                         <input name="login_name" type="text" class="form-control login-field" value=""
@@ -49,7 +49,7 @@ $ValueForHash = wp_create_nonce('ASMART');
                     <input class="btn btn-primary btn-lg btn-block btn-form-login" type="submit"
                            name="login_submit" value="Войти"/>
 
-                    <span>Вы не зарегистрированы? <a href="<?php echo LinksTheme('registration'); ?>">Зарегистрируйтесь</a></span>
+                    <span>Вы не зарегистрированы? <a href="<?php echo LinksTheme('registration'); ?>"  onClick="yaCounter48236498.reachGoal('link_registration');">Зарегистрируйтесь</a></span>
                 </div>
             </form>
         </div><!-- #primary -->

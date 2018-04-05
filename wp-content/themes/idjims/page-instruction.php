@@ -62,7 +62,7 @@ get_header(); ?>
                     </li>
                     <li class="blog-item">
                         <div class="blog-item-walp">
-                            <a class="blog-img-link" href="#">
+                            <a class="blog-img-link" href="<?php   echo LinksTheme('instruction-page-one'); ?>">
                                 <img class="blog-img"
                                      src="<?php echo get_theme_file_uri("/assets/images/i5.jpg"); ?>"/>
 
@@ -70,7 +70,7 @@ get_header(); ?>
 
                             </a>
 
-                            <div class="title-blog"><a href="#">Процедура сбора документов  для банкротства</a></div>
+                            <div class="title-blog"><a href="<?php   echo LinksTheme('instruction-page-one'); ?>">Процедура сбора документов  для банкротства</a></div>
                             <div class="except-blog">Душа моя озарена неземной радостью, как эти чудесные весенние утра,
                                 которыми я наслаждаюсь от всего сердца
                             </div>

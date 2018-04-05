@@ -728,6 +728,7 @@ jQuery(document).ready(function () {
     jQuery('.benefit-cols .benefit-block').equalHeightResponsive();
     jQuery('.blog-item').equalHeightResponsive();
     jQuery('.block-dont-self').equalHeightResponsive();
+    jQuery('.instuction-icon-block').equalHeightResponsive();
     jQuery('.live-idji-walp .live-idji-block').equalHeightResponsive();
     jQuery('.dont-wait-block-auto-height .dont-wait-block').equalHeightResponsive();
 
