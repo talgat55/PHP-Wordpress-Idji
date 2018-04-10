@@ -16,8 +16,8 @@ if (isset($_POST['form_11_submit'])) {
 
     $form_11_date = $_POST['form_11_date'];
     $form_11_number_cart = $_POST['form_11_number_cart'];
-    //		$cur_user_id = get_current_user_id();
-    $cur_user_id = 1;
+    	$cur_user_id = get_current_user_id();
+    //$cur_user_id = 1;
     global $wpdb;
     $table_name = $wpdb->prefix . "addition_informaion";
     $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");
@@ -54,7 +54,7 @@ if (isset($_POST['form_11_submit'])) {
     потребительском кредите (займе)»)
 
     </h1>
-    <p> ' . date("d.m.y", strtotime($form_11_date)) . ' между мной и '.$form_11_name_bank.' (далее - Банк) заключен кредитный договор '.$form_11_order.',
+    <p style="text-align: justify;"> ' . date("d.m.y", strtotime($form_11_date)) . ' между мной и '.$form_11_name_bank.' (далее - Банк) заключен кредитный договор '.$form_11_order.',
 согласно условиям которого Банк принял на себя обязательство по выпуску кредитной карты '.$form_11_number_cart.'
 <br> Прошу Вас предоставить мне информацию в виде справки, в которой будут содержаться
 следующие сведения:<br>

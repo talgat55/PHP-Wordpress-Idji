@@ -11,8 +11,8 @@ if (isset($_POST['form_5_submit'])) {
 
     $form_5_name_bank = $_POST['form_5_name_bank'];
     $form_5_adress_bank = $_POST['form_5_adress_bank'];
-    //		$cur_user_id = get_current_user_id();
-    $cur_user_id = 1;
+    		$cur_user_id = get_current_user_id();
+    //$cur_user_id = 1;
     global $wpdb;
     $table_name = $wpdb->prefix . "addition_informaion";
     $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");
@@ -38,7 +38,7 @@ if (isset($_POST['form_5_submit'])) {
                                         
                      
     <h1 style="text-align: center;">Заявление о предоставлении информации</h1>
-    <p>
+    <p  style="text-align: justify;">
     Прошу Вас предоставить сведения в виде справки о наличии счетов, вкладов (депозитов),
     а также об остатках денежных средств на счетах, во вкладах (депозитах), выписки за
     трехлетний период по операциям на счетах, по вкладам (депозитам) открытым в Вашем банке

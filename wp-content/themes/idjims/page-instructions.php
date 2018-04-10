@@ -17,8 +17,8 @@ get_header(); ?>
                 case '[post1]':
                     get_template_part('template-parts/instructions/post-1');
                     break;
-                case '[form10]':
-                    get_template_part('template-parts/forms/page-form-10');
+                case '[post2]':
+                    get_template_part('template-parts/instructions/post-2');
                     break;
                 case '[form9]':
                     get_template_part('template-parts/forms/page-form-9');

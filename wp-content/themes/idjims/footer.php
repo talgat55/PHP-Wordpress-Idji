@@ -28,7 +28,7 @@
 									<img src="<?php  echo get_theme_file_uri( '/assets/images/phone-a-2.png' ) ?>">
 									<div class="center-top-heder-holder">
 									<p>Звоните нам</p>
-									<div><a href="tel:+79235374667">8 923 537 46 67</a></div>
+									<div><a href="tel:+79235374767">8 923 537 47 67</a></div>
 									</div>
 								</div>
 
@@ -47,7 +47,8 @@
 					<div class="bottom-header-wallpaper">
 						 <ul class="footer-block-list clearfix">
 							 <li>г. Кемерово, пр. Ленина, 33/2 - 403</li>
-							 <li>e-mail:<a href="mailto:aegis@иджис.рф">aegis@иджис.рф</a></li>
+							 
+							 <li>e-mail:<a href="mailto:aegis@xn--d1aeec9b.xn--p1ai">aegis@иджис.рф</a></li>
 							 <li>ООО "Иджис", ОГРН 1174205021407</li>
 						 </ul>
 						 <ul class="social-top clearfix">
@@ -99,5 +100,11 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/48236498" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<script data-skip-moving="true">
+        (function(w,d,u){
+                var s=d.createElement('script');s. async=1;s.src=u+'?'+(Date.now( )/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode. insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.ru/b6697771/crm/site_button/loader_2_f7w4ye.js');
+</script>   
 </body>
 </html>

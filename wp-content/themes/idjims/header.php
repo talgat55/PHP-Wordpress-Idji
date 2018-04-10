@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js no-svg">
+<html <?php language_attributes(); ?> >
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +18,7 @@
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116537806-1"></script>
+<script  src="https://b24go.com/form/v3/aegis42.bitrix24.ru/form.js" async></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -84,7 +85,7 @@
                             <img src="<?php echo get_theme_file_uri('/assets/images/phone-a-2.png') ?>">
                             <div class="center-top-heder-holder">
                                 <p>Звоните нам</p>
-                                <div><a href="tel:+79235374667">8 923 537 46 67</a></div>
+                                <div><a href="tel:+79235374767">8 923 537 47 67</a></div>
                             </div>
                         </div>
 

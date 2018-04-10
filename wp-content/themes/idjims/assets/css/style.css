@@ -4423,8 +4423,8 @@ footer {
     opacity: 0;
     visibility: hidden;
     position: fixed;
-    bottom: 30px;
-    right: 12px;
+    bottom: 0;
+    right: 0;
     padding: 9px 13px;
     border: 2px solid #008fdb;
     color: #fff;
@@ -4922,11 +4922,92 @@ ul.instruction-list {
     border-bottom: 2px solid #cb454c;
     padding: 20px 0;
 }
-
+.SendMessage-3-walp{
+    background-color: #cb454c;
+    padding: 30px;
+    position: relative;
+}
+.SendMessage-img-3{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
 .border-block p {
     margin-bottom: 0;
 }
+.padding-top-30{
+    padding-top: 30px;
+}
+.margin-top-30{
+    margin-top: 30px!important;
+}
+.padding-bottom-30{
+    padding-bottom: 30px;
+}
+.padding-bottom-40{
+    padding-bottom: 40px;
+}
+.padding-top-40{
+    padding-top: 40px;
+}
+.SendMessage.SendMessage-3 .checkboxFour::after{
+    background: #cb454c;
+}
+.SendMessage.SendMessage-3 .title-section {
+    font-size: 28px;
+    margin-top: 0px;
+}
+.SendMessage.SendMessage-3{
+    background-color: transparent;
+}
+.SendMessage-3 .wpcf7-submit{
+    border-radius: 3px;
+}
+.SendMessage-3 .field {
+    width: 30.33%;
+    padding-right: 4%;
+}
+.SendMessage-3 .block-submit {
+    width: 31.33%;
+}
 
+.instuction-table-block{
+    display: table;
+    height: 100%;
+
+}
+.instuction-table-block-walp{
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 20px;
+}
+.instuction-table-block-row{
+    margin-right: -1.68%;
+    margin-left: -1.68%;
+}
+.instuction-table-block-row .col-md-4{
+    width: 30%;
+    margin-right: 1.68%;
+    background: #fff;
+    margin-left: 1.68%;
+    margin-bottom: 40px;
+}
+.custom-col.col-2{
+    height: auto;
+}
+.text-left{
+    text-align: left;
+}
+.five-step-block-bottom.red{
+    background-color: #cb454c;
+}
+.white-important{
+    color: #fff!important;
+}
+.section-instruction .feature-service{
+    padding: 17px 25px;
+}
 @media (min-width: 1201px) {
     .navigation li:hover .sub-menu {
         display: block;
@@ -5032,6 +5113,7 @@ ul.instruction-list {
     #five-step .col-five-step-block {
         text-align: left;
         display: table;
+        margin-bottom: 40px;
     }
 
     #five-step .block-five-step-arrow a,
@@ -5082,6 +5164,12 @@ ul.instruction-list {
 
     .SendMessage .block-submit {
         width: 24%;
+    }
+    .SendMessage-3 .block-submit .wpcf7-submit{
+        padding: 10px;
+    }
+    .SendMessage-3 .block-submit {
+        width: auto;
     }
 
     #OurService img {
@@ -5156,13 +5244,22 @@ ul.instruction-list {
     .first-block-img {
         height: 200px;
     }
-
+    .section-instruction .col-five-step-block.Four_two_step{
+        margin-top:0;
+        margin-bottom:40px;
+    }
+    .section-instruction .col-five-step-block.One_step{
+        padding-top: 40px;
+    }
     .custom-col:first-child {
         text-align: center;
         margin-bottom: 30px;
     }
     .section-instruction .col-md-4{
         width: 50%;
+    }
+    .col-md-4.instuction-table-block{
+        width: 46%;
     }
     .custom-col:first-child,
     .custom-col:last-child,
@@ -5380,6 +5477,7 @@ ul.instruction-list {
         float: none;
     }
 
+    .SendMessage-3 .block-submit,
     .SendMessage-2 .block-submit,
     .wpcf7-submit {
         width: 100%;
@@ -5634,9 +5732,12 @@ ul.instruction-list {
     .modal-form {
         width: 100%;
     }
-
+    .instuction-table-block-row .col-md-4{
+        margin-left: 0;
+        margin-right: 0;
+    }
     .title-instruction {
-        font-size: 15px;
+        font-size: 19px;
     }
     .section-instruction .feature-service p,
     .section-instruction .feature-service img {

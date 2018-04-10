@@ -3,8 +3,8 @@
 
 if (isset($_POST['form_reg_submit'])) {
 
-    //		$cur_user_id = get_current_user_id();
-    $cur_user_id = 1;
+    		$cur_user_id = get_current_user_id();
+   
     global $wpdb;
     $table_name = $wpdb->prefix . "addition_informaion";
     $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");

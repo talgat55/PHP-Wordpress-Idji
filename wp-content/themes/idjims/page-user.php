@@ -47,12 +47,12 @@ get_header(); ?>
             if (in_array("empty", $array) OR in_array("first_name", $array) OR in_array("second_name", $array) OR in_array("bird_day", $array)) {
 
 
-                echo '<p class="error"><img  style="padding-right: 10px;" src="' . get_theme_file_uri('/assets/images/warning-2.png') . '"/>Личные данные в профиле заполнены не полностью! Формирование документов невозможно.</p>';
+                echo '<p class="error"><img  style="padding-right: 10px;" src="' . get_theme_file_uri('/assets/images/warning-2.png') . '"/>Личные данные в профиле заполнены не полностью(ФИО)! Формирование документов невозможно.</p>';
             }
 
-            if (in_array("passport_serial", $array) OR in_array("passport_number", $array) OR in_array("passport_issued_by", $array) OR in_array("passport_issued_date", $array) OR in_array("passport_issued_key", $array) OR in_array("extra_inn", $array) OR in_array("extra_snils", $array) OR in_array("extra_phone", $array) OR in_array("registrtation_index", $array) OR in_array("registrtation_city", $array) OR in_array("registrtation_locality", $array) OR in_array("registrtation_street", $array) OR in_array("registrtation_number_hourse", $array) OR in_array("registrtation_number_housing", $array) OR in_array("registrtation_number_apartments", $array)) {
+          /*  if (in_array("passport_serial", $array) OR in_array("passport_number", $array) OR in_array("passport_issued_by", $array) OR in_array("passport_issued_date", $array) OR in_array("passport_issued_key", $array) OR in_array("extra_inn", $array) OR in_array("extra_snils", $array) OR in_array("extra_phone", $array) OR in_array("registrtation_index", $array) OR in_array("registrtation_city", $array) OR in_array("registrtation_locality", $array) OR in_array("registrtation_street", $array) OR in_array("registrtation_number_hourse", $array) OR in_array("registrtation_number_housing", $array) OR in_array("registrtation_number_apartments", $array)) {
 
-                echo '<p class="error"><img  style="padding-right: 10px;" src="' . get_theme_file_uri('/assets/images/warning-2.png') . '"/>Пожалуйста, заполните данные поля:</p>';
+                echo '<p class="error"><img  style="padding-right: 10px;" src="' . get_theme_file_uri('/assets/images/warning-2.png') . '"/>Пожалуйста, заполните данные поля:</p>'; 
 
             }
             if (in_array("passport_serial", $array)) {
@@ -130,7 +130,7 @@ get_header(); ?>
 
                 echo '<p class="error">Номер квартиры</p>';
 
-            }
+            }*/
             echo '</div>';
 
 
@@ -152,8 +152,9 @@ get_header(); ?>
             $arrays_empty_fileds = [];
             foreach ($results[0] as $key => $value) {
                 if (empty($value)) {
-                    array_push($arrays_empty_fileds, $key);
-
+                    if($key =='first_name'  || $key =='second_name' || $key =='third_name'    ){
+                         array_push($arrays_empty_fileds, $key);
+                    }
 
                 }
 

@@ -7,8 +7,8 @@
  */
 if (isset($_POST['form_4_submit'])) {
 
-    //		$cur_user_id = get_current_user_id();
-    $cur_user_id = 1;
+    		$cur_user_id = get_current_user_id();
+    //$cur_user_id = 1;
     global $wpdb;
     $table_name = $wpdb->prefix . "addition_informaion";
     $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");
@@ -91,7 +91,7 @@ if (isset($_POST['form_4_submit'])) {
      <h1 style="text-align: center;">ХОДАТАЙСТВО<br> о признании гражданина банкротом и введении процедуры<br>
         реализации имущества гражданина 
     </h1>
-    <p>
+    <p  style="text-align: justify;">
      В соответствии с п. 8 ст. 213.6 Федерального закона «О несостоятельности
     (банкротстве)», по результатам рассмотрения обоснованности заявления о признании
     гражданина банкротом, если гражданин не соответствует требованиям для утверждения плана
@@ -129,7 +129,7 @@ if (isset($_POST['form_4_submit'])) {
 
     $html .= '      
      <h1 style="text-align: center;">ПРОШУ СУД:</h1>
-     <p>
+     <p  style="text-align: justify;">
          Признать меня - гражданина Российской Федерации  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '  банкротом, в вести
             процедуру реализации имущества гражданина в отношении моего имущества. 
     </p>

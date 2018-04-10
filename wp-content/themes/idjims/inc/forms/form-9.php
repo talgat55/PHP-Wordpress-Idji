@@ -12,8 +12,8 @@ if (isset($_POST['form_9_short_info_submit'])) {
     $form_9_default_period[] = $_POST['form_9_default_period'];
     $form_9_bank_try_collect[] = $_POST['form_9_bank_try_collect'];
 
-    //		$cur_user_id = get_current_user_id();
-    $cur_user_id = 1;
+    		$cur_user_id = get_current_user_id();
+    //$cur_user_id = 1;
     global $wpdb;
     $table_name = $wpdb->prefix . "addition_informaion";
     $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");

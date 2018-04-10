@@ -71,14 +71,15 @@ get_header(); ?>
                             </a>
 
                             <div class="title-blog"><a href="<?php   echo LinksTheme('instruction-page-one'); ?>">Процедура сбора документов  для банкротства</a></div>
-                            <div class="except-blog">Душа моя озарена неземной радостью, как эти чудесные весенние утра,
-                                которыми я наслаждаюсь от всего сердца
+                            <div class="except-blog">Сбор документов для подачи на банкротство с компанией ИДЖИС обычно составляет от двух недель до двух
+                                месяцев, в зависимости от количества кредиторов, банки это или МФО, имеются ли на руках кредитные
+                                договора и
                             </div>
                         </div>
                     </li>
                     <li class="blog-item">
                         <div class="blog-item-walp">
-                            <a class="blog-img-link" href="#">
+                            <a class="blog-img-link" href="<?php   echo LinksTheme('instruction-page-two'); ?>">
                                 <img class="blog-img"
                                      src="<?php echo get_theme_file_uri("/assets/images/i1.jpg"); ?>"/>
 
@@ -86,9 +87,10 @@ get_header(); ?>
 
                             </a>
 
-                            <div class="title-blog"><a href="#">Начало процедуры банкротства</a></div>
-                            <div class="except-blog">Душа моя озарена неземной радостью, как эти чудесные весенние утра,
-                                которыми я наслаждаюсь от всего сердца
+                            <div class="title-blog"><a href="<?php   echo LinksTheme('instruction-page-two'); ?>">Начало процедуры банкротства</a></div>
+                            <div class="except-blog">Заявление о признании должника банкротом регистрируется в канцелярии Арбитражного суда Кемеровской
+                                области, и в случае, если все сделано правильно и у суда нет замечаний к заявлению и приложениям, в
+                                течении недели выносится определение:
                             </div>
                         </div>
                     </li>

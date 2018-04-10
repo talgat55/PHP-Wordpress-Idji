@@ -7,8 +7,8 @@
  */
 if (isset($_POST['form_3_submit'])) {
 
-    //		$cur_user_id = get_current_user_id();
-    $cur_user_id = 1;
+    		$cur_user_id = get_current_user_id();
+   // $cur_user_id = 1;
     global $wpdb;
     $table_name = $wpdb->prefix . "addition_informaion";
     $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");
@@ -92,7 +92,7 @@ if (isset($_POST['form_3_submit'])) {
     </table>
     
         <h1 style="text-align: center;">ЗАЯВЛЕНИЕ<br> о признании гражданина банкротом </h1>
-        <p>   Я, гражданин РФ - ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '  ' . date("d.m.y", strtotime($results[0]->bird_day)) . ' г.р., паспорт: ' . $results[0]->passport_serial . '  ' . $results[0]->passport_number . ', выдан ' . date("m.d.y", strtotime($results[0]->passport_issued_date)) . '  ' . $results[0]->passport_issued_by . '
+        <p  style="text-align: justify;">   Я, гражданин РФ - ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '  ' . date("d.m.y", strtotime($results[0]->bird_day)) . ' г.р., паспорт: ' . $results[0]->passport_serial . '  ' . $results[0]->passport_number . ', выдан ' . date("m.d.y", strtotime($results[0]->passport_issued_date)) . '  ' . $results[0]->passport_issued_by . '
             , ИНН ' . $results[0]->extra_inn . ', СНИЛС ' . $results[0]->extra_snils . ' (далее по тексту настоящего заявления - «Должник»).
             Обращаюсь в Суд с настоящим заявлением, поскольку, по состоянию на ' . date("d.m.y") . ' имею
             следующие обязательства:
@@ -201,7 +201,7 @@ if (isset($_POST['form_3_submit'])) {
 
 
     $html .= '<h1 style="text-align: center;">ПРОШУ СУД:</h1>
-    <p>
+    <p  style="text-align: justify;">
     1. Признать гражданина РФ -  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '  ' . date("m.d.y", strtotime($results[0]->bird_day)) . ' г.р., паспорт: ' . $results[0]->passport_serial . '  ' . $results[0]->passport_number . ', выдан ' . date("m.d.y", strtotime($results[0]->passport_issued_date)) . '  ' . $results[0]->passport_issued_by . '
             , ИНН ' . $results[0]->extra_inn . ', СНИЛС ' . $results[0]->extra_snils . ' несостоятельным (банкротом);<br>
     2. Утвердить финансового управляющего из числа членов следующей саморегулируемой

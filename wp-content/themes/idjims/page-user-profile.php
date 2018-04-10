@@ -40,7 +40,7 @@ $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user =
         </div>
         <div class="container">
             <div class="page-user-profile">
-                <p>Заполличные данныените ваши , они будут использоваться для формирования документов</p>
+                <p>Заполните ваши данные, они будут использоваться для формирования документов</p>
                 <form method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">
                     <div class="clearfix">
                         <div class="clearfix">
@@ -193,7 +193,7 @@ $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user =
 
                                     }else{
 
-                                        echo '<option value="Москва" selected="selected">Москва</option>';
+                                        echo '<option value="Кемеровская область" selected="selected">Кемеровская область</option>';
                                     }
                                     ?>
 

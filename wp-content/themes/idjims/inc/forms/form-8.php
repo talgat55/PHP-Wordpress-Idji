@@ -27,8 +27,8 @@ if (isset($_POST['form_8_loan_agreement_submit'])) {
 
     $form_8_aplication_name[] = $_POST['form_8_aplication_name'];
 
-    //		$cur_user_id = get_current_user_id();
-    $cur_user_id = 1;
+    	$cur_user_id = get_current_user_id();
+   // $cur_user_id = 1;
     global $wpdb;
     $table_name = $wpdb->prefix . "addition_informaion";
     $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");
@@ -86,7 +86,7 @@ if (isset($_POST['form_8_loan_agreement_submit'])) {
 
         </p> 
     <h1 style="text-align: center;">ПРОШУ СУД:</h1>
-    <p>
+    <p  style="text-align: justify;">
    Снизить размер неустойки за неисполнение Ответчиком обязательств перед Истцом по
     '.$form_8_name_obligation.', заключенного между Истцом и Ответчиком.
 

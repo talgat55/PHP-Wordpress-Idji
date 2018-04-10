@@ -7,8 +7,8 @@
  */
 if (isset($_POST['form_6_submit'])) {
 
-    //		$cur_user_id = get_current_user_id();
-    $cur_user_id = 1;
+    		$cur_user_id = get_current_user_id();
+    //$cur_user_id = 1;
     global $wpdb;
     $table_name = $wpdb->prefix . "addition_informaion";
     $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE id_user ='" . $cur_user_id . "'");
@@ -86,7 +86,7 @@ if (isset($_POST['form_6_submit'])) {
         
     </p>
     <h1 style="text-align: center;">ПРОШУ СУД:</h1>  
-    <p>
+    <p  style="text-align: justify;">
     ежемесячно, в течение срока проведения процедуры реализации имущества должника,
     исключать из конкурсной массы должника денежные средства в размере ' . num2str($form_6_amount_money) . ' руб. для проживания должника и членов его семьи.<br>
     <br>Дата: ' . date("d.m.y") . '         
