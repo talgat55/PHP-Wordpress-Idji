@@ -1973,6 +1973,7 @@ form {
 
 .slider-content-client {
     padding: 16px 0 0 0;
+    text-align: justify;
 }
 
 .slider-content-client,
@@ -4922,91 +4923,607 @@ ul.instruction-list {
     border-bottom: 2px solid #cb454c;
     padding: 20px 0;
 }
-.SendMessage-3-walp{
+
+.SendMessage-3-walp {
     background-color: #cb454c;
     padding: 30px;
     position: relative;
 }
-.SendMessage-img-3{
+
+.SendMessage-img-3 {
     position: absolute;
     left: 0;
     bottom: 0;
 }
+
 .border-block p {
     margin-bottom: 0;
 }
-.padding-top-30{
+
+.padding-top-30 {
     padding-top: 30px;
 }
-.margin-top-30{
-    margin-top: 30px!important;
+
+.margin-top-30 {
+    margin-top: 30px !important;
 }
-.padding-bottom-30{
+
+.padding-bottom-30 {
     padding-bottom: 30px;
 }
-.padding-bottom-40{
+
+.padding-bottom-40 {
     padding-bottom: 40px;
 }
-.padding-top-40{
+
+.padding-top-40 {
     padding-top: 40px;
 }
-.SendMessage.SendMessage-3 .checkboxFour::after{
+
+.SendMessage.SendMessage-3 .checkboxFour::after {
     background: #cb454c;
 }
+
 .SendMessage.SendMessage-3 .title-section {
     font-size: 28px;
     margin-top: 0px;
 }
-.SendMessage.SendMessage-3{
+
+.SendMessage.SendMessage-3 {
     background-color: transparent;
 }
-.SendMessage-3 .wpcf7-submit{
+
+.SendMessage-3 .wpcf7-submit {
     border-radius: 3px;
 }
+
 .SendMessage-3 .field {
     width: 30.33%;
     padding-right: 4%;
 }
+
 .SendMessage-3 .block-submit {
     width: 31.33%;
 }
 
-.instuction-table-block{
+.instuction-table-block {
     display: table;
     height: 100%;
 
 }
-.instuction-table-block-walp{
+
+.instuction-table-block-walp {
     margin: 0;
     display: table-cell;
     vertical-align: middle;
     padding: 20px;
 }
-.instuction-table-block-row{
+
+.instuction-table-block-row {
     margin-right: -1.68%;
     margin-left: -1.68%;
 }
-.instuction-table-block-row .col-md-4{
+
+.instuction-table-block-row .col-md-4 {
     width: 30%;
     margin-right: 1.68%;
     background: #fff;
     margin-left: 1.68%;
     margin-bottom: 40px;
 }
-.custom-col.col-2{
+
+.custom-col.col-2 {
     height: auto;
 }
-.text-left{
+
+.text-left {
     text-align: left;
 }
-.five-step-block-bottom.red{
+
+.five-step-block-bottom.red {
     background-color: #cb454c;
 }
-.white-important{
-    color: #fff!important;
+
+.white-important {
+    color: #fff !important;
 }
-.section-instruction .feature-service{
+
+.section-instruction .feature-service {
     padding: 17px 25px;
+}
+
+.block-border-2 {
+    border: 4px solid #7dcd96;
+    padding: 20px;
+}
+
+.block-border-3 {
+    border: 4px solid #cb454c;
+    padding: 40px;
+}
+
+.block-border-4 {
+    border: 4px solid #008fdb;
+    padding: 20px;
+}
+
+.section-instruction-col-custom .col-md-3 {
+    width: 21%;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.row-instructions-margin-minus-3 {
+    margin-right: -2%;
+    margin-left: -2%;
+}
+
+.instuction-icon-block-2 {
+    text-align: center;
+}
+
+.col-md-half-instruction {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.col-md-half-instruction p {
+    margin: 0;
+}
+
+.block-4-instructions p {
+    font-family: Calibri, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+
+}
+
+.block-4-instructions {
+    padding: 20px;
+    background-color: #cb454c;
+    margin-top: 30px;
+}
+
+.normal-weight {
+    font-weight: normal !important;
+}
+
+.bold-weight {
+    font-weight: bold !important;
+}
+
+.section-instruction-2 .feature-service img {
+    min-width: 42px;
+}
+
+.block-border-3 ul {
+    padding: 0;
+    margin: 0;
+}
+
+.block-border-3 ul li {
+    list-style: none;
+    padding-bottom: 30px;
+}
+
+.block-border-3 ul li:last-child {
+    padding-bottom: 0;
+}
+
+.block-border-3 ul li img {
+    float: left;
+    margin-right: 20px;
+}
+
+.block-border-3 ul li p {
+    margin: 0;
+}
+
+.margin-0 {
+    margin: 0;
+}
+
+.block-border-4 p {
+    margin: 0;
+}
+
+.float-right {
+    float: right;
+}
+
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+.instruction-table-col2 {
+    width: 80%;
+}
+
+.instruction-table-col1 {
+    width: 60%;
+}
+
+.col-section-instruction-table {
+    display: table;
+}
+
+.col-section-instruction-table div {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.block-text-plus-instruction {
+    width: auto;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 30px;
+    display: table;
+    margin: 0 auto 30px;
+}
+
+.block-text-plus-instruction h3 {
+    top: 0;
+    text-align: left;
+    font-family: Calibri, sans-serif !important;
+    position: relative;
+    padding: 0;
+    background-color: transparent;
+    display: inline;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.block-text-plus-instruction p {
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.instruction-table-col3 {
+    width: 70%;
+}
+
+.instruction-table-col4 {
+    width: 75%;
+
+}
+
+.instruction-table-col4-img {
+    text-align: center;
+}
+
+.head-tree-upercase {
+    font-family: Calibri, sans-serif !important;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.calibri-bold {
+    font-family: Calibri, sans-serif !important;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.instruction-list.post-4 {
+    margin: 15px 0 0 5px;
+}
+
+.instruction-list.post-4 li:last-child {
+    padding-bottom: 0;
+}
+
+.instruction-table-col5 {
+    width: 70%;
+}
+
+.border-one-px {
+    border-width: 1px !important;
+}
+
+.instruction-list.post-4 li::before {
+    content: "• ";
+    color: #008fdb;
+    padding-right: 11px;
+}
+
+.procedure-post4 img {
+    float: left;
+    margin-right: 15px;
+}
+
+.procedure-post4 .col-md-6 {
+    padding-right: 2%;
+}
+
+.spisanie-row {
+    margin-left: -2%;
+    margin-right: -2%;
+    margin-bottom: 265px;
+}
+
+.spisanie-row .col-md-4 {
+    width: 26.33%;
+    margin: 0 2% 30px 2%;
+    box-sizing: border-box;
+}
+
+.spisanie-row .red {
+    background: #cb454c;
+    color: #fff;
+    padding: 15px;
+    border-top-left-radius: 60px;
+    display: table;
+    position: relative;
+}
+
+.spisanie-row .green {
+    background: #7dcd96;
+    color: #fff;
+    padding: 15px;
+    border-top-left-radius: 60px;
+    display: table;
+    position: relative;
+}
+
+.spisanie-row .blue {
+    background: #258dcf;
+    color: #fff;
+    padding: 15px;
+    border-top-left-radius: 60px;
+    display: table;
+    position: relative;
+}
+
+.spisanie-row p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px;
+}
+
+.spisanie-img {
+    position: absolute;
+    bottom: -231px;
+    right: 0px;
+    margin: 0 !important;
+}
+
+.red .spisanie-img {
+    right: -50.8px;
+}
+
+.green .spisanie-img {
+    right: -42.8px;
+}
+
+.blue .spisanie-img {
+    right: -44px;
+}
+
+.text-table {
+    display: table;
+}
+
+.post-5 .col-md-6 {
+    padding-right: 2%;
+}
+
+.block {
+    display: block !important;
+}
+
+.col-md-6.spec {
+    width: 46%;
+}
+
+.post-5-spec-col-6-block {
+    display: table !important;
+    margin: 0 0 0 auto;
+    text-align: center;
+}
+
+.col-md-6.spec:last-child .post-5-spec-col-6-block:last-child {
+    display: table;
+    margin: 0 auto 0 0;
+    text-align: center;
+}
+
+.instruction-table-col1-2 {
+    width: 78%;
+    padding-right: 4%;
+}
+
+.inst-img-feature img {
+    min-width: 42px !important;
+}
+
+.instuction-table-block-row.post-5 .col-md-4 {
+    border: 1px solid #fff !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    color: #fff !important;
+}
+
+.self-width-img {
+    min-width: auto !important;
+}
+
+.margin-right-30 {
+    margin-right: 30px;
+}
+
+.devider-title {
+    border-bottom: 1.5px solid #000;
+}
+
+.border-one-5 {
+    border-width: 1.5px;
+}
+
+.devider-title div {
+    font-family: "Minsk";
+    font-size: 26px;
+    text-align: center;
+    line-height: 36px;
+    position: relative;
+    padding: 0 9px;
+    bottom: -19px;
+    background: #fff;
+    display: table;
+    margin: 0 auto;
+}
+
+.post-5-what-bankrotstvo {
+    padding-right: 30px;
+}
+
+.col-md-4:last-child .post-5-what-bankrotstvo {
+    padding-right: 0;
+}
+
+.width-70 {
+    width: 70%;
+    margin: 0 auto !important;
+    display: table;
+}
+
+.post-5-row-col-3 .col-md-3 {
+    width: 23%;
+    padding-right: 2%;
+    text-align: center;
+}
+
+.post-5-row-col-3 .col-md-3:last-child {
+    padding-right: 0;
+}
+.post-6.header-tree{
+    font-family: Calibri, sans-serif !important;
+    font-size: 18px;
+    font-weight: 800;
+}
+ .Plus-block.post-6 .col-md-plus-block:first-child p{
+   margin: 0;
+}
+.Plus-block.post-6 .col-md-plus-block:first-child{
+    margin-bottom: 30px;
+}
+.Plus-block.post-6{
+    margin-bottom: 0;
+}
+.number-instruction-block-text.one{
+    background: url(../images/bg-one.png);
+    background-repeat: no-repeat;
+    height: 164px;
+    width: 352px;
+}
+.number-instruction-block-text.two{
+    background: url(../images/bg-two.png);
+    background-repeat: no-repeat;
+    height: 164px;
+    width: 352px;
+}
+.number-instruction-block-text.tree{
+    background: url(../images/bg-tree.png);
+    background-repeat: no-repeat;
+    height: 164px;
+    width: 352px;
+}
+.number-instruction-block-text.four{
+    background: url(../images/bg-four.png);
+    background-repeat: no-repeat;
+    height: 164px;
+    width: 352px;
+}
+
+
+
+.number-instruction-block-text.five{
+    background: url(../images/bg-five.png);
+    background-repeat: no-repeat;
+    height: 164px;
+    width: 352px;
+}
+.number-instruction-block-text.six{
+    background: url(../images/bg-six.png);
+    background-repeat: no-repeat;
+    height: 164px;
+    width: 352px;
+}
+
+
+
+.number-instruction-block-text.one p{
+    margin: 0;
+    color: #fff;
+    padding: 53px 20px 30px 67px;
+    font-size: 16px;
+}
+.number-instruction-block-text.six p{
+    margin: 0;
+    color: #fff;
+    padding: 16px 16px 30px 78px;
+    font-size: 16px;
+}
+.number-instruction-block-text.four p{
+    margin: 0;
+    color: #fff;
+    padding: 6px 20px 30px 95px;
+    font-size: 16px;
+}
+.number-instruction-block-text.two p{
+    margin: 0;
+    color: #fff;
+    padding: 14px 20px 30px 79px;
+    font-size: 16px;
+}
+
+
+.number-instruction-block-text.tree p{
+    margin: 0;
+    color: #fff;
+    padding: 30px 20px 30px 81px;
+    font-size: 16px;
+}
+.number-instruction-block-text.five p{
+    margin: 0;
+    color: #fff;
+    padding: 46px 20px 30px 81px;
+    font-size: 16px;
+}
+.number-instruction-block{
+    margin-bottom: 30px;
+}
+.custom-6-first{
+    display: table;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.custom-col-6{
+    width: 23%;
+    float: left;
+}
+.custom-col-6:last-child{
+    width: 77%;
+    float: left;
+}
+.post6-last-text-block{
+    width: 80%;
+    margin: 0 auto;
+}
+.custom-col-6 .col-md-6{
+    padding-right: 2%;
+}
+.post-6-feature{
+    display: block!important;
+}
+.post-6-feature-block{
+    display: table;
+    margin: 0 auto;
 }
 @media (min-width: 1201px) {
     .navigation li:hover .sub-menu {
@@ -5018,6 +5535,25 @@ ul.instruction-list {
     .form-calculate .col-md-6 {
         width: 100%;
         padding-right: 0;
+    }
+    .number-row   .col-md-4{
+        width: 50%;
+    }
+    .spisanie-row .col-md-4 {
+
+        width: 42.33%;
+    }
+
+    .instruction-table-col3 {
+        width: 60%;
+    }
+
+    .spisanie-row {
+        margin-bottom: 0;
+    }
+
+    .spisanie-img {
+        display: none;
     }
 
     .pagec-calc-field-total-debt-fwalp.property input {
@@ -5165,9 +5701,11 @@ ul.instruction-list {
     .SendMessage .block-submit {
         width: 24%;
     }
-    .SendMessage-3 .block-submit .wpcf7-submit{
+
+    .SendMessage-3 .block-submit .wpcf7-submit {
         padding: 10px;
     }
+
     .SendMessage-3 .block-submit {
         width: auto;
     }
@@ -5244,23 +5782,86 @@ ul.instruction-list {
     .first-block-img {
         height: 200px;
     }
-    .section-instruction .col-five-step-block.Four_two_step{
-        margin-top:0;
-        margin-bottom:40px;
+    .number-instruction-block{
+        display: table;
+        margin: 0 auto 30px auto;
     }
-    .section-instruction .col-five-step-block.One_step{
+    .post-5-row-col-3 .col-md-3 {
+        width: 48%;
+    }
+
+    .instruction-table-col2.post-5 .col-md-4 {
+        width: 50%;
+    }
+
+    .col-md-6.spec:last-child .post-5-spec-col-6-block:last-child,
+    .post-5-spec-col-6-block {
+        margin: 0 auto;
+    }
+
+    .col-section-instruction-table.post-5-how-stand-bankrot div,
+    .post-5-how-stand-bankrot .instruction-table-col1-2 {
+        display: block;
+    }
+
+    .post-5-priznaki div {
+        display: block;
+    }
+
+    .post-5-how-stand-bankrot img {
+        display: table;
+        margin: 30px auto;
+    }
+
+    .post-5-priznaki div img {
+        margin-bottom: 30px;
+    }
+
+    .spisanie-row {
+        margin: 0;
+    }
+
+    .spisanie-row .col-md-4 {
+        margin: 0 0 30px 0;
+    }
+
+    .section-instruction-col-custom .col-md-3 {
+        width: 46%;
+    }
+
+    .col-md-6:last-child .col-md-plus-block:last-child p,
+    .col-md-6:last-child .col-md-plus-block:last-child .block-text-plus-instruction {
+        margin-bottom: 0 !important;
+    }
+
+    .section-instruction .col-five-step-block.Four_two_step {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    .section-instruction .col-five-step-block.One_step {
         padding-top: 40px;
     }
+
     .custom-col:first-child {
         text-align: center;
         margin-bottom: 30px;
     }
-    .section-instruction .col-md-4{
+
+    .section-instruction .col-md-4 {
         width: 50%;
     }
-    .col-md-4.instuction-table-block{
+
+    .col-md-4.instuction-table-block {
         width: 46%;
     }
+
+    .instruction-table-col1-2,
+    .post-5-priznaki .instruction-table-col2,
+    .section-instruction .col-md-4 {
+        width: 100%;
+    }
+
     .custom-col:first-child,
     .custom-col:last-child,
     .col-lg-4,
@@ -5629,13 +6230,22 @@ ul.instruction-list {
     .review-content {
         padding: 15px 0 0 0;
     }
-
-    .section-instruction .feature-service{
+    .post-5 .col-md-6.spec{
+        width: 100%;
+        padding: 0;
+    }
+    .instruction-table-col2.post-5 .col-md-4,
+    .width-70{
+        width: 100%;
+    }
+    .section-instruction .feature-service {
         padding: 16px;
     }
-    .section-instruction .feature-service p{
+
+    .section-instruction .feature-service p {
         margin-bottom: 0;
     }
+
     .img-bottom-risk {
         height: 254px;
     }
@@ -5727,18 +6337,57 @@ ul.instruction-list {
 @media (max-width: 767px) {
     .col-md-6-incstruction,
     .col-mdi-6,
+    .col-md-half-instruction,
+    .custom-col-6:last-child,
+    .post-5-row-col-3 .col-md-3,
     .custom-col .col-mdi-6,
+    .custom-col-6 .col-md-6,
     .section-instruction .col-md-4,
     .modal-form {
         width: 100%;
     }
-    .instuction-table-block-row .col-md-4{
+    .custom-col-6{
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    .col-section-instruction-table div img {
+        margin-bottom: 30px;
+    }
+
+    .col-section-instruction-table div {
+        display: inline-block;
+    }
+
+    .instruction-table-col5,
+    .instruction-table-col4,
+    .instruction-table-col3,
+    .instruction-table-col2,
+    .instruction-table-col1 {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .section-instruction-col-custom .col-md-3 {
+        width: 96%;
+    }
+
+    .instuction-table-block-row .col-md-4 {
         margin-left: 0;
         margin-right: 0;
     }
+    .post-5 .col-section-instruction-table img{
+            display: table;
+        margin:  0 auto 30px auto;
+    }
+     .col-section-instruction-table{
+        text-align: center;
+    }
+
     .title-instruction {
         font-size: 19px;
     }
+
     .section-instruction .feature-service p,
     .section-instruction .feature-service img {
         display: block;
@@ -5749,10 +6398,17 @@ ul.instruction-list {
         padding: 10px 0;
     }
 
+    .block-border-3 ul li img {
+        float: none;
+        padding-bottom: 20px;
+    }
+
     .second .title-slider {
         text-align: left;
     }
-
+    .post-5-row-col-3 .col-md-3{
+        margin-right: 0;
+    }
     .second .text-slider {
         margin-top: 4px;
         margin-right: 0;

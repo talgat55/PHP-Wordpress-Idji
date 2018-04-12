@@ -20,33 +20,19 @@ get_header(); ?>
                 case '[post2]':
                     get_template_part('template-parts/instructions/post-2');
                     break;
-                case '[form9]':
-                    get_template_part('template-parts/forms/page-form-9');
+                case '[post3]':
+                    get_template_part('template-parts/instructions/post-3');
                     break;
-                case '[form8]':
-                    get_template_part('template-parts/forms/page-form-8');
+                case '[post4]':
+                    get_template_part('template-parts/instructions/post-4');
                     break;
-                case '[form7]':
-                    get_template_part('template-parts/forms/page-form-7');
+                 case '[post5]':
+                    get_template_part('template-parts/instructions/post-5');
                     break;
-                case '[form6]':
-                    get_template_part('template-parts/forms/page-form-6');
+                 case '[post6]':
+                    get_template_part('template-parts/instructions/post-6');
                     break;
-                case '[form5]':
-                    get_template_part('template-parts/forms/page-form-5');
-                    break;
-                case '[form4]':
-                    get_template_part('template-parts/forms/page-form-4');
-                    break;
-                case '[form3]':
-                    get_template_part('template-parts/forms/page-form-3');
-                    break;
-                case '[form2]':
-                    get_template_part('template-parts/forms/page-form-2');
-                    break;
-                case '[form1]':
-                    get_template_part('template-parts/forms/page-form-1');
-                    break;
+
             }
 
         endwhile;

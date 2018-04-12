@@ -662,6 +662,18 @@ function LinksTheme($link)
         case 'instruction-page-two':
             return home_url("/instruction-page-two");
             break;
+        case 'instruction-page-tree':
+            return home_url("/instruction-page-tree");
+            break;
+        case 'instruction-page-four':
+            return home_url("/instruction-page-four");
+            break;
+        case 'instruction-page-five':
+            return home_url("/instruction-page-five");
+            break;
+        case 'instruction-page-six':
+            return home_url("/instruction-page-six");
+            break;
 
     }
 

@@ -725,6 +725,7 @@ jQuery(document).ready(function () {
     * Response Height in bloks  Same
     */
 
+    jQuery('.spisanie-row .col-md-4').equalHeightResponsive();
     jQuery('.benefit-cols .benefit-block').equalHeightResponsive();
     jQuery('.blog-item').equalHeightResponsive();
     jQuery('.block-dont-self').equalHeightResponsive();
