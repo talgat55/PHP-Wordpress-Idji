@@ -9,7 +9,15 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?php echo get_theme_file_uri('/assets/images/favicon-alt.png') ?>"
           type="image/x-icon"/>
-    <title><?php bloginfo('name'); ?></title>
+        <title><?php 
+        if(is_home()){
+            bloginfo('name'); 
+        }else{
+             wp_title(''); 
+        }
+        ?>
+            
+        </title>
 
     <?php wp_head(); ?>
     <script type="text/javascript">

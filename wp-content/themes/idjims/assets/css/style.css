@@ -6234,6 +6234,12 @@ ul.instruction-list {
         width: 100%;
         padding: 0;
     }
+    .review-content{
+        height: 155px;
+    }
+    .second .title-slider span{
+        line-height: 25px;
+    }
     .instruction-table-col2.post-5 .col-md-4,
     .width-70{
         width: 100%;
@@ -6715,7 +6721,7 @@ ul.instruction-list {
     }
 
     .meta-review {
-        width: 118px;
+        width: 131px;
     }
 
     .col-lg-6,
