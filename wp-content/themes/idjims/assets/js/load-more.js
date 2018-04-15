@@ -27,6 +27,9 @@
                         $('.blog-row').addClass(' blog-row-nopadding-bottom ');
 					}
 					$('.blog-row-list').append( res.data );
+                   // $('.blog-item.autoheight').equalHeightResponsive('refresh');
+                     var heightappenditems =   $('.blog-item:eq(0)').height();
+                    $('.blog-item.autoheight').css('height',heightappenditems );
 					$('.row-blog').append( button );
 					page = page + 1;
 					loading = false;

@@ -14,15 +14,16 @@ get_header(); ?>
                     </a>
                 </div>
                 <div class="col-lg-4 ">
-                    <a href="<?php echo LinksTheme('instruction'); ?>" class="user-page-link-breadscrumb ">
-                        Инструкция по банкротству
-                    </a>
-                </div>
-                <div class="col-lg-4 no-padding">
                     <a href="#" class="user-page-link-breadscrumb current no-hover">
                         Оформление документов
                     </a>
                 </div>
+                <div class="col-lg-4 no-padding">
+                    <a href="<?php echo LinksTheme('instruction'); ?>" class="user-page-link-breadscrumb ">
+                        Инструкция по банкротству
+                    </a>
+                </div>
+
 
             </div>
         </div>
@@ -184,17 +185,17 @@ get_header(); ?>
                         <h3>Собираем документы на банкротство:</h3>
                         <ul class="list-docs-user-page">
                             <li>
-                                <a href="<?php echo LinksTheme('perechen'); ?>"> <img
+                              <img
                                             src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
-                                    <p>
-                                        Перечень документов, необходимых для банкротства
+                                    <p><a target="_blank" href="https://xn--d1aeec9b.xn--p1ai/instruction-page-one/#post-one-link-doc-one" class="question-page-doc">?</a>
+                                        <a class="link-hover" href="<?php echo LinksTheme('perechen'); ?>">Перечень документов, необходимых для банкротства</a>
                                     </p>
-                                </a>
+
                             </li>
                             <li>
                                 <a href="<?php echo LinksTheme('form5'); ?>"> <img
                                             src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
-                                    <p><span class="question-page-doc">?</span>
+                                    <p>
                                         Запрос в банк о предоставлении сведений по счетам и вкладам
                                     </p>
                                 </a>
@@ -202,7 +203,7 @@ get_header(); ?>
                             <li>
                                 <a href="<?php echo LinksTheme('form11'); ?>"> <img
                                             src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
-                                    <p><span class="question-page-doc">?</span>
+                                    <p>
                                         Заявление о предоставлении сведений о задолженности
                                     </p>
                                 </a>
@@ -216,17 +217,17 @@ get_header(); ?>
                         <h3>Подаем в суд заявление о признании банкротом:</h3>
                         <ul class="list-docs-user-page">
                             <li>
-                                <a href="<?php echo LinksTheme('form3'); ?>"> <img
+                                <img
                                             src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
-                                    <p><span class="question-page-doc">?</span>
-                                        Заявление о признании гражданина банкротом
+                                    <p><a  target="_blank" href="https://xn--d1aeec9b.xn--p1ai/instruction-page-one/#post-one-link-doc-two" class="question-page-doc">?</a>
+                                        <a class="link-hover" href="<?php echo LinksTheme('form3'); ?>">Заявление о признании гражданина банкротом</a>
                                     </p>
-                                </a>
+
                             </li>
                             <li>
                                 <a href="<?php echo LinksTheme('form1'); ?>"> <img
                                             src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
-                                    <p><span class="question-page-doc">?</span>
+                                    <p>
                                         Список кредиторов гражданина по установленной форме
                                     </p>
                                 </a>
@@ -234,7 +235,7 @@ get_header(); ?>
                             <li>
                                 <a href="<?php echo LinksTheme('form2'); ?>"> <img
                                             src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
-                                    <p><span class="question-page-doc">?</span>
+                                    <p>
                                         Опись имущества гражданина по установленной форме
                                     </p>
                                 </a>
@@ -250,14 +251,13 @@ get_header(); ?>
                         <h3>На первом судебном заседании:</h3>
                         <ul class="list-docs-user-page">
                             <li>
-                                <a href="<?php echo LinksTheme('form4'); ?>"> <img
-                                            src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
+                                 <img src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
 
-                                    <p><span class="question-page-doc">?</span>
-                                        Ходатайство о введении процедуры реализации имущества минуя
-                                        процедуру реструктуризации долгов;
+                                    <p><a target="_blank" href="https://xn--d1aeec9b.xn--p1ai/instruction-page-two/#post-two-link-doc-tree" class="question-page-doc">?</a>
+                                        <a  class="link-hover" href="<?php echo LinksTheme('form4'); ?>">Ходатайство о введении процедуры реализации имущества минуя
+                                        процедуру реструктуризации долгов;</a>
                                     </p>
-                                </a>
+
                                 <div>
                                     Если у Вас отсутствует доход
                                     на момент подачи заявления о признании банкротом, Вы вправе направить
@@ -273,7 +273,7 @@ get_header(); ?>
                             <li>
                                 <a href="<?php echo LinksTheme('form6'); ?>"> <img
                                             src="<?php echo get_theme_file_uri('/assets/images/doc-icon-2.png') ?>">
-                                    <p><span class="question-page-doc">?</span>
+                                    <p>
                                         Ходатайство об ежемесячных исключениях денежных
                                         средств из конкурсной массы на личные нужды.
                                     </p>

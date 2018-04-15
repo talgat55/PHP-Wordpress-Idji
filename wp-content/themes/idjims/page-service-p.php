@@ -670,7 +670,7 @@ get_header(); ?>
                <div class="client-city">' . $CityClient . '</div>
                <div class="slider-content-client">
 
-                 ' . my_string_limit_words(get_the_content($post_id_slider), 20) . '
+                 ' . my_string_limit_words(strip_tags(get_the_content($post_id_slider)), 20) . '
                </div>
              </div>';
                 endwhile;

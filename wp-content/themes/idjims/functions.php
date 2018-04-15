@@ -432,7 +432,7 @@ function my_string_limit_words($string, $word_limit)
     if (count($words) > $word_limit)
         array_pop($words);
     //	return implode(' ', $words).'... ';
-    return implode(' ', $words) . '';
+    return implode(' ', $words) . '...';
 }
 
 
@@ -562,7 +562,7 @@ function be_post_summary()
     $img_url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()), 'full');
     $image = aq_resize($img_url, 334, 179, true); // Resize & crop img
 
-    echo '  <li class="blog-item">
+    echo '  <li class="blog-item autoheight">
                             <div class="blog-item-walp">
                                 <a class="blog-img-link" href="' . get_the_permalink(get_the_ID()) . '">
                                     <img class="blog-img" src="' . $image . '" />
@@ -574,7 +574,7 @@ function be_post_summary()
                                 </a>
                                 
                                 <div class="title-blog"><a href="' . get_the_permalink(get_the_ID()) . '">' . get_the_title(get_the_ID()) . '</a></div>
-                                <div class="except-blog">' . my_string_limit_words(strip_tags(get_the_content(get_the_ID())), 35) . '</div>
+                                <div class="except-blog">' . my_string_limit_words(strip_tags(get_field('preview')), 35) . '</div>
                             </div>
             </li>';
 
@@ -839,7 +839,7 @@ function wpcf7_cstm_function($contact_form)
 
 
         $postData = array(
-            'TITLE' => 'Сайт Иджис Форма:'.$title, // сохраняем нашу метку и формируем заголовок лида
+            'TITLE' => 'Сайт Иджис Форма:' . $title, // сохраняем нашу метку и формируем заголовок лида
             'NAME' => $name,   // сохраняем имя
             'PHONE_WORK' => $phone, // сохраняем телефон
             'COMMENTS' => $message, // сохраняем телефон

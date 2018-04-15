@@ -302,8 +302,12 @@ jQuery(document).ready(function () {
             .html($resultprice);
         jQuery('.price-part.first .total-price span').html($resulteco);
         jQuery('.price-part.third .total-price span').html($resultprice + parseInt(50000));
-
-        jQuery('#result-calculate').css('height', jQuery('.table-prices').height() + jQuery('.calculate-finish-text').height() + 300);
+        if(jQuery(window).width() < 490){
+           var  $heightmobile = parseInt(200);
+        }else{
+            var  $heightmobile = '';
+        }
+        jQuery('#result-calculate').css('height', jQuery('.table-prices').height() + jQuery('.calculate-finish-text').height() + 350 + $heightmobile);
         jQuery('#result-calculate').removeClass('overflow-hidden');
 
 
@@ -742,22 +746,23 @@ jQuery(document).ready(function () {
 function accordionQAPage() {
     if (jQuery(window).width() < 800) {
 
-        jQuery(".q-a-block").click(function () {
-
-            jQuery(this).toggleClass('showaccordion');
+        jQuery(".q-a-block-hover").click(function () {
+            var $this =  jQuery(this).parent();
+            $this.toggleClass('showaccordion');
 
             return false;
         });
     } else {
-        jQuery(".q-a-block").click(function () {
-            jQuery(this).css('height', 63);
-            if (jQuery(this).hasClass('showaccordion')) {
-                jQuery(this).removeClass('showaccordion');
+        jQuery(".q-a-block-hover").click(function () {
+            var $this =  jQuery(this).parent();
+            $this.css('height', 63);
+            if ($this.hasClass('showaccordion')) {
+                $this.removeClass('showaccordion');
 
             } else {
-                var $thisblock = jQuery(this).find('.block-q-a-accordion').height();
-                jQuery(this).css('height', $thisblock + 143);
-                jQuery(this).addClass('showaccordion');
+                var $thisblock = $this.find('.block-q-a-accordion').height();
+                $this.css('height', $thisblock + 143);
+                $this.addClass('showaccordion');
             }
             return false;
         });

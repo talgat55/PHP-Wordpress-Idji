@@ -941,7 +941,7 @@ header .right-top-header .btn.btn-link-modal {
     color: #fff;
     display: block;
     text-align: center;
-    padding: 10px;
+    padding: 7px 10px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     border: 2px solid #cb454c;
@@ -3702,11 +3702,13 @@ footer {
 }
 
 .col-five-step-block.Four_two_step .tooltip-five-step {
-    top: -53px;
-    left: 303px;
+    top: -5px;
+    left: 127px;
     width: 354px;
 }
-
+.link-hover:hover{
+    text-decoration: underline;
+}
 .top-text-ip {
     font-style: italic;
     color: #ffe1c2 !important;
@@ -4552,7 +4554,9 @@ footer {
 .q-a-block img {
     float: left;
 }
-
+.q-a-block-hover{
+    cursor: pointer;
+}
 .q-a-block h3 {
     display: inline-block;
     padding-left: 30px;
@@ -4653,7 +4657,9 @@ footer {
     padding-top: 20px;
     font-size: 18px;
 }
-
+.qa-blue{
+    color: #008dd0;
+}
 .page-form-4 .left-border .form-group-one::before,
 .page-form-3 .form-group-one::before,
 .page-form-9 .col-md-12-form::before,
@@ -5358,13 +5364,13 @@ ul.instruction-list {
 
 .post-5-spec-col-6-block {
     display: table !important;
-    margin: 0 0 0 auto;
+    margin: 0 13px 0 auto;
     text-align: center;
 }
 
 .col-md-6.spec:last-child .post-5-spec-col-6-block:last-child {
     display: table;
-    margin: 0 auto 0 0;
+    margin: 0 auto 0 51px;
     text-align: center;
 }
 
@@ -5565,12 +5571,19 @@ ul.instruction-list {
     .navigation li:hover .sub-menu {
         display: block;
     }
+
 }
 
 @media (max-width: 1200px) {
     .form-calculate .col-md-6 {
         width: 100%;
         padding-right: 0;
+    }
+    .post-5-spec-col-6-block{
+        margin: 0 0 0 auto;
+    }
+    .col-md-6.spec:last-child .post-5-spec-col-6-block:last-child{
+        margin: 0 auto 0 0;
     }
     .number-row   .col-md-4{
         width: 50%;
@@ -6270,6 +6283,13 @@ ul.instruction-list {
 @media (max-width: 490px) {
     .review-content {
         padding: 15px 0 0 0;
+    }
+    .second .top-price-content img{
+        min-width: 83px;
+    }
+    .top-price-content span{
+        right: 95px!important;
+        top: -98px!important;
     }
     .post-5 .col-md-6.spec{
         width: 100%;

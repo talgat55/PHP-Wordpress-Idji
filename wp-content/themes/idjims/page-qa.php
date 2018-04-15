@@ -14,7 +14,7 @@ get_header(); ?>
 
         <div class="container clearfix">
             <div class="   accordion-qa">
-               <? /* <div>
+                <? /* <div>
                     <a class="q-a-block clearfix" href="#"><img class="q-a-img"
                                                                 src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
                         <h3>Как начать с Вами работать?</h3>
@@ -103,12 +103,15 @@ get_header(); ?>
                 </div>
  */ ?>
                 <div>
-                    <div class="q-a-block clearfix"  ><img class="q-a-img"
-                                                                src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
-                        <h3>Что такое банкротство физ. лиц?</h3>
-                        <div class="accordion-rigtharrow">
-                            <img class="arr-down" src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
-                            <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                    <div class="q-a-block clearfix">
+                        <div class="q-a-block-hover">
+                            <img class="q-a-img" src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
+                            <h3>Что такое банкротство физ. лиц?</h3>
+                            <div class="accordion-rigtharrow">
+                                <img class="arr-down"
+                                     src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
+                                <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                            </div>
                         </div>
                         <div class="block-q-a-accordion">
                             Банкротство физических лиц – реабилитационная процедура, применяемая в рамках закона о
@@ -127,12 +130,15 @@ get_header(); ?>
                     </div>
                 </div>
                 <div>
-                    <div class="q-a-block clearfix"  ><img class="q-a-img"
-                                                                src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
-                        <h3>Подойдет ли мне персональное банкротство?</h3>
-                        <div class="accordion-rigtharrow">
-                            <img class="arr-down" src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
-                            <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                    <div class="q-a-block clearfix">
+                        <div class="q-a-block-hover">
+                            <img class="q-a-img" src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
+                            <h3>Подойдет ли мне персональное банкротство?</h3>
+                            <div class="accordion-rigtharrow">
+                                <img class="arr-down"
+                                     src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
+                                <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                            </div>
                         </div>
                         <div class="block-q-a-accordion">
                             Исходя из цели банкротства – списание долгов гражданина, рассчитывать на такой исход могут
@@ -152,7 +158,7 @@ get_header(); ?>
                             противоправные действия с целью уклонения от уплаты долгов, или погасили долги
                             преимущественно перед одним из кредиторов, вас могут привлечь к административной или даже к
                             уголовной ответственности. Подробно об этом рассказано в нашей инструкции по банкротству.
-                            <a target="_blank" href="<?php echo LinksTheme('instruction'); ?>">ссылка</a><br/>
+                            <a target="_blank" href="<?php echo LinksTheme('instruction'); ?>" class="qa-blue">ссылка</a><br/>
                             Узнать, подойдет ли банкротство лично Вам со 100% результатом можно у нас на бесплатной
                             консультации. Достаточно оставить заявку на сайте или позвонить по телефону 8-923-537-47-67.
 
@@ -161,30 +167,36 @@ get_header(); ?>
                     </div>
                 </div>
                 <div>
-                    <div class="q-a-block clearfix"  ><img class="q-a-img"
-                                                                src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
-                        <h3>Какие негативные последствия банкротства?</h3>
-                        <div class="accordion-rigtharrow">
-                            <img class="arr-down" src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
-                            <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                    <div class="q-a-block clearfix">
+                        <div class="q-a-block-hover">
+                            <img class="q-a-img" src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
+                            <h3>Какие негативные последствия банкротства?</h3>
+                            <div class="accordion-rigtharrow">
+                                <img class="arr-down"
+                                     src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
+                                <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                            </div>
                         </div>
                         <div class="block-q-a-accordion">
                             К таким можно отнести разве что реализацию Вашего недвижимого имущества, не являющегося
                             единственным жильем, а также предметы роскоши (в том числе транспортные средства). Предметы
                             домашнего обихода (бытовая техника, мебель, домашние животные и пр.) реализации не подлежат.
                             Подробно о последствиях банкротства можно прочесть в нашей инструкции по банкротству.
-                            <a target="_blank" href="<?php echo LinksTheme('instruction'); ?>">ссылка</a>
+                            <a target="_blank" href="<?php echo LinksTheme('instruction'); ?>" class="qa-blue">ссылка</a>
                         </div>
 
                     </div>
                 </div>
                 <div>
-                    <div class="q-a-block clearfix" ><img class="q-a-img"
-                                                                src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
-                        <h3>Сколько длится процедура банкротства физ. лица?</h3>
-                        <div class="accordion-rigtharrow">
-                            <img class="arr-down" src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
-                            <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                    <div class="q-a-block clearfix">
+                        <div class="q-a-block-hover"><img class="q-a-img"
+                                                          src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
+                            <h3>Сколько длится процедура банкротства физ. лица?</h3>
+                            <div class="accordion-rigtharrow">
+                                <img class="arr-down"
+                                     src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
+                                <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                            </div>
                         </div>
                         <div class="block-q-a-accordion">
                             Минимальный срок процедуры банкротства гражданина – от 4 месяцев, в среднем же он составляет
@@ -195,12 +207,15 @@ get_header(); ?>
                     </div>
                 </div>
                 <div>
-                    <div class="q-a-block clearfix" ><img class="q-a-img"
-                                                                src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
-                        <h3>Сколько стоит банкротство физ. лица?</h3>
-                        <div class="accordion-rigtharrow">
-                            <img class="arr-down" src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
-                            <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                    <div class="q-a-block clearfix">
+                        <div class="q-a-block-hover">
+                            <img class="q-a-img" src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
+                            <h3>Сколько стоит банкротство физ. лица?</h3>
+                            <div class="accordion-rigtharrow">
+                                <img class="arr-down"
+                                     src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
+                                <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                            </div>
                         </div>
                         <div class="block-q-a-accordion">
                             В среднем по России банкротство «под ключ» стоит от 150 тыс. руб. Эта цена, как правило,
@@ -215,19 +230,23 @@ get_header(); ?>
                             Кроме того, зная о тяжелом финансовом состоянии наших земляков, мы создали сервис
                             бесплатного банкротства физических лиц, позволяющий самостоятельно собрать и сформировать
                             все документы для персонального банкротства, а также написали подробную инструкцию о том,
-                            что и как делать, чтобы самому пройти эту процедуру. <a target="_blank" href="<?php echo LinksTheme('calculate'); ?>">ссылка</a>.
+                            что и как делать, чтобы самому пройти эту процедуру. <a class="qa-blue" target="_blank"
+                                                                                    href="<?php echo LinksTheme('calculate'); ?>">ссылка</a>.
 
                         </div>
 
                     </div>
                 </div>
                 <div>
-                    <div class="q-a-block clearfix"><img class="q-a-img"
-                                                                src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
-                        <h3>Какие документы нужны для подачи заявления на банкротство?</h3>
-                        <div class="accordion-rigtharrow">
-                            <img class="arr-down" src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
-                            <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                    <div class="q-a-block clearfix">
+                        <div class="q-a-block-hover">
+                            <img class="q-a-img" src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
+                            <h3>Какие документы нужны для подачи заявления на банкротство?</h3>
+                            <div class="accordion-rigtharrow">
+                                <img class="arr-down"
+                                     src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
+                                <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                            </div>
                         </div>
                         <div class="block-q-a-accordion">
                             В первую очередь, нужны документы, являющиеся основанием возникновения долговых обязательств
@@ -235,19 +254,23 @@ get_header(); ?>
                             задолженности на текущий момент. К этим документам также потребуются сведения о вашем
                             финансовом состоянии, это справка о доходах и опись имущества. Ну и, конечно же, потребуется
                             паспорт и другие личные документы. Полный список необходимых документов содержится в
-                            бесплатном конструкторе документов. <a target="_blank" href="<?php echo LinksTheme('user-doc'); ?>">ссылка</a>.
+                            бесплатном конструкторе документов. <a class="qa-blue" target="_blank"
+                                                                   href="<?php echo LinksTheme('user-doc'); ?>">ссылка</a>.
 
                         </div>
 
                     </div>
                 </div>
                 <div>
-                    <div class="q-a-block clearfix" ><img class="q-a-img"
-                                                                src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
-                        <h3>Как подать заявление на банкротство физического лица?</h3>
-                        <div class="accordion-rigtharrow">
-                            <img class="arr-down" src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
-                            <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                    <div class="q-a-block clearfix">
+                        <div class="q-a-block-hover">
+                            <img class="q-a-img" src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
+                            <h3>Как подать заявление на банкротство физического лица?</h3>
+                            <div class="accordion-rigtharrow">
+                                <img class="arr-down"
+                                     src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
+                                <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                            </div>
                         </div>
                         <div class="block-q-a-accordion">
                             Заявление о банкротстве Вы можете направить в Арбитражный суд посредством почтового
@@ -256,7 +279,7 @@ get_header(); ?>
                             дистанционно в электронном виде через этот сервис.<br/>
                             Самостоятельно составить заявление о банкротстве, а также сформировать необходимые
                             приложения к нему Вы сможете с использованием нашего бесплатного сервиса формирования
-                            документов для банкротства. <a target="_blank" href="<?php echo LinksTheme('user-doc'); ?>">ссылка</a>.
+                            документов для банкротства. <a class="qa-blue" target="_blank" href="<?php echo LinksTheme('user-doc'); ?>">ссылка</a>.
 
                         </div>
 
@@ -264,18 +287,22 @@ get_header(); ?>
                 </div>
 
                 <div>
-                    <div class="q-a-block clearfix"  ><img class="q-a-img"
-                                                                src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
-                        <h3>Как найти арбитражного управляющего для персонального банкротства?</h3>
-                        <div class="accordion-rigtharrow">
-                            <img class="arr-down" src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
-                            <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                    <div class="q-a-block clearfix">
+                        <div class="q-a-block-hover">
+                            <img class="q-a-img" src="<?php echo get_theme_file_uri('/assets/images/q-a.png') ?>">
+                            <h3>Как найти арбитражного управляющего для персонального банкротства?</h3>
+                            <div class="accordion-rigtharrow">
+                                <img class="arr-down"
+                                     src="<?php echo get_theme_file_uri('/assets/images/arr-down.png') ?>">
+                                <img class="arr-up" src="<?php echo get_theme_file_uri('/assets/images/arr-up.png') ?>">
+                            </div>
                         </div>
                         <div class="block-q-a-accordion">
                             В компании «Иджис» имеются арбитражные управляющие, готовые взяться за Ваше дело! Если Вы
                             хотите сэкономить на юридических услугах, воспользуйтесь нашим тарифом «Эконом» - в него
                             входит подготовка документов для банкротства и предоставление арбитражного управляющего.
-                            Рассчитайте стоимость услуг, воспользовавшись калькулятором банкротства. <a target="_blank" href="<?php echo LinksTheme('calculate'); ?>">ссылка</a>.
+                            Рассчитайте стоимость услуг, воспользовавшись калькулятором банкротства. <a class="qa-blue" target="_blank"
+                                                                                                        href="<?php echo LinksTheme('calculate'); ?>">ссылка</a>.
 
                         </div>
 
