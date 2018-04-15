@@ -573,9 +573,9 @@ body {
 }
 
 #logo p {
-    font-size: 19.5px;
+    font-size: 18.5px;
     float: left;
-    margin-left: 12px;
+    margin-left: 13px;
     font-family: Georgia, sans-serif;
     font-weight: 400;
     margin-bottom: 0;
@@ -1094,7 +1094,7 @@ header .right-top-header .btn.btn-link-modal {
 .check-capability-payment,
 .block-for-mortage {
     padding: 30px 0;
-    color: #ffd25e;
+   /* color: #ffd25e;*/
     text-align: center;
 }
 
@@ -1104,6 +1104,8 @@ header .right-top-header .btn.btn-link-modal {
 
 .no-payment-way {
     color: red;
+    width: 57%;
+    margin: 0 auto;
 }
 
 /*
@@ -2843,14 +2845,39 @@ footer {
     visibility: visible !important;
     opacity: 1 !important;
 }
-
+.row-instructions .SendMessage-3-walp .ajax-loader {
+    right: -29px;
+}
+.row-instructions .SendMessage-3-walp .wpcf7-submit:hover{
+    background-color: #008fdb;
+}
 /*
 * Page Calculate
 **/
+.calculate-page-walp .wpcf7-submit{
+    background: transparent;
+}
 .calculate-page-walp .col-md-6 {
     padding-right: 4%;
 }
-
+.calculate-finish-text{
+    padding: 50px 0;
+}
+.feature-service.calc-feature p{
+    color: #333!important;
+    margin: 0;
+    font-size: 19px!important;
+}
+.feature-service.calc-feature img{
+    padding-right: 0;
+}
+.feature-service.calc-feature{
+    padding: 17px 25px;
+    margin: 0 0 90px;
+    /* display: table; */
+    border: 2px solid #000;
+    background: transparent;
+}
 .form-calculate {
     margin: 50px 0;
 }
@@ -3814,6 +3841,12 @@ footer {
     background-color: #fff !important;
     color: #cb454c;
 }
+.background-red{
+    background-color:   #cb454c;
+    color: #fff;
+    display: inline;
+    padding: 0 2px;
+}
 
 .add-form {
     border: 2px solid #008dd0 !important;
@@ -4194,7 +4227,10 @@ footer {
 .blue-when-color {
     color: #008fdb;
 }
-
+.underline{
+    text-decoration: underline;
+    color: #444;
+}
 .fisrt-block-block-dont-self h3 {
     float: left;
     margin-bottom: 0;
@@ -5621,7 +5657,9 @@ ul.instruction-list {
     .container {
         width: 900px;
     }
-
+    .no-payment-way {
+        width: 64%;
+    }
     .ourServiceBlock {
         min-height: 199px;
     }
@@ -5781,6 +5819,9 @@ ul.instruction-list {
 @media (max-width: 991px) {
     .first-block-img {
         height: 200px;
+    }
+    .no-payment-way {
+        width: 74%;
     }
     .number-instruction-block{
         display: table;
@@ -6349,6 +6390,7 @@ ul.instruction-list {
     .custom-col .col-mdi-6,
     .custom-col-6 .col-md-6,
     .section-instruction .col-md-4,
+    .no-payment-way,
     .modal-form {
         width: 100%;
     }

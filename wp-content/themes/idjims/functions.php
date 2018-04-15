@@ -1,4 +1,14 @@
 <?php
+/*
+ *  Settings for Bitrix 24
+ */
+define('CRM_HOST', get_field('bitrix_24_host_name', 'option') . '.bitrix24.ru');
+define('CRM_PORT', '443');
+define('CRM_PATH', '/crm/configs/import/lead.php');
+define('CRM_LOGIN', get_field('bitrix_24_user_name', 'option'));
+define('CRM_PASSWORD', get_field('bitrix_24_user_password', 'option'));
+// settings SMS.ru
+define('APIKEYSMSRU', get_field('api_key_smsru', 'option'));
 
 /*
 * Add Feature Imagee
@@ -172,6 +182,21 @@ function post_type_client()
     register_post_type('clients', $args);
 }
 
+/*
+*  Rgister Post Type Settings
+*/
+if (function_exists('acf_add_options_page')) {
+
+    // Let's add our Options Page
+    acf_add_options_page(array(
+        'page_title' => 'Настройки Темы',
+        'menu_title' => 'Настройки Темы',
+        'menu_slug' => 'theme-options',
+        'capability' => 'edit_posts'
+    ));
+
+
+}
 
 /*
 *  Rgister Post Type Action
@@ -549,7 +574,7 @@ function be_post_summary()
                                 </a>
                                 
                                 <div class="title-blog"><a href="' . get_the_permalink(get_the_ID()) . '">' . get_the_title(get_the_ID()) . '</a></div>
-                                <div class="except-blog">' . my_string_limit_words(get_the_content(get_the_ID()), 10) . '</div>
+                                <div class="except-blog">' . my_string_limit_words(strip_tags(get_the_content(get_the_ID())), 35) . '</div>
                             </div>
             </li>';
 
@@ -720,16 +745,14 @@ function check_account()
     ob_start();
 
 
-
     if ($number AND $code == 0) {
 
         $six_digit_random_number = mt_rand(100000, 999999);
 
 
-
         $updatenumber = substr_replace($number, '7', 0, 1);
 
-        $smsru = new SMSRU('BD789B4B-A7F8-D5C2-A36E-D40CAC1DF37F'); // Ваш уникальный программный ключ, который можно получить на главной странице
+        $smsru = new SMSRU(APIKEYSMSRU); // Ваш уникальный программный ключ, который можно получить на главной странице
 
         $data = new stdClass();
         $data->to = $updatenumber;
@@ -753,7 +776,7 @@ function check_account()
         } else {
             $a = array(
                 'status' => false,
-                'value' => $sms->status_code." ".$sms->status_text
+                'value' => $sms->status_code . " " . $sms->status_text
             );
             echo json_encode($a);
         }
@@ -798,3 +821,68 @@ function check_account()
 
 add_action('wp_ajax_check_account', 'check_account');
 add_action('wp_ajax_nopriv_check_account', 'check_account');
+/*
+ * Send data in Bitrix 24
+ */
+function wpcf7_cstm_function($contact_form)
+{
+    $title = $contact_form->title;
+    $submission = WPCF7_Submission::get_instance();
+
+    if ($submission) {
+        $posted_data = $submission->get_posted_data();
+
+        $name = isset($posted_data['your-name']) ? $posted_data['your-name'] : '';
+        $email = isset($posted_data['email12']) ? $posted_data['email12'] : '';
+        $phone = isset($posted_data['tel-855']) ? $posted_data['tel-855'] : '';
+        $message = isset($posted_data['textarea-5']) ? $posted_data['textarea-5'] : '';
+
+
+        $postData = array(
+            'TITLE' => 'Сайт Иджис Форма:'.$title, // сохраняем нашу метку и формируем заголовок лида
+            'NAME' => $name,   // сохраняем имя
+            'PHONE_WORK' => $phone, // сохраняем телефон
+            'COMMENTS' => $message, // сохраняем телефон
+            'EMAIL_WORK' => $email
+        );
+
+        // авторизация, проверка логина и пароля
+        if (defined('CRM_AUTH')) {
+            $postData['AUTH'] = CRM_AUTH;
+        } else {
+            $postData['LOGIN'] = CRM_LOGIN;
+            $postData['PASSWORD'] = CRM_PASSWORD;
+        }
+
+        $fp = fsockopen("ssl://" . CRM_HOST, CRM_PORT, $errno, $errstr, 30);
+        if ($fp) {
+            // формируем и шифруем строку с данными из формы
+            $strPostData = '';
+            foreach ($postData as $key => $value)
+                $strPostData .= ($strPostData == '' ? '' : '&') . $key . '=' . urlencode($value);
+            $str = "POST " . CRM_PATH . " HTTP/1.0\r\n";
+            $str .= "Host: " . CRM_HOST . "\r\n";
+            $str .= "Content-Type: application/x-www-form-urlencoded\r\n";
+            $str .= "Content-Length: " . strlen($strPostData) . "\r\n";
+            $str .= "Connection: close\r\n\r\n";
+
+            $str .= $strPostData;
+
+            // отправляем запрос в срм систему
+            fwrite($fp, $str);
+            $result = '';
+            while (!feof($fp)) {
+                $result .= fgets($fp, 128);
+            }
+            fclose($fp);
+
+            $response = explode("\r\n\r\n", $result);
+            $output = '<pre>' . print_r($response[1], 1) . '</pre>';
+        } else {
+            //echo 'Connection Failed! ' . $errstr . ' (' . $errno . ')';
+        }
+    }
+}
+
+add_action("wpcf7_before_send_mail", "wpcf7_cstm_function");
+

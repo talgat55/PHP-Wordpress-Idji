@@ -74,7 +74,7 @@
                     <a href="<?php echo home_url(); ?>">
                         <img src="<?php echo get_theme_file_uri('/assets/images/logo-a-2.png') ?>" alt="Logo">
                         <div>ИДЖИС</div>
-                        <p>Живи без долгов</p>
+                        <p>Живи без долгов!</p>
                     </a>
                 </div>
                 <div class="center-top-heder">

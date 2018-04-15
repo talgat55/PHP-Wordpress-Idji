@@ -361,8 +361,7 @@ get_header(); ?>
                 4. Все способы «альтернативной» ликвидации <span class="yellow-live-color">не законны.</span>
                 <br/>
                 <br/>
-                <span class="happen-italic">Важно: Прибегая к «альтернативной» ликвидации Вы загоняете себя в ловушку.Банкротство фирмы с долгами возможно только путем
-                    банкротства.</span>
+                <span class="happen-italic">Важно: Прибегая к «альтернативной» ликвидации Вы загоняете себя в ловушку. Ликвидация фирмы с долгами возможно только путем банкротства.</span>
 
 
             </div>
@@ -533,7 +532,7 @@ get_header(); ?>
                             <div class="img-risk">
                                 <img data-src="<?php echo get_theme_file_uri('/assets/images/chain.png') ?>">
                             </div>
-                            <h3>Субсидиарная ответственность</h3>
+                            <h3>Уголовная ответственность</h3>
                         </div>
                         <p class="content-risk">
                             Уголовная ответственность может наступить за ряд экономических преступлений: фиктивное
@@ -804,7 +803,7 @@ get_header(); ?>
                         </div>
                         <p>
                             Предоставим независимого финансового управляющего, который поможет выйти
-                            <span class="yellow-live-color">из сложной ситуации</span> с наиболее благоприятным
+                            из сложной ситуации с наиболее благоприятным
                             результатом.
                         </p>
                     </div>
@@ -881,7 +880,7 @@ get_header(); ?>
                <div class="client-city">' . $CityClient . '</div>
                <div class="slider-content-client">
 
-                 ' . my_string_limit_words(get_the_content($post_id_slider), 20) . '
+                 ' . my_string_limit_words(strip_tags(get_the_content($post_id_slider)), 20) . '
                </div>
              </div>';
                 endwhile;

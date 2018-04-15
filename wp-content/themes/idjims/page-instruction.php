@@ -70,7 +70,7 @@ get_header(); ?>
 
                             </a>
 
-                            <div class="title-blog"><a href="<?php echo LinksTheme('instruction-page-one'); ?>">Процедура
+                            <div class="title-blog"><a href="<?php echo LinksTheme('instruction-page-one'); ?>">Процесс
                                     сбора документов для банкротства</a></div>
                             <div class="except-blog">Сбор документов для подачи на банкротство с компанией ИДЖИС обычно
                                 составляет от двух недель до двух
@@ -100,13 +100,13 @@ get_header(); ?>
                     </li>
                     <li class="blog-item">
                         <div class="blog-item-walp">
-                            <a class="blog-img-link" href="<?php echo LinksTheme('instruction-page-four'); ?>">
+                            <a class="blog-img-link" href="<?php echo LinksTheme('instruction-page-six'); ?>">
                                 <img class="blog-img"
                                      src="<?php echo get_theme_file_uri("/assets/images/i2.jpg"); ?>"/>
 
                             </a>
 
-                            <div class="title-blog"><a href="<?php echo LinksTheme('instruction-page-four'); ?>">Банкротство
+                            <div class="title-blog"><a href="<?php echo LinksTheme('instruction-page-six'); ?>">Банкротство
                                     путем реструктуризации </a></div>
                             <div class="except-blog">Та самая процедура, за которой к нам обращается 90% всех клиентов.
                                 Конечная цель процедуры реализации имущества – освобождение от долгов. Законопроект о
@@ -116,13 +116,13 @@ get_header(); ?>
                     </li>
                     <li class="blog-item">
                         <div class="blog-item-walp">
-                            <a class="blog-img-link" href="<?php echo LinksTheme('instruction-page-six'); ?>">
+                            <a class="blog-img-link" href="<?php echo LinksTheme('instruction-page-four'); ?>">
                                 <img class="blog-img"
                                      src="<?php echo get_theme_file_uri("/assets/images/i3.jpg"); ?>"/>
 
                             </a>
 
-                            <div class="title-blog"><a href="<?php echo LinksTheme('instruction-page-six'); ?>">Банкротство
+                            <div class="title-blog"><a href="<?php echo LinksTheme('instruction-page-four'); ?>">Банкротство
                                     путем реализации имущества</a></div>
                             <div class="except-blog">Если судом в отношении Вас все же была утверждена процедура
                                 реструктуризации, то на ближайшие 6 месяцев о введении финальной процедуры банкротства

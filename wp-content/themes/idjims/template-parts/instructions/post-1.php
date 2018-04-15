@@ -5,7 +5,7 @@
 ?>
 <div class="breadscrumb">
     <div class="container">
-        <h1 class="title-section service center-white ">Процедура сбора документов для банкротства</h1>
+        <h1 class="title-section service center-white ">Процесс сбора документов для банкротства</h1>
     </div>
 </div>
 <div class="row row-instructions">
@@ -321,9 +321,9 @@
             <div class="feature-service    clearfix">
                 <img data-src="<?php echo get_theme_file_uri('/assets/images/warning2-2.png') ?>">
                 <p>
-                    Реквизиты для оплаты государственной пошлины и депозита суда Вы можете найти на сайте <span
+                    Реквизиты для оплаты государственной пошлины и депозита суда Вы можете найти на сайте <a target="_blank"  href="http://kemerovo.arbitr.ru/process/duty/invoice"
                             class="custom-inst-one">Арбитражного
-                        суда Кемеровской области</span>. Кроме того, Вы можете попросить у суда отсрочку внесения денег
+                        суда Кемеровской области</a>. Кроме того, Вы можете попросить у суда отсрочку внесения денег
                     на
                     вознаграждение финансового управляющего до даты первого судебного заседания.
                 </p>

@@ -76,8 +76,8 @@ get_header(); ?>
         <div class="container clearfix">
             <div class="col-md-7 text-justify">
                 <h1 class="title-section">Немного о нас</h1>
-                <p>Мы знаем, как решить проблему с долгами КАЧЕСТВЕННО и НЕДОРОГО! </p>
-                <p>Компания <b>ИДЖИС</b> специализируется на банкротствах физических лиц с момента принятия
+                <p>Мы знаем, как решить проблему с долгами <span class="blue-when-color">КАЧЕСТВЕННО</span> и <span class="blue-when-color">НЕДОРОГО!</span> </p>
+                <p>Компания <span class="blue-when-color"><b>ИДЖИС</b></span> специализируется на <span class="underline">банкротствах физических лиц</span> с момента принятия
                     Законодателем соответствующих поправок в Федеральный закон
                     "О несостоятельности (банкротстве)", касающихся банкротства граждан. К слову, до недавнего времени
                     возможность списать свои долги имелась только у различных фирм и индивидуальных предпринимателей,
@@ -87,11 +87,11 @@ get_header(); ?>
                     бизнес-процессов позволяет нам предложить, пожалуй, самую низкую цену банкротства физических лиц в
                     Кемеровской области.
                     </br>
-                    Банкротство физического лица - единственный законный способ освободиться от всех кредитных долгов, и
+                    <span class="underline">Банкротство физического лица</span> - единственный <span class="blue-when-color">законный способ освободиться от всех кредитных долгов</span>, и
                     уже сразу после начала этой процедуры прекращаются начисления пеней и штрафов, звонки и визиты
                     приставов и коллекторов.</p>
 
-                <p class="italic">Начните свой путь в жизнь без долгов вместе с нами!</p>
+                <p class="italic background-red ">Начните свой путь в жизнь без долгов вместе с нами!</p>
             </div>
             <div class="col-md-5  background-about"
                  style="background: url(<?php echo get_theme_file_uri('/assets/images/smart-2.png') ?>);">
@@ -194,7 +194,8 @@ get_header(); ?>
                 <div class="col-md-3 benefit-cols animation-block  opacity-zero" data-animation="slideInUp">
                     <div class="benefit-block">
                         <div class="why-img">
-                            <img data-src="<?php echo get_theme_file_uri('/assets/images/shape3-2.jpg') ?>">
+
+                            <img data-src="<?php echo get_theme_file_uri('/assets/images/shape2-2.jpg') ?>">
                         </div>
                         <h3>Гарантия возврата денег </h3>
                         <p>Если суд не признает Вас банкротом— вернем деньги. Это прописано в договоре!</p>
@@ -203,7 +204,7 @@ get_header(); ?>
                 <div class="col-md-3 benefit-cols animation-block  opacity-zero" data-animation="slideInUp">
                     <div class="benefit-block">
                         <div class="why-img">
-                            <img data-src="<?php echo get_theme_file_uri('/assets/images/shape2-2.jpg') ?>">
+                            <img data-src="<?php echo get_theme_file_uri('/assets/images/shape3-2.jpg') ?>">
                         </div>
                         <h3>Представительство в суде</h3>
                         <p>Вам не придется лично присутствовать на судебных заседаниях— этим за Вас займется наш

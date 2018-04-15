@@ -233,81 +233,78 @@ jQuery(document).ready(function () {
 
             jQuery('.check-capability-payment')
                 .html('')
-                .removeClass(' no-payment-way ')
-                .addClass(' no-payment-way ')
-                .html('Процедура реструктуризации невозможна.');
+              //  .removeClass(' no-payment-way ')
+               // .addClass(' no-payment-way ')
+                .html('<div class="border-block"><p class="text-left">Вам подходит процедура банкротства с полным списанием долгов, так как у Вас имеются признаки неплатежеспособности и недостаточности имущества. Реструктуризация долгов через процедуру банкротства невозможно.</p></div>');
 
-           // jQuery('#result-calculate').addClass(' overflow-hidden ');
-           // jQuery('#result-calculate').css('height', 0);
+            // jQuery('#result-calculate').addClass(' overflow-hidden ');
+            // jQuery('#result-calculate').css('height', 0);
         } else {
             jQuery('.check-capability-payment')
                 .html('')
-                .removeClass(' no-payment-way ')
-                .html('Cуд может утвердить план реструктуризации, нужна консультация специалиста, и что подробнее можно прочесть в соответствующем разделе сайта');
+              //  .removeClass(' no-payment-way ')
+                .html('<div class="border-block"><p class="text-left">С учетом Вашего дохода и стоимости имущества, Вы можете рассчитаться со всеми долгами в течении трех лет. Вам подходит процедура реструктуризации задолженности.');
         }
-            var $addCreditPrice, addText, $addproperty, $addCreditPriceEco, $numberpropertyprice;
+        var $addCreditPrice, addText, $addproperty, $addCreditPriceEco, $numberpropertyprice;
 
-            if (valuecredits > 5) {
-                $addCreditPrice = Number(parseInt(valuecredits) * 2000);
-                $addCreditPriceEco = Number(parseInt(valuecredits) * 1000);
+        if (valuecredits > 5) {
+            $addCreditPrice = Number(parseInt(valuecredits) * 2000);
+            $addCreditPriceEco = Number(parseInt(valuecredits) * 1000);
+        } else {
+            $addCreditPrice = 0;
+            $addCreditPriceEco = 0;
+        }
+
+        if (checkmortgage == 1) {
+            addText = 'Для ипотечных клиентов у нас действуют скидки';
+            $addproperty = 0;
+        } else {
+            if (valueproperty > 0) {
+
+                $addproperty = parseInt(10000);
+
             } else {
-                $addCreditPrice = 0;
-                $addCreditPriceEco = 0;
-            }
 
-            if (checkmortgage == 1) {
-                addText = 'Для ипотечных клиентов у нас действуют скидки';
                 $addproperty = 0;
-            } else {
-                if (valueproperty > 0) {
 
-                    $addproperty = parseInt(10000);
-
-                } else {
-
-                    $addproperty = 0;
-
-                }
-                addText = '';
             }
-            if (parseInt(numberproperty) > 0) {
-                $numberpropertyprice = parseInt(numberproperty) * parseInt(5000);
-            } else {
-                $numberpropertyprice = 0;
-            }
-            if (valueOld == 0) {  // calc Old Value
-                var $valueOld = parseInt(5000);
-            } else {
-                var $valueOld = 0;
-            }
-            var $resultprice = Number(100000 + $addCreditPrice + $addproperty + $numberpropertyprice - $valueOld);
-            var $resulteco = Number(35000 + $addCreditPriceEco + $addproperty + $numberpropertyprice - $valueOld);
+            addText = '';
+        }
+        if (parseInt(numberproperty) > 0) {
+            $numberpropertyprice = parseInt(numberproperty) * parseInt(5000);
+        } else {
+            $numberpropertyprice = 0;
+        }
+        if (valueOld == 0) {  // calc Old Value
+            var $valueOld = parseInt(5000);
+        } else {
+            var $valueOld = 0;
+        }
+        var $resultprice = Number(100000 + $addCreditPrice + $addproperty + $numberpropertyprice - $valueOld);
+        var $resulteco = Number(35000 + $addCreditPriceEco + $addproperty + $numberpropertyprice - $valueOld);
 
-            jQuery('html, body').animate({scrollTop: jQuery('#result-calculate').offset().top - 100}, 500);
+        jQuery('html, body').animate({scrollTop: jQuery('#result-calculate').offset().top - 100}, 500);
 
-            //jQuery('#result-calculate').html('Cуд может утвердить план реструктуризации, нужна консультация специалиста, подробнее можно прочесть в соответствующем разделе сайта </br> <div>Цена наших услуг:'+ $resultprice+' руб.</div></br><p>'+ addText+'</p>');
-            jQuery('.price-part .total-price span').html('');
-            if (addText.length) {
-                jQuery('.block-for-mortage')
-                    .html('')
-                    .html(addText);
-
-            } else {
-                jQuery('.block-for-mortage').html('');
-            }
-
-
-            jQuery('.price-part.second .total-price span')
+        //jQuery('#result-calculate').html('Cуд может утвердить план реструктуризации, нужна консультация специалиста, подробнее можно прочесть в соответствующем разделе сайта </br> <div>Цена наших услуг:'+ $resultprice+' руб.</div></br><p>'+ addText+'</p>');
+        jQuery('.price-part .total-price span').html('');
+        if (addText.length) {
+            jQuery('.block-for-mortage')
                 .html('')
-                .html($resultprice);
-            jQuery('.price-part.first .total-price span').html($resulteco);
-            jQuery('.price-part.third .total-price span').html($resultprice + parseInt(50000));
+                .html(addText);
 
-            jQuery('#result-calculate').css('height', jQuery('.table-prices').height());
-            jQuery('#result-calculate').removeClass('overflow-hidden');
-
+        } else {
+            jQuery('.block-for-mortage').html('');
+        }
 
 
+        jQuery('.price-part.second .total-price span')
+            .html('')
+            .html($resultprice);
+        jQuery('.price-part.first .total-price span').html($resulteco);
+        jQuery('.price-part.third .total-price span').html($resultprice + parseInt(50000));
+
+        jQuery('#result-calculate').css('height', jQuery('.table-prices').height() + jQuery('.calculate-finish-text').height() + 300);
+        jQuery('#result-calculate').removeClass('overflow-hidden');
 
 
     });
@@ -747,7 +744,7 @@ function accordionQAPage() {
 
         jQuery(".q-a-block").click(function () {
 
-            jQuery(this).toggleClass('showaccordion')
+            jQuery(this).toggleClass('showaccordion');
 
             return false;
         });
@@ -997,6 +994,7 @@ function InitActionPriceTables() {
                 $secondMountPayment = parseInt(15000);
                 //  $mountPayment = parseInt(10000);
                 $mountPayment = parseInt($currentPrice) / 10;
+                $textforTemplate= '';
             } else {
 
                 $firstTwoPayment = parseInt(20000 + 25000);
@@ -1004,6 +1002,7 @@ function InitActionPriceTables() {
                 $secondMountPayment = parseInt(25000);
                 //  $mountPayment = parseInt(10000);
                 $mountPayment = parseInt($currentPrice) / 10;
+                $textforTemplate= ' Депозит суда';
             }
 
 
@@ -1074,7 +1073,7 @@ function InitActionPriceTables() {
                 '<p>1 месяц Аванс: <span>' + $firstMountPayment + '</span> руб.</p>' +
                 '</li>' +
                 '<li>' +
-                '<p>2 месяц Депозит суда: <span>' + $secondMountPayment + '</span> руб.</p>' +
+                '<p>2 месяц'+$textforTemplate+': <span>' + $secondMountPayment + '</span> руб.</p>' +
                 '</li>' + redytemplate + '</ul>');
 
 
@@ -1291,7 +1290,7 @@ function InitUISlider() {
     jQuery("#slider-ui").slider({
         value: 0,//Значение, которое будет выставлено слайдеру при загрузке
         min: 150000,//Минимально возможное значение на ползунке
-        max: 3000000,//Максимально возможное значение на ползунке
+        max: 5000000,//Максимально возможное значение на ползунке
         step: 1000,//Шаг, с которым будет двигаться ползунок
         create: function (event, ui) {
             val = jQuery("#slider-ui").slider("value");//При создании слайдера, получаем его значение в перемен. val
@@ -1318,7 +1317,7 @@ function InitUISliderPage() {
     $this.slider({
         value: 0,//Значение, которое будет выставлено слайдеру при загрузке
         min: 150000,//Минимально возможное значение на ползунке
-        max: 15000000,//Максимально возможное значение на ползунке
+        max: 5000000,//Максимально возможное значение на ползунке
         step: 1000,//Шаг, с которым будет двигаться ползунок
         create: function (event, ui) {
             val = jQuery($this).slider("value");//При создании слайдера, получаем его значение в перемен. val
@@ -1493,21 +1492,22 @@ function backToTop() {
     });
 
 }
+
 /*
 * Target yandex
  */
-document.addEventListener('wpcf7mailsent', function( event ) {
+document.addEventListener('wpcf7mailsent', function (event) {
 
-    if(event.detail.contactFormId=="17"){
+    if (event.detail.contactFormId == "17") {
 
         yaCounter48236498.reachGoal('Stay_statement');
-    } else if(event.detail.contactFormId=="15"){
+    } else if (event.detail.contactFormId == "15") {
 
         yaCounter48236498.reachGoal('Stay_statement_home');
-    }  else if(event.detail.contactFormId=="16"){
+    } else if (event.detail.contactFormId == "16") {
 
         yaCounter48236498.reachGoal('Statement_sale');
     }
 
 
-}, false );
+}, false);

@@ -10,7 +10,7 @@ get_header(); ?>
                 <div class="col-md-3">
 
                     <img class="first-block-img"
-                         data-src="<?php echo get_theme_file_uri('/assets/images/human-2.png') ?>">
+                         data-src="<?php echo get_theme_file_uri('/assets/images/human5-2.png') ?>">
 
                 </div>
                 <div class="col-md-9 z-up">
@@ -93,7 +93,7 @@ get_header(); ?>
 
 
         </div>
-        <img class="home-img" data-src="<?php echo get_theme_file_uri('/assets/images/home-2.png') ?>">
+        <img class="home-img" data-src="<?php echo get_theme_file_uri('/assets/images/home5-2.png') ?>">
     </section>
     <section id="dont-wait">
         <div class="container clearfix">
@@ -108,8 +108,8 @@ get_header(); ?>
                         <div class="dont-wait-img">
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/dontwait1-2.png') ?>">
                         </div>
-                        <p>Войти в прежний график будет все сложнее, ведь долг станет только больше. Кредитные каникулы
-                            лишь усугубят ситуацию, лишив последней надежды сохранить бизнес</p>
+                        <p>С каждым днем долг будет расти подобно снежному кому: из-за начисленных процентов, пеней и
+                            неустоек его размер будет увеличиваться</p>
                     </div>
                 </div>
                 <div class="col-md-6  dont-wait-block-auto-height no-padding-right">
@@ -163,7 +163,7 @@ get_header(); ?>
             <div class="border-use-our"></div>
             <div class="col-md-6  animation-block  opacity-zero" data-animation="slideInLeft">
                 <div class="block-use-our">
-                    <a href="<?php echo LinksTheme('calculate');  ?>" class="block-use-our-walp-2 clearfix">
+                    <a href="<?php echo LinksTheme('calculate'); ?>" class="block-use-our-walp-2 clearfix">
                         <h3>Калькулятор <span>банкротства</span></h3>
                         <p>Узнайте, подходит ли банкротство в Вашем
                             случае, а также узнайте стоимость наших услуг!</p>
@@ -175,7 +175,7 @@ get_header(); ?>
             </div>
             <div class="col-md-6 no-padding-right  animation-block  opacity-zero" data-animation="slideInRight">
                 <div class="block-use-our">
-                    <a  href="<?php echo LinksTheme('user-doc');  ?>"  class="block-use-our-walp-2 clearfix">
+                    <a href="<?php echo LinksTheme('user-doc'); ?>" class="block-use-our-walp-2 clearfix">
                         <h3>Бесплатное <span>банкротство</span></h3>
                         <p>Зарегистрируйтесь на сайте и получите
                             возможность бесплатно подготовить все документы
@@ -418,7 +418,7 @@ get_header(); ?>
                             <p>
                                 Окупите затраты на банкротство через несколько
                                 месяцев, а после начнете значительно экономить, ведь
-                                реструктуризация пройдет под 7,5% (прим: да, сейчас ставка рефинансирования ЦБ РФ всего 7,5%, банкротство стало еще выгоднее) годовых.
+                                реструктуризация пройдет под 7,25% годовых.
                             </p>
                         </div>
                     </div>
@@ -624,7 +624,7 @@ get_header(); ?>
                         </div>
                         <p>
                             Предоставим независимого финансового управляющего, который поможет выйти
-                            <span class="yellow-live-color">из сложной ситуации</span> с наиболее благоприятным результатом.
+                            из сложной ситуации с наиболее благоприятным результатом.
                         </p>
                     </div>
                 </div>
@@ -634,7 +634,8 @@ get_header(); ?>
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/live3.png') ?>">
                         </div>
                         <p>
-                            Поможем собрать все необходимые документы, составим и направим запросы в гос. органы и кредитные организации.
+                            Поможем собрать все необходимые документы, составим и направим запросы в гос. органы и
+                            кредитные организации.
                         </p>
                     </div>
                 </div>
@@ -644,7 +645,8 @@ get_header(); ?>
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/live5.png') ?>">
                         </div>
                         <p>
-                            Подготовим и направим заявление о банкротстве в арбитражный суд, будем представлять Ваши интересы от начала и до конца.
+                            Подготовим и направим заявление о банкротстве в арбитражный суд, будем представлять Ваши
+                            интересы от начала и до конца.
                         </p>
                     </div>
                 </div>

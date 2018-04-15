@@ -16,7 +16,7 @@
                     styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
                 };
                 var image = {
-                    url: 'http://idgis.trekweb.ru/wp-content/themes/idjims/assets/images/geo3.png',
+                    url: 'https://xn--d1aeec9b.xn--p1ai/wp-content/themes/idjims/assets/images/geo3.png',
                     size: new google.maps.Size(571, 176),
                     // The origin for this image is (0, 0).
                     origin: new google.maps.Point(0, 0),

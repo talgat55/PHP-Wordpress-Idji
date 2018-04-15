@@ -37,7 +37,7 @@ get_header(); ?>
                                 </a>
                                 
                                 <div class="title-blog"><a href="' . get_the_permalink($post_id) . '">' . get_the_title($post_id) . '</a></div>
-                                <div class="except-blog">' . my_string_limit_words(get_the_content($post_id), 10) . '</div>
+                                <div class="except-blog">' . my_string_limit_words(strip_tags(get_the_content($post_id)), 35) . '</div>
                             </div>
                             </li>';
 
