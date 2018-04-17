@@ -248,8 +248,8 @@ jQuery(document).ready(function () {
         var $addCreditPrice, addText, $addproperty, $addCreditPriceEco, $numberpropertyprice;
 
         if (valuecredits > 5) {
-            $addCreditPrice = Number(parseInt(valuecredits) * 2000);
-            $addCreditPriceEco = Number(parseInt(valuecredits) * 1000);
+            $addCreditPrice = Number(parseInt(valuecredits-5) * 2000);
+            $addCreditPriceEco = Number(parseInt(valuecredits-5) * 1000);
         } else {
             $addCreditPrice = 0;
             $addCreditPriceEco = 0;
@@ -1034,15 +1034,15 @@ function InitActionPriceTables() {
             lastPayment = false;
         }
         //lastPayment = false;
-
+/*
         var valuecredits = jQuery(".calculate-valuecredits").val();
         if (parentClass.hasClass('third') && valuecredits < 5) {  // for VIP plan  if credit less 5
 
             lastPayment = false;
-        }
+        }*/
         if (lastPayment) {
 
-            if ($firstTwoPayment == $currentPrice) {  // check price first Two Mounth  Price and total Price ==   3 mouth don't need
+            if ($firstTwoPayment == $currentPrice ||  ($currentPrice-$firstTwoPayment) < $mountPayment ) {  // check price first Two Mounth  Price and total Price ==   3 mouth don't need
 
                 var template = '';
 

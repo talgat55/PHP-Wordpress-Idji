@@ -82,7 +82,7 @@ get_header(); ?>
     </section>
     <section id="dont-wait">
         <div class="container clearfix">
-            <div class="title-section center">Почему не стоит ждать, пока ситуация с ипотекой наладится?</div>
+            <div class="title-section center">Почему не стоит ждать, пока ситуация с долгами наладится?</div>
             <p class="calibri">
                 Если в ближайшее время Вы не найдете способ вернуться к платежам, то стоит воспользоваться процедурой
                 банкротства. Иначе могут начаться необратимые последствия:

@@ -461,17 +461,6 @@ get_header(); ?>
 
             </div>
         </div><!-- #primary -->
-        <section class="SendMessage">
-            <div class="container">
-                <div class="title-section center-white">Закажите бесплатную консультацию</div>
-                <?php echo do_shortcode('[contact-form-7 id="15" title="Untitled"]'); ?>
-
-            </div>
-            <div class="SendMessage-img">
-                <img data-src="<?php echo get_theme_file_uri('/assets/images/smart2-2.png') ?>">
-            </div>
-
-        </section>
         <section class="SendMessage  SendMessage-2  Calc-page">
             <div class="container relative">
 
