@@ -4825,6 +4825,7 @@ footer {
     text-align: center;
 }
 
+.spec-help-block .feature-service p,
 .section-instruction .feature-service p {
     font-family: Calibri, sans-serif;
     font-size: 18px;
@@ -4936,18 +4937,22 @@ ul.instruction-list {
     margin-bottom: 10px;
 }
 
+.spec-help-block .feature-service,
 .section-instruction .feature-service {
     margin: 0;
     display: table;
     border: 2px solid #000;
 }
 
+.spec-help-block .feature-service p,
 .section-instruction .feature-service p,
+.spec-help-block .feature-service img ,
 .section-instruction .feature-service img {
     display: table-cell;
     vertical-align: top;
 }
 
+.spec-help-block .feature-service img,
 .section-instruction .feature-service img {
     min-width: 73px;
 }
@@ -5070,6 +5075,7 @@ ul.instruction-list {
     color: #fff !important;
 }
 
+.spec-help-block .feature-service,
 .section-instruction .feature-service {
     padding: 17px 25px;
 }
@@ -5288,7 +5294,7 @@ ul.instruction-list {
 }
 
 .spisanie-row .col-md-4 {
-    width: 26.33%;
+    width: 29.33%;
     margin: 0 2% 30px 2%;
     box-sizing: border-box;
 }
@@ -5329,21 +5335,21 @@ ul.instruction-list {
 
 .spisanie-img {
     position: absolute;
-    bottom: -231px;
+    bottom: -246px;
     right: 0px;
     margin: 0 !important;
 }
 
 .red .spisanie-img {
-    right: -50.8px;
+    right: -53.8px;
 }
 
 .green .spisanie-img {
-    right: -42.8px;
+    right: -45.8px;
 }
 
 .blue .spisanie-img {
-    right: -44px;
+    right: -47px;
 }
 
 .text-table {
@@ -5567,6 +5573,22 @@ ul.instruction-list {
     display: table;
     margin: 0 auto;
 }
+
+.spec-help-block{
+    padding: 40px 0;
+}
+.links-to-pages-instrusiotns{
+    color: #cb454c;
+    border: 1.6px solid;
+    padding: 10px 61px;
+    margin: 0 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+
 @media (min-width: 1201px) {
     .navigation li:hover .sub-menu {
         display: block;
@@ -5590,7 +5612,7 @@ ul.instruction-list {
     }
     .spisanie-row .col-md-4 {
 
-        width: 42.33%;
+        width: 45.33%;
     }
 
     .instruction-table-col3 {
@@ -6517,12 +6539,14 @@ ul.instruction-list {
     .row-blog {
         margin: 0;
     }
-
+    .center-top-heder .center-top-heder-holder{
+        margin-left: 0;
+    }
     .blog-row-list li {
         width: 100%;
         margin: 0 0 50px 0;
     }
-
+    .registration-page, .login-page,
     .col-lg-2-calc, .col-lg-6-calc {
         width: 100%;
     }
@@ -6572,6 +6596,10 @@ ul.instruction-list {
         display: block !important;
         margin: 0 auto;
 
+    }
+    .spec-help-block .feature-service img,
+    .spec-help-block .feature-service p{
+        display: block;
     }
 
     .form-policy a,

@@ -107,6 +107,7 @@ function th_scripts()
     wp_enqueue_script('jquery.equalheightresponsive.min', get_theme_file_uri('/assets/js/jquery.equalheightresponsive.min.js'), array(), '2');
     wp_enqueue_script('jquery.ui-slider', get_theme_file_uri('/assets/js/jquery-ui.min.js'), array(), '2');
     wp_enqueue_script('ajax-confirm', get_theme_file_uri('/assets/js/ajax-confirm.js'), array(), '2');
+    wp_enqueue_script('js.cookie', get_theme_file_uri('/assets/js/js.cookie.js'), array(), '2');
     wp_enqueue_script('jquery.ui.touch-punch.min', get_theme_file_uri('/assets/js/jquery.ui.touch-punch.min.js'), array(), '2');
 
 
@@ -361,6 +362,9 @@ if (isset($_POST['login_submit'])) {
         }
         if (!is_wp_error($user)) {
 
+            setcookie ("user", 'true',time()+604800);
+
+
             wp_redirect(LinksTheme('user-doc'));
             exit;
 
@@ -400,9 +404,11 @@ if (isset($_POST['reg_submit'])) {
 
 
         exit;
+
     } else {
 
         $_SESSION['error_registration'] = $register_user->get_error_message();
+
 
     }
 }
@@ -782,7 +788,7 @@ function check_account()
         }
 
     }
-    if ($code > 0) {
+    if ($code > 0) {  // успешная проверка кода
 
         if ($check == 'true') {
             $cur_user_id = get_current_user_id();
@@ -843,7 +849,14 @@ function wpcf7_cstm_function($contact_form)
             'NAME' => $name,   // сохраняем имя
             'PHONE_WORK' => $phone, // сохраняем телефон
             'COMMENTS' => $message, // сохраняем телефон
-            'EMAIL_WORK' => $email
+            'EMAIL_WORK' => $email,
+            'UF_CRM_SEARCH_WORD' => "utm_term",
+            'UF_CRM_LEAD_LANDING' => "HTTP_HOST",
+            'UF_CRM_CT_UTM_CAMP' => "utm_campaign",
+            'UF_CRM_CT_UTM_CONT' => "utm_content",
+            'UF_CRM_CT_UTM_MEDI' => "utm_medium",
+            'UF_CRM_CT_UTM_SOUR' => "utm_source",
+            'UF_CRM_CT_UTM_TERM' => "utm_term"
         );
 
         // авторизация, проверка логина и пароля

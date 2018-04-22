@@ -17,11 +17,29 @@ $ValueForHash = wp_create_nonce('ASMART');
         </div>
         <div class="container">
             <div class="registration-page">
+                <div class="spec-help-block">
+                    <div class="border-block">
+
+                        <p>
+                            Зная обо всех финансовых трудностях наших земляков, команда ИДЖИС разработала сервис бесплатного
+                            банкротства, включающий в себя онлайн-конструктор документов для банкротства физического лица и
+                            инструкцию по самостоятельному прохождению процедуры банкротства. Указанные инструменты позволят
+                            самостоятельно подготовить все необходимые документы и пройти процедуру банкротства без
+                            привлечения квалифицированных специалистов!
+                            <br/>
+                            <br/>
+                            Для того, чтобы воспользоваться нашим сервисом и получить бесплатный доступ в личный кабинет,
+                            нужно зарегистрироваться на сайте.
+
+                        </p>
+
+                    </div>
+                </div>
                 <div class="errors">
                     <?php
                     if (isset($_SESSION['error_registration'])) {
                         ?>
-                        <p class="alert alert-danger"><?php echo $_SESSION['error_registration']; ?></p>
+                        <p class="alert  registration-scroll alert-danger"><?php echo $_SESSION['error_registration']; ?></p>
                         <?php unset($_SESSION['error_registration']); ?>
                     <?php } ?>
                 </div>

@@ -388,4 +388,23 @@
             </div>
         </div>
     </section>
+    <section class="section-instruction padding-bottom-30 ">
+        <div class="container clearfix  ">
+            <a href="<?php echo LinksTheme('instruction'); ?>" class="links-to-pages-instrusiotns">
+               Страница инструкций
+            </a>
+            <?php if (is_user_logged_in()) {
+                echo '
+                    <a href="'.LinksTheme('user-doc').'" class="links-to-pages-instrusiotns">
+                        Оформления документов
+                     </a>
+            ';
+            } ?>
+            <a href="<?php echo LinksTheme('instruction-page-one'); ?>" class="links-to-pages-instrusiotns">
+                 Процесс сбора документов для банкротства
+            </a>
+
+
+        </div>
+    </section>
 </div>

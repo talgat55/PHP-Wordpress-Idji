@@ -76,15 +76,18 @@
                         </div>
                         <div class="col-md-6-form no-padding-right">
                             <div class="form-group">
-                                <input name="form_1_total_all[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                <input name="form_1_total_all[]" type="number" pattern="[0-9]+([\.,][0-9]+)?"
+                                       class="form-control number-field"
                                        placeholder="Сумма обязательства (всего) (4)">
                             </div>
                             <div class="form-group">
-                                <input name="form_1_total_all_indebtedness[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
-                                       placeholder="Сумма обязательства (в том числе задолженность) (5)" >
+                                <input name="form_1_total_all_indebtedness[]" type="number"
+                                       pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                       placeholder="Сумма обязательства (в том числе задолженность) (5)">
                             </div>
                             <div class="form-group ">
-                                <input name="form_1_penaltie_fines[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                <input name="form_1_penaltie_fines[]" type="number" pattern="[0-9]+([\.,][0-9]+)?"
+                                       class="form-control number-field"
                                        placeholder="Штрафы, пени и иные санкции">
                             </div>
                         </div>
@@ -105,11 +108,13 @@
                                        placeholder="Наименование налога, сбора или иного обязательного платежа">
                             </div>
                             <div class="form-group">
-                                <input name="form_1_row2_arrears[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                <input name="form_1_row2_arrears[]" type="number" pattern="[0-9]+([\.,][0-9]+)?"
+                                       class="form-control number-field"
                                        placeholder="Недоимка">
                             </div>
                             <div class="form-group">
-                                <input name="form_1_row2_penaltie_fines[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                <input name="form_1_row2_penaltie_fines[]" type="number" pattern="[0-9]+([\.,][0-9]+)?"
+                                       class="form-control number-field"
                                        placeholder="Штрафы, пени и иные санкции">
                             </div>
 
@@ -126,8 +131,8 @@
                 <div class="form-group-one-walp  one-section" data-section="2">
 
                     <h3>
-                        Сведения о должниках гражданина (по денежным обязательствам и (или) обязанности по уплате
-                        обязательных платежей, за исключением возникших в результате осуществления гражданином
+                        Сведения о кредиторах гражданина (по денежным обязательствам и (или) обязанности по уплате
+                        обязательных платежей, которые возникли в результате осуществления гражданином
                         предпринимательской деятельности)
                     </h3>
                     <div class="accordion">
@@ -178,15 +183,18 @@
                         </div>
                         <div class="col-md-6-form no-padding-right">
                             <div class="form-group">
-                                <input name="form_1_total_all_2[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                <input name="form_1_total_all_2[]" type="number" pattern="[0-9]+([\.,][0-9]+)?"
+                                       class="form-control number-field"
                                        placeholder="Сумма обязательства (всего) (9)">
                             </div>
                             <div class="form-group">
-                                <input name="form_1_total_all_indebtedness_2[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                <input name="form_1_total_all_indebtedness_2[]" type="number"
+                                       pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                        placeholder="Сумма обязательства (в том числе задолженность) (10)">
                             </div>
                             <div class="form-group">
-                                <input name="form_1_penaltie_fines_2[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                <input name="form_1_penaltie_fines_2[]" type="number" pattern="[0-9]+([\.,][0-9]+)?"
+                                       class="form-control number-field"
                                        placeholder="Штрафы, пени и иные санкции">
                             </div>
                         </div>
@@ -205,11 +213,13 @@
                                        placeholder="Наименование налога, сбора или иного обязательного платежа">
                             </div>
                             <div class="form-group">
-                                <input name="form_1_row2_arrears_2[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                <input name="form_1_row2_arrears_2[]" type="number" pattern="[0-9]+([\.,][0-9]+)?"
+                                       class="form-control number-field"
                                        placeholder="Недоимка">
                             </div>
                             <div class="form-group">
-                                <input name="form_1_row2_penaltie_fines_2[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                <input name="form_1_row2_penaltie_fines_2[]" type="number"
+                                       pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                        placeholder="Штрафы, пени и иные санкции">
                             </div>
 
@@ -253,6 +263,14 @@
                             упущенной выгоды и иных финансовых санкций, начисленных на сумму основного обязательства).
                             Для обязательств, выраженных в иностранной валюте, сумма указывается в рублях по курсу Банка
                             России на дату составления списка кредиторов и должников гражданина.
+
+                            </br>
+                            (16) - Заполняется в случае, если возврат суммы излишне уплаченного налога осуществляется с
+                            нарушением сроков, установленных Налоговым кодексом Российской Федерации (Собрание
+                            законодательства Российской Федерации, 1998, № 31, ст. 3824; 2006, № 31, ст. 3436; 2010, №
+                            31, ст. 4198; 2011, № 47, ст. 6611; 2012, № 27, ст. 3588; 2013, № 30, ст. 4081; 2014, № 45,
+                            ст. 6157; № 26, ст. 3372; 2015, № 24, ст. 3377).
+
                         </div>
 
                     </div>
@@ -282,15 +300,18 @@
                         </div>
                         <div class="col-md-6-form no-padding-right">
                             <div class="form-group">
-                                <input name="form_1_total_all_3[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                <input name="form_1_total_all_3[]" type="number" pattern="[0-9]+([\.,][0-9]+)?"
+                                       class="form-control number-field"
                                        placeholder="Сумма обязательства (всего) (14)">
                             </div>
                             <div class="form-group">
-                                <input name="form_1_total_all_indebtedness_3[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                <input name="form_1_total_all_indebtedness_3[]" type="number"
+                                       pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
                                        placeholder="Сумма обязательства (в том числе задолженность) (15)">
                             </div>
                             <div class="form-group ">
-                                <input name="form_1_penaltie_fines_3[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                <input name="form_1_penaltie_fines_3[]" type="number" pattern="[0-9]+([\.,][0-9]+)?"
+                                       class="form-control number-field"
                                        placeholder="Штрафы, пени и иные санкции">
                             </div>
                         </div>
@@ -310,12 +331,14 @@
                                        placeholder="Наименование налога, сбора или иного обязательного платежа">
                             </div>
                             <div class="form-group">
-                                <input name="form_1_row2_arrears_3[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
-                                       placeholder="Недоимка">
+                                <input name="form_1_row2_arrears_3[]" type="number" pattern="[0-9]+([\.,][0-9]+)?"
+                                       class="form-control number-field"
+                                       placeholder="Сумма к зачету или возврату, всего">
                             </div>
                             <div class="form-group">
-                                <input name="form_1_row2_penaltie_fines_3[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
-                                       placeholder="Штрафы, пени и иные санкции">
+                                <input name="form_1_row2_penaltie_fines_3[]" type="number"
+                                       pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                       placeholder="Сумма к зачету или возврату, проценты (16)">
                             </div>
 
                         </div>
@@ -338,27 +361,27 @@
                         <a class="link-to-ul" href="#">Информация о правилах заполнения (кликните для
                             показа/скрытия)</a>
                         <div>
-                            (16) - Указывается существо обязательства (например, заем, кредит).
+                            (17) - Указывается существо обязательства (например, заем, кредит).
                             </br>
-                            (17) - Указывается другая сторона обязательства: кредитор, фамилия, имя и отчество
+                            (18) - Указывается другая сторона обязательства: кредитор, фамилия, имя и отчество
                             (последнее - при наличии) для физического лица или наименование юридического лица.
                             </br>
-                            (18) - Указывается основание возникновения обязательства, а также реквизиты (дата, номер)
+                            (19) - Указывается основание возникновения обязательства, а также реквизиты (дата, номер)
                             соответствующего договора или акта.
                             </br>
-                            (19) - Указывается сумма основного обязательства, в том числе подлежащие уплате проценты.
+                            (20) - Указывается сумма основного обязательства, в том числе подлежащие уплате проценты.
                             Для обязательств, выраженных в иностранной валюте, сумма указывается в рублях по курсу Банка
                             России на дату составления списка кредиторов и должников гражданина.
 
                             </br>
-                            (20) - Указывается размер просроченной задолженности по сумме основного обязательства (с
+                            (21) - Указывается размер просроченной задолженности по сумме основного обязательства (с
                             процентами) по состоянию на дату составления списка кредиторов и должников гражданина (за
                             исключением неустойки (штрафа, пени), процентов за просрочку платежа, убытков в виде
                             упущенной выгоды и иных финансовых санкций, начисленных на сумму основного обязательства).
                             Для обязательств, выраженных в иностранной валюте, сумма указывается в рублях по курсу Банка
                             России на дату составления списка кредиторов и должников гражданина.
                             </br>
-                            (21) - Заполняется в случае, если возврат суммы излишне уплаченного налога осуществляется с
+                            (22) - Заполняется в случае, если возврат суммы излишне уплаченного налога осуществляется с
                             нарушением сроков, установленных Налоговым кодексом Российской Федерации (Собрание
                             законодательства Российской Федерации, 1998, N 31, ст.3824; 2006, N 31, ст.3436; 2010, N 31,
                             ст.4198; 2011, N 47, ст.6611; 2012, N 27, ст.3588; 2013, N 30, ст.4081; 2014, N 45, ст.6157;
@@ -375,11 +398,11 @@
                         <div class="col-md-6-form">
                             <div class="form-group">
                                 <input name="form_1_entity_4[]" type="text" class="form-control "
-                                       placeholder="Содержание обязательства (16)">
+                                       placeholder="Содержание обязательства (17)">
                             </div>
                             <div class="form-group">
                                 <input name="form_1_creditor_4[]" type="text" class="form-control "
-                                       placeholder="Кредитор (17)">
+                                       placeholder="Кредитор (18)">
                             </div>
                             <div class="form-group">
                                 <input name="form_1_place_life_4[]" type="text" class="form-control "
@@ -387,20 +410,23 @@
                             </div>
                             <div class="form-group no-padding">
                                 <input name="form_1_main_emite_4[]" type="text" class="form-control "
-                                       placeholder="Основание возникновения (18)">
+                                       placeholder="Основание возникновения (19)">
                             </div>
                         </div>
                         <div class="col-md-6-form no-padding-right">
                             <div class="form-group">
-                                <input name="form_1_total_all_4[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
-                                       placeholder="Сумма обязательства (всего) (19)">
+                                <input name="form_1_total_all_4[]" type="number" pattern="[0-9]+([\.,][0-9]+)?"
+                                       class="form-control number-field"
+                                       placeholder="Сумма обязательства (всего) (20)">
                             </div>
                             <div class="form-group">
-                                <input name="form_1_total_all_indebtedness_4[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
-                                       placeholder="Сумма обязательства (в том числе задолженность) (20)">
+                                <input name="form_1_total_all_indebtedness_4[]" type="number"
+                                       pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                       placeholder="Сумма обязательства (в том числе задолженность) (21)">
                             </div>
                             <div class="form-group ">
-                                <input name="form_1_penaltie_fines_4[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                <input name="form_1_penaltie_fines_4[]" type="number" pattern="[0-9]+([\.,][0-9]+)?"
+                                       class="form-control number-field"
                                        placeholder="Штрафы, пени и иные санкции">
                             </div>
                         </div>
@@ -420,12 +446,14 @@
                                        placeholder="Наименование налога, сбора или иного обязательного платежа">
                             </div>
                             <div class="form-group">
-                                <input name="form_1_row2_arrears_4[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                <input name="form_1_row2_arrears_4[]" type="number" pattern="[0-9]+([\.,][0-9]+)?"
+                                       class="form-control number-field"
                                        placeholder="Недоимка">
                             </div>
                             <div class="form-group">
-                                <input name="form_1_row2_penaltie_fines_4[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
-                                       placeholder="Сумма к зачету или возврату (проценты) (21)">
+                                <input name="form_1_row2_penaltie_fines_4[]" type="number"
+                                       pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"
+                                       placeholder="Сумма к зачету или возврату (проценты) (22)">
                             </div>
 
                         </div>

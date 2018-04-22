@@ -388,6 +388,15 @@ jQuery(document).ready(function () {
             e.preventDefault();
 
             var $thisParent = jQuery(this).parent();
+            var $dataSectionNumber = jQuery(this).parent().data('section');
+
+            if($dataSectionNumber =='3'){  // for 3 row
+                 var   $thirdfield = 'Сумма к зачету или возврату, всего';
+                 var   $fourfield = 'Сумма к зачету или возврату, проценты (16)';
+            }else{
+                var   $thirdfield = 'Недоимка';
+                var   $fourfield = 'Штрафы, пени и иные санкции';
+            }
 
             jQuery($thisParent).append('<div class="form-group-one">' +
                 '<div class="col-md-12-form">' +
@@ -395,10 +404,10 @@ jQuery(document).ready(function () {
                 '<input name="form_1_row2_name_tax' + InitTypeFiledNumber(this) + '[]" type="text" class="form-control " placeholder="Наименование налога, сбора или иного обязательного платежа" >' +
                 '</div>' +
                 '<div class="form-group">' +
-                '<input name="form_1_row2_arrears' + InitTypeFiledNumber(this) + '[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field" placeholder="Недоимка" >' +
+                '<input name="form_1_row2_arrears' + InitTypeFiledNumber(this) + '[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field" placeholder="'+$thirdfield+'" >' +
                 '</div>' +
                 '<div class="form-group">' +
-                '<input name="form_1_row2_penaltie_fines' + InitTypeFiledNumber(this) + '[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"  placeholder="Штрафы, пени и иные санкции" >' +
+                '<input name="form_1_row2_penaltie_fines' + InitTypeFiledNumber(this) + '[]" type="number" pattern="[0-9]+([\.,][0-9]+)?" class="form-control number-field"  placeholder="'+$fourfield+'" >' +
                 '</div>' +
                 '</div>' +
                 '<div class="delete-row" onclick="deleterowforms(this)">Удалить Строку</div>' +
@@ -736,6 +745,24 @@ jQuery(document).ready(function () {
     jQuery('.dont-wait-block-auto-height .dont-wait-block').equalHeightResponsive();
 
 
+/*
+*  Check cookie  if exist  hide block
+*
+ */
+
+    var $getcookie = Cookies.get('user');
+    if($getcookie){
+
+        jQuery('.spec-help-block').slideUp();
+
+    }
+/*
+* Registraion page srcoll to error
+ */
+    if (jQuery('.registration-scroll').length> 0) {
+        jQuery('html, body').animate({scrollTop: jQuery('.alert.registration-scroll').offset().top - 100}, 500);
+
+    }
 // end redy function
 });
 

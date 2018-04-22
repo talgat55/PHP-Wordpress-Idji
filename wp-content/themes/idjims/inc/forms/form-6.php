@@ -7,7 +7,7 @@
  */
 if (isset($_POST['form_6_submit'])) {
 
-    		$cur_user_id = get_current_user_id();
+    $cur_user_id = get_current_user_id();
     //$cur_user_id = 1;
     global $wpdb;
     $table_name = $wpdb->prefix . "addition_informaion";
@@ -23,7 +23,7 @@ if (isset($_POST['form_6_submit'])) {
     $form_6_number_dela = $_POST['form_6_number_dela'];
 
     $form_6_period_dela = $_POST['form_6_period_dela'];
-    $form_6_textarea = $_POST['form_6_textarea'];
+    $form_6_date_secision = $_POST['form_6_date_secision'];
     $form_6_amount_money = $_POST['form_6_amount_money'];
 
     $explodecourt = explode('|', $form_6_court);
@@ -39,21 +39,41 @@ if (isset($_POST['form_6_submit'])) {
             <tr>
                 <td style="width: 30%;"> </td>
                 <td style="width: 30%; text-align: right;">Должник:<br> (Заявитель)</td>
-                <td style="width: 40%;"> ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>паспорт:  ' . $results[0]->passport_serial . '  ' . $results[0]->passport_number . '<br>выдан:  ' . $results[0]->passport_issued_by . ' <br>дата выдачи:  ' . date("d.m.y", strtotime($results[0]->passport_issued_date)) . '  <br>адрес регистрации:
-                                                    ' . $results[0]->registrtation_index . ', ' . $results[0]->registrtation_city . ',  ' . $results[0]->registrtation_locality . '<br>
+                <td style="width: 40%;"> ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>паспорт:  ' . $results[0]->passport_number . '  ' . $results[0]->passport_serial . '<br>выдан:  ' . $results[0]->passport_issued_by . ' <br>дата выдачи:  ' . date("d.m.y", strtotime($results[0]->passport_issued_date)) . '  <br>адрес регистрации:
+                                                    ' . $results[0]->registrtation_index . ', ' . $results[0]->registrtation_city . ',  ' . $results[0]->registrtation_locality . ' ' . $results[0]->registrtation_street . ', д. ' . $results[0]->registrtation_number_hourse . ', кв. ' . $results[0]->registrtation_number_housing . '<br><br>
                 </td>
             </tr>
             <tr>
                 <td style="width: 30%;"> </td>
                 <td style="width: 30%; text-align: right;">Финансовый<br> управляющий:</td>
-                <td style="width: 40%;"> адрес: ' . $form_6_adress_send_mails . ' <br> ';
-    for ($i = 0; $i < count($form_6_creditor[0]); $i++) {
+                <td style="width: 40%;">' . $form_6_fio . '<br>адрес: ' . $form_6_adress_send_mails . '  ';
 
-        $html .= $form_6_creditor[0][$i] . '<br>';
-    }
     $html .= '        
                 </td>
-            </tr>             
+            </tr> 
+            <tr>
+                <td style="width: 30%;"> </td>
+                <td style="width: 30%; text-align: right;">Конкурсные кредиторы:</td>
+                <td style="width: 40%;"></td>
+            </tr> 
+            <tr>
+               <td style="width: 30%;"> </td>
+               <td style="width: 30%;"></td>
+               <td style="width: 40%;">';
+
+        if ($form_6_creditor[0]) {
+            $count_creditor = 1;
+            for ($i = 0; $i < count($form_6_creditor[0]); $i++) {
+                $html .=$form_6_creditor[0][$i].'<br>';
+
+
+                $count_creditor++;
+            }
+
+        }
+       $html .= ' 
+                </td>
+            </tr> 
             <tr>
                 <td style="width: 30%;"> </td>
                 <td style="width: 30%; text-align: right;">Дело №:</td>
@@ -71,11 +91,10 @@ if (isset($_POST['form_6_submit'])) {
         проживания должника и членов его семьи
     </h1>
     
-    <p style="text-align: justify;">
-     Решением Арбитражного суда Республики Башкортостан по делу № ' . $form_6_number_dela . '  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' 
+    <p style="text-align: justify;"><span style="color: #fff;">wdaw</span>Решением '.$explodecourt[0].' по делу № ' . $form_6_number_dela . '  от ' . date("d.m.y",strtotime($form_6_date_secision)) . ' ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' 
     признан банкротом и введена процедура реализации имущества гражданина. Процедура введена
-    на срок до 2018-02-27 г.
-     Согласно п. 39 Постановления Пленума ВС РФ №45 от 13.10.2015 г. при рассмотрении дел о
+    на срок до ' . date("d.m.y",strtotime($form_6_period_dela)) . ' г.
+    <br><span style="color: #fff;">wdaw</span>Согласно п. 39 Постановления Пленума ВС РФ №45 от 13.10.2015 г. при рассмотрении дел о
     банкротстве граждан, в том числе индивидуальных предпринимателей, суды должны учитывать
     необходимость обеспечения справедливого баланса между имущественными интересами
     кредиторов и личными правами должника (в том числе его правами на достойную жизнь и
@@ -86,9 +105,8 @@ if (isset($_POST['form_6_submit'])) {
         
     </p>
     <h1 style="text-align: center;">ПРОШУ СУД:</h1>  
-    <p  style="text-align: justify;">
-    ежемесячно, в течение срока проведения процедуры реализации имущества должника,
-    исключать из конкурсной массы должника денежные средства в размере ' . num2str($form_6_amount_money) . ' руб. для проживания должника и членов его семьи.<br>
+    <p  style="text-align: justify;"><span style="color: #fff;">wdaw</span>ежемесячно, в течение срока проведения процедуры реализации имущества должника,
+    исключать из конкурсной массы должника денежные средства в размере ' . num2str($form_6_amount_money) . '. для проживания должника и членов его семьи.<br>
     <br>Дата: ' . date("d.m.y") . '         
     <p style="text-align:right;">
                  _____________/  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' 

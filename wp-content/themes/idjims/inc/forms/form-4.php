@@ -43,7 +43,7 @@ if (isset($_POST['form_4_submit'])) {
             <tr>
                 <td style="width: 30%;"> </td>
                 <td style="width: 30%; text-align: right;">Должник:</td>
-                <td style="width: 40%;"> ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>Место жительства: ' . $results[0]->place_live . '<br>Дата и место рождения: ' . date("d.m.y", strtotime($results[0]->bird_day)) . ',<br>Телефон: ' . $results[0]->extra_phone . '<br>E-mail: ' . $results[0]->extra_email . '<br>
+                <td style="width: 40%;">' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' <br>Место жительства: ' . $results[0]->place_live . '<br>Дата и место рождения: ' . date("d.m.y", strtotime($results[0]->bird_day)) . ',<br>Телефон: ' . $results[0]->extra_phone . '<br>E-mail: ' . $results[0]->extra_email . '<br>
                 </td>
             </tr>
             <tr>
@@ -60,7 +60,7 @@ if (isset($_POST['form_4_submit'])) {
                         <tr>
                         <td style="width: 30%;"> </td>
                               <td style="width: 30%; text-align: right;"> кредитор ' . $count_creditor . '</td>
-                              <td style="width: 40%;"> ' . $form_4_name_creditor[0][$i] . '<br>Место нахождения:<br>
+                              <td style="width: 40%;">' . $form_4_name_creditor[0][$i] . '<br>Место нахождения:<br>
                                    ' . $form_4_location[0][$i] . '<br>ИНН: ' . $form_4_inn[0][$i] . ';ОГРН: ' . $form_4_ogrn[0][$i] . '<br>Телефон: ' . $form_4_phone[0][$i] . '<br>Факс: ' . $form_4_fax[0][$i] . '<br>E-mail: ' . $form_4_email[0][$i] . '<br>
                         </td>
                         </tr>
@@ -91,46 +91,42 @@ if (isset($_POST['form_4_submit'])) {
      <h1 style="text-align: center;">ХОДАТАЙСТВО<br> о признании гражданина банкротом и введении процедуры<br>
         реализации имущества гражданина 
     </h1>
-    <p  style="text-align: justify;">
-     В соответствии с п. 8 ст. 213.6 Федерального закона «О несостоятельности
+    <p  style="text-align: justify;"><span style="color: #fff;">wdaw</span>В соответствии с п. 8 ст. 213.6 Федерального закона «О несостоятельности
     (банкротстве)», по результатам рассмотрения обоснованности заявления о признании
     гражданина банкротом, если гражданин не соответствует требованиям для утверждения плана
     реструктуризации долгов, установленным пунктом 1 статьи 213.13 вышеуказанного
     Федерального закона, арбитражный суд вправе на основании ходатайства гражданина вынести
-    решение о признании его банкротом и введении процедуры реализации имущества гражданина.
-     Я,  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' , (далее - Должник) не соответствую требованиям п. 1 ст. 213.13
+    решение о признании его банкротом и введении процедуры реализации имущества гражданина.<br><span style="color: #fff;">wdaw</span>Я,  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' , (далее - Должник) не соответствую требованиям п. 1 ст. 213.13
     Федерального закона «О несостоятельности (банкротстве)» и в отношении меня не может быть
     введена процедура реструктуризации долгов гражданина в связи с тем, что на момент
     рассмотрения обоснованности заявления о признании гражданина банкротом, я:
     ';
     if ($form_4_no_have_earn) {
-        $html .= '- не имею источника дохода;<br> ';
+        $html .= '<br><span style="color: #fff;">wdaw</span>-<span style="color: #fff;">w</span>не имею источника дохода; ';
     }
     if ($form_4_outstanding_conviction) {
-        $html .= '- имею неснятую или непогашенную судимость за совершение умышленного преступления в сфере экономики;<br> ';
+        $html .= '<br><span style="color: #fff;">wdaw</span>-<span style="color: #fff;">w</span>имею неснятую или непогашенную судимость за совершение умышленного преступления в сфере экономики; ';
     }
     if ($form_4_administrative_punishment) {
-        $html .= '- считаюсь подвергнутым административному наказанию за мелкое хищение, умышленное уничтожение или повреждение имущества либо за фиктивное или преднамеренное банкротство;<br> ';
+        $html .= '<br><span style="color: #fff;">wdaw</span>-<span style="color: #fff;">w</span>считаюсь подвергнутым административному наказанию за мелкое хищение, умышленное уничтожение или повреждение имущества либо за фиктивное или преднамеренное банкротство; ';
     }
     if ($form_4_have_bankrot) {
-        $html .= '- признавался банкротом в течение пяти лет;<br> ';
+        $html .= '<br><span style="color: #fff;">wdaw</span>-<span style="color: #fff;">w</span>признавался банкротом в течение пяти лет;  ';
     }
 
     if ($form_4_have_plan_bankot) {
-        $html .= '- имею утверждённый в течение предшествующих восьми лет план реструктуризации долгов в отношении моей задолженности;<br> ';
+        $html .= '<br><span style="color: #fff;">wdaw</span>-<span style="color: #fff;">w</span>имею утверждённый в течение предшествующих восьми лет план реструктуризации долгов в отношении моей задолженности; ';
     }
 
 
-    $html .= '
-    На основании вышеизложенного, а также руководствуясь ст. 41 АПК РФ, п. 8 ст. 213.6 ФЗ
+    $html .= '<br><span style="color: #fff;">wdaw</span>На основании вышеизложенного, а также руководствуясь ст. 41 АПК РФ, п. 8 ст. 213.6 ФЗ
     от 26.10.2002 г. № 127-ФЗ «О несостоятельности (банкротстве)»,
     </p>
     ';
 
     $html .= '      
      <h1 style="text-align: center;">ПРОШУ СУД:</h1>
-     <p  style="text-align: justify;">
-         Признать меня - гражданина Российской Федерации  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '  банкротом, в вести
+     <p  style="text-align: justify;"><br><span style="color: #fff;">wdaw</span>Признать меня - гражданина Российской Федерации  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '  банкротом, в вести
             процедуру реализации имущества гражданина в отношении моего имущества. 
     </p>
 
@@ -138,9 +134,10 @@ if (isset($_POST['form_4_submit'])) {
     ';
     if ($form_4_name_app[0]) {
         $count_app = 1;
+        $html .= 'Приложение:';
         for ($j = 0; $j < count($form_4_name_app[0]); $j++) {
-            $html .= 'Приложение:<br>
-        ' . $count_app . ') ' . $form_4_name_app[0][$j] . ' <br>
+            $html .= '
+        <br><span style="color: #fff;">wdaw</span>' . $count_app . ') ' . $form_4_name_app[0][$j] . ' 
         
         ';
             $count_app++;

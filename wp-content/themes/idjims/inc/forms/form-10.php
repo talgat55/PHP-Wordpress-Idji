@@ -71,8 +71,7 @@ if (isset($_POST['form_10_cancel_court_order_submit'])) {
     
         <h1 style="text-align: center;">Заявление<br> об отмене судебного приказа</h1>
     
-        <p style="text-align: justify;">
-        ' . date("d.m.y", strtotime($form_10_date)) . ' ' . $form_10_by_whom . ' был вынесен судебный приказ по делу ' . $form_10_case_number . ' по заявлению
+        <p style="text-align: justify;"><span style="color: #fff;">wdaw</span>' . date("d.m.y", strtotime($form_10_date)) . ' ' . $form_10_by_whom . ' был вынесен судебный приказ по делу ' . $form_10_case_number . ' по заявлению
         ' . $form_10_name_creditor . ' к ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' о взыскании денежных средств по кредитному
         договору ' . $form_10_credit_number . ', уплате госпошлины, а всего в размере ' . $form_10_total . '  (' . num2str($form_10_total) . ') рублей.
         Категорически возражаю относительно исполнения вышеуказанного судебного приказа,
@@ -81,14 +80,14 @@ if (isset($_POST['form_10_cancel_court_order_submit'])) {
         ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . ' не имел возможности представлять доказательства в защиту своей позиции по
         данному разбирательству и знакомиться с материалами, имеющимися в распоряжении банка, то
         есть реализовывать свои права, предоставленные ГПК РФ.
-        На основании вышеизложенного и руководствуясь ст. 128, 129 ГПК РФ
+        <br><span style="color: #fff;">wdaw</span>На основании вышеизложенного и руководствуясь ст. 128, 129 ГПК РФ
                 
         </p> 
     <h1 style="text-align: center;">Прошу суд:</h1>
     <p style="text-align: justify;">
-    1. Отменить судебный приказ ' . $form_10_who_whom . '    от ' . date("d.m.y", strtotime($form_10_date)) . ' по делу ' . $form_10_case_number . ' о взыскании с  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '  
+    <br><span style="color: #fff;">wdaw</span>1. Отменить судебный приказ ' . $form_10_who_whom . '    от ' . date("d.m.y", strtotime($form_10_date)) . ' по делу ' . $form_10_case_number . ' о взыскании с  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '  
     в пользу ' . $form_10_name_creditor . ' денежных средств в размере ' . $form_10_total . '  (' . num2str($form_10_total) . ') рублей.
-    2. Выдать  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '  на руки копию определения об отмене судебного приказа в установленный законом срок.
+    <br><span style="color: #fff;">wdaw</span>2. Выдать  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '  на руки копию определения об отмене судебного приказа в установленный законом срок.
       
     </p>
     <br>

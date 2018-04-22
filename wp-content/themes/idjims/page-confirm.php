@@ -17,6 +17,26 @@ checkUser();
             </div>
         </div>
         <div class="container">
+            <div class="spec-help-block">
+                <div class="border-block">
+
+                    <p>
+                        Для подтверждения регистрации остался последний шаг: мы должны убедиться, что
+                        Вы-настоящий человек, а не вирусная программа. Для этого укажите свой телефонный
+                        номер, на который мы вышлем код подтверждения регистрации
+                    </p>
+
+                </div>
+                <div class="feature-service  border-one-5   margin-top-30  clearfix">
+                    <img class="self-width-img margin-right-30"
+                         data-src="<?php echo get_theme_file_uri('/assets/images/warning-2.png') ?>">
+                    <p class="text-left normal-weight">
+                        Важно: Ваши персональные данные будут надежно защищены нашим протоколом шифрования
+                        данных https, а также «Законом о защите персональных данных – будьте уверены, все
+                        вводимые на нашем сайте данные под надежной защитой!»
+                    </p>
+                </div>
+            </div>
             <div class="login-page">
 
                 <form method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">

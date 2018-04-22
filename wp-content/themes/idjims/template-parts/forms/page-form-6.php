@@ -8,7 +8,7 @@
 ?>
 <div class="breadscrumb">
     <div class="container">
-        <h1 class="title-section service center-white ">Ходотайство об ежемесячном исключении денежных средств из
+        <h1 class="title-section service center-white ">Ходатайство об ежемесячном исключении денежных средств из
             конкурсной массы.</h1>
     </div>
 </div>
@@ -313,9 +313,15 @@
                                         >
 
                             </div>
-                            <div class="form-group">
+                            <!--<div class="form-group">
                                 <p>Согласно постановлению</p>
                                 <textarea name="form_6_textarea"  class="form-control " ></textarea>
+
+                            </div>
+                            -->
+                            <div class="form-group">
+                                <p>Дата решения</p>
+                                <input name="form_6_date_secision" type="date" class="form-control ">
 
                             </div>
                             <div class="form-group">

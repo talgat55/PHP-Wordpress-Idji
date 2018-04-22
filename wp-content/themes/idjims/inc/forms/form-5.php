@@ -23,7 +23,7 @@ if (isset($_POST['form_5_submit'])) {
             <tr>
                 <td style="width: 30%;"> </td>
                 <td style="width: 30%; text-align: right;">В:</td>
-                <td style="width: 40%;">' . $form_5_name_bank . '<br>Адрес: ' . $form_5_adress_bank . '<br>От  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '<br>Место жительства: '.$results[0]->place_live.'<br>Телефон: '.$results[0]->extra_phone.'
+                <td style="width: 40%;">' . $form_5_name_bank . '<br>Адрес: ' . $form_5_adress_bank . '<br>От:  ' . $results[0]->first_name . ' ' . $results[0]->second_name . ' ' . $results[0]->third_name . '<br>Место жительства: '.$results[0]->place_live.'<br>Телефон: '.$results[0]->extra_phone.'<br>Паспорт: серия ' . $results[0]->passport_number  . '  №' . $results[0]->passport_serial . ', выдан ' . date("d.m.y", strtotime($results[0]->passport_issued_date)) . ' ' . $results[0]->passport_issued_by . ', код подразделения ' . $results[0]->passport_issued_key . '
                 </td>
             </tr>
         </tbody>
@@ -38,8 +38,7 @@ if (isset($_POST['form_5_submit'])) {
                                         
                      
     <h1 style="text-align: center;">Заявление о предоставлении информации</h1>
-    <p  style="text-align: justify;">
-    Прошу Вас предоставить сведения в виде справки о наличии счетов, вкладов (депозитов),
+    <p  style="text-align: justify;"><span style="color: #fff;">wdaw</span>Прошу Вас предоставить сведения в виде справки о наличии счетов, вкладов (депозитов),
     а также об остатках денежных средств на счетах, во вкладах (депозитах), выписки за
     трехлетний период по операциям на счетах, по вкладам (депозитам) открытым в Вашем банке
     на моё имя.

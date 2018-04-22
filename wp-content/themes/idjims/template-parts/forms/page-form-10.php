@@ -8,7 +8,7 @@
 ?>
 <div class="breadscrumb">
     <div class="container">
-        <h1 class="title-section service center-white ">Заявление об отмеене судебного приказа</h1>
+        <h1 class="title-section service center-white ">Заявление об отмене судебного приказа</h1>
     </div>
 </div>
 <div class="row row-doc-form">
