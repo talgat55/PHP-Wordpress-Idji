@@ -130,9 +130,8 @@ get_header(); ?>
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/dontwait3-2.png') ?>">
                         </div>
                         <p>
-                            Банк подаст иск в суд уже спустя 3 месяца просрочки платежей, или же когда сумма
-                            задолженности превысит 5% от суммы залога. Ваш бизнес продадут конкурентам по самой низкой
-                            цене, о оставшуюся задолженность все равно придется выплачивать.
+                            Банк подаст иск в суд уже спустя 3 месяца просрочки платежей, или же когда
+                            суммазадолженности превысит 5% от суммы залога.
                         </p>
                     </div>
                 </div>
@@ -163,7 +162,7 @@ get_header(); ?>
             <div class="border-use-our"></div>
             <div class="col-md-6  animation-block  opacity-zero" data-animation="slideInLeft">
                 <div class="block-use-our">
-                    <a href="<?php echo LinksTheme('calculate');  ?>" class="block-use-our-walp-2 clearfix">
+                    <a href="<?php echo LinksTheme('calculate'); ?>" class="block-use-our-walp-2 clearfix">
                         <h3>Калькулятор <span>банкротства</span></h3>
                         <p>Узнайте, подходит ли банкротство в Вашем
                             случае, а также узнайте стоимость наших услуг!</p>
@@ -175,7 +174,7 @@ get_header(); ?>
             </div>
             <div class="col-md-6 no-padding-right  animation-block  opacity-zero" data-animation="slideInRight">
                 <div class="block-use-our">
-                    <a href="<?php echo LinksTheme('user-doc');  ?>"  class="block-use-our-walp-2 clearfix">
+                    <a href="<?php echo LinksTheme('user-doc'); ?>" class="block-use-our-walp-2 clearfix">
                         <h3>Бесплатное <span>банкротство</span></h3>
                         <p>Зарегистрируйтесь на сайте и получите
                             возможность бесплатно подготовить все документы
@@ -596,7 +595,7 @@ get_header(); ?>
                         </div>
                         <p>
                             Предоставим независимого финансового управляющего, который поможет выйти
-                             из сложной ситуации с наиболее благоприятным результатом.
+                            из сложной ситуации с наиболее благоприятным результатом.
                         </p>
                     </div>
                 </div>
@@ -606,7 +605,8 @@ get_header(); ?>
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/live3.png') ?>">
                         </div>
                         <p>
-                            Поможем собрать все необходимые документы, составим и направим запросы в гос. органы и кредитные организации.
+                            Поможем собрать все необходимые документы, составим и направим запросы в гос. органы и
+                            кредитные организации.
                         </p>
                     </div>
                 </div>
@@ -616,7 +616,8 @@ get_header(); ?>
                             <img data-src="<?php echo get_theme_file_uri('/assets/images/live5.png') ?>">
                         </div>
                         <p>
-                            Подготовим и направим заявление о банкротстве в арбитражный суд, будем представлять Ваши интересы от начала и до конца.
+                            Подготовим и направим заявление о банкротстве в арбитражный суд, будем представлять Ваши
+                            интересы от начала и до конца.
                         </p>
                     </div>
                 </div>

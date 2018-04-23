@@ -228,7 +228,7 @@
             <?php if (is_user_logged_in()) {
                 echo '
                     <a href="'.LinksTheme('user-doc').'" class="links-to-pages-instrusiotns">
-                        Оформления документов
+                        Оформление документов
                      </a>
             ';
             } ?>

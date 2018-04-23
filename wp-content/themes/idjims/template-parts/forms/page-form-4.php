@@ -8,7 +8,7 @@
 ?>
 <div class="breadscrumb">
     <div class="container">
-        <h1 class="title-section service center-white ">Ходотайство о введнении процедуры реализации имущества минуя
+        <h1 class="title-section service center-white ">Ходатайство о введении процедуры реализации имущества минуя
             процедура реструкуризации долгов</h1>
     </div>
 </div>

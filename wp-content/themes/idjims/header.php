@@ -33,6 +33,9 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-116537806-1');
+
+    // vk
+  (window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-238025-5LSOi';
 </script>
 
 </head>

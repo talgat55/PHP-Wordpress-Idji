@@ -8,7 +8,7 @@
 ?>
 <div class="breadscrumb">
     <div class="container">
-        <h1 class="title-section service center-white ">Заявление о признании гражданиниа банкротом</h1>
+        <h1 class="title-section service center-white ">Заявление о признании гражданина банкротом</h1>
     </div>
 </div>
 <div class="row row-doc-form">
