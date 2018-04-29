@@ -30,7 +30,14 @@ jQuery(document).ready(function () {
     fiveblocks();
     AddBlockTextInFormFields();
     accordionQAPage();
+    initUserVisitesPages();
+    initStoreUserParams();
+    /*
+    * Tabs
+     */
     jQuery(".tabs").lightTabs();
+
+
 
     /*
     * Lazy Load
@@ -1525,8 +1532,88 @@ function backToTop() {
 
 }
 
+// ---------------------------------------------------------
+//   Get UTM params
+// ---------------------------------------------------------
+function initStoreUserParams() {
+    "use strict";
+    var namekey = ['utm_source','utm_campaign','utm_medium','utm_term','utm_content']; //Ключи какие будем парсить
+    function parseGET(url){
+
+        if(!url || url == '') url = decodeURI(document.location.search);
+        if(url.indexOf('?') < 0) return 'none';
+        url = url.split('?');
+        url = url[1];
+        var GET = [],
+            params = [],
+            key = [];
+        if(url.indexOf('#')!=-1){ url = url.substr(0,url.indexOf('#')); }
+        if(url.indexOf('&') > -1){ params = url.split('&');} else {params[0] = url; }
+        for (var r=0; r<params.length; r++){
+            for (var z=0; z<namekey.length; z++){
+                if(params[r].indexOf(namekey[z]+'=') > -1){
+                    if(params[r].indexOf('=') > -1) {
+                        key = params[r].split('=');
+                        GET[key[0]]=key[1];
+                    }
+                }
+            }
+        }
+        return (GET);
+    }  // end parse url
+
+    var $_GET = parseGET();
+    var Objects = [];
+
+
+    for(var z=0; z<namekey.length; z++){
+
+        if(!!$_GET[namekey[z]]){
+            var namefield =  namekey[z];
+            var value = $_GET[namekey[z]];
+            var objTest = {
+                namefield: namefield,
+                valuefield: value
+            };
+            Objects.push(objTest);
+
+
+
+
+        }
+
+    }
+
+    console.log(Objects);
+
+    Cookies.remove('utm');
+    Cookies.set('utm', JSON.stringify(Objects) );
+
+}
+
+// ---------------------------------------------------------
+//   Get Views Pages users
+// ---------------------------------------------------------
+function initUserVisitesPages() {
+    "use strict";
+    var path = window.location.pathname;
+    var viespages =     Cookies.get('views_pages');
+
+    if(viespages !== undefined) {
+        var viewpath = viespages.concat(' ' + path);
+    }else{
+        var viewpath =' ' + path;
+    }
+    Cookies.set('views_pages', viewpath );
+
+}
+
+
+
+
+
 /*
-* Target yandex
+* Target yandex and clear cookies
  */
 document.addEventListener('wpcf7mailsent', function (event) {
 
@@ -1540,6 +1627,10 @@ document.addEventListener('wpcf7mailsent', function (event) {
 
         yaCounter48236498.reachGoal('Statement_sale');
     }
+
+    Cookies.remove('utm');
+    Cookies.remove('views_pages');
+
 
 
 }, false);

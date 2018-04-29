@@ -2040,7 +2040,40 @@ form {
     right: -50px;
 
 }
-
+.quiz-bg{
+    height: 600px;
+}
+.quiz-row .col-md-6{
+    padding-right: 2%;
+}
+.quiz-row{
+    display: table;
+    width: 100%;
+}
+.col-mds-6{
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+.quiz__button{
+    color: #cb454c;
+    border: 1.6px solid;
+    padding: 10px 61px;
+    margin: 0;
+    border-radius: 3px;
+    display: table;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.quiz-row h2{
+    font-size: 24px;
+    color: #000;
+    font-family: "Minsk";
+}
+.quiz-row ul{
+    margin-left: 20px;
+}
+input.url-page { display:none; }
 /*
 * Footer
 */
@@ -2068,6 +2101,8 @@ form {
 
 footer {
     background-color: #f7f6f6;
+    left: 0;
+    right: 0;
 }
 
 .footer-oth {
@@ -7077,4 +7112,7 @@ ul.instruction-list {
     opacity: 1;
     animation-duration: 1s;
     animation-fill-mode: both;
+}
+.header-modal  input.wpcf7-form-control {
+    text-align: center;
 }

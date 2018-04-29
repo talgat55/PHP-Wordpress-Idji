@@ -2,11 +2,7 @@
 /*
  *  Settings for Bitrix 24
  */
-define('CRM_HOST', get_field('bitrix_24_host_name', 'option') . '.bitrix24.ru');
-define('CRM_PORT', '443');
-define('CRM_PATH', '/crm/configs/import/lead.php');
-define('CRM_LOGIN', get_field('bitrix_24_user_name', 'option'));
-define('CRM_PASSWORD', get_field('bitrix_24_user_password', 'option'));
+define('CRM_TOKEN', get_field('bitrix_24_token', 'option'));
 // settings SMS.ru
 define('APIKEYSMSRU', get_field('api_key_smsru', 'option'));
 
@@ -85,7 +81,7 @@ function th_scripts()
 {
     // Theme stylesheet.
     wp_enqueue_style('th-style', get_theme_file_uri('style.css'), array(), '');
-    wp_enqueue_style('style', get_theme_file_uri('/assets/css/style.css'), array(), '');
+    wp_enqueue_style('style', get_theme_file_uri('/assets/css/style.css'), array(), '3');
     // wp_enqueue_style('style', get_theme_file_uri('/assets/css/minify.css'), array(), '');
     wp_enqueue_style('lightbox.min', get_theme_file_uri('/assets/css/lightbox.min.css'), array(), '');
 
@@ -362,7 +358,7 @@ if (isset($_POST['login_submit'])) {
         }
         if (!is_wp_error($user)) {
 
-            setcookie ("user", 'true',time()+604800);
+            setcookie("user", 'true', time() + 604800);
 
 
             wp_redirect(LinksTheme('user-doc'));
@@ -597,98 +593,95 @@ function LinksTheme($link)
 
     switch ($link) {
         case 'user-profile':
-            return home_url('/user-profile/');
+            return home_url('/user-profile');
             break;
         case 'login':
             return home_url("/login");
             break;
         case 'user-doc':
-            return home_url("/doc/");
+            return home_url("/doc");
             break;
         case 'banlrotstvo-fl':
-            return home_url("/banlrotstvo-fl/");
+            return home_url("/banlrotstvo-fl");
             break;
         case 'bankrotstvo-ipotechikov':
-            return home_url("/bankrotstvo-ipotechikov/");
+            return home_url("/bankrotstvo-ipotechikov");
             break;
         case 'bankrotstvo-poruchitelya':
-            return home_url("/bankrotstvo-poruchitelya/");
+            return home_url("/bankrotstvo-poruchitelya");
             break;
         case 'bankrotstvo-ooo':
-            return home_url("/bankrotstvo-ooo/");
+            return home_url("/bankrotstvo-ooo");
             break;
         case 'bankrotstvo-ip':
-            return home_url("/bankrotstvo-ip/");
+            return home_url("/bankrotstvo-ip");
             break;
         case 'reviews':
-            return home_url("/reviews/");
+            return home_url("/reviews");
             break;
         case 'blog':
-            return home_url("/blog/");
+            return home_url("/blog");
             break;
         case 'question-answer':
-            return home_url("/question-answer/");
+            return home_url("/question-answer");
             break;
         case 'calculate':
-            return home_url("/calculate/");
+            return home_url("/calculate");
             break;
         case 'policy':
-            return home_url("/policy/");
-            break;
-        case 'policy':
-            return home_url("/policy/");
+            return home_url("/policy");
             break;
         case 'registration':
-            return home_url("/registration/");
+            return home_url("/registration");
             break;
         case 'form10':
-            return home_url("/doc-form10/");
+            return home_url("/doc-form10");
             break;
         case 'form11':
-            return home_url("/doc-form11/");
+            return home_url("/doc-form11");
             break;
         case 'form9':
-            return home_url("/doc-form9/");
+            return home_url("/doc-form9");
             break;
 
         case 'form8':
-            return home_url("/doc-form8/");
+            return home_url("/doc-form8");
             break;
         case 'form7':
-            return home_url("/doc-form7/");
+            return home_url("/doc-form7");
             break;
         case 'form6':
-            return home_url("/doc-form6/");
+            return home_url("/doc-form6");
             break;
         case 'form5':
-            return home_url("/doc-form5/");
+            return home_url("/doc-form5");
             break;
         case 'form4':
-            return home_url("/doc-form4/");
+            return home_url("/doc-form4");
             break;
         case 'form3':
-            return home_url("/doc-form3/");
+            return home_url("/doc-form3");
             break;
         case 'form2':
-            return home_url("/doc-form2/");
+            return home_url("/doc-form2");
             break;
         case 'form1':
-            return home_url("/doc-form1/");
+            return home_url("/doc-form1");
             break;
         case 'perechen':
-            return home_url("/perechen-doc/");
+            return home_url("/perechen-doc");
             break;
         case 'contact':
-            return home_url("/contact/");
+            return home_url("/contact");
             break;
         case 'confirm':
-            return home_url("/confirm/");
+            return home_url("/confirm");
             break;
         case 'instruction':
-            return home_url("/instruction/");
+            return home_url("/instruction");
             break;
         case 'instruction-page-one':
-            return home_url("/instruction-page-one/");
+            return home_url("/instruction-page-one");
             break;
         case 'instruction-page-two':
             return home_url("/instruction-page-two");
@@ -709,6 +702,7 @@ function LinksTheme($link)
     }
 
 }
+
 
 /*
  *  Check User
@@ -827,13 +821,25 @@ function check_account()
 
 add_action('wp_ajax_check_account', 'check_account');
 add_action('wp_ajax_nopriv_check_account', 'check_account');
+
+function getRefererPage( $form_tag )
+{
+    if ( $form_tag['name'] == 'url-page' ) {
+        $form_tag['values'][] = htmlspecialchars($_SERVER['REQUEST_URI']);
+    }
+    return $form_tag;
+}
+    add_filter( 'wpcf7_form_tag', 'getRefererPage' );
 /*
  * Send data in Bitrix 24
  */
+
 function wpcf7_cstm_function($contact_form)
 {
     $title = $contact_form->title;
     $submission = WPCF7_Submission::get_instance();
+
+
 
     if ($submission) {
         $posted_data = $submission->get_posted_data();
@@ -842,58 +848,147 @@ function wpcf7_cstm_function($contact_form)
         $email = isset($posted_data['email12']) ? $posted_data['email12'] : '';
         $phone = isset($posted_data['tel-855']) ? $posted_data['tel-855'] : '';
         $message = isset($posted_data['textarea-5']) ? $posted_data['textarea-5'] : '';
+        $currentpage = isset($posted_data['url-page']) ? $posted_data['url-page'] : '';
 
 
-        $postData = array(
-            'TITLE' => 'Сайт Иджис Форма:' . $title, // сохраняем нашу метку и формируем заголовок лида
-            'NAME' => $name,   // сохраняем имя
-            'PHONE_WORK' => $phone, // сохраняем телефон
-            'COMMENTS' => $message, // сохраняем телефон
-            'EMAIL_WORK' => $email,
-            'UF_CRM_SEARCH_WORD' => "utm_term",
-            'UF_CRM_LEAD_LANDING' => "HTTP_HOST",
-            'UF_CRM_CT_UTM_CAMP' => "utm_campaign",
-            'UF_CRM_CT_UTM_CONT' => "utm_content",
-            'UF_CRM_CT_UTM_MEDI' => "utm_medium",
-            'UF_CRM_CT_UTM_SOUR' => "utm_source",
-            'UF_CRM_CT_UTM_TERM' => "utm_term"
-        );
 
-        // авторизация, проверка логина и пароля
-        if (defined('CRM_AUTH')) {
-            $postData['AUTH'] = CRM_AUTH;
-        } else {
-            $postData['LOGIN'] = CRM_LOGIN;
-            $postData['PASSWORD'] = CRM_PASSWORD;
-        }
 
-        $fp = fsockopen("ssl://" . CRM_HOST, CRM_PORT, $errno, $errstr, 30);
-        if ($fp) {
-            // формируем и шифруем строку с данными из формы
-            $strPostData = '';
-            foreach ($postData as $key => $value)
-                $strPostData .= ($strPostData == '' ? '' : '&') . $key . '=' . urlencode($value);
-            $str = "POST " . CRM_PATH . " HTTP/1.0\r\n";
-            $str .= "Host: " . CRM_HOST . "\r\n";
-            $str .= "Content-Type: application/x-www-form-urlencoded\r\n";
-            $str .= "Content-Length: " . strlen($strPostData) . "\r\n";
-            $str .= "Connection: close\r\n\r\n";
+        if ($_COOKIE["utm"] != 'none' && $_COOKIE["utm"] != '') {
 
-            $str .= $strPostData;
+            $jsonData = stripslashes(html_entity_decode($_COOKIE["utm"]));
 
-            // отправляем запрос в срм систему
-            fwrite($fp, $str);
-            $result = '';
-            while (!feof($fp)) {
-                $result .= fgets($fp, 128);
+            $k=json_decode($jsonData,true);
+
+            foreach ($k as $value){
+                if($value['namefield']=='utm_source' ){
+                    $source = $value['valuefield'];
+                }  else if($value['namefield']=='utm_campaign'){
+                    $compaign = $value['valuefield'];
+                }else if($value['namefield']=='utm_medium'){
+                    $medium  = $value['valuefield'];
+                }else if($value['namefield']=='utm_term'){
+                    $term  = $value['valuefield'];
+                }else if($value['namefield']=='utm_content'){
+                    $content  = $value['valuefield'];
+                }
             }
-            fclose($fp);
 
-            $response = explode("\r\n\r\n", $result);
-            $output = '<pre>' . print_r($response[1], 1) . '</pre>';
+
         } else {
-            //echo 'Connection Failed! ' . $errstr . ' (' . $errno . ')';
+            $compaign = 'Нет данных';
+            $content = 'Нет данных';
+            $medium = 'Нет данных';
+            $source = 'Нет данных';
+            $term = 'Нет данных';
         }
+
+        // check user view pages
+        $arrayLinks = [
+            'instruction-page-six' => 'Страница "Банкротство путем реструктуризации задолженности"',
+            'instruction-page-five' => 'Странца "Общие положения о банкростве"',
+            'instruction-page-four' =>  'Страница "Банкротство путем реализации имущества"',
+            'instruction-page-tree' => 'Страница "Итоги банкротства"',
+            'instruction-page-two' => 'Страница "Начало процедуры банкротства"',
+            'instruction-page-one' => 'Страница "Процесс сбора документов для банкротства"',
+            'instruction' => 'Странциа "Инструкция по банкротству"',
+            'confirm' => 'Странциа "Подтвреждения регистрации"',
+            'contact' => 'Страница "Контакты"',
+            'doc' => 'Страница "Оформление документов"',
+            'user-profile' => 'Страница "Профиль пользователя"',
+            'login' => 'Страница "Входа в личный кабинет"',
+            'banlrotstvo-fl' => 'Страница "Банкротство физичесикх лиц"',
+            'calculate' => 'Страница "Калькулятор банкротства"',
+            'bankrotstvo-ipotechikov' => 'Страница "Банкротство ипотечных заёмщиков"',
+            'bankrotstvo-poruchitelya' => 'Страница "Банкротство поручителя"',
+            'reviews' => 'Страница "Отзывы"',
+            'registration' => 'Страница "Регистрации"',
+            'bankrotstvo-ip' => 'Страница "Банкротство ИП"',
+            'blog'  => 'Страница Блога',
+            'bankrotstvo-ooo' => 'Страница "Банкротство ООО"',
+            'question-answer' => 'Страница "Вопрос Ответ"',
+            'perechen-doc' => 'СТраница "Документы на бонкротсво физического лица в 2018 году"'
+        ];
+        $CurrnetViewPages='';
+        $redyViewPages ='';
+        foreach ($arrayLinks as $key => $value){
+
+
+            if(stristr(trim($_COOKIE["views_pages"]), $key)){
+                $redyViewPages .=' '.$value;
+            }
+            $currentpage = str_replace("/","",$currentpage);
+            $key = str_replace("/","",$key);
+
+            if(trim($currentpage)== $key){
+                $CurrnetViewPages = $value;
+            }
+
+        }
+
+
+        $result = file_get_contents("http://ipgeobase.ru:7020/geo?ip=".trim($_SERVER['REMOTE_ADDR']));
+
+        $xml = new SimpleXMLElement($result);
+
+
+        if($_SERVER['REMOTE_ADDR']){
+            $infoip = "IP ".htmlentities ($_SERVER['REMOTE_ADDR']).", Город: ".$xml->ip->city.", Область: ".$xml->ip->region.", Округ: ".$xml->ip->district;
+        }else{
+            $infoip = 'Нет данных';
+        }
+        
+
+
+
+        $queryUrl = 'https://aegis42.bitrix24.ru/rest/1/'.trim(CRM_TOKEN).'/crm.lead.add.json';
+        $queryData = http_build_query(array(
+            'fields' => array(
+                'TITLE' => 'Сайт Иджис Форма:' . $title,
+                'NAME' => $name,
+                'COMMENTS' => $message,
+                "OPENED" => "Y", // ДОСТУПЕН ВСЕМ
+                "STATUS_ID" => "NEW",
+                'UTM_CAMPAIGN' => $compaign,
+                'UTM_CONTENT' => $content,
+                'UTM_MEDIUM' => $medium,
+                'UTM_SOURCE' => $source,
+                'UTM_TERM' => $term,
+                'UF_CRM_1525002894'=> $infoip,
+                'UF_CRM_1525011242' => $redyViewPages,
+                'UF_CRM_1525011478' => $CurrnetViewPages,
+                "PHONE" => array(
+                    array(
+                        "VALUE" => $phone,
+                        "VALUE_TYPE" => "WORK"
+                    )
+                ),
+                "EMAIL" => array(
+                    array(
+                        "VALUE" => $email,
+                        "VALUE_TYPE" => "WORK"
+                    )
+                )
+            )
+        ));
+
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_POST => 1,
+            CURLOPT_HEADER => 0,
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_URL => $queryUrl,
+            CURLOPT_POSTFIELDS => $queryData
+        ));
+        $result = curl_exec($curl);
+
+
+
+
+
+        curl_close($curl);
+
+
     }
 }
 

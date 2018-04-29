@@ -37,7 +37,10 @@
     // vk
   (window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-238025-5LSOi';
 </script>
-
+    <!— Marquiz script start —>
+    <script src="//script.marquiz.ru/v1.js"  type="application/javascript"></script>
+    <script> document.addEventListener("DOMContentLoaded", function() { Marquiz.init({ id: '5a82a8db6db2f600180525a3', host: '//quiz.marquiz.ru', template: 'default' }); }); </script>
+    <!— Marquiz script end —>
 </head>
 
 <body <?php body_class(); ?> >

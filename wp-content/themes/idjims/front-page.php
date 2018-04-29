@@ -95,7 +95,7 @@ get_header(); ?>
             </div>
             <div class="col-md-5  background-about"
                  style="background: url(<?php echo get_theme_file_uri('/assets/images/smart-2.png') ?>);">
-                <img class="about-img" data-src="<?php echo get_theme_file_uri('/assets/images/woman-2.png') ?>">
+                <img class="about-img" data-src="<?php echo get_theme_file_uri('/assets/images/woman-2.png'); ?>">
                 <h2>Светлана Вячеславовна</h2>
                 <p class="position">генеральный директор компании "Иджис"</p>
             </div>
