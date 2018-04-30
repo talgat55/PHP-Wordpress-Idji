@@ -37,6 +37,26 @@ jQuery(document).ready(function () {
      */
     jQuery(".tabs").lightTabs();
 
+    /*
+    * Check Confirm
+    */
+
+    jQuery('.wpcf7-submit').click(function (e) {
+        var parentClass = jQuery(this).parent().parent().parent().parent().parent();
+        var valuechechbox =  parentClass.find('.checkboxFour input').val();
+        var respondcf7 = parentClass.find('.wpcf7-response-output');
+       // var valuechechbox = jQuery("#checkboxFourInput").val();
+        if(valuechechbox !='1'){
+            e.preventDefault();
+            respondcf7.addClass(' wpcf7-validation-errors');
+            respondcf7.html(' ');
+            respondcf7.append('Вы не согласились с политикой конфиденциальности');
+            respondcf7.slideDown();
+        }
+
+
+
+    });
 
 
     /*
@@ -95,7 +115,12 @@ jQuery(document).ready(function () {
             if (!$thisvalue.length) {
                 $this.parent().parent().find('label').show();
             }
-            jQuery(this).parent().find('.telephone').inputmask('remove');
+
+             
+
+                jQuery(this).parent().find('.telephone').inputmask('remove');
+            
+
         });
 
         $this.parent().find('.telephone').inputmask({"mask": "+7 (999) 999-9999"});
