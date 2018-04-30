@@ -825,7 +825,12 @@ add_action('wp_ajax_nopriv_check_account', 'check_account');
 function getRefererPage( $form_tag )
 {
     if ( $form_tag['name'] == 'url-page' ) {
-        $form_tag['values'][] = htmlspecialchars($_SERVER['REQUEST_URI']);
+        if(is_home()){
+            $redyUrl= 'home';
+        }else{
+            $redyUrl= $_SERVER['REQUEST_URI'];
+        }
+        $form_tag['values'][] = htmlspecialchars($redyUrl);
     }
     return $form_tag;
 }
@@ -904,6 +909,7 @@ function wpcf7_cstm_function($contact_form)
             'registration' => 'Страница "Регистрации"',
             'bankrotstvo-ip' => 'Страница "Банкротство ИП"',
             'blog'  => 'Страница Блога',
+            'home'  => 'Домашняя страница',
             'bankrotstvo-ooo' => 'Страница "Банкротство ООО"',
             'question-answer' => 'Страница "Вопрос Ответ"',
             'perechen-doc' => 'СТраница "Документы на бонкротсво физического лица в 2018 году"'

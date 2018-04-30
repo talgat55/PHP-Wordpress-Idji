@@ -1599,7 +1599,11 @@ function initUserVisitesPages() {
     var path = window.location.pathname;
     var viespages =     Cookies.get('views_pages');
 
+        if(path == '/'){
+            path = 'home';
+        } 
     if(viespages !== undefined) {
+
         var viewpath = viespages.concat(' ' + path);
     }else{
         var viewpath =' ' + path;
