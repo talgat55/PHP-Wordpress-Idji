@@ -6,6 +6,14 @@
 }
 
 @font-face {
+    font-family: "DINPro-CondBlack";
+    src: url("DINPro-CondBlack.woff") format("woff"), url("DINPro-CondBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+@font-face {
     font-family: 'fontello';
     src: url('fontello.woff') format('woff'),
     url('fontello.ttf') format('truetype'),
@@ -2049,6 +2057,7 @@ form {
 .quiz-row{
     display: table;
     width: 100%;
+    padding: 29px 0;
 }
 .col-mds-6{
     display: table-cell;
@@ -2065,14 +2074,37 @@ form {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
 }
+.quiz-row h1{
+    font-family: "DINPro-CondBlack";
+    font-size: 53px;
+    color: #3c99a0;
+    line-height: 60px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    padding-top: 11px;
+}
+.logo-quiz{
+    height: 65px;
+}
+.quiz-row h1 span{
+    display: block;
+    color: #bd4d47;
+}
 .quiz-row h2{
-    font-size: 24px;
+    font-size: 27px;
+    padding-top: 0;
     color: #000;
     font-family: "Minsk";
+    text-transform: uppercase;
 }
 .quiz-row ul{
     margin-left: 20px;
 }
+.quiz-row ul li{
+    margin-bottom: 20px;
+}
+
+
 input.url-page { display:none; }
 /*
 * Footer
@@ -5623,6 +5655,12 @@ ul.instruction-list {
     transition: all .5s ease;
 }
 
+.quiz-bg img{
+    height: 680px;
+}
+.second-quiz-block{
+    float: right;
+}
 
 @media (min-width: 1201px) {
     .navigation li:hover .sub-menu {
@@ -5635,6 +5673,9 @@ ul.instruction-list {
     .form-calculate .col-md-6 {
         width: 100%;
         padding-right: 0;
+    }
+    .quiz-bg img {
+        height: auto;
     }
     .post-5-spec-col-6-block{
         margin: 0 0 0 auto;
@@ -5890,8 +5931,18 @@ ul.instruction-list {
     .first-block-img {
         height: 200px;
     }
+    .quiz-row .col-mds-6 {
+        display: block;
+        width: 100%;
+    }
+    .second-quiz-block{
+        float: none;
+    }
     .no-payment-way {
         width: 74%;
+    }
+    .quiz-bg{
+        height: auto!important;
     }
     .number-instruction-block{
         display: table;
@@ -6471,10 +6522,40 @@ ul.instruction-list {
     .modal-form {
         width: 100%;
     }
+    .quiz-bg img {
+        height: auto;
+    }
+    .quiz-bg {
+        height: 467px;
+        padding-bottom: 30px;
+    }
+    .quiz-row h1 {
+        font-size: 30px;
+        line-height: 39px;
+    }
+    .quiz-row h2 {
+        font-size: 19px;
+    }
     .custom-col-6{
         display: block;
         float: none;
         width: 100%;
+    }
+    .col-mds-6 {
+        display: block;
+        width: 100%;
+    }
+
+    .col-mds-6:last-child{
+        margin-bottom: 40px;
+    }
+    .quiz-row .col-mds-6:last-child{
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .quiz-bg img {
+        height: auto;
+        margin: 30px 0;
     }
     .col-section-instruction-table div img {
         margin-bottom: 30px;

@@ -78,7 +78,7 @@
             <div class="top-hedaer-block">
                 <div id="logo">
                     <a href="<?php echo home_url(); ?>">
-                        <img src="<?php echo get_theme_file_uri('/assets/images/logo-a-2.png') ?>" alt="Logo">
+                        <img src="<?php echo get_theme_file_uri('/assets/images/logo-a-2.png') ?>" alt="Логотип">
                         <div>ИДЖИС</div>
                         <p>Живи без долгов!</p>
                     </a>
