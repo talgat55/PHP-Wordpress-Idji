@@ -56,7 +56,7 @@
                 <img class="logo-quiz" src="<?php echo get_theme_file_uri('/assets/images/logo_quiz.png') ?>"
                      alt="логотип">
                 <h1>Что делать, если нечем<span>платить кредит?</span></h1>
-                <h2>Заполните последнюю форму и получите бонусы:</h2>
+                <h2>Пройдите тест и узнайте, как списать долги, а также получите подарки за ответы:</h2>
 
 
                 <ul>
@@ -83,7 +83,7 @@
 
             </div>
             <div class="col-mds-6 quiz-bg center  first-quiz-block">
-                <img src="<?php echo get_theme_file_uri('/assets/images/quiz.png') ?>" alt="изображение">
+                <img src="<?php echo get_theme_file_uri('/assets/images/quiz2.png') ?>" alt="изображение">
             </div>
         </div>
     </div><!-- .wrap -->

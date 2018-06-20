@@ -81,7 +81,7 @@ function th_scripts()
 {
     // Theme stylesheet.
     wp_enqueue_style('th-style', get_theme_file_uri('style.css'), array(), '');
-    wp_enqueue_style('style', get_theme_file_uri('/assets/css/style.css'), array(), '3');
+    wp_enqueue_style('style', get_theme_file_uri('/assets/css/style.css'), array(), '3.1');
     // wp_enqueue_style('style', get_theme_file_uri('/assets/css/minify.css'), array(), '');
     wp_enqueue_style('lightbox.min', get_theme_file_uri('/assets/css/lightbox.min.css'), array(), '');
 

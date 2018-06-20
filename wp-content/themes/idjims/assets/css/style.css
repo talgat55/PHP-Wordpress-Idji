@@ -4766,58 +4766,192 @@ footer {
 */
 
 .login-form input {
-    background: #f7fcff;
-    border-radius: 0;
+    background: #fff;
     margin-bottom: 20px;
+    border-radius: 21px;
+    line-height: 20px;
+    padding: 12px;
+    text-align: center;
 }
-
-.registration-page,
-.login-page {
+.login-page-block .col-md-6{
+    box-sizing: border-box;
+}
+.registration-page{
     width: 50%;
     margin: 50px auto;
 }
-
+.login-page{
+    width: 70%;
+    margin: 50px auto;
+}
 .btn-form-login {
     transition: all 0.3s ease-in-out;
     width: 100%;
     padding: 6px 18px;
-    color: #cb454c;
-    border: 1.5px solid #cb454c;
+    color: #fff;
+    border: 1.5px solid #ec6d62;
+    background:   #ec6d62!important;
     cursor: pointer;
+    font-family: Calibri, sans-serif;
+    border-radius: 21px!important;
 }
 
 .btn-form-login:hover {
-    color: #fff;
+    color: #ec6d62;
+    background: transparent!important;
+}
+.registration-form ::-webkit-input-placeholder,
+.login-form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #b7b7b7;
+    font-family: Calibri, sans-serif;
+    font-size: 22px;
+}
+.login-text{
+    display: table;
+    margin: 0 auto;
+}
+.registration-form ::-moz-placeholder,
+.login-form ::-moz-placeholder { /* Firefox 19+ */
+    color: #b7b7b7;
+    font-family: Calibri, sans-serif;
+    font-size: 22px;
+}
+.registration-form :-ms-input-placeholder ,
+.login-form :-ms-input-placeholder { /* IE 10+ */
+    color: #b7b7b7;
+    font-family: Calibri, sans-serif;
+    font-size: 22px;
+}
+.registration-form :-moz-placeholder ,
+.login-form :-moz-placeholder { /* Firefox 18- */
+    color: #b7b7b7;
+    font-family: Calibri, sans-serif;
+    font-size: 22px;
 }
 
 .login-form a {
     text-decoration: underline;
 }
-
+.breadscrumb-login{
+    height: 550px;
+    background: #dce3eb!important;
+    position: relative;
+}
+.login-img-bred  {
+    position: absolute;
+    right: 0;
+    top: 72px;
+    height: 400px;
+}
+.login-first-text{
+    height: 550px;
+    display: table;
+}
+.login-first-text p{
+    display: table-cell;
+    vertical-align: middle;
+    font-family: "Calibri Light";
+}
+.login-page-start{
+    background: #0a8fc4;
+    color: #fff;
+    padding: 7px 80px;
+    margin-top: 66px;
+    display: inline-block;
+    border-radius: 31px;
+    font-family: "Calibri Light";
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.login-page-start:hover {
+    background-color: #cb454c;
+    color: #fff;
+}
+.second-row-login{
+    background: #eeeef4;
+}
+.first-table{
+    display: table;
+    width: 100%;
+}
+.login-page-list{
+    margin: 0 0 50px;
+    padding: 0;
+}
+.login-page-list li{
+    list-style: none;
+    font-family: "Calibri Light";
+    font-style: italic;
+}
+.login-page-list li img{
+    padding-right: 6px;
+}
+.first-table .text,
+.first-table .img{
+    display: table-cell;
+    vertical-align: middle;
+}
+.img img{
+    max-width: 100%;
+}
+.second-row-login .first-table .text{
+    width: 40%;
+    padding-left: 50px;
+    padding-right: 0!important;
+}
+.first-table .text{
+    width: 40%;
+    padding-right: 40px;
+}
+.first-table{
+    padding: 80px 0;
+}
+.text h3{
+    font-family: "Calibri";
+    font-size: 25px;
+    font-weight: 600;
+}
+.text p{
+    font-family: "Calibri Light";
+    font-size: 16px;
+    margin: 33px 0;
+}
 /*
 * Registration
  */
 .registration-page {
     margin-top: 100px;
 }
-
+.link-login-modal{
+    transition: all 0.3s ease-in-out;
+    padding: 6px 18px;
+    color: #fff;
+    border: 1.5px solid #ec6d62;
+    background: #ec6d62!important;
+    cursor: pointer;
+    font-family: Calibri Light;
+    border-radius: 21px!important;
+}
 .btn-registration {
     transition: all 0.3s ease-in-out;
     width: 100%;
     padding: 6px 18px;
-    color: #cb454c;
-    background-color: #fff;
-    border: 1.5px solid #cb454c;
+    color: #fff;
+    border: 1.5px solid #ec6d62;
+    background: #ec6d62!important;
     cursor: pointer;
+    font-family: Calibri, sans-serif;
+    border-radius: 21px!important;
 }
 
 .registration-page .form-policy a,
 .registration-page .form-policy {
     color: #000;
 }
-
+.link-login-modal:hover,
 .btn-registration:hover {
-    color: #fff;
+    color: #ec6d62;
+    background: transparent!important;
 }
 
 .registration-page .checkboxFour {
@@ -4825,9 +4959,12 @@ footer {
 }
 
 .registration-form input {
-    background: #f7fcff;
-    border-radius: 0;
+    background: #fff;
     margin-bottom: 20px;
+    border-radius: 21px;
+    line-height: 20px;
+    padding: 12px;
+    text-align: center;
 }
 
 .confirm.btn-registration {
@@ -5661,6 +5798,29 @@ ul.instruction-list {
 .second-quiz-block{
     float: right;
 }
+.first-quiz-block{
+    padding-top: 30px;
+}
+.spec-rows div{
+    box-sizing: border-box;
+}
+.spec-rows{
+    display: table;
+    width: 100%;
+}
+.spec-rows div{
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+}
+.spec-rows h2{
+    font-size: 24px;
+    font-family: "Minsk";
+    text-align: center;
+}
+.margin-bottom-50{
+    margin-bottom: 50px;
+}
 
 @media (min-width: 1201px) {
     .navigation li:hover .sub-menu {
@@ -5762,6 +5922,13 @@ ul.instruction-list {
         z-index: 999;
         padding: 30px;
     }
+
+    .login-img-bred {
+        top: 120px;
+        height: 285px;
+    }
+
+
 }
 
 @media (min-width: 992px)  and (max-width: 1200px) {
@@ -5931,6 +6098,24 @@ ul.instruction-list {
     .first-block-img {
         height: 200px;
     }
+    .first-table .text{
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .login-form{
+        margin-bottom: 40px;
+    }
+    .second-row-login .first-table .text{
+        padding-left: 0;
+    }
+    .first-table .img{
+        display: none;
+    }
+    .login-first-text,
+    .breadscrumb-login{
+        height: 300px;
+    }
     .quiz-row .col-mds-6 {
         display: block;
         width: 100%;
@@ -6063,7 +6248,7 @@ ul.instruction-list {
         padding-right: 0 !important;
 
     }
-
+    .login-img-bred,
     .q-a-img {
         display: none;
     }
@@ -6080,6 +6265,9 @@ ul.instruction-list {
     .q-a-block {
         padding: 15px 16px;
         height: auto !important;
+    }
+    .login-page-start{
+        display: table;
     }
 
     .q-a-block h3 {
@@ -7196,4 +7384,19 @@ ul.instruction-list {
 }
 .header-modal  input.wpcf7-form-control {
     text-align: center;
+}
+.title-login-page-block{
+    font-family: Calibri, sans-serif;
+    font-size: 33px;
+    font-weight: bold;
+    text-align: center;
+}
+.text-login-page-block{
+    font-family: Calibri, sans-serif;
+    text-align: center;
+    margin-top: 50px;w
+}
+.last-block-login-page {
+    padding: 55px 0;
+    background: #eeeef4;
 }

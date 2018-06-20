@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> >
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="<?php bloginfo('charset'); ?>"> 
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="yandex-verification" content="d1e66d86f8329b3a" />
@@ -41,6 +40,37 @@
     <script src="//script.marquiz.ru/v1.js"  type="application/javascript"></script>
     <script> document.addEventListener("DOMContentLoaded", function() { Marquiz.init({ id: '5a82a8db6db2f600180525a3', host: '//quiz.marquiz.ru', template: 'default' }); }); </script>
     <!— Marquiz script end —>
+
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3032395", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="//top-fwz1.mail.ru/counter?id=3032395;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
+<script type="text/javascript">
+var _tmr = _tmr || [];
+_tmr.push({
+    type: 'itemView',
+    productid: 'VALUE',
+    pagetype: 'VALUE',
+    list: 'VALUE',
+    totalvalue: 'VALUE'
+});
+</script>
+<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
+
+    
 </head>
 
 <body <?php body_class(); ?> >
