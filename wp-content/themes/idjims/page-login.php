@@ -70,7 +70,8 @@ $ValueForHash = wp_create_nonce('ASMART');
                         <a href="#" class="link-login-modal">Остались вопросы?</a>
                     </div>
                     <div class="img">
-                        <img src="<?php echo get_theme_file_uri('/assets/images/img-1-compressor.jpg') ?>"/>
+                        <!--<img src="<?php echo get_theme_file_uri('/assets/images/img-1-compressor.jpg') ?>"/>-->
+                        <img src="<?php echo get_theme_file_uri('/assets/images/1.gif') ?>"/>
                     </div>
 
                 </div>
@@ -82,7 +83,7 @@ $ValueForHash = wp_create_nonce('ASMART');
 
 
                     <div class="img">
-                        <img src="<?php echo get_theme_file_uri('/assets/images/img-2-compressor.jpg') ?>"/>
+                        <img src="<?php echo get_theme_file_uri('/assets/images/2.gif') ?>"/>
                     </div>
                     <div class="text">
                         <h3>
@@ -128,7 +129,7 @@ $ValueForHash = wp_create_nonce('ASMART');
                         <a href="#" class="link-login-modal">Остались вопросы?</a>
                     </div>
                     <div class="img">
-                        <img src="<?php echo get_theme_file_uri('/assets/images/img-3-compressor.jpg') ?>"/>
+                        <img src="<?php echo get_theme_file_uri('/assets/images/3.gif') ?>"/>
                     </div>
 
                 </div>
