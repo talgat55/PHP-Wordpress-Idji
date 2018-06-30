@@ -23,8 +23,7 @@ $ValueForHash = wp_create_nonce('ASMART');
                 <div class="col-md-6 login-first-text">
                     <p>
                         <b>Сэкономьте Ваши деньги</b>, подготовьте необходимые документы для своей финансовой защиты или
-                        защиты
-                        банкротством. Бесплатно.
+                        защиты  банкротством. Бесплатно.<br>
 
                         <a href="#" class="login-page-start">Начать</a>
                     </p>
@@ -36,7 +35,7 @@ $ValueForHash = wp_create_nonce('ASMART');
             </div>
 
         </div>
-        <section class="first-row-login">
+        <section id="first-row-login" class="first-row-login">
             <div class="container  ">
                 <div class="first-table">
                     <!--<div class="spec-help-block">
@@ -60,7 +59,7 @@ $ValueForHash = wp_create_nonce('ASMART');
                     <div class="text">
                         <h3>
                             Инструкция по банкротству написана простым и понятным языком для тех, кто ценит свое время и
-                            желает самостоятельно во всем разобраться
+                            желает самостоятельно во всем разобраться.
 
                         </h3>
                         <p>
@@ -83,7 +82,7 @@ $ValueForHash = wp_create_nonce('ASMART');
 
 
                     <div class="img">
-                        <img src="<?php echo get_theme_file_uri('/assets/images/2.gif') ?>"/>
+                        <img src="<?php echo get_theme_file_uri('/assets/images/3.gif') ?>"/>
                     </div>
                     <div class="text">
                         <h3>
@@ -120,7 +119,7 @@ $ValueForHash = wp_create_nonce('ASMART');
                     <div class="text">
                         <h3>
                             Для тех, кому не подходит банкротство – самое необходимое для защиты от давления коллекторов
-                            и незаконных требований кредиторов (банков и МФО)
+                            и незаконных требований кредиторов (банков и МФО).
                         </h3>
                         <p>
                             Законно откажитесь от общения с коллекторами и кредитными организациями. Дайте отпор банкам
@@ -129,7 +128,7 @@ $ValueForHash = wp_create_nonce('ASMART');
                         <a href="#" class="link-login-modal">Остались вопросы?</a>
                     </div>
                     <div class="img">
-                        <img src="<?php echo get_theme_file_uri('/assets/images/3.gif') ?>"/>
+                        <img src="<?php echo get_theme_file_uri('/assets/images/2.gif') ?>"/>
                     </div>
 
                 </div>
@@ -139,10 +138,10 @@ $ValueForHash = wp_create_nonce('ASMART');
         <div class="last-block-login-page ">
             <div class="login-page login-page-block clearfix">
                 <div class="col-md-6">
-                    <div class="title-login-page-block">Бесплатно. Быстро. Удобно</div>
+                    <div class="title-login-page-block">Бесплатно. Быстро. Удобно.</div>
                     <p class="text-login-page-block">
                         Окажем необходимую помощь при использовании сервиса.
-                        Дадим рекомендации по составлению документов
+                        Дадим рекомендации по составлению документов.
                     </p>
                     <div class="errors">
                         <?php

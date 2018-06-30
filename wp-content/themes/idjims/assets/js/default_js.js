@@ -181,7 +181,7 @@ jQuery(document).ready(function () {
         return false;
     });
 
-    jQuery(".btn-link-modal, .btn-link-to-modal").click(function () {
+    jQuery(".btn-link-modal, .btn-link-to-modal, .link-login-modal").click(function () {
 
         jQuery('.overlay-layer').addClass('overlay-display');
         jQuery('.modal-form.header-modal').addClass(' overlay-display ');
@@ -197,7 +197,16 @@ jQuery(document).ready(function () {
         return false;
     });
 
+    /*
+    * Scroll to Next Block
+     */
 
+    jQuery('.login-page-start').click(function (e) {
+        e.preventDefault();
+        jQuery('html, body').animate({scrollTop: jQuery('#first-row-login').offset().top }, 500);
+
+
+    });
     /*
     * Click Events for   Check
     **/

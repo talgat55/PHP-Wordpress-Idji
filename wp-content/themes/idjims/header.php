@@ -78,7 +78,7 @@ _tmr.push({
 
     <header class="site-header">
         <?php
-        if (!is_home()) {
+       /// if (!is_home()) {
             if (is_user_logged_in()) {
 
                 echo '  <div class="top-header-user clearfix">
@@ -100,7 +100,7 @@ _tmr.push({
             }
 
 
-        }
+       // }
 
 
         ?>
