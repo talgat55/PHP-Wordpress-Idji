@@ -942,7 +942,12 @@ function wpcf7_cstm_function($contact_form)
         }else{
             $infoip = 'Нет данных';
         }
-        
+
+
+        if(empty($xml->ip->city)){
+            return   invalidate( '', 'you are robot' );
+        }
+
 
 
 
