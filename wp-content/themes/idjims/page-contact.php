@@ -14,20 +14,26 @@ get_header(); ?>
         <div class="container">
             <div class="contact-page-adress clearfix">
                 <div class="col-md-7">
-                    <span>Адрес:</span> Кемерово, пр. Ленина, 33/2 - 403, БЦ "Томь"</br>
-                    <span>Email:</span><a href="mailto:aegis@иджис.рф"> aegis@иджис.рф</a>
+                    <span>Адрес: </span><?= $city['address']; ?></br>
+                    <?php if ($city['name'] == 'Симферополь') { ?>
+                      <span>Доп. адрес: </span>Крым, г. Бахчисарай, ул. Ракитского, 1</br>
+                    <?php } ?>
+                    <span>Email: </span><a href="mailto:aegis@иджис.рф">aegis@иджис.рф</a>
                 </div>
                 <div class="col-md-5">
-
-                    <span>Телефон:</span><a href="tel:+79235374667"> 8 (923) 537-47-67</a></br>
-                    <span>Время работы:</span> с 9:00 до 17:00
+                    <span>Телефон: </span><span class="callibri">
+                      <?= ($city['name'] == 'Симферополь') ? '<a href="tel:89781005125">8 (978) 100-51-25</a>' : '<a href="tel:88007079863">8 800 707 98 63</a>'; ?>
+                    </span></br>
+                    <span>Время работы: </span>с 9:00 до 17:00
                 </div>
             </div>
         </div>
+        <?php if (!$isRegion): ?>
         <div class="map-walp">
             <div id="map"></div>
             <div class="overlay-map"></div>
         </div>
+      <?php endif; ?>
     </div><!-- .wrap -->
     <section class="SendMessage">
         <div class="container">

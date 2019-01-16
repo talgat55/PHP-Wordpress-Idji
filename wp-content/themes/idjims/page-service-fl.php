@@ -5,7 +5,7 @@
 get_header(); ?>
     <section id="first-section-service" style="height: auto;">
         <div class="container clearfix">
-            <h1 class="title-section service center-white ">Банкротство физических лиц</h1>
+            <h1 class="title-section service center-white ">Банкротство физических лиц <?= $city['name_rod']; ?></h1>
             <div class="clearfix">
                 <div class="col-md-3  z-up">
 

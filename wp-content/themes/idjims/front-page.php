@@ -84,8 +84,7 @@ get_header(); ?>
                     что, согласитесь, было совсем несправедливо. Так, специалисты нашей компании долгое время занимались
                     оформлением банкротств именно этой категории должников, но теперь мы предлагаем наш опыт и знания
                     ведения дел о банкротстве простым гражданам. Кроме того, сокращение издержек и автоматизация всех
-                    бизнес-процессов позволяет нам предложить, пожалуй, самую низкую цену банкротства физических лиц в
-                    Кемеровской области.
+                    бизнес-процессов позволяет нам предложить, пожалуй, самую низкую цену банкротства физических лиц <?= (!$isRegion) ? 'в Кемеровской области' : $city['name_rod']; ?>.
                     </br>
                     <span class="underline">Банкротство физического лица</span> - единственный <span class="blue-when-color">законный способ освободиться от всех кредитных долгов</span>, и
                     уже сразу после начала этой процедуры прекращаются начисления пеней и штрафов, звонки и визиты
@@ -95,7 +94,7 @@ get_header(); ?>
             </div>
             <div class="col-md-5  background-about"
                  style="background: url(<?php echo get_theme_file_uri('/assets/images/smart-2.png') ?>);">
-                <img class="about-img" data-src="<?php echo get_theme_file_uri('/assets/images/woman-2.png'); ?>">
+                <img class="about-img" data-src="<?php echo get_theme_file_uri('/assets/images/woman-2.png') ?>">
                 <h2>Светлана Вячеславовна</h2>
                 <p class="position">генеральный директор компании "Иджис"</p>
             </div>
@@ -245,7 +244,7 @@ get_header(); ?>
                         </div>
                         <div class="col-md-10  block-text-how-we-work margin-top">
                             <h3>Оставьте заявку</h3>
-                            <p>Сделать это можно, позвонив по телефону <a href="tel:+79235374767" class="linkInText">8-923-537-47-67</a>,
+                            <p>Сделать это можно, позвонив по телефону <a href="tel:8 800 707 98 63" class="linkInText">8 800 707 98 63</a>,
                                 либо оставив данные в форме на нашем сайте. Наш специалист обязательно перезвонит, что
                                 бы уточнить детали, ответить на все интересующие вопросы о банкротстве граждан,
                                 стоимости наших услуг и записать Вас на бесплатную консультацию!</p>
@@ -328,7 +327,7 @@ get_header(); ?>
     <section id="Offer">
         <div class="container">
             <div class="title-section center">Предлагаем Вам воспользоваться процедурой <span
-                        class="red">банкротства,</span> в ходе которой мы
+                        class="red">банкротства <?= $city['name_rod']; ?>,</span> в ходе которой мы
             </div>
             <div class="clearfix">
                 <div class="col-md-7">
@@ -562,8 +561,7 @@ get_header(); ?>
 
                 <a href="#" class="slider-arrow-right"><span class="icon-right-open"></span></a>
             </div>
-            <div class="block-link-client"><a href="<?php echo LinksTheme('reviews'); ?>" class="link-client-more">Читать
-                    больше</a></div>
+            <div class="block-link-client"><a href="<?php echo LinksTheme('reviews'); ?>" class="link-client-more">Читать больше</a></div>
         </div>
     </section>
 

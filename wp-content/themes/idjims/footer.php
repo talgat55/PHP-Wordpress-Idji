@@ -1,4 +1,4 @@
-
+<?php global $city; ?>
 
 		</div><!-- #content -->
 
@@ -7,8 +7,8 @@
 			<div class="top-hedaer-block">
 					<div id="logo">
 						<a href="<?php echo home_url(); ?>" >
-							<img src="<?php  echo get_theme_file_uri( '/assets/images/logo-a-2.png' ) ?>" alt="Logo">
-							<div>ИДЖИС</div>
+							<img src="<?php  echo get_theme_file_uri( '/assets/images/logo-a-1.png' ) ?>" alt="Logo">
+							<!-- <div>ИДЖИС</div> -->
 							<p>Живи без долгов</p>
 						</a>
 					</div>
@@ -28,7 +28,9 @@
 									<img src="<?php  echo get_theme_file_uri( '/assets/images/phone-a-2.png' ) ?>">
 									<div class="center-top-heder-holder">
 									<p>Звоните нам</p>
-									<div><a href="tel:+79235374767">8 923 537 47 67</a></div>
+									<div><a href="tel:88007079863">8 800 707 98 63</a><span class="center-top-heder-holder__freecall">(звонок бесплатный)</span></div>
+									<!-- <div class="callibri"><a href="tel:+79235374767">8 923 537 47 67</a></div> -->
+									<!--<div class="last"><a href="tel:88007079863">8 800 707 98 63</a></div>-->
 									</div>
 								</div>
 
@@ -46,15 +48,14 @@
 				<div class="container">
 					<div class="bottom-header-wallpaper">
 						 <ul class="footer-block-list clearfix">
-							 <li>г. Кемерово, пр. Ленина, 33/2 - 403</li>
-							 
+							 <li><?= $city['address']; ?></li>
 							 <li>e-mail:<a href="mailto:aegis@xn--d1aeec9b.xn--p1ai">aegis@иджис.рф</a></li>
 							 <li>ООО "Иджис", ОГРН 1174205021407</li>
 						 </ul>
 						 <ul class="social-top clearfix">
-							 <li><a  target="_blank" href="https://vk.com/bankruptcy42"><i class="icon-vkontakte"></i></a></li>
+							 <li><a href="https://vk.com/bankruptcy42" target="_blank"><i class="icon-vkontakte"></i></a></li>
 							 <li><a href="#"><i class="icon-facebook"></i></a></li>
-							 <li><a href="#"><i class="icon-odnoklassniki"></i></a></li>
+							 <li><a href="https://ok.ru/group/55245396115708" target="_blank"><i class="icon-odnoklassniki"></i></a></li>
 						 </ul>
 					</div>
 				</div><!-- end container-->
@@ -71,6 +72,7 @@
 		</footer><!-- #colophon -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet">
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
     (function (d, w, c) {
@@ -105,6 +107,7 @@
                 var s=d.createElement('script');s. async=1;s.src=u+'?'+(Date.now( )/60000|0);
                 var h=d.getElementsByTagName('script')[0];h.parentNode. insertBefore(s,h);
         })(window,document,'https://cdn.bitrix24.ru/b6697771/crm/site_button/loader_2_f7w4ye.js');
-</script>   
+</script>
+<script src="//cdn.callibri.ru/callibri.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

@@ -81,11 +81,13 @@ function th_scripts()
 {
     // Theme stylesheet.
     wp_enqueue_style('th-style', get_theme_file_uri('style.css'), array(), '');
-    wp_enqueue_style('style', get_theme_file_uri('/assets/css/style.css'), array(), '3.1');
+    wp_enqueue_style('style', get_theme_file_uri('/assets/css/style.css'), array(), '3.1.1');
+    wp_enqueue_style('select', get_theme_file_uri('/assets/css/select.css'), array(), '3.1');
     // wp_enqueue_style('style', get_theme_file_uri('/assets/css/minify.css'), array(), '');
     wp_enqueue_style('lightbox.min', get_theme_file_uri('/assets/css/lightbox.min.css'), array(), '');
 
     wp_enqueue_script('jquery', get_theme_file_uri('/assets/js/jquery-3.2.1.min.js'), array(), '1');
+    wp_enqueue_script('select', get_theme_file_uri('/assets/js/select.js'), array(), '2');
     wp_enqueue_script('default', get_theme_file_uri('/assets/js/default_js.js'), array(), '2');
     //   wp_enqueue_script('compressed', get_theme_file_uri('/assets/js/compressed.js'), array(), '2');
     wp_enqueue_script('lightbox.min', get_theme_file_uri('/assets/js/lightbox.min.js'), array(), '2');
@@ -574,7 +576,7 @@ function be_post_summary()
                                         <span class="date-blog">' . get_the_date('Y.m.d', get_the_ID()) . '</span>
                                     </div>
                                 </a>
-                                
+
                                 <div class="title-blog"><a href="' . get_the_permalink(get_the_ID()) . '">' . get_the_title(get_the_ID()) . '</a></div>
                                 <div class="except-blog">' . my_string_limit_words(strip_tags(get_field('preview')), 35) . '</div>
                             </div>
@@ -613,6 +615,21 @@ function LinksTheme($link)
         case 'bankrotstvo-ooo':
             return home_url("/bankrotstvo-ooo");
             break;
+		 case 'zashchita-ot-davleniya-kollektorov-i-bankov':
+            return home_url("/zashchita-ot-davleniya-kollektorov-i-bankov");
+            break;
+		case 'otmena-shtrafov-i-neustoyek':
+            return home_url("/otmena-shtrafov-i-neustoyek");
+            break;
+		case 'otmena-sudebnogo-prikaza':
+            return home_url("/otmena-sudebnogo-prikaza");
+            break;	
+        case 'zashchita-v-sude':
+            return home_url("/zashchita-v-sude");
+            break;	 
+        case 'umensheniye-yezhemesyachnykh-platezhey':
+            return home_url("/umensheniye-yezhemesyachnykh-platezhey");
+            break;	
         case 'bankrotstvo-ip':
             return home_url("/bankrotstvo-ip");
             break;
@@ -912,7 +929,12 @@ function wpcf7_cstm_function($contact_form)
             'home'  => 'Домашняя страница',
             'bankrotstvo-ooo' => 'Страница "Банкротство ООО"',
             'question-answer' => 'Страница "Вопрос Ответ"',
-            'perechen-doc' => 'СТраница "Документы на бонкротсво физического лица в 2018 году"'
+            'perechen-doc' => 'Страница "Документы на бонкротсво физического лица в 2018 году"',
+			'zashchita-ot-davleniya-kollektorov-i-bankov' => 'Страница "Защита от давления коллекторов и банков"',
+            'otmena-shtrafov-i-neustoyek' => 'Страница "Отмена штрафов и неустоек, уменьшение ежемесячных платежей"',
+            'otmena-sudebnogo-prikaza' => 'Страница "Отмена судебного приказа"',
+            'zashchita-v-sude' => 'Страница "Защита (представительство) в суде"',
+            'umensheniye-yezhemesyachnykh-platezhey' => 'Страница "Уменьшение ежемесячных платежей"',
         ];
         $CurrnetViewPages='';
         $redyViewPages ='';
@@ -943,9 +965,28 @@ function wpcf7_cstm_function($contact_form)
             $infoip = 'Нет данных';
         }
 
+        //  url
+        $parse_url = explode('/', $_SERVER['REQUEST_URI']);
+        if(isset($parse_url[1])  &&  !empty($parse_url[1]) ){
 
+            if(  $parse_url[1] == 'wp-json'){
 
+                $redypath = '';
 
+            }else{
+
+                $redypath = '/'.$parse_url[1];
+
+            }
+
+           
+
+        }else{
+            $redypath = '';
+
+        }
+
+        $current_url =  'https://иджис.рф'. $redypath;  
 
 
 
@@ -965,6 +1006,7 @@ function wpcf7_cstm_function($contact_form)
                 'UF_CRM_1525002894'=> $infoip,
                 'UF_CRM_1525011242' => $redyViewPages,
                 'UF_CRM_1525011478' => $CurrnetViewPages,
+                'UF_CRM_1547630537' => $current_url,
                 "PHONE" => array(
                     array(
                         "VALUE" => $phone,
@@ -1003,3 +1045,90 @@ function wpcf7_cstm_function($contact_form)
 
 add_action("wpcf7_before_send_mail", "wpcf7_cstm_function");
 
+
+add_filter('template_include', 'templates');
+function templates($template) {
+  global $post;
+	if( $post->post_type == 'post' && !is_front_page() ){
+		return get_template_directory() . '/post-blog.php';
+	}
+	return $template;
+}
+
+// поле Регион в настройках
+function region_option(){
+	$option_name = 'siteregion';
+	register_setting( 'general', $option_name );
+	add_settings_field(
+		'region_setting-id',
+		'Регион',
+		'region_setting_function',
+		'general',
+		'default',
+		array(
+			'id' => 'region_setting-id',
+			'option_name' => 'siteregion'
+		)
+	);
+}
+add_action('admin_menu', 'region_option');
+
+function region_setting_function( $val ){
+	$id = $val['id'];
+	$option_name = $val['option_name'];
+	?>
+	<input type="text" name="<? echo $option_name ?>" id="<? echo $id ?>" value="<? echo esc_attr( get_option($option_name) ) ?>" />
+	<?
+}
+
+// поле Регион (род.) в настройках
+function region_rod_option(){
+	$option_name = 'siteregion_rod';
+	register_setting( 'general', $option_name );
+	add_settings_field(
+		'region_rod_setting-id',
+		'Регион (род.)',
+		'region_rod_setting_function',
+		'general',
+		'default',
+		array(
+			'id' => 'region_rod_setting-id',
+			'option_name' => 'siteregion_rod'
+		)
+	);
+}
+add_action('admin_menu', 'region_rod_option');
+
+function region_rod_setting_function( $val ){
+	$id = $val['id'];
+	$option_name = $val['option_name'];
+	?>
+	<input type="text" name="<? echo $option_name ?>" id="<? echo $id ?>" value="<? echo esc_attr( get_option($option_name) ) ?>" />
+	<?
+}
+
+// поле Адрес в настройках
+function region_addr_option(){
+	$option_name = 'region_address';
+	register_setting( 'general', $option_name );
+	add_settings_field(
+		'region_addr_setting-id',
+		'Адрес',
+		'region_addr_setting_function',
+		'general',
+		'default',
+		array(
+			'id' => 'region_addr_setting-id',
+			'option_name' => 'region_address'
+		)
+	);
+}
+add_action('admin_menu', 'region_addr_option');
+
+function region_addr_setting_function( $val ){
+	$id = $val['id'];
+	$option_name = $val['option_name'];
+	?>
+	<input type="text" name="<? echo $option_name ?>" id="<? echo $id ?>" value="<? echo esc_attr( get_option($option_name) ) ?>" size="40" />
+	<?
+}
